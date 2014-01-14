@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f790028f30d65ea49ba75f3ff48bdd20
+guid: d2e74efcef46f204ab461d4cb04ef628
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -23,14 +23,14 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -44,6 +44,42 @@ TextureImporter:
     textureFormat: -2
     compressionQuality: 50
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: titileScreen_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 276
+        width: 256
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: titileScreen_1
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 276
+        width: 256
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: titileScreen_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 34
+        width: 256
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: titileScreen_3
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 34
+        width: 256
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
   spritePackingTag: 
   userData: 
