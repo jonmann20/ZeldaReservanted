@@ -2,6 +2,7 @@ Zelda Reservanted
 =================
 
 [zelda sprites](http://www.spriters-resource.com/nes/thelegendofzelda/)
+[zelda map](http://www.nesmaps.com/maps/Zelda/ZeldaOverworld1stQuest.swf)
 
 Task ideas:
 -----------

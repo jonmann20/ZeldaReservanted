@@ -4,8 +4,7 @@ using System.Collections;
 public class Link : MonoBehaviour {
 
 	public Sprite[] spr;
-
-	float speed = 0.1f;
+	public float speed;
 
 	SpriteRenderer sprRend;
 

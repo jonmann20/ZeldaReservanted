@@ -1,0 +1,1237 @@
+fileFormatVersion: 2
+guid: 01dc017149d79974c8e05d7c11b7cd6e
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: overworldSprites_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_4
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_6
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_8
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_9
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_10
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_11
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_12
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_14
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_15
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_17
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_18
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 146
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_39
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_40
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_41
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_43
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_44
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_45
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_46
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_47
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_48
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_49
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_50
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_51
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_52
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_53
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_54
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_55
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_56
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 115
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_58
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_59
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_60
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_61
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_62
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_63
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_64
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_65
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_66
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_67
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_68
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_69
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_70
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_71
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_72
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_73
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_74
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_75
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 99
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_77
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_78
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_79
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_80
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_81
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_82
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_83
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_84
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_85
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_86
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_87
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_88
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_89
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_90
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_91
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_92
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_93
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_94
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 83
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_96
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_97
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_98
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_99
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_100
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_101
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_102
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_103
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_104
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_105
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_106
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_107
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_108
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_109
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_110
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_111
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_112
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_113
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 67
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_114
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_115
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_116
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_117
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_118
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_119
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_120
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_121
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_122
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_123
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_124
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_125
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_126
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_127
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_128
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_129
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_130
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_131
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_132
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 51
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_133
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_134
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_135
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_136
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_137
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_138
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_139
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_140
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_141
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_142
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_143
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_144
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_145
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_146
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_147
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_148
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_149
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_150
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+    - name: overworldSprites_151
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 35
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+  spritePackingTag: 
+  userData: 

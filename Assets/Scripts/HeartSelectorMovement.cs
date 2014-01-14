@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HeartSelectorMovement : MonoBehaviour {
 
-	float y = 0.7f;
+	float y = 0.16f;
 
 	void Update () {
 
