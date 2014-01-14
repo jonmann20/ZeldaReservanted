@@ -1,0 +1,35 @@
+Initialize engine version: 4.3.2f1 (0517a5ae8669)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [aticfx32.dll 8.17.10.1247]
+    Renderer: AMD Radeon HD 7700 Series
+    Vendor:   ATI
+    VRAM:     1008 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=1 INTZ=1 RAWZ=0 NULL=1 RESZ=1 SlowINTZ=1
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\git\ZeldaReservanted\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\git\ZeldaReservanted\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\git\ZeldaReservanted\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\git\ZeldaReservanted\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.054 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+UnloadTime: 0.451436 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 80.
+Total: 0.857481 ms (FindLiveObjects: 0.004352 ms CreateObjectMapping: 0.007461 ms MarkObjects: 0.065601 ms  DeleteObjects: 0.010259 ms)
+
+UnloadTime: 0.204576 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 163.
+Total: 0.529474 ms (FindLiveObjects: 0.006529 ms CreateObjectMapping: 0.005596 ms MarkObjects: 0.049123 ms  DeleteObjects: 0.010259 ms)
+
+HandleD3DDeviceLost
+  HandleD3DDeviceLost: needs reset, doing it
+FullResetD3DDevice
+ResetD3DDevice
+dev->Reset
+D3Dwindow device not lost anymore
