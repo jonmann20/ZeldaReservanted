@@ -2,11 +2,12 @@
 using System.Collections;
 
 public class TextCta : MonoBehaviour {
-	public KeyCode key = KeyCode.Return;
 	public string nextScene;
+
+	public 
 	
 	void Update () {
-		if(Input.GetKey(key)){
+		if(Input.GetButtonDown("Enter")){
 			Application.LoadLevel(nextScene);
 		}
 	}

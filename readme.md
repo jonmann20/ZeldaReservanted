@@ -13,3 +13,14 @@ Task ideas:
 * Temple logic
 * Save/Load states
 * Boss scripting
+
+Keyboard Controls:
+------------------
+* UP: w or up arrow
+* DOWN: s or down arrow
+* LEFT: a or left arrow
+* RIGHT: d or right arrow
+* SELECT: space
+* START: enter
+* ATTACK (a): j
+* SPECIAL ATTACK (b): k
