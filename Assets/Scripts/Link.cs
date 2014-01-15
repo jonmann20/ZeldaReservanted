@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Link : MonoBehaviour {
@@ -8,8 +8,6 @@ public class Link : MonoBehaviour {
 
 	SpriteRenderer sprRend;
 
-	bool isVert = false;
-
 	void Start () {
 		sprRend = renderer as SpriteRenderer;
 	}
@@ -18,28 +16,30 @@ public class Link : MonoBehaviour {
 		movement();
 	}
 
+	float vert, hor;
 	void movement(){
-		isVert = false;
+		vert = Input.GetAxis("Vertical");
+		hor = Input.GetAxis("Horizontal");
 
-		if(Input.GetKey(KeyCode.W)){
-			sprRend.sprite = spr[2];
-			transform.Translate(new Vector2(0, speed));
-			isVert = true;
-		}
-		
-		if(Input.GetKey(KeyCode.S)){
-			sprRend.sprite = spr[0];
-			transform.Translate(new Vector2(0, -speed));
-			isVert = true;
+		if(!Input.GetButton("Up") || !Input.GetButton("Down")){
+			if(vert == 1f){
+				sprRend.sprite = spr[2];
+				transform.Translate(new Vector2(0, speed));
+			}
+			
+			if(vert == -1f){
+				sprRend.sprite = spr[0];
+				transform.Translate(new Vector2(0, -speed));
+			}
 		}
 
-		if(!isVert){
-			if(Input.GetKey(KeyCode.A)){
+		if(vert == 0 && (!Input.GetButton("Left") || !Input.GetButton("Right"))){
+			if(hor == -1f){
 				sprRend.sprite = spr[1];
 				transform.Translate(new Vector2(-speed, 0));
 			}
 			
-			if(Input.GetKey(KeyCode.D)){
+			if(hor == 1f){
 				sprRend.sprite = spr[3];
 				transform.Translate(new Vector2(speed, 0));
 			}
