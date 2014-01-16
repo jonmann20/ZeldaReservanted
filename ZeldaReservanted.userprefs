@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Link.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\tyBomber\Assets\Scripts\Controller\GunController.cs">
     <Files>
-      <File FileName="Assets\Scripts\Link.cs" Line="15" Column="3" />
-      <File FileName="Assets\Scripts\Link.cs" Line="1" Column="1" />
+      <File FileName="..\tyBomber\tyBomber.sln" Line="1" Column="1" />
+      <File FileName="..\tyBomber\Assets\Scripts\Controller\GunController.cs" Line="51" Column="8" />
+      <File FileName="Assets\Scripts\Link.cs" Line="22" Column="18" />
       <File FileName="Assets\Scripts\TextCta.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EnterName.cs" Line="1" Column="1" />
     </Files>

@@ -1,0 +1,472 @@
+fileFormatVersion: 2
+guid: 3ce6b890549f8c04c815593a8952167a
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: NES - Legend of Zelda The - Treasures_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 112
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_3
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 106
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_4
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_5
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 104
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 104
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_7
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 104
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_8
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 104
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_9
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 109
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_10
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 106
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_11
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 104
+        width: 5
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_13
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 105
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_14
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 104
+        width: 3
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_15
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 104
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_16
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 104
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_17
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 104
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_18
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 107
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_19
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 107
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_20
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 93
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_21
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 104
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_22
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 92
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_23
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 91
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_24
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 88
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_80
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 15
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_81
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 37
+        width: 48
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_82
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 15
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_83
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 37
+        width: 48
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_84
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 21
+        width: 48
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_85
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 21
+        width: 48
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_86
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 5
+        width: 48
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_87
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 5
+        width: 48
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 104
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_89
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 106
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_90
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 103
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_91
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 88
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_92
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 104
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_93
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 87
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_94
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 104
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_95
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 88
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_96
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 104
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_42
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 88
+        width: 5
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_42
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 104
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_43
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 104
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_44
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 104
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_45
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 104
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NES - Legend of Zelda The - Treasures_46
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 88
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
