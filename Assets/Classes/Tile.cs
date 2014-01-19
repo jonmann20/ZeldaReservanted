@@ -4,10 +4,10 @@ using System.Collections;
 public class Tile {
 	//local coords (coords in room)
 	int xcoord, ycoord;
-	string hexval;
+	public string hexval;
 
 	//denote enemy / item placement on tile
-	string spawnval;
+	public string spawnval;
 
 	public Tile(int x, int y, string hex, string spawn)
 	{
@@ -25,5 +25,9 @@ public class Tile {
 	public void alterTileSpawn(string spawn)
 	{
 		spawnval = spawn;
+	}
+	public void print()
+	{
+		Debug.Log("x:" + xcoord + " y: " + ycoord + " hex:" + hexval + " spawn:" + spawnval);
 	}
 }
