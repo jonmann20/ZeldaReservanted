@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fc7193e0c58314f99820b299bf599695
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - tile43: {fileID: 21300122, guid: 01dc017149d79974c8e05d7c11b7cd6e, type: 3}
+  - tile02: {instanceID: 0}
+  - tile18: {instanceID: 0}
+  - tile44: {instanceID: 0}
+  - tile42: {instanceID: 0}
+  - tile2f: {instanceID: 0}
+  - tile30: {instanceID: 0}
+  - tile2e: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
