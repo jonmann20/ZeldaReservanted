@@ -11,8 +11,16 @@ public class Link : MonoBehaviour {
 
 	float initSpeed;
 	char direction = 'n';
+	Vector3 previousPos;
 
 	SpriteRenderer sprRend;
+
+	//SCREEN SCROLL
+	Vector2 desiredDisplacement;
+	Vector2 deltaDisplacement;
+	float desiredDisplacementTime;
+
+	public bool movementEnabled = true;
 	
 	void Start () {
 		initSpeed = speed;
@@ -22,7 +30,20 @@ public class Link : MonoBehaviour {
 
 	void Update () {
 		speed = 5.0f;
-		movement();
+		if(movementEnabled)
+			movement();
+
+		//SCREEN SCROLL
+		if(desiredDisplacementTime > 0)
+		{
+			transform.Translate(deltaDisplacement);
+			desiredDisplacementTime --;
+		}
+	}
+
+	void FixedUpdate()
+	{
+		previousPos = transform.position;
 	}
 
 	float vert, hor;
@@ -160,12 +181,28 @@ public class Link : MonoBehaviour {
 		return 0;
 	}
 
-	void OnCollision2D(Collision2D col){
+	void OnCollisionEnter2D(Collision2D col){
+		//transform.Translate(-1, 0, 0);
+		//transform.position = previousPos;
+		Debug.Log("Collision2D");
 		if(col.gameObject.tag == "wall"){
 			speed = 0;
 		}
 		else {
 			speed = initSpeed;
 		}
+	}
+
+	public void setMovementEnabled(bool b)
+	{
+		movementEnabled = b;
+	}
+
+	public void setDesiredDisplacementTime(Vector3 v)
+	{
+		desiredDisplacement = new Vector2(v.x, v.y);
+		Debug.Log(v.x);
+		desiredDisplacementTime = v.z;
+		deltaDisplacement = desiredDisplacement / (desiredDisplacementTime);
 	}
 }

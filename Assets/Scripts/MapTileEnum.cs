@@ -3,6 +3,8 @@ using System.Collections;
 
 public class MapTileEnum : MonoBehaviour {
 
+	static string[] solidTiles = { "2e", "2f", "30", "42", "43", "44", "28", "29", "2a", "1b", "07", "15", "01", "3c", "3d", "3e" };
+
 	static Sprite[] mapTileSprites;
 
 	public static Sprite tile00;
@@ -489,6 +491,13 @@ public class MapTileEnum : MonoBehaviour {
 		if(s_tile == "9d") return tile9d;
 
 		return tile00;
+	}
+
+	public static bool isSolid(string hex)
+	{
+		foreach(string s in solidTiles)
+			if(s == hex) return true;
+		return false;
 	}
 
 	// Update is called once per frame

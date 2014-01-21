@@ -8,6 +8,7 @@ public class GameplayMain : MonoBehaviour {
 	Room[,] storedRooms = new Room[16,8];
 
 	GameObject[] activeTiles = new GameObject[176];
+	GameObject[] newTiles = new GameObject[176];
 
 	public float topLeftX = -8f;
 	public float topLeftY = 3.5f;
@@ -17,6 +18,10 @@ public class GameplayMain : MonoBehaviour {
 
 	int currentRoomX = 7;
 	int currentRoomY = 7;
+
+	//SCREEN SCROLL
+	bool screenScrolling = false;
+	float desiredDisplacementTime = 0;
 	
 	void Start () {
 		linkRef = GameObject.FindGameObjectsWithTag("Player")[0];
@@ -46,12 +51,12 @@ public class GameplayMain : MonoBehaviour {
 		}
 		//File seems to end in space || endline
 		//So no 'final tile'
-		//Debug.Log("finished loading " + tileNumber + " tiles");
+		Debug.Log("finished loading " + tileNumber + " tiles");
 		initRooms();
-		populateRoom(currentRoomX, currentRoomY);
+		populateRoom(currentRoomX, currentRoomY, 0, 0);
 	}
 
-	void populateRoom(int roomX, int roomY)
+	void populateRoom(int roomX, int roomY, float offsetX, float offsetY)
 	{
 		int objectCount = 0;
 		for(int i = 0; i < 16; i++)
@@ -59,7 +64,7 @@ public class GameplayMain : MonoBehaviour {
 			for(int j = 0; j < 11; j++)
 			{
 				//Debug.Log("i: " + i + " j: " + j + "hex: " + storedRooms[roomX, roomY].tiles[i, j].hexval);
-				GameObject go = Instantiate(MapTile, new Vector3(topLeftX + i, topLeftY - j, 0), Quaternion.identity) as GameObject;
+				GameObject go = Instantiate(MapTile, new Vector3(topLeftX + i + offsetX, topLeftY - j + offsetY, 0), Quaternion.identity) as GameObject;
 				go.SendMessage("setHexVal", storedRooms[roomX, roomY].tiles[i, j].hexval);
 				go.SendMessage("updateSprite");
 
@@ -110,38 +115,96 @@ public class GameplayMain : MonoBehaviour {
 	}
 
 	void Update () {
+		if(desiredDisplacementTime > 0)
+			desiredDisplacementTime --;
+		else
+		{
+			screenScrolling = false;
+			//NOT EFFICIENT
+			linkRef.SendMessage("setMovementEnabled", true);
+		}
+
+		if(!screenScrolling)
+		{
+			//n
+			if(linkRef.transform.position.y > 3)
+			{
+				float x = linkRef.transform.position.x;
+				transitionRoom('n');
+			}
+			//e
+			if(linkRef.transform.position.x > 7.5)
+			{
+				float y = linkRef.transform.position.y;
+				transitionRoom('e');
+			}
+			//s
+			if(linkRef.transform.position.y < -7)
+			{
+				float x = linkRef.transform.position.x;
+				transitionRoom('s');
+			}
+			//w
+			if(linkRef.transform.position.x < -7.5)
+			{
+				float y = linkRef.transform.position.y;
+				transitionRoom('w');
+			}
+		}
+	}
+
+	//'n'=north, 'e'=east, 's'=south, 'w'=west
+	void transitionRoom(char d)
+	{
+		screenScrolling = true;
+		desiredDisplacementTime = 120;
+
+		//give the new tiles a head-start to remove room-break line.
+		float headStartFactor = 1.00f;
 		float hudmovedelta = 0.2f;
-		if(linkRef.transform.position.y > 2)
+		int xMovement = 0;
+		int yMovement = 0;
+
+		if(d == 'n')
 		{
-			linkRef.transform.Translate(0, -10, 0);
-			hudPosMarker.transform.Translate(0, hudmovedelta, 0);
-			destroyCurrentRoom();
 			currentRoomY --;
-			populateRoom(currentRoomX, currentRoomY);
+			hudPosMarker.transform.Translate(0, hudmovedelta, 0);
+			xMovement = 0;
+			yMovement = -11;
 		}
-		if(linkRef.transform.position.y < -7)
+		else if(d == 'e')
 		{
-			linkRef.transform.Translate(0, 10, 0);
-			hudPosMarker.transform.Translate(0, -hudmovedelta, 0);
-			destroyCurrentRoom();
-			currentRoomY ++;
-			populateRoom(currentRoomX, currentRoomY);
-		}
-		if(linkRef.transform.position.x < -7)
-		{
-			linkRef.transform.Translate(14, 0, 0);
-			hudPosMarker.transform.Translate(-hudmovedelta, 0, 0);
-			destroyCurrentRoom();
-			currentRoomX --;
-			populateRoom(currentRoomX, currentRoomY);
-		}
-		if(linkRef.transform.position.x > 7)
-		{
-			linkRef.transform.Translate(-14, 0, 0);
 			hudPosMarker.transform.Translate(hudmovedelta, 0, 0);
-			destroyCurrentRoom();
 			currentRoomX ++;
-			populateRoom(currentRoomX, currentRoomY);
+			xMovement = -16;
+			yMovement = 0;
+		}
+		else if(d == 's')
+		{
+			currentRoomY ++;
+			hudPosMarker.transform.Translate(0, -hudmovedelta, 0);
+			xMovement = 0;
+			yMovement = 11;
+		}
+		else if(d == 'w')
+		{
+			currentRoomX --;
+			hudPosMarker.transform.Translate(-hudmovedelta, 0, 0);
+			xMovement = 16;
+			yMovement = 0;
+		}
+
+		linkRef.SendMessage("setMovementEnabled", false);
+		linkRef.SendMessage("setDesiredDisplacementTime", new Vector3(xMovement * 0.93f, yMovement * 0.9f, desiredDisplacementTime));
+
+		foreach(GameObject t in activeTiles)
+		{
+			t.SendMessage("setDesiredDisplacementTime", new Vector3(xMovement, yMovement, desiredDisplacementTime));
+		}
+		populateRoom(currentRoomX, currentRoomY, -xMovement * headStartFactor, -yMovement * headStartFactor);
+		foreach(GameObject t in activeTiles)
+		{
+			t.SendMessage("setDesiredDisplacementTime", new Vector3(xMovement, yMovement, desiredDisplacementTime));
 		}
 	}
 }
