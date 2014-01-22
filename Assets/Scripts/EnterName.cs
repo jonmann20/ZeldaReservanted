@@ -24,6 +24,8 @@ public class EnterName : MonoBehaviour {
 	};
 	Vector2 curPos = Vector2.zero;
 
+	bool isVisible = true;
+
 	void Start () {
 		font = Resources.Load<Font>("Fonts/prstartk");
 		
@@ -35,34 +37,55 @@ public class EnterName : MonoBehaviour {
 		style.fontSize = 7;
 		style.normal.textColor = Color.white;
 	}
-	
+
+	Vector2 mid = new Vector2(Screen.width/2, Screen.height/2);
+
 	void OnGUI(){
-		GUI.Label(new Rect(10, 10, 100, 100), cnt, style);
+		GUI.Label(new Rect(mid.x - 19, mid.y - 60, 100, 100), cnt, style);
 	}
 
 	void Update () {
+		print (Time.frameCount);
+
+		if(Time.frameCount % 7 == 0){
+			isVisible = !isVisible;
+			print (isVisible);
+			if(!isVisible){
+				renderer.enabled = false;
+			}
+			else {
+				renderer.enabled = true;
+			}
+		}
+
+
+
 		if(Input.GetButtonDown("Left") && transform.position.x > -97){
 			transform.position += new Vector3(-speed, 0);
 			--curPos.x;
 		}
 
-		if(Input.GetButtonDown("Right") && transform.position.x < 92){
+		if(Input.GetButtonDown("Right") && transform.position.x < 91){
 			transform.position += new Vector3(speed, 0);
 			++curPos.x;
 		}
 
-		if(Input.GetButtonDown("Up") && transform.position.y < 12){
+		if(Input.GetButtonDown("Up") && transform.position.y < -19){
 			transform.position += new Vector3(0, speed);
 			--curPos.y;
 		}
 
-		if(Input.GetButtonDown("Down") && transform.position.y > -43){
+		if(Input.GetButtonDown("Down") && transform.position.y > -63){
 			transform.position += new Vector3(0, -speed);
 			++curPos.y;
 		}
 
-		if(Input.GetKeyDown(KeyCode.Return)){
+		if(Input.GetButtonDown("Attack")){
 			cnt.text += charArr[(int)curPos.x, (int)curPos.y];
+		}
+
+		if(Input.GetButtonDown("SpecialAttack")){
+			cnt.text += charArr[10, 3];	// space
 		}
 
 	}
