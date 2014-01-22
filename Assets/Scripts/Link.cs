@@ -189,7 +189,7 @@ public class Link : MonoBehaviour {
 			speed = 0;
 		}
 		else {
-			speed = initSpeed;
+			//speed = initSpeed;
 		}
 	}
 
