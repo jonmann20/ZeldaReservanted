@@ -71,13 +71,13 @@ public class EnterName : MonoBehaviour {
 
 			switch(hrtPos){
 				case 0:
-					heartSelector.transform.position = new Vector2(-72, 70);
+					heartSelector.transform.position = new Vector2(-72, 75);
 					break;
 				case 1:
 					heartSelector.transform.position = new Vector2(-72, 50);
 					break;
 				case 2:
-					heartSelector.transform.position = new Vector2(-72, 30);
+					heartSelector.transform.position = new Vector2(-72, 25);
 					break;
 				case 3:
 					heartSelector.transform.position = new Vector2(-76, 3);
