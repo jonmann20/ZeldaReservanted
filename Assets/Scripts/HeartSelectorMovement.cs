@@ -8,12 +8,22 @@ public class HeartSelectorMovement : MonoBehaviour {
 	GUIContent cnt;
 	GUIStyle style;
 
+	string playerName;
+
+	GameObject redHeart;
+
+	void Awake(){
+		redHeart = Resources.Load<GameObject>("heartSelectorRegRed");
+	}
+
 	void Start(){
+		playerName = PlayerPrefs.GetString("name");
+
 		cnt = new GUIContent();
-		if(EnterName.name != ""){
+		if(playerName != ""){
 			hrtPos = 0;
 		}
-		cnt.text = EnterName.name;
+		cnt.text = playerName;
 
 		updateHrtPos();
 		
@@ -21,15 +31,21 @@ public class HeartSelectorMovement : MonoBehaviour {
 		style.font = Resources.Load<Font>("Fonts/prstartk");;
 		style.fontSize = 7;
 		style.normal.textColor = Color.white;
-	}
 
+		int n = PlayerPrefs.GetInt("numHearts");
+		for(int i=0; i < n; ++i){
+			GameObject h = new GameObject();
+			h = Instantiate(redHeart) as GameObject;
+			h.transform.position = new Vector3(21.7f + i*9, 19.2f);
+		}
+	}
 
 	void Update () {
 		if(Input.GetButtonDown("Select")){
 			++hrtPos;
 
 			if(hrtPos > 2){
-				if(EnterName.name != ""){
+				if(name != ""){
 					hrtPos = 0;
 				}
 				else {

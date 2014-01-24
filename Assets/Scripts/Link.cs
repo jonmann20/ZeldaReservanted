@@ -9,7 +9,6 @@ public class Link : MonoBehaviour {
 	public float topLeftX = -8f;
 	public float topLeftY = 3.5f;
 
-	float initSpeed;
 	char direction = 'n';
 	Vector3 previousPos;
 
@@ -23,7 +22,6 @@ public class Link : MonoBehaviour {
 	public bool movementEnabled = true;
 	
 	void Start () {
-		initSpeed = speed;
 		sprRend = renderer as SpriteRenderer;
 		sprRend.sprite = spr[2];
 	}
@@ -201,7 +199,7 @@ public class Link : MonoBehaviour {
 	public void setDesiredDisplacementTime(Vector3 v)
 	{
 		desiredDisplacement = new Vector2(v.x, v.y);
-		Debug.Log(v.x);
+		//Debug.Log(v.x);
 		desiredDisplacementTime = v.z;
 		deltaDisplacement = desiredDisplacement / (desiredDisplacementTime);
 	}

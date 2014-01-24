@@ -3,8 +3,6 @@ using System.Collections;
 
 public class EnterName : MonoBehaviour {
 
-	public static string name = "";
-
 	public float speed;
 
 	Font font;
@@ -145,7 +143,8 @@ public class EnterName : MonoBehaviour {
 		}
 
 		if(hrtPos == 1 && Input.GetButtonDown("Enter")){
-			name = cnt.text;
+			PlayerPrefs.SetString("name", cnt.text);
+			PlayerPrefs.SetInt("numHearts", 3);
 			Application.LoadLevel("loadSave");
 		}
 	}
