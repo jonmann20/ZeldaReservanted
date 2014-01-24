@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class EnterName : MonoBehaviour {
-	
+
+	public static string name = "";
+
 	public float speed;
 
 	Font font;
@@ -24,17 +26,19 @@ public class EnterName : MonoBehaviour {
 	};
 	Vector2 curPos = Vector2.zero;
 	int hrtPos = 0; // 0: first, 1: second, 2: third, 3: REGISTER, 4: END
-	
+
 	GameObject srcBeep, srcBomb;
 	public AudioClip beep, bomb;
 
-
-	GameObject heartSelector;
+	public GameObject namePosHighlightPrefab;
+	GameObject heartSelector, namePosHighlight;
 
 	void Awake(){
 		GameObject hSelPrefab = Resources.Load<GameObject>("heartSelectorReg");
 		heartSelector = Instantiate(hSelPrefab) as GameObject;
 		font = Resources.Load<Font>("Fonts/prstartk");
+
+		namePosHighlight = Instantiate(namePosHighlightPrefab) as GameObject;
 	}
 
 	void Start () {
@@ -58,14 +62,18 @@ public class EnterName : MonoBehaviour {
 	Vector2 mid = new Vector2(Screen.width/2, Screen.height/2);
 
 	void OnGUI(){
-		GUI.Label(new Rect(mid.x - 19, mid.y - 60, 100, 100), cnt, style);
+		GUI.Label(new Rect(mid.x - 25f, mid.y - 76.6f, 100, 100), cnt, style);
+
+		// strike #2 and #3
+		GUI.Label(new Rect(mid.x - 24, mid.y - 50, 100, 100), "---", style);
+		GUI.Label(new Rect(mid.x - 24, mid.y - 24, 100, 100), "---", style);
 	}
 
 	void Update(){
 		// heart
 		if(Input.GetButtonDown("Select")){
 
-			if(++hrtPos > 3){
+			if(++hrtPos > 1){//3
 				hrtPos = 0;
 			}
 
@@ -74,14 +82,15 @@ public class EnterName : MonoBehaviour {
 					heartSelector.transform.position = new Vector2(-72, 75);
 					break;
 				case 1:
-					heartSelector.transform.position = new Vector2(-72, 50);
+					//heartSelector.transform.position = new Vector2(-72, 50);
+				heartSelector.transform.position = new Vector2(-76, 3);
 					break;
-				case 2:
-					heartSelector.transform.position = new Vector2(-72, 25);
-					break;
-				case 3:
-					heartSelector.transform.position = new Vector2(-76, 3);
-					break;
+//				case 2:
+//					heartSelector.transform.position = new Vector2(-72, 25);
+//					break;
+//				case 3:
+//					heartSelector.transform.position = new Vector2(-76, 3);
+//					break;
 			}
 
 			playBeep();
@@ -90,6 +99,7 @@ public class EnterName : MonoBehaviour {
 		// blink highlighter
 		if(Time.frameCount % 7 == 0){
 			renderer.enabled = !renderer.enabled;
+			namePosHighlight.renderer.enabled = !namePosHighlight.renderer.enabled;
 		}
 
 		// highlighter movement
@@ -118,14 +128,25 @@ public class EnterName : MonoBehaviour {
 		}
 
 		// add char to name
-		if(Input.GetButtonDown("Attack")){
+		if(hrtPos == 0 && Input.GetButtonDown("Attack") && cnt.text.Length < 8){
 			cnt.text += charArr[(int)curPos.x, (int)curPos.y];
 			playBombSet();
+
+			if(cnt.text.Length != 7)
+				namePosHighlight.transform.position += new Vector3(7.2f, 0);
 		}
 
 		// add a space
-		if(Input.GetButtonDown("SpecialAttack")){
+		if(hrtPos == 0 && Input.GetButtonDown("SpecialAttack") && cnt.text.Length < 8){
 			cnt.text += charArr[10, 3];	// space
+
+			if(cnt.text.Length != 7)
+				namePosHighlight.transform.position += new Vector3(7.2f, 0);
+		}
+
+		if(hrtPos == 1 && Input.GetButtonDown("Enter")){
+			name = cnt.text;
+			Application.LoadLevel("loadSave");
 		}
 	}
 

@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnterName.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HeartSelectorMovement.cs">
     <Files>
-      <File FileName="Assets\Scripts\EnterName.cs" Line="80" Column="60" />
-      <File FileName="Assets\Scripts\EnterName.cs" Line="60" Column="15" />
+      <File FileName="Assets\Scripts\EnterName.cs" Line="80" Column="19" />
+      <File FileName="Assets\Scripts\HeartSelectorMovement.cs" Line="45" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
