@@ -80,7 +80,7 @@ TextureImporter:
         width: 13
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_4
       rect:
         serializedVersion: 2
@@ -89,7 +89,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_5
       rect:
         serializedVersion: 2
@@ -98,7 +98,7 @@ TextureImporter:
         width: 11
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_6
       rect:
         serializedVersion: 2
@@ -116,34 +116,25 @@ TextureImporter:
         width: 5
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_10
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 104
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_11
       rect:
         serializedVersion: 2
         x: 154
-        y: 88
+        y: 104
         width: 5
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_12
       rect:
         serializedVersion: 2
-        x: 161
-        y: 115
-        width: 6
-        height: 5
+        x: 159
+        y: 104
+        width: 11
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_13
       rect:
         serializedVersion: 2
@@ -152,7 +143,7 @@ TextureImporter:
         width: 15
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_14
       rect:
         serializedVersion: 2
@@ -161,7 +152,7 @@ TextureImporter:
         width: 20
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_15
       rect:
         serializedVersion: 2
@@ -170,7 +161,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_16
       rect:
         serializedVersion: 2
@@ -179,16 +170,16 @@ TextureImporter:
         width: 4
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_17
       rect:
         serializedVersion: 2
         x: 232
         y: 104
-        width: 24
+        width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_18
       rect:
         serializedVersion: 2
@@ -197,7 +188,7 @@ TextureImporter:
         width: 11
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_19
       rect:
         serializedVersion: 2
@@ -206,7 +197,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_20
       rect:
         serializedVersion: 2
@@ -215,16 +206,7 @@ TextureImporter:
         width: 5
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_21
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 99
-        width: 8
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_22
       rect:
         serializedVersion: 2
@@ -233,7 +215,7 @@ TextureImporter:
         width: 7
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_23
       rect:
         serializedVersion: 2
@@ -242,565 +224,16 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_24
       rect:
         serializedVersion: 2
-        x: 160
+        x: 159
         y: 88
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_25
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 77
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_26
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 77
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_27
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 77
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_28
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 77
         width: 9
-        height: 6
+        height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_29
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 77
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_30
-      rect:
-        serializedVersion: 2
-        x: 164
-        y: 77
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_31
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 77
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_32
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 77
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_33
-      rect:
-        serializedVersion: 2
-        x: 182
-        y: 77
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_34
-      rect:
-        serializedVersion: 2
-        x: 189
-        y: 77
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_35
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 77
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_36
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 77
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_37
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 77
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_38
-      rect:
-        serializedVersion: 2
-        x: 217
-        y: 77
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_39
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 77
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_40
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 77
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_41
-      rect:
-        serializedVersion: 2
-        x: 237
-        y: 77
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_42
-      rect:
-        serializedVersion: 2
-        x: 242
-        y: 77
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_43
-      rect:
-        serializedVersion: 2
-        x: 251
-        y: 77
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_44
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 77
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_45
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 76
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_46
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 64
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_47
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 64
-        width: 9
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_48
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 64
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_49
-      rect:
-        serializedVersion: 2
-        x: 153
-        y: 64
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_50
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 63
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_51
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 64
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_52
-      rect:
-        serializedVersion: 2
-        x: 173
-        y: 64
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_53
-      rect:
-        serializedVersion: 2
-        x: 179
-        y: 64
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_54
-      rect:
-        serializedVersion: 2
-        x: 185
-        y: 64
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_55
-      rect:
-        serializedVersion: 2
-        x: 191
-        y: 64
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_56
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 64
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_57
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 64
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_58
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 64
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_59
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 63
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_60
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 64
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_61
-      rect:
-        serializedVersion: 2
-        x: 229
-        y: 64
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_62
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 63
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_63
-      rect:
-        serializedVersion: 2
-        x: 247
-        y: 64
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_64
-      rect:
-        serializedVersion: 2
-        x: 253
-        y: 64
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_65
-      rect:
-        serializedVersion: 2
-        x: 259
-        y: 64
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_66
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 64
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_67
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 63
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_68
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 51
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_69
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 51
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_70
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 50
-        width: 11
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_71
-      rect:
-        serializedVersion: 2
-        x: 157
-        y: 51
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_72
-      rect:
-        serializedVersion: 2
-        x: 163
-        y: 51
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_73
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 51
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_74
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 51
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_75
-      rect:
-        serializedVersion: 2
-        x: 183
-        y: 51
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_76
-      rect:
-        serializedVersion: 2
-        x: 189
-        y: 51
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_77
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 51
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_78
-      rect:
-        serializedVersion: 2
-        x: 202
-        y: 51
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_79
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 51
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_81
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 37
-        width: 48
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_83
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 37
-        width: 48
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_84
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 21
-        width: 48
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_85
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 21
-        width: 48
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_86
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 5
-        width: 48
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: treasures_87
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 5
-        width: 48
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: treasures_88
       rect:
         serializedVersion: 2
@@ -906,6 +339,51 @@ TextureImporter:
         x: 152
         y: 32
         width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treasures_95
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 106
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treasures_96
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 104
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treasures_97
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 88
+        width: 5
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treasures_36
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 104
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: treasures_37
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 104
+        width: 7
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}

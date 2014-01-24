@@ -18,7 +18,7 @@ public class HeartSelectorMovement : MonoBehaviour {
 
 	void Start(){
 		playerName = PlayerPrefs.GetString("name");
-
+		print (playerName);
 		cnt = new GUIContent();
 		if(playerName != ""){
 			hrtPos = 0;
@@ -29,7 +29,7 @@ public class HeartSelectorMovement : MonoBehaviour {
 		
 		style = new GUIStyle();
 		style.font = Resources.Load<Font>("Fonts/prstartk");;
-		style.fontSize = 7;
+		style.fontSize = 32;
 		style.normal.textColor = Color.white;
 
 		int n = PlayerPrefs.GetInt("numHearts");
@@ -84,6 +84,6 @@ public class HeartSelectorMovement : MonoBehaviour {
 	}
 	
 	void OnGUI(){
-		GUI.Label(new Rect(Screen.width/2 - 54f, Screen.height/2 - 29.5f, 100, 100), cnt, style);
+		GUI.Label(new Rect(Screen.width/3.8f, Screen.height/2.65f, 100, 100), cnt, style);
 	}
 }

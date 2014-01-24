@@ -45,7 +45,7 @@ public class EnterName : MonoBehaviour {
 		
 		style = new GUIStyle();
 		style.font = font;
-		style.fontSize = 7;
+		style.fontSize = 32;
 		style.normal.textColor = Color.white;
 
 		srcBeep = new GameObject("srcBeep");
@@ -57,14 +57,12 @@ public class EnterName : MonoBehaviour {
 		srcBomb.audio.clip = bomb;
 	}
 
-	Vector2 mid = new Vector2(Screen.width/2, Screen.height/2);
-
 	void OnGUI(){
-		GUI.Label(new Rect(mid.x - 25f, mid.y - 76.6f, 100, 100), cnt, style);
+		GUI.Label(new Rect(Screen.width/2.6f, Screen.height/5.6f, 100, 100), cnt, style);
 
 		// strike #2 and #3
-		GUI.Label(new Rect(mid.x - 24, mid.y - 50, 100, 100), "---", style);
-		GUI.Label(new Rect(mid.x - 24, mid.y - 24, 100, 100), "---", style);
+		GUI.Label(new Rect(Screen.width/2.6f, Screen.height/3.4f, 100, 100), "---", style);
+		GUI.Label(new Rect(Screen.width/2.6f, Screen.height/2.5f, 100, 100), "---", style);
 	}
 
 	void Update(){
@@ -126,20 +124,24 @@ public class EnterName : MonoBehaviour {
 		}
 
 		// add char to name
+		float letterSpacing = 134f;
+
 		if(hrtPos == 0 && Input.GetButtonDown("Attack") && cnt.text.Length < 8){
 			cnt.text += charArr[(int)curPos.x, (int)curPos.y];
 			playBombSet();
 
-			if(cnt.text.Length != 7)
-				namePosHighlight.transform.position += new Vector3(7.2f, 0);
+			if(cnt.text.Length != 8){
+				namePosHighlight.transform.position += new Vector3(Screen.width/letterSpacing, 0);
+			}
 		}
 
 		// add a space
 		if(hrtPos == 0 && Input.GetButtonDown("SpecialAttack") && cnt.text.Length < 8){
 			cnt.text += charArr[10, 3];	// space
 
-			if(cnt.text.Length != 7)
-				namePosHighlight.transform.position += new Vector3(7.2f, 0);
+			if(cnt.text.Length != 8){
+				namePosHighlight.transform.position += new Vector3(Screen.width/letterSpacing, 0);
+			}
 		}
 
 		if(hrtPos == 1 && Input.GetButtonDown("Enter")){
