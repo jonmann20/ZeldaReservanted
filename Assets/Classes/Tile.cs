@@ -5,7 +5,7 @@ public class Tile {
 	//local coords (coords in room)
 	int xcoord, ycoord;
 	public string hexval;
-
+	public int index;
 	//denote enemy / item placement on tile
 	public string spawnval;
 

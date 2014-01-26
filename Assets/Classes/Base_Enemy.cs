@@ -1,56 +1,34 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-public class Link : MonoBehaviour {
-	
-	public Sprite[] spr;
-	float speed = 1200;
-	
+public class Base_Enemy : MonoBehaviour {
+
+	public float speed = 450;
 	public float topLeftX = -8f;
 	public float topLeftY = 3.5f;
-	
-	float initSpeed;
-	char direction = 'n';
-	Vector3 previousPos;
-	
-	SpriteRenderer sprRend;
-	
-	//SCREEN SCROLL
-	Vector2 desiredDisplacement;
-	Vector2 deltaDisplacement;
-	float desiredDisplacementTime;
-	
-	public bool movementEnabled = true;
-	
-	void Start () {
-		initSpeed = speed;
-		sprRend = renderer as SpriteRenderer;
-		sprRend.sprite = spr[2];
-	}
-	
-	void Update () {
-		rigidbody2D.velocity = Vector2.zero;
-		if(movementEnabled)
-			movement();
-		
-		//SCREEN SCROLL
-		if(desiredDisplacementTime > 0)
-		{
+	public SpriteRenderer sprRend;
+	protected char direction = 'n';
 
-			transform.Translate(deltaDisplacement);
-			desiredDisplacementTime --;
-		}
+	void Start () {
+		sprRend = renderer as SpriteRenderer;
 	}
-	
-	void FixedUpdate()
+
+	void killEnemy()
 	{
-		previousPos = transform.position;
+		Destroy(this.gameObject);
 	}
+
+	void Update () {
 	
-	float vert, hor;
-	void movement(){
-		vert = Input.GetAxis("Vertical");
-		hor = Input.GetAxis("Horizontal");
+	}
+
+	void OnCollisionEnter2D(Collision2D col){
+		killEnemy ();
+	}
+
+	protected void movement(){
+		float vert = Input.GetAxis("Vertical");
+		float hor = Input.GetAxis("Horizontal");
 		
 		//VERTICAL MOVEMENT
 		if(Input.GetButton("Up") || Input.GetButton("Down")){
@@ -116,11 +94,6 @@ public class Link : MonoBehaviour {
 				}
 			}
 		}
-		
-		if(direction == 'n') sprRend.sprite = spr[2];
-		else if(direction == 's') sprRend.sprite = spr[0];
-		else if(direction == 'e') sprRend.sprite = spr[3];
-		else if(direction == 'w') sprRend.sprite = spr[1];
 	}
 	
 	float getNearestHorizontalGridLine(float ypos, char direction)
@@ -129,12 +102,12 @@ public class Link : MonoBehaviour {
 		float closestDown = topLeftY - 50;
 		
 		while(closestUp >= ypos)
-			closestUp --;
-		closestUp ++;
+			closestUp -= 2;
+		closestUp += 2;
 		
 		while(closestDown <= ypos) 
-			closestDown ++;
-		closestDown --;
+			closestDown += 2;
+		closestDown -= 2;
 		
 		float closestUpDiff = Mathf.Abs(closestUp - ypos);
 		float closestDownDiff = Mathf.Abs(closestDown - ypos);
@@ -158,12 +131,12 @@ public class Link : MonoBehaviour {
 		float closestLeft = topLeftX - 2;
 		
 		while(closestRight >= xpos)
-			closestRight --;
-		closestRight ++;
+			closestRight -= 2;
+		closestRight += 2;
 		
 		while(closestLeft <= xpos) 
-			closestLeft ++;
-		closestLeft --;
+			closestLeft += 2;
+		closestLeft -= 2;
 		
 		float closestLeftDiff = Mathf.Abs(closestLeft - xpos);
 		float closestRightDiff = Mathf.Abs(closestRight - xpos);
@@ -179,22 +152,5 @@ public class Link : MonoBehaviour {
 			else if(closestRightDiff  * 1.2f <= closestLeftDiff) return -closestRightDiff;
 		}
 		return 0;
-	}
-	
-	void OnCollisionEnter2D(Collision2D col){
-		//transform.Translate(-1, 0, 0);
-		//transform.position = previousPos;
-	}
-	
-	public void setMovementEnabled(bool b)
-	{
-		movementEnabled = b;
-	}
-	
-	public void setDesiredDisplacementTime(Vector3 v)
-	{
-		desiredDisplacement = new Vector2(v.x, v.y);
-		desiredDisplacementTime = v.z;
-		deltaDisplacement = desiredDisplacement / (desiredDisplacementTime);
 	}
 }

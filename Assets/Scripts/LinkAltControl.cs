@@ -1,10 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-public class Link : MonoBehaviour {
+public class LinkAltControl : MonoBehaviour {
 	
 	public Sprite[] spr;
-	float speed = 1200;
+	public float speed = 450;
 	
 	public float topLeftX = -8f;
 	public float topLeftY = 3.5f;
@@ -29,14 +29,12 @@ public class Link : MonoBehaviour {
 	}
 	
 	void Update () {
-		rigidbody2D.velocity = Vector2.zero;
 		if(movementEnabled)
 			movement();
 		
 		//SCREEN SCROLL
 		if(desiredDisplacementTime > 0)
 		{
-
 			transform.Translate(deltaDisplacement);
 			desiredDisplacementTime --;
 		}
@@ -49,13 +47,14 @@ public class Link : MonoBehaviour {
 	
 	float vert, hor;
 	void movement(){
+		rigidbody2D.velocity = Vector2.zero;
 		vert = Input.GetAxis("Vertical");
 		hor = Input.GetAxis("Horizontal");
-		
+
 		//VERTICAL MOVEMENT
 		if(Input.GetButton("Up") || Input.GetButton("Down")){
 			float diffFromGridLine = getNearestVerticalGridLine(transform.position.x, direction);
-			
+
 			if(Mathf.Abs(diffFromGridLine) < 0.2f)
 			{
 				transform.Translate(new Vector2(-diffFromGridLine, 0));
@@ -73,25 +72,31 @@ public class Link : MonoBehaviour {
 			{
 				if(diffFromGridLine > 0)
 				{
+					//transform.Translate(new Vector2(-speed * Time.deltaTime, 0));
+					//vel = new Vector2(-speed * Time.deltaTime, 0);
 					rigidbody2D.AddForce(new Vector2(-speed * Time.deltaTime, 0));
 					direction = 'w';
 				}
 				else if(diffFromGridLine < 0)
 				{
+					//transform.Translate(new Vector2(speed * Time.deltaTime, 0));
+					//vel = new Vector2(speed * Time.deltaTime, 0);
 					rigidbody2D.AddForce(new Vector2(speed * Time.deltaTime, 0));
 					direction = 'e';
 				}
 			}
+
+
 		}
-		
+
 		//HORIZONTAL MOVEMENT
 		if(vert == 0 && (Input.GetButton("Left") || Input.GetButton("Right"))){
 			float diffFromGridLine = getNearestHorizontalGridLine(transform.position.y, direction);
-			
+
 			if(Mathf.Abs(diffFromGridLine) < 0.2f)
 			{
 				transform.Translate(new Vector2(0, diffFromGridLine));
-				
+
 				if(hor == 1f){
 					rigidbody2D.AddForce(new Vector2(speed * Time.deltaTime, 0));
 					direction = 'e';
@@ -116,7 +121,7 @@ public class Link : MonoBehaviour {
 				}
 			}
 		}
-		
+
 		if(direction == 'n') sprRend.sprite = spr[2];
 		else if(direction == 's') sprRend.sprite = spr[0];
 		else if(direction == 'e') sprRend.sprite = spr[3];
@@ -184,6 +189,13 @@ public class Link : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 		//transform.Translate(-1, 0, 0);
 		//transform.position = previousPos;
+		Debug.Log("Collision2D");
+		if(col.gameObject.tag == "wall"){
+			speed = 0;
+		}
+		else {
+			speed = initSpeed;
+		}
 	}
 	
 	public void setMovementEnabled(bool b)
@@ -194,6 +206,7 @@ public class Link : MonoBehaviour {
 	public void setDesiredDisplacementTime(Vector3 v)
 	{
 		desiredDisplacement = new Vector2(v.x, v.y);
+		Debug.Log(v.x);
 		desiredDisplacementTime = v.z;
 		deltaDisplacement = desiredDisplacement / (desiredDisplacementTime);
 	}

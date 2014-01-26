@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameplayMain : MonoBehaviour {
+
 	//overworld map is 256x88 tiles
 	public GameObject MapTile;
-	Tile[] storedTiles = new Tile[22528]; //fills to 22441 //Odd: 256x88 tiles says there should be 22528 tiles
+	public GameObject Enemy;
+	Tile[] storedTiles = new Tile[22528];
 	Room[,] storedRooms = new Room[16,8];
 
 	GameObject[] activeTiles = new GameObject[176];
-	GameObject[] newTiles = new GameObject[176];
+	GameObject[] oldTiles = new GameObject[176];
+	//TODO: NOT CURRENTLY DESTROYING ALL ENEMIES
+
+	List<GameObject> enemies = new List<GameObject>();
 
 	public float topLeftX = -8f;
 	public float topLeftY = 3.5f;
@@ -19,19 +25,31 @@ public class GameplayMain : MonoBehaviour {
 	int currentRoomX = 7;
 	int currentRoomY = 7;
 
+	//DEBUG
+	GameObject cam;
+	debugMapScript dms;
+	MapTileScript highlightedTile;
+
 	//SCREEN SCROLL
 	bool screenScrolling = false;
 	float desiredDisplacementTime = 0;
 	
 	void Start () {
+		//CAM AND DEBUG GUI
+		cam = GameObject.Find("MainCamera");
+		dms = cam.GetComponent("debugMapScript") as debugMapScript;
+
 		linkRef = GameObject.FindGameObjectsWithTag("Player")[0];
 		hudPosMarker = GameObject.FindGameObjectsWithTag("hudposmarker")[0];
-		//Debug.Log("attempting load");
-		//overworld dataset via http://inventwithpython.com/blog/2012/12/10/8-bit-nes-legend-of-zelda-map-data/
-		TextAsset txt = Resources.Load("nes_zelda_overworld_tile_map") as TextAsset;
-		string content = txt.text;
 
-		//STRING PARSE
+		//LOAD PREFABS
+		MapTile = Resources.Load("MapTile") as GameObject;
+		Enemy = Resources.Load("octorok(red)") as GameObject;
+
+		//overworld dataset via http://inventwithpython.com/blog/2012/12/10/8-bit-nes-legend-of-zelda-map-data/
+
+		//PARSE TILE MAP
+		string content = ((TextAsset)Resources.Load("nes_zelda_overworld_tile_map")).text;
 		string temp = "";
 		int tileNumber = 0;
 		for(int i = 0; i < content.Length; i++)
@@ -44,16 +62,41 @@ public class GameplayMain : MonoBehaviour {
 			else
 			{
 				Tile tempTile = new Tile(tileNumber, tileNumber, temp, "-1");
+				tempTile.index = tileNumber;
 				storedTiles[tileNumber] = tempTile;
 				tileNumber ++;
 				temp = "";
 			}
 		}
-		//File seems to end in space || endline
-		//So no 'final tile'
-		Debug.Log("finished loading " + tileNumber + " tiles");
+
+		//PARSE ENEMY TILE MAP
+		string enemyContent = ((TextAsset)Resources.Load("EnemyTileMap")).text;
+		temp = "";
+		tileNumber = 0;
+		for(int i = 0; i < enemyContent.Length; i++)
+		{
+			char currentChar = enemyContent[i];
+			if(currentChar != ' ')
+			{
+				temp += currentChar;
+			}
+			else
+			{
+				storedTiles[tileNumber].spawnval = temp;
+				tileNumber ++;
+				temp = "";
+			}
+		}
+
+
 		initRooms();
+		initEnemyMap();
 		populateRoom(currentRoomX, currentRoomY, 0, 0);
+	}
+
+	void initEnemyMap()
+	{
+
 	}
 
 	void populateRoom(int roomX, int roomY, float offsetX, float offsetY)
@@ -63,16 +106,36 @@ public class GameplayMain : MonoBehaviour {
 		{
 			for(int j = 0; j < 11; j++)
 			{
-				//Debug.Log("i: " + i + " j: " + j + "hex: " + storedRooms[roomX, roomY].tiles[i, j].hexval);
 				GameObject go = Instantiate(MapTile, new Vector3(topLeftX + i + offsetX, topLeftY - j + offsetY, 0), Quaternion.identity) as GameObject;
+				MapTileScript mts = go.GetComponent("MapTileScript") as MapTileScript;
+
 				go.SendMessage("setHexVal", storedRooms[roomX, roomY].tiles[i, j].hexval);
+				go.SendMessage("setSpawnVal", storedRooms[roomX, roomY].tiles[i, j].spawnval);
+				go.SendMessage("setIndex", storedRooms[roomX, roomY].tiles[i, j].index);
 				go.SendMessage("updateSprite");
 
 				activeTiles[objectCount] = go;
 				objectCount ++; 
 			}
 		}
-		//Debug.Log("finished populating room (" + roomX + ", " + roomY + ")");
+	}
+
+	void initEnemiesCurrentRoom()
+	{
+		print(enemies.Count);
+		foreach(GameObject t in activeTiles)
+		{
+			MapTileScript mts = t.GetComponent("MapTileScript") as MapTileScript;
+			if(mts.spawnVal != "00")
+			{
+				float xVal = t.transform.position.x + 0.5f;
+				float yVal = t.transform.position.y - 0.5f;
+				GameObject enemy = Instantiate(Enemy, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+				enemies.Add(enemy);
+			}
+		}
+		print("# enemies:");
+		print(enemies.Count);
 	}
 
 	//Iterate through the 16x8 possible rooms, initializing them.
@@ -85,7 +148,6 @@ public class GameplayMain : MonoBehaviour {
 				fillRoom (i, j);
 			}
 		}
-		//Debug.Log("Finished init rooms");
 	}
 
 	//fill room at coordinates (<roomX>, <roomY>) with tiles from dataset
@@ -103,7 +165,6 @@ public class GameplayMain : MonoBehaviour {
 
 		Room tempRoom = new Room(roomX, roomY, roomTiles);
 		storedRooms[roomX, roomY] = tempRoom;
-		//Debug.Log("finished filling room (" + roomX + ", " + roomY + ")");
 	}
 
 	void destroyCurrentRoom()
@@ -115,10 +176,25 @@ public class GameplayMain : MonoBehaviour {
 	}
 
 	void Update () {
+		//RAYCAST STUFF
+		RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+		if(hit.collider != null && Input.GetMouseButtonDown(0))
+		{
+			MapTileScript s = hit.collider.gameObject.GetComponent("MapTileScript") as MapTileScript;
+			dms.setText(s.spawnVal, s.hexVal);
+			highlightedTile = s;
+		}
+
+
 		if(desiredDisplacementTime > 0)
 			desiredDisplacementTime --;
 		else
 		{
+			if(screenScrolling)
+			{
+				disposeOfArray(oldTiles);
+				initEnemiesCurrentRoom();
+			}
 			screenScrolling = false;
 			//NOT EFFICIENT
 			linkRef.SendMessage("setMovementEnabled", true);
@@ -194,17 +270,53 @@ public class GameplayMain : MonoBehaviour {
 			yMovement = 0;
 		}
 
+		//DISPOSE OF ENEMIES
+		print(enemies.Count);
+		foreach(GameObject e in enemies) 
+		{
+			if(e != null)
+				Destroy(e);
+		}
+		enemies.Clear();
+
 		linkRef.SendMessage("setMovementEnabled", false);
 		linkRef.SendMessage("setDesiredDisplacementTime", new Vector3(xMovement * 0.93f, yMovement * 0.9f, desiredDisplacementTime));
 
+		int counter = 0;
 		foreach(GameObject t in activeTiles)
 		{
 			t.SendMessage("setDesiredDisplacementTime", new Vector3(xMovement, yMovement, desiredDisplacementTime));
+			oldTiles[counter] = t;
+			counter ++;
 		}
 		populateRoom(currentRoomX, currentRoomY, -xMovement * headStartFactor, -yMovement * headStartFactor);
 		foreach(GameObject t in activeTiles)
 		{
 			t.SendMessage("setDesiredDisplacementTime", new Vector3(xMovement, yMovement, desiredDisplacementTime));
 		}
+	}
+
+	void disposeOfArray(GameObject[] oldTiles)
+	{
+		foreach(GameObject g in oldTiles)
+		{
+			Destroy(g);
+		}
+	}
+
+	public void setNewSpawnValueForCurrentTile(string s)
+	{
+		highlightedTile.spawnVal = s;
+		storedTiles[highlightedTile.index].spawnval = s;
+	}
+
+	public void saveEnemyMapFile()
+	{
+		string s = "";
+		foreach(Tile t in storedTiles)
+		{
+			s += t.spawnval + ' ';
+		}
+		System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
 	}
 }

@@ -4,27 +4,45 @@ using System.Collections;
 public class MapTileScript : MonoBehaviour {
 	
 	public string hexVal;
+	public string spawnVal;
+	//Use this index to locate Tile file in StoredTiles
+	public int index;
 
 	Vector2 desiredDisplacement;
 	Vector2 deltaDisplacement;
 	float desiredDisplacementTime;
 
+	BoxCollider2D c2d;
+
 	void Awake()
 	{
 		desiredDisplacementTime = 0;
+		c2d = gameObject.AddComponent("BoxCollider2D") as BoxCollider2D;
+		c2d.isTrigger = true;
 	}
 
 	public void setHexVal(string h)
 	{
 		hexVal = h;
-		//Debug.Log(tile00);
+	}
+	public void setSpawnVal(string s)
+	{
+		spawnVal = s;
+	}
+	public void setIndex(int i)
+	{
+		index = i;
 	}
 	public void updateSprite()
 	{
 		GetComponent<SpriteRenderer>().sprite = MapTileEnum.getTileSprite(hexVal);
-		if(!MapTileEnum.isSolid(hexVal))
+		if(MapTileEnum.isSolid(hexVal) || MapTileEnum.isWater(hexVal))
 		{
-			//Do something?
+			c2d.isTrigger = false;
+		}
+		if(spawnVal != "00")
+		{
+			//Instantiate();
 		}
 	}
 

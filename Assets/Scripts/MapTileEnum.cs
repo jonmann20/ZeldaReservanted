@@ -3,7 +3,13 @@ using System.Collections;
 
 public class MapTileEnum : MonoBehaviour {
 
-	static string[] solidTiles = { "2e", "2f", "30", "42", "43", "44", "28", "29", "2a", "1b", "07", "15", "01", "3c", "3d", "3e" };
+	static string[] solidTiles = { "01", "03", "04", "05", "07", "08", "09", "0a", "0b", "0d", "0f", "10", "11", "15", "16", "17",
+									"19", "1b", "1c", "1d", "1e", "1f", "21", "22", "23", "25", "28", "29", "2a", "2b", "2c", "2d",
+									"2e", "2f", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "3c", "3d", "3e", "3f",
+									"41", "42", "43", "44", "45", "47", "48", "49", "4a", "4b", "4d", "96", "9c"};
+
+	static string[] waterTiles = { "14", "1a", "20", "46", "50", "51", "52", "56", "57", "58", "5c", "5d", "5e", "64", "65", "66",
+									"6a", "6b", "6c", "70", "71", "72", "78", "79", "7a", "7e", "7f", "80", "84", "85", "86", "90"};
 
 	static Sprite[] mapTileSprites;
 
@@ -164,14 +170,9 @@ public class MapTileEnum : MonoBehaviour {
 	void Awake()
 	{
 		init();
-		Debug.Log("FUDGE!");
-		Debug.Log(mapTileSprites.Length);
-		//Debug.Log(tile00);
 		int i = 0;
 		foreach( Sprite s in mapTileSprites)
 		{
-			Debug.Log(i);
-			Debug.Log(s);
 			i ++;
 		}
 	}
@@ -496,6 +497,13 @@ public class MapTileEnum : MonoBehaviour {
 	public static bool isSolid(string hex)
 	{
 		foreach(string s in solidTiles)
+			if(s == hex) return true;
+		return false;
+	}
+
+	public static bool isWater(string hex)
+	{
+		foreach(string s in waterTiles)
 			if(s == hex) return true;
 		return false;
 	}
