@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{9D9A55C7-5C93-3FBB-9E90-A8D8B155E444}") = "ZeldaReservanted", "Assembly-CSharp.csproj", "{77C74923-C0A3-232B-A747-27C678311190}"
+Project("{49D25630-0EE9-B076-8C0E-B3D17C6DCD1E}") = "zeldareservanted", "Assembly-CSharp.csproj", "{1AECD4D2-1DB1-845A-BB82-E27FB544D9B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{77C74923-C0A3-232B-A747-27C678311190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77C74923-C0A3-232B-A747-27C678311190}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77C74923-C0A3-232B-A747-27C678311190}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77C74923-C0A3-232B-A747-27C678311190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AECD4D2-1DB1-845A-BB82-E27FB544D9B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AECD4D2-1DB1-845A-BB82-E27FB544D9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AECD4D2-1DB1-845A-BB82-E27FB544D9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AECD4D2-1DB1-845A-BB82-E27FB544D9B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																														GlobalSection(MonoDevelopProperties) = preSolution
+																																																																														GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
