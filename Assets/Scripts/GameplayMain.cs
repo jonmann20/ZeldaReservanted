@@ -51,7 +51,7 @@ public class GameplayMain : MonoBehaviour {
 		}
 		//File seems to end in space || endline
 		//So no 'final tile'
-		Debug.Log("finished loading " + tileNumber + " tiles");
+		//Debug.Log("finished loading " + tileNumber + " tiles");
 		initRooms();
 		populateRoom(currentRoomX, currentRoomY, 0, 0);
 	}

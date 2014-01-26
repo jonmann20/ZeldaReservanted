@@ -164,15 +164,15 @@ public class MapTileEnum : MonoBehaviour {
 	void Awake()
 	{
 		init();
-		Debug.Log("FUDGE!");
-		Debug.Log(mapTileSprites.Length);
+		//Debug.Log("FUDGE!");
+		//Debug.Log(mapTileSprites.Length);
 		//Debug.Log(tile00);
 		int i = 0;
 		foreach( Sprite s in mapTileSprites)
 		{
-			Debug.Log(i);
-			Debug.Log(s);
-			i ++;
+			//Debug.Log(i);
+			//Debug.Log(s);
+			++i;
 		}
 	}
 

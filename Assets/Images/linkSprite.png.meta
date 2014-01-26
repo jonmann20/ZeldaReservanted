@@ -45,7 +45,7 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: linkSprite_0
+    - name: linkSr
       rect:
         serializedVersion: 2
         x: 0
@@ -53,8 +53,8 @@ TextureImporter:
         width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: linkSprite_1
+      pivot: {x: .5, y: .5}
+    - name: linkW
       rect:
         serializedVersion: 2
         x: 30
@@ -62,8 +62,8 @@ TextureImporter:
         width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: linkSprite_2
+      pivot: {x: .5, y: .5}
+    - name: linkNr
       rect:
         serializedVersion: 2
         x: 62
@@ -71,8 +71,8 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: linkSprite_3
+      pivot: {x: .5, y: .5}
+    - name: linkEr
       rect:
         serializedVersion: 2
         x: 91
@@ -80,7 +80,7 @@ TextureImporter:
         width: 14
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_4
       rect:
         serializedVersion: 2
@@ -89,7 +89,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_5
       rect:
         serializedVersion: 2
@@ -98,7 +98,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_6
       rect:
         serializedVersion: 2
@@ -107,7 +107,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_7
       rect:
         serializedVersion: 2
@@ -116,7 +116,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_8
       rect:
         serializedVersion: 2
@@ -125,7 +125,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_9
       rect:
         serializedVersion: 2
@@ -134,7 +134,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_10
       rect:
         serializedVersion: 2
@@ -143,7 +143,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_11
       rect:
         serializedVersion: 2
@@ -152,8 +152,8 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: linkSprite_12
+      pivot: {x: .5, y: .5}
+    - name: linkS
       rect:
         serializedVersion: 2
         x: 1
@@ -161,8 +161,8 @@ TextureImporter:
         width: 13
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: linkSprite_13
+      pivot: {x: .5, y: .5}
+    - name: linkWr
       rect:
         serializedVersion: 2
         x: 31
@@ -170,8 +170,8 @@ TextureImporter:
         width: 14
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: linkSprite_14
+      pivot: {x: .5, y: .5}
+    - name: linkN
       rect:
         serializedVersion: 2
         x: 62
@@ -179,8 +179,8 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: linkSprite_15
+      pivot: {x: .5, y: .5}
+    - name: linkE
       rect:
         serializedVersion: 2
         x: 90
@@ -188,7 +188,7 @@ TextureImporter:
         width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_16
       rect:
         serializedVersion: 2
@@ -197,7 +197,7 @@ TextureImporter:
         width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_17
       rect:
         serializedVersion: 2
@@ -206,7 +206,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_18
       rect:
         serializedVersion: 2
@@ -215,7 +215,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_19
       rect:
         serializedVersion: 2
@@ -224,7 +224,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_20
       rect:
         serializedVersion: 2
@@ -233,7 +233,7 @@ TextureImporter:
         width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_21
       rect:
         serializedVersion: 2
@@ -242,7 +242,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_22
       rect:
         serializedVersion: 2
@@ -251,7 +251,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_23
       rect:
         serializedVersion: 2
@@ -260,7 +260,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_24
       rect:
         serializedVersion: 2
@@ -269,7 +269,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_25
       rect:
         serializedVersion: 2
@@ -278,7 +278,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_26
       rect:
         serializedVersion: 2
@@ -287,7 +287,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_27
       rect:
         serializedVersion: 2
@@ -296,7 +296,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_28
       rect:
         serializedVersion: 2
@@ -305,7 +305,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_29
       rect:
         serializedVersion: 2
@@ -314,7 +314,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_30
       rect:
         serializedVersion: 2
@@ -323,7 +323,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_31
       rect:
         serializedVersion: 2
@@ -332,7 +332,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_32
       rect:
         serializedVersion: 2
@@ -341,7 +341,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_33
       rect:
         serializedVersion: 2
@@ -350,7 +350,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_34
       rect:
         serializedVersion: 2
@@ -359,7 +359,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_35
       rect:
         serializedVersion: 2
@@ -368,8 +368,8 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: linkSprite_36
+      pivot: {x: .5, y: .5}
+    - name: linkSws
       rect:
         serializedVersion: 2
         x: 0
@@ -377,8 +377,8 @@ TextureImporter:
         width: 16
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: linkSprite_37
+      pivot: {x: .5, y: .5}
+    - name: linkWws
       rect:
         serializedVersion: 2
         x: 24
@@ -386,8 +386,8 @@ TextureImporter:
         width: 27
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: linkSprite_38
+      pivot: {x: .5, y: .5}
+    - name: linkNws
       rect:
         serializedVersion: 2
         x: 60
@@ -395,8 +395,8 @@ TextureImporter:
         width: 16
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: linkSprite_39
+      pivot: {x: .5, y: .5}
+    - name: linkEws
       rect:
         serializedVersion: 2
         x: 84
@@ -404,7 +404,7 @@ TextureImporter:
         width: 27
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_40
       rect:
         serializedVersion: 2
@@ -413,7 +413,7 @@ TextureImporter:
         width: 16
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_41
       rect:
         serializedVersion: 2
@@ -422,7 +422,7 @@ TextureImporter:
         width: 27
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_42
       rect:
         serializedVersion: 2
@@ -431,7 +431,7 @@ TextureImporter:
         width: 16
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_43
       rect:
         serializedVersion: 2
@@ -440,7 +440,7 @@ TextureImporter:
         width: 27
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_44
       rect:
         serializedVersion: 2
@@ -449,7 +449,7 @@ TextureImporter:
         width: 16
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_45
       rect:
         serializedVersion: 2
@@ -458,7 +458,7 @@ TextureImporter:
         width: 27
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_46
       rect:
         serializedVersion: 2
@@ -467,7 +467,7 @@ TextureImporter:
         width: 16
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_47
       rect:
         serializedVersion: 2
@@ -476,7 +476,7 @@ TextureImporter:
         width: 27
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_48
       rect:
         serializedVersion: 2
@@ -485,7 +485,7 @@ TextureImporter:
         width: 16
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_49
       rect:
         serializedVersion: 2
@@ -494,7 +494,7 @@ TextureImporter:
         width: 27
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_50
       rect:
         serializedVersion: 2
@@ -503,7 +503,7 @@ TextureImporter:
         width: 16
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_51
       rect:
         serializedVersion: 2
@@ -512,7 +512,7 @@ TextureImporter:
         width: 27
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_52
       rect:
         serializedVersion: 2
@@ -521,7 +521,7 @@ TextureImporter:
         width: 16
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_53
       rect:
         serializedVersion: 2
@@ -530,7 +530,7 @@ TextureImporter:
         width: 27
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_54
       rect:
         serializedVersion: 2
@@ -539,7 +539,7 @@ TextureImporter:
         width: 16
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_55
       rect:
         serializedVersion: 2
@@ -548,7 +548,7 @@ TextureImporter:
         width: 27
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_56
       rect:
         serializedVersion: 2
@@ -557,7 +557,7 @@ TextureImporter:
         width: 16
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_57
       rect:
         serializedVersion: 2
@@ -566,7 +566,7 @@ TextureImporter:
         width: 27
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_58
       rect:
         serializedVersion: 2
@@ -575,7 +575,7 @@ TextureImporter:
         width: 16
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_59
       rect:
         serializedVersion: 2
@@ -584,7 +584,7 @@ TextureImporter:
         width: 27
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_60
       rect:
         serializedVersion: 2
@@ -593,7 +593,7 @@ TextureImporter:
         width: 13
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_61
       rect:
         serializedVersion: 2
@@ -602,7 +602,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_62
       rect:
         serializedVersion: 2
@@ -611,7 +611,7 @@ TextureImporter:
         width: 4
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_63
       rect:
         serializedVersion: 2
@@ -620,7 +620,7 @@ TextureImporter:
         width: 16
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_64
       rect:
         serializedVersion: 2
@@ -629,7 +629,7 @@ TextureImporter:
         width: 4
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_65
       rect:
         serializedVersion: 2
@@ -638,7 +638,7 @@ TextureImporter:
         width: 13
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_66
       rect:
         serializedVersion: 2
@@ -647,7 +647,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_67
       rect:
         serializedVersion: 2
@@ -656,7 +656,7 @@ TextureImporter:
         width: 4
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_68
       rect:
         serializedVersion: 2
@@ -665,7 +665,7 @@ TextureImporter:
         width: 16
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_69
       rect:
         serializedVersion: 2
@@ -674,7 +674,7 @@ TextureImporter:
         width: 4
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_70
       rect:
         serializedVersion: 2
@@ -683,7 +683,7 @@ TextureImporter:
         width: 13
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_71
       rect:
         serializedVersion: 2
@@ -692,7 +692,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_72
       rect:
         serializedVersion: 2
@@ -701,7 +701,7 @@ TextureImporter:
         width: 4
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_73
       rect:
         serializedVersion: 2
@@ -710,7 +710,7 @@ TextureImporter:
         width: 16
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_74
       rect:
         serializedVersion: 2
@@ -719,7 +719,7 @@ TextureImporter:
         width: 4
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_75
       rect:
         serializedVersion: 2
@@ -728,7 +728,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_76
       rect:
         serializedVersion: 2
@@ -737,7 +737,7 @@ TextureImporter:
         width: 11
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_77
       rect:
         serializedVersion: 2
@@ -746,7 +746,7 @@ TextureImporter:
         width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_78
       rect:
         serializedVersion: 2
@@ -755,7 +755,7 @@ TextureImporter:
         width: 10
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_79
       rect:
         serializedVersion: 2
@@ -764,7 +764,7 @@ TextureImporter:
         width: 10
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_80
       rect:
         serializedVersion: 2
@@ -773,7 +773,7 @@ TextureImporter:
         width: 10
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_81
       rect:
         serializedVersion: 2
@@ -782,7 +782,7 @@ TextureImporter:
         width: 7
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_82
       rect:
         serializedVersion: 2
@@ -791,8 +791,8 @@ TextureImporter:
         width: 16
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: linkSprite_83
+      pivot: {x: .5, y: .5}
+    - name: linkWS
       rect:
         serializedVersion: 2
         x: 64
@@ -800,7 +800,7 @@ TextureImporter:
         width: 7
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_84
       rect:
         serializedVersion: 2
@@ -809,7 +809,7 @@ TextureImporter:
         width: 16
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_85
       rect:
         serializedVersion: 2
@@ -818,7 +818,7 @@ TextureImporter:
         width: 5
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_86
       rect:
         serializedVersion: 2
@@ -827,7 +827,7 @@ TextureImporter:
         width: 5
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_87
       rect:
         serializedVersion: 2
@@ -836,7 +836,7 @@ TextureImporter:
         width: 7
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_88
       rect:
         serializedVersion: 2
@@ -845,7 +845,7 @@ TextureImporter:
         width: 7
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_89
       rect:
         serializedVersion: 2
@@ -854,7 +854,7 @@ TextureImporter:
         width: 13
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_90
       rect:
         serializedVersion: 2
@@ -863,7 +863,7 @@ TextureImporter:
         width: 8
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_91
       rect:
         serializedVersion: 2
@@ -872,7 +872,7 @@ TextureImporter:
         width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_92
       rect:
         serializedVersion: 2
@@ -881,7 +881,7 @@ TextureImporter:
         width: 6
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_93
       rect:
         serializedVersion: 2
@@ -890,7 +890,7 @@ TextureImporter:
         width: 6
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_94
       rect:
         serializedVersion: 2
@@ -899,7 +899,7 @@ TextureImporter:
         width: 16
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_95
       rect:
         serializedVersion: 2
@@ -908,7 +908,7 @@ TextureImporter:
         width: 16
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_96
       rect:
         serializedVersion: 2
@@ -917,7 +917,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_97
       rect:
         serializedVersion: 2
@@ -926,7 +926,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_98
       rect:
         serializedVersion: 2
@@ -935,7 +935,7 @@ TextureImporter:
         width: 7
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_99
       rect:
         serializedVersion: 2
@@ -944,7 +944,7 @@ TextureImporter:
         width: 16
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_100
       rect:
         serializedVersion: 2
@@ -953,7 +953,7 @@ TextureImporter:
         width: 7
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_101
       rect:
         serializedVersion: 2
@@ -962,7 +962,7 @@ TextureImporter:
         width: 16
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_102
       rect:
         serializedVersion: 2
@@ -971,7 +971,7 @@ TextureImporter:
         width: 5
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_103
       rect:
         serializedVersion: 2
@@ -980,7 +980,7 @@ TextureImporter:
         width: 16
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_104
       rect:
         serializedVersion: 2
@@ -989,7 +989,7 @@ TextureImporter:
         width: 5
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_105
       rect:
         serializedVersion: 2
@@ -998,7 +998,7 @@ TextureImporter:
         width: 16
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_106
       rect:
         serializedVersion: 2
@@ -1007,7 +1007,7 @@ TextureImporter:
         width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_107
       rect:
         serializedVersion: 2
@@ -1016,7 +1016,7 @@ TextureImporter:
         width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_108
       rect:
         serializedVersion: 2
@@ -1025,7 +1025,7 @@ TextureImporter:
         width: 7
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_109
       rect:
         serializedVersion: 2
@@ -1034,7 +1034,7 @@ TextureImporter:
         width: 7
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_110
       rect:
         serializedVersion: 2
@@ -1043,7 +1043,7 @@ TextureImporter:
         width: 8
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_111
       rect:
         serializedVersion: 2
@@ -1052,7 +1052,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_112
       rect:
         serializedVersion: 2
@@ -1061,7 +1061,7 @@ TextureImporter:
         width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_113
       rect:
         serializedVersion: 2
@@ -1070,7 +1070,7 @@ TextureImporter:
         width: 7
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_114
       rect:
         serializedVersion: 2
@@ -1079,7 +1079,7 @@ TextureImporter:
         width: 16
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_115
       rect:
         serializedVersion: 2
@@ -1088,7 +1088,7 @@ TextureImporter:
         width: 7
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_116
       rect:
         serializedVersion: 2
@@ -1097,7 +1097,7 @@ TextureImporter:
         width: 16
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_117
       rect:
         serializedVersion: 2
@@ -1106,7 +1106,7 @@ TextureImporter:
         width: 5
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_118
       rect:
         serializedVersion: 2
@@ -1115,7 +1115,7 @@ TextureImporter:
         width: 16
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_119
       rect:
         serializedVersion: 2
@@ -1124,7 +1124,7 @@ TextureImporter:
         width: 5
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_120
       rect:
         serializedVersion: 2
@@ -1133,7 +1133,7 @@ TextureImporter:
         width: 16
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_121
       rect:
         serializedVersion: 2
@@ -1142,7 +1142,7 @@ TextureImporter:
         width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_122
       rect:
         serializedVersion: 2
@@ -1151,7 +1151,7 @@ TextureImporter:
         width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_123
       rect:
         serializedVersion: 2
@@ -1160,7 +1160,7 @@ TextureImporter:
         width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_124
       rect:
         serializedVersion: 2
@@ -1169,7 +1169,7 @@ TextureImporter:
         width: 8
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_125
       rect:
         serializedVersion: 2
@@ -1178,7 +1178,7 @@ TextureImporter:
         width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_126
       rect:
         serializedVersion: 2
@@ -1187,7 +1187,7 @@ TextureImporter:
         width: 11
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_127
       rect:
         serializedVersion: 2
@@ -1196,7 +1196,7 @@ TextureImporter:
         width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_128
       rect:
         serializedVersion: 2
@@ -1205,7 +1205,7 @@ TextureImporter:
         width: 7
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_129
       rect:
         serializedVersion: 2
@@ -1214,7 +1214,7 @@ TextureImporter:
         width: 16
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_130
       rect:
         serializedVersion: 2
@@ -1223,7 +1223,7 @@ TextureImporter:
         width: 7
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_131
       rect:
         serializedVersion: 2
@@ -1232,7 +1232,7 @@ TextureImporter:
         width: 16
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_132
       rect:
         serializedVersion: 2
@@ -1241,7 +1241,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_133
       rect:
         serializedVersion: 2
@@ -1250,7 +1250,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_134
       rect:
         serializedVersion: 2
@@ -1259,7 +1259,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_135
       rect:
         serializedVersion: 2
@@ -1268,7 +1268,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_136
       rect:
         serializedVersion: 2
@@ -1277,7 +1277,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_137
       rect:
         serializedVersion: 2
@@ -1286,7 +1286,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_138
       rect:
         serializedVersion: 2
@@ -1295,7 +1295,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_139
       rect:
         serializedVersion: 2
@@ -1304,7 +1304,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_140
       rect:
         serializedVersion: 2
@@ -1313,7 +1313,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_141
       rect:
         serializedVersion: 2
@@ -1322,7 +1322,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_142
       rect:
         serializedVersion: 2
@@ -1331,7 +1331,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_143
       rect:
         serializedVersion: 2
@@ -1340,7 +1340,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_144
       rect:
         serializedVersion: 2
@@ -1349,7 +1349,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_145
       rect:
         serializedVersion: 2
@@ -1358,7 +1358,7 @@ TextureImporter:
         width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_146
       rect:
         serializedVersion: 2
@@ -1367,7 +1367,7 @@ TextureImporter:
         width: 8
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_147
       rect:
         serializedVersion: 2
@@ -1376,7 +1376,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_148
       rect:
         serializedVersion: 2
@@ -1385,7 +1385,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_149
       rect:
         serializedVersion: 2
@@ -1394,7 +1394,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_150
       rect:
         serializedVersion: 2
@@ -1403,7 +1403,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_151
       rect:
         serializedVersion: 2
@@ -1412,7 +1412,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_152
       rect:
         serializedVersion: 2
@@ -1421,7 +1421,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_153
       rect:
         serializedVersion: 2
@@ -1430,7 +1430,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
     - name: linkSprite_154
       rect:
         serializedVersion: 2
@@ -1439,6 +1439,6 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
