@@ -36,6 +36,8 @@ public partial class Link : MonoBehaviour {
 	void Start(){
 		sprRend = renderer as SpriteRenderer;
 		sprRend.sprite = spr[2];
+
+		woodenSwordPrefab = Resources.Load<GameObject>("WoodenSword");
 	}
 
 	void Update(){
