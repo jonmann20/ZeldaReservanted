@@ -1,11 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Link\LinkAction.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameplayMain.cs">
     <Files>
+      <File FileName="Assets\Scripts\GameplayMain.cs" Line="323" Column="1" />
       <File FileName="Assets\Scripts\Link\Link.cs" Line="1" Column="1" />
       <File FileName="Assets\ItemSprite.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Link\LinkAction.cs" Line="11" Column="27" />
-      <File FileName="Assets\Scripts\Link\Link.cs" Line="37" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

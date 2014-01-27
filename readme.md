@@ -20,3 +20,7 @@ Graphics Resources:
 Audio Resources:
 ----------------
 * [Soundtracks](http://www.zeldadungeon.net/Zelda01-the-legend-of-zelda-soundtrack-music.php)
+
+Playable Build:
+---------------
+* [Web Build](http://jonmann20.github.io/z/)

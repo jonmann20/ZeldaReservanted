@@ -317,6 +317,6 @@ public class GameplayMain : MonoBehaviour {
 		{
 			s += t.spawnval + ' ';
 		}
-		System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
+		//System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
 	}
 }
