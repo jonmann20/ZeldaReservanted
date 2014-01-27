@@ -42,7 +42,7 @@ public partial class Link : MonoBehaviour {
 
 	void Update(){
 		rigidbody2D.velocity = Vector2.zero;
-		if(movementEnabled){
+		if(movementEnabled && !isAttacking){
 			checkMovement();
 		}
 
