@@ -189,7 +189,6 @@ public class LinkAltControl : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 		//transform.Translate(-1, 0, 0);
 		//transform.position = previousPos;
-		Debug.Log("Collision2D");
 		if(col.gameObject.tag == "wall"){
 			speed = 0;
 		}
@@ -206,7 +205,6 @@ public class LinkAltControl : MonoBehaviour {
 	public void setDesiredDisplacementTime(Vector3 v)
 	{
 		desiredDisplacement = new Vector2(v.x, v.y);
-		Debug.Log(v.x);
 		desiredDisplacementTime = v.z;
 		deltaDisplacement = desiredDisplacement / (desiredDisplacementTime);
 	}

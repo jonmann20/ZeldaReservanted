@@ -68,7 +68,6 @@ public class GameplayMain : MonoBehaviour {
 				temp = "";
 			}
 		}
-<<<<<<< HEAD
 
 		//PARSE ENEMY TILE MAP
 		string enemyContent = ((TextAsset)Resources.Load("EnemyTileMap")).text;
@@ -89,12 +88,6 @@ public class GameplayMain : MonoBehaviour {
 			}
 		}
 
-
-=======
-		//File seems to end in space || endline
-		//So no 'final tile'
-		//Debug.Log("finished loading " + tileNumber + " tiles");
->>>>>>> f60057d2e0d70f3a9c85ef550685e80bfdd6bec9
 		initRooms();
 		initEnemyMap();
 		populateRoom(currentRoomX, currentRoomY, 0, 0);
