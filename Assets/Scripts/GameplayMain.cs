@@ -196,6 +196,7 @@ public class GameplayMain : MonoBehaviour {
 			}
 			screenScrolling = false;
 			//NOT EFFICIENT
+
 			linkRef.SendMessage("setMovementEnabled", true);
 		}
 
