@@ -261,7 +261,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: linkSprite_24
+    - name: linkActionS
       rect:
         serializedVersion: 2
         x: 0
@@ -270,7 +270,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: linkSprite_25
+    - name: linkActionW
       rect:
         serializedVersion: 2
         x: 30
@@ -279,7 +279,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: linkSprite_26
+    - name: linkActionN
       rect:
         serializedVersion: 2
         x: 60
@@ -288,7 +288,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: linkSprite_27
+    - name: linkActionE
       rect:
         serializedVersion: 2
         x: 90
@@ -774,7 +774,7 @@ TextureImporter:
         height: 4
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: linkSprite_81
+    - name: woodenSwordS
       rect:
         serializedVersion: 2
         x: 4
@@ -783,7 +783,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: linkSprite_82
+    - name: woodenSwordW
       rect:
         serializedVersion: 2
         x: 30
@@ -792,7 +792,7 @@ TextureImporter:
         height: 7
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: linkWS
+    - name: woodenSwordN
       rect:
         serializedVersion: 2
         x: 64
@@ -801,7 +801,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: linkSprite_84
+    - name: woodenSwordE
       rect:
         serializedVersion: 2
         x: 90
