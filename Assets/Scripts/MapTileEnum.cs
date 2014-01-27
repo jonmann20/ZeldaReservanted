@@ -170,10 +170,22 @@ public class MapTileEnum : MonoBehaviour {
 	void Awake()
 	{
 		init();
+<<<<<<< HEAD
 		int i = 0;
 		foreach( Sprite s in mapTileSprites)
 		{
 			i ++;
+=======
+		//Debug.Log("FUDGE!");
+		//Debug.Log(mapTileSprites.Length);
+		//Debug.Log(tile00);
+		int i = 0;
+		foreach( Sprite s in mapTileSprites)
+		{
+			//Debug.Log(i);
+			//Debug.Log(s);
+			++i;
+>>>>>>> f60057d2e0d70f3a9c85ef550685e80bfdd6bec9
 		}
 	}
 

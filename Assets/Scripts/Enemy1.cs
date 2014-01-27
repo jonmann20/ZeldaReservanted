@@ -15,6 +15,10 @@ public class Enemy1 : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col){
 		//transform.Translate(1, 0, 0);
+<<<<<<< HEAD
+=======
+		//Debug.Log("Collision2D");
+>>>>>>> f60057d2e0d70f3a9c85ef550685e80bfdd6bec9
 		if(col.gameObject.tag == "wall"){
 
 		}

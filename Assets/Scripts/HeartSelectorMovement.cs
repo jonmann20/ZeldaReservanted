@@ -2,14 +2,88 @@
 using System.Collections;
 
 public class HeartSelectorMovement : MonoBehaviour {
+	
+	int hrtPos = 1;
 
-	public float dtY;
-	bool onReg = true;
+	GUIContent cnt;
+	GUIStyle style;
+
+	string playerName;
+
+	GameObject redHeart;
+
+	void Awake(){
+		redHeart = Resources.Load<GameObject>("heartSelectorRegRed");
+	}
+
+	void Start(){
+		playerName = PlayerPrefs.GetString("name");
+		print (playerName);
+		cnt = new GUIContent();
+		if(playerName != ""){
+			hrtPos = 0;
+		}
+		cnt.text = playerName;
+
+		updateHrtPos();
+		
+		style = new GUIStyle();
+		style.font = Resources.Load<Font>("Fonts/prstartk");;
+		style.fontSize = 32;
+		style.normal.textColor = Color.white;
+
+		int n = PlayerPrefs.GetInt("numHearts");
+		for(int i=0; i < n; ++i){
+			GameObject h = new GameObject();
+			h = Instantiate(redHeart) as GameObject;
+			h.transform.position = new Vector3(21.7f + i*9, 19.2f);
+		}
+	}
 
 	void Update () {
 		if(Input.GetButtonDown("Select")){
-			transform.Translate(new Vector3(0, onReg ? -dtY : dtY, 0));
-			onReg = !onReg;
+			++hrtPos;
+
+			if(hrtPos > 2){
+				if(name != ""){
+					hrtPos = 0;
+				}
+				else {
+					hrtPos = 1;
+				}
+			}
+
+			updateHrtPos();
 		}
+
+		if(Input.GetButtonDown("Enter")){
+			if(hrtPos == 0){
+				Application.LoadLevel("main");
+			}
+			else if(hrtPos == 1){
+				Application.LoadLevel("registerName");
+			}
+			else if(hrtPos == 2){
+				//Application.LoadLevel("eliminationMode");
+			}
+		}
+	}
+
+	void updateHrtPos(){
+		switch(hrtPos){
+			case 0:
+				transform.position = new Vector3(-89f, 29f, 0);
+				break;
+			case 1:
+				transform.position = new Vector3(-89f, -52.5f, 0);
+				break;
+			case 2: 
+				transform.position = new Vector3(-89f, -66.5f, 0);
+				break;
+		}
+	}
+	
+	void OnGUI(){
+		GUI.Label(new Rect(Screen.width/3.8f, Screen.height/2.65f, 100, 100), cnt, style);
 	}
 }
