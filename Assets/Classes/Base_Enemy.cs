@@ -23,7 +23,7 @@ public class Base_Enemy : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
-		killEnemy ();
+		//killEnemy ();
 	}
 
 	protected void movement(){

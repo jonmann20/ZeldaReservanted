@@ -41,38 +41,33 @@ public partial class Link : MonoBehaviour {
 	}
 
 	void setItem(){
-		float offsetX = 0f, offsetY = 0f;
-		int idx = 0;
+		float offsetX = 0, offsetY = 0;
+		Quaternion rot = Quaternion.identity;
 
 		switch(dir){
 			case SpriteDir.UP:
 			case SpriteDir.UP_STEP:
 				offsetY = itemOffset;
-				idx = 0;
 				break;
 			case SpriteDir.RIGHT:
 			case SpriteDir.RIGHT_STEP:
 				offsetX = itemOffset;
-				idx = 1;
+				rot = Quaternion.Euler(0, 0, -90);
 				break;
 			case SpriteDir.DOWN:
 			case SpriteDir.DOWN_STEP:
 				offsetY = -itemOffset;
-				idx = 2;
+				rot = Quaternion.Euler(0, 0, 180);
 				break;
 			case SpriteDir.LEFT:
 			case SpriteDir.LEFT_STEP:
 				offsetX = -itemOffset;
-				idx = 3;
+				rot = Quaternion.Euler(0, 0, 90);
 				break;
 		}
 
 		Vector3 newPos = new Vector3(transform.position.x + offsetX, transform.position.y + offsetY, transform.position.z);
-		
-		woodenSword = Instantiate(woodenSwordPrefab, newPos, Quaternion.identity) as GameObject;
-		SpriteRenderer sp = woodenSword.renderer as SpriteRenderer;
-		ItemSprite item = woodenSword.GetComponent<ItemSprite>();
-		sp.sprite = item.spr[idx];
+		woodenSword = Instantiate(woodenSwordPrefab, newPos, rot) as GameObject;
 	}
 	
 	IEnumerator finishAttack(SpriteDir d){
