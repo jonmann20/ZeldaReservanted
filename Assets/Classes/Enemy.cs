@@ -1,31 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Base_Enemy : MonoBehaviour {
+public abstract class Enemy : MonoBehaviour {
+
+	protected GameObject audioSrc;
+	protected AudioClip enemyZap;
+	protected int health;
+	public Sprite[] spr;
 
 	public float speed = 450;
 	public float topLeftX = -8f;
 	public float topLeftY = 3.5f;
 	public SpriteRenderer sprRend;
-	protected char direction = 'n';
+	protected SpriteDir direction;
 
-	void Start () {
-		sprRend = renderer as SpriteRenderer;
+
+	public abstract void Movement();
+
+	void Awake(){
+		enemyZap = Resources.Load<AudioClip>("Audio/soundEffects/enemyZapped");
+		
+		audioSrc = new GameObject("audioSrc");
+		audioSrc.AddComponent<AudioSource>();
+		audioSrc.audio.clip = enemyZap;
 	}
 
-	void killEnemy()
-	{
+	public void kill(){
+		audioSrc.audio.Play();
 		Destroy(this.gameObject);
 	}
 
-	void Update () {
-	
-	}
 
-	void OnCollisionEnter2D(Collision2D col){
-		//killEnemy ();
-	}
-
+	/*
 	protected void movement(){
 		float vert = Input.GetAxis("Vertical");
 		float hor = Input.GetAxis("Horizontal");
@@ -153,4 +159,5 @@ public class Base_Enemy : MonoBehaviour {
 		}
 		return 0;
 	}
+*/
 }
