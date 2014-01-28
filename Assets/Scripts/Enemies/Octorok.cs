@@ -57,18 +57,18 @@ public class Octorok : Enemy {
 		float speed = 1.5f;
 		
 		switch(dirToMove){
-		case 0:
-			transform.Translate(0, speed*Time.deltaTime, 0);
-			break;
-		case 1:
-			transform.Translate(speed*Time.deltaTime, 0, 0);
-			break;
-		case 2:
-			transform.Translate(0, -speed*Time.deltaTime, 0);
-			break;
-		case 3:
-			transform.Translate(-speed*Time.deltaTime, 0, 0);
-			break;
+			case 0:
+				transform.Translate(0, speed*Time.deltaTime, 0);
+				break;
+			case 1:
+				transform.Translate(speed*Time.deltaTime, 0, 0);
+				break;
+			case 2:
+				transform.Translate(0, -speed*Time.deltaTime, 0);
+				break;
+			case 3:
+				transform.Translate(-speed*Time.deltaTime, 0, 0);
+				break;
 		}
 		distMoved += speed*Time.deltaTime;
 		

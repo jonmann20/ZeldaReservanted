@@ -23,6 +23,8 @@ public abstract class Enemy : MonoBehaviour {
 		audioSrc = new GameObject("audioSrc");
 		audioSrc.AddComponent<AudioSource>();
 		audioSrc.audio.clip = enemyZap;
+
+		audioSrc.transform.parent = GameplayMain.EnemyAudioSourceHolder.transform;
 	}
 
 	public void kill(){

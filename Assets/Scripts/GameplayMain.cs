@@ -25,6 +25,9 @@ public class GameplayMain : MonoBehaviour {
 	int currentRoomX = 7;
 	int currentRoomY = 7;
 
+	GameObject LvlCamera;
+	public static GameObject EnemyAudioSourceHolder;
+
 	//DEBUG
 	GameObject cam;
 	debugMapScript dms;
@@ -33,18 +36,27 @@ public class GameplayMain : MonoBehaviour {
 	//SCREEN SCROLL
 	bool screenScrolling = false;
 	float desiredDisplacementTime = 0;
-	
+
+	void Awake(){
+		LvlCamera = GameObject.Find("LvlCamera");
+
+		EnemyAudioSourceHolder = new GameObject("EnemyAudioSourceHolder");
+		EnemyAudioSourceHolder.transform.parent = LvlCamera.transform;
+	}
+
 	void Start () {
 		//CAM AND DEBUG GUI
 		cam = GameObject.Find("MainCamera");
 		dms = cam.GetComponent("debugMapScript") as debugMapScript;
+
 
 		linkRef = GameObject.FindGameObjectsWithTag("Player")[0];
 		hudPosMarker = GameObject.FindGameObjectsWithTag("hudposmarker")[0];
 
 		//LOAD PREFABS
 		MapTile = Resources.Load("MapTile") as GameObject;
-		Enemy = Resources.Load("octorok(red)") as GameObject;
+		//Enemy = Resources.Load("Enemies/OctorokRed") as GameObject;
+		Enemy = Resources.Load("Enemies/TektikeBlue") as GameObject;
 
 		//overworld dataset via http://inventwithpython.com/blog/2012/12/10/8-bit-nes-legend-of-zelda-map-data/
 
@@ -100,12 +112,16 @@ public class GameplayMain : MonoBehaviour {
 
 	void populateRoom(int roomX, int roomY, float offsetX, float offsetY)
 	{
+		GameObject TileHolder = new GameObject("TileHolder");
+		TileHolder.transform.parent = LvlCamera.transform;
+
 		int objectCount = 0;
 		for(int i = 0; i < 16; i++)
 		{
 			for(int j = 0; j < 11; j++)
 			{
 				GameObject go = Instantiate(MapTile, new Vector3(topLeftX + i + offsetX, topLeftY - j + offsetY, 0), Quaternion.identity) as GameObject;
+				go.transform.parent = TileHolder.transform;
 				MapTileScript mts = go.GetComponent("MapTileScript") as MapTileScript;
 
 				go.SendMessage("setHexVal", storedRooms[roomX, roomY].tiles[i, j].hexval);
@@ -121,7 +137,9 @@ public class GameplayMain : MonoBehaviour {
 
 	void initEnemiesCurrentRoom()
 	{
-		print(enemies.Count);
+		GameObject EnemyHolder = new GameObject("EnemyHolder");
+		EnemyHolder.transform.parent = LvlCamera.transform;
+
 		foreach(GameObject t in activeTiles)
 		{
 			MapTileScript mts = t.GetComponent("MapTileScript") as MapTileScript;
@@ -130,11 +148,11 @@ public class GameplayMain : MonoBehaviour {
 				float xVal = t.transform.position.x + 0.5f;
 				float yVal = t.transform.position.y - 0.5f;
 				GameObject enemy = Instantiate(Enemy, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+				enemy.transform.parent = EnemyHolder.transform;
 				enemies.Add(enemy);
 			}
 		}
-		print("# enemies:");
-		print(enemies.Count);
+		print("# enemies: " + enemies.Count);
 	}
 
 	//Iterate through the 16x8 possible rooms, initializing them.
@@ -271,7 +289,7 @@ public class GameplayMain : MonoBehaviour {
 		}
 
 		//DISPOSE OF ENEMIES
-		print(enemies.Count);
+		//print(enemies.Count);
 		foreach(GameObject e in enemies) 
 		{
 			if(e != null)
