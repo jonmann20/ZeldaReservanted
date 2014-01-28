@@ -32,8 +32,11 @@ public partial class Link : MonoBehaviour {
 	Vector2 desiredDisplacement, deltaDisplacement;
 	float desiredDisplacementTime, vert, hor;
 
+	public float initHealth = 3, health = 3;
 
 	void Start(){
+		//initHealth = health = PlayerPrefs.GetInt("numHearts");
+
 		sprRend = renderer as SpriteRenderer;
 		sprRend.sprite = spr[8];	// NOTE: this actually gets overwritten by movement logic
 

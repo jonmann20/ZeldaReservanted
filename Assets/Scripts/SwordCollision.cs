@@ -8,4 +8,8 @@ public class SwordCollision : MonoBehaviour {
 			Destroy(col.gameObject);
 		}
 	}
+
+	void OnBecameInvisible(){
+		Destroy(gameObject);
+	}
 }

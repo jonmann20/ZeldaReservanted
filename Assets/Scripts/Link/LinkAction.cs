@@ -7,7 +7,7 @@ using System.Collections;
 
 public partial class Link : MonoBehaviour {
 
-	GameObject woodenSwordPrefab, woodenSword;
+	GameObject woodenSwordPrefab, woodenSword, woodenSwordProjectile;
 	float itemOffset = 0.93f;
 
 	void checkAction(){
@@ -16,31 +16,59 @@ public partial class Link : MonoBehaviour {
 				case SpriteDir.UP:
 				case SpriteDir.UP_STEP:
 					sprRend.sprite = spr[4];
-					setItem();
+					woodenSword = getItem();
 					break;
 				case SpriteDir.DOWN:
 				case SpriteDir.DOWN_STEP:
 					sprRend.sprite = spr[6];
-					setItem();
+					woodenSword = getItem();
 					break;
 				case SpriteDir.RIGHT:
 				case SpriteDir.RIGHT_STEP:
 					sprRend.sprite = spr[5];
-					setItem();
+					woodenSword = getItem();
 					break;
 				case SpriteDir.LEFT:
 				case SpriteDir.LEFT_STEP:
 					sprRend.sprite = spr[7];
-					setItem();
+					woodenSword = getItem();
 					break;
 			}
 			
 			isAttacking = true;
 			StartCoroutine("finishAttack", dir);
+
+			if(health == initHealth){
+				shootSword();	
+			}
 		}
 	}
 
-	void setItem(){
+	void shootSword(){
+		float speed = 5;
+
+		woodenSwordProjectile = getItem();
+		Quaternion r = woodenSwordProjectile.transform.localRotation;
+
+		if(Mathf.Approximately(r.eulerAngles.z, 0)){
+			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(0, speed, 0);
+		}
+		else if(Mathf.Approximately(r.eulerAngles.z, 270)){
+			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(speed, 0, 0);
+		}
+		else if(Mathf.Approximately(r.eulerAngles.z, 180)){
+			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(0, -speed, 0);
+		}
+		else if(Mathf.Approximately(r.eulerAngles.z, 90)){
+			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(-speed, 0, 0);
+		}
+	}
+
+//	IEnumerator blinkShot(){
+//		yield return new WaitForSeconds(0.1f);
+//	}
+
+	GameObject getItem(){
 		float offsetX = 0, offsetY = 0;
 		Quaternion rot = Quaternion.identity;
 
@@ -52,7 +80,7 @@ public partial class Link : MonoBehaviour {
 			case SpriteDir.RIGHT:
 			case SpriteDir.RIGHT_STEP:
 				offsetX = itemOffset;
-				rot = Quaternion.Euler(0, 0, -90);
+				rot = Quaternion.Euler(0, 0, 270);
 				break;
 			case SpriteDir.DOWN:
 			case SpriteDir.DOWN_STEP:
@@ -67,7 +95,7 @@ public partial class Link : MonoBehaviour {
 		}
 
 		Vector3 newPos = new Vector3(transform.position.x + offsetX, transform.position.y + offsetY, transform.position.z);
-		woodenSword = Instantiate(woodenSwordPrefab, newPos, rot) as GameObject;
+		return Instantiate(woodenSwordPrefab, newPos, rot) as GameObject;
 	}
 	
 	IEnumerator finishAttack(SpriteDir d){
@@ -94,7 +122,7 @@ public partial class Link : MonoBehaviour {
 				break;
 		}
 
-		Destroy(woodenSword);
 		isAttacking = false;
+		Destroy(woodenSword);
 	}
 }
