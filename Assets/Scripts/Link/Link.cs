@@ -21,16 +21,9 @@ public partial class Link : MonoBehaviour {
 
 	public bool movementEnabled = true;
 	public bool isAttacking = false;
-
-
+	
 	SpriteRenderer sprRend;
-
-<<<<<<< HEAD
-	SpriteDir dir = SpriteDir.UP;
-=======
-	SpriteDir dir = SpriteDir.UP_STEP;
 	Vector3 previousPos;
->>>>>>> 766cdd86d3c5c94e3051b64bd15590145835f619
 
 	// SCREEN SCROLL
 	Vector2 desiredDisplacement, deltaDisplacement;
@@ -38,7 +31,10 @@ public partial class Link : MonoBehaviour {
 
 	public float initHealth = 3, health = 3;
 
+	SpriteDir dir = SpriteDir.UP;
+
 	void Start(){
+		previousPos = transform.position;
 		//initHealth = health = PlayerPrefs.GetInt("numHearts");
 
 		sprRend = renderer as SpriteRenderer;
@@ -48,14 +44,6 @@ public partial class Link : MonoBehaviour {
 	}
 
 	void Update(){
-<<<<<<< HEAD
-=======
-		rigidbody2D.velocity = Vector2.zero;
-		if(movementEnabled && !isAttacking){
-			checkMovement();
-		}
-
->>>>>>> 766cdd86d3c5c94e3051b64bd15590145835f619
 		if(!isAttacking){
 			checkAction();
 		}
@@ -71,8 +59,9 @@ public partial class Link : MonoBehaviour {
 	void FixedUpdate()
 	{
 		rigidbody2D.velocity = Vector2.zero;
-		if(movementEnabled){
+		if(movementEnabled && !isAttacking){
 			checkMovement();
 		}
+		previousPos = transform.position;
 	}
 }
