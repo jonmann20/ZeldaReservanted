@@ -26,7 +26,6 @@ public partial class Link : MonoBehaviour {
 	SpriteRenderer sprRend;
 
 	SpriteDir dir = SpriteDir.UP;
-	Vector3 previousPos;
 
 	// SCREEN SCROLL
 	Vector2 desiredDisplacement, deltaDisplacement;
@@ -39,11 +38,6 @@ public partial class Link : MonoBehaviour {
 	}
 
 	void Update(){
-		rigidbody2D.velocity = Vector2.zero;
-		if(movementEnabled){
-			checkMovement();
-		}
-
 		if(!isAttacking){
 			checkAction();
 		}
@@ -56,7 +50,11 @@ public partial class Link : MonoBehaviour {
 		}
 	}
 
-	void FixedUpdate(){
-		previousPos = transform.position;
+	void FixedUpdate()
+	{
+		rigidbody2D.velocity = Vector2.zero;
+		if(movementEnabled){
+			checkMovement();
+		}
 	}
 }

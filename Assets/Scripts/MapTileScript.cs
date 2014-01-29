@@ -3,8 +3,8 @@ using System.Collections;
 
 public class MapTileScript : MonoBehaviour {
 	
-	public string hexVal;
-	public string spawnVal;
+	public string tilecode;
+	public string code;
 	//Use this index to locate Tile file in StoredTiles
 	public int index;
 
@@ -21,13 +21,13 @@ public class MapTileScript : MonoBehaviour {
 		c2d.isTrigger = true;
 	}
 
-	public void setHexVal(string h)
+	public void setTileCode(string tc)
 	{
-		hexVal = h;
+		tilecode = tc;
 	}
-	public void setSpawnVal(string s)
+	public void setCode(string c)
 	{
-		spawnVal = s;
+		code = c;
 	}
 	public void setIndex(int i)
 	{
@@ -35,12 +35,12 @@ public class MapTileScript : MonoBehaviour {
 	}
 	public void updateSprite()
 	{
-		GetComponent<SpriteRenderer>().sprite = MapTileEnum.getTileSprite(hexVal);
-		if(MapTileEnum.isSolid(hexVal) || MapTileEnum.isWater(hexVal))
+		GetComponent<SpriteRenderer>().sprite = MapTileEnum.getTileSprite(tilecode);
+		if(MapTileEnum.isSolid(tilecode) || MapTileEnum.isWater(tilecode))
 		{
 			c2d.isTrigger = false;
 		}
-		if(spawnVal != "00")
+		if(code != "00")
 		{
 			//Instantiate();
 		}

@@ -1195,8 +1195,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_7a
       rect:
         serializedVersion: 2
@@ -1204,8 +1204,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_7b
       rect:
         serializedVersion: 2
@@ -1213,8 +1213,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_7c
       rect:
         serializedVersion: 2
@@ -1222,8 +1222,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_7d
       rect:
         serializedVersion: 2
@@ -1231,8 +1231,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_7e
       rect:
         serializedVersion: 2
@@ -1240,8 +1240,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_7f
       rect:
         serializedVersion: 2
@@ -1249,8 +1249,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_80
       rect:
         serializedVersion: 2
@@ -1258,8 +1258,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_81
       rect:
         serializedVersion: 2
@@ -1267,8 +1267,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_82
       rect:
         serializedVersion: 2
@@ -1276,8 +1276,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_83
       rect:
         serializedVersion: 2
@@ -1285,8 +1285,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_84
       rect:
         serializedVersion: 2
@@ -1294,8 +1294,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_85
       rect:
         serializedVersion: 2
@@ -1303,8 +1303,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_86
       rect:
         serializedVersion: 2
@@ -1312,8 +1312,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_87
       rect:
         serializedVersion: 2
@@ -1321,8 +1321,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_88
       rect:
         serializedVersion: 2
@@ -1330,8 +1330,8 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
     - name: overworldSprites_89
       rect:
         serializedVersion: 2
@@ -1339,7 +1339,7 @@ TextureImporter:
         y: 44
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
   spritePackingTag: 
   userData: 

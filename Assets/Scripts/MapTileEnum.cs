@@ -8,8 +8,10 @@ public class MapTileEnum : MonoBehaviour {
 									"2e", "2f", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "3c", "3d", "3e", "3f",
 									"41", "42", "43", "44", "45", "47", "48", "49", "4a", "4b", "4d", "96", "9c"};
 
-	static string[] waterTiles = { "14", "1a", "20", "46", "50", "51", "52", "56", "57", "58", "5c", "5d", "5e", "64", "65", "66",
+	static string[] waterTiles = { "46", "50", "51", "52", "56", "57", "58", "5c", "5d", "5e", "64", "65", "66",
 									"6a", "6b", "6c", "70", "71", "72", "78", "79", "7a", "7e", "7f", "80", "84", "85", "86", "90"};
+
+	static string[,] npcRoomTiles = new string[16,11];
 
 	static Sprite[] mapTileSprites;
 
@@ -169,10 +171,11 @@ public class MapTileEnum : MonoBehaviour {
 
 	void Awake()
 	{
-		init();
+		initMapTiles();
+		initNpcRoomTiles();
 	}
 
-	void init()
+	void initMapTiles()
 	{
 		mapTileSprites = Resources.LoadAll<Sprite>("overworldSprites");
 		tile00 = mapTileSprites[0];
@@ -327,6 +330,43 @@ public class MapTileEnum : MonoBehaviour {
 		tile87 = mapTileSprites[141];
 		tile88 = mapTileSprites[142];
 		tile89 = mapTileSprites[143];
+	}
+
+	void initNpcRoomTiles()
+	{
+		for(int i = 0; i < 16; i++)
+		{
+			for(int j = 0; j < 11; j++)
+			{
+				//TOP 2 ROWS
+				if(j == 0 || j == 1)
+				{
+					npcRoomTiles[i,j] = "3d";
+					continue;
+				}
+				//MIDDLE 7 ROWS
+				if(j >= 2 && j < 9)
+				{
+					if(i == 0 || i == 1 || i == 14 || i == 15)
+					{
+						npcRoomTiles[i, j] = "3d";
+						continue;
+					}
+				}
+				//BOTTOM 2 ROWS
+				if(j >= 9)
+				{
+					if(i != 7 && i != 8)
+					{
+						npcRoomTiles[i, j] = "3d";
+						continue;
+					}
+				}
+
+				//EMPTY WALKING SPACE
+				npcRoomTiles[i, j] = "18";
+			}
+		}
 	}
 
 	public static Sprite getTileSprite(string s_tile)
@@ -501,6 +541,55 @@ public class MapTileEnum : MonoBehaviour {
 		foreach(string s in waterTiles)
 			if(s == hex) return true;
 		return false;
+	}
+
+	public static Room getNpcRoom(string whichRoom)
+	{
+		string [,] npcRoomSpawnTiles = new string[16,11];
+		for(int i = 0; i < 16; i++)
+			for(int j = 0; j < 11; j++)
+				npcRoomSpawnTiles[i, j] = "00";
+
+		Room r = new Room(-1, -1, npcRoomTiles, npcRoomSpawnTiles);
+		r.tiles[7, 9].code = "100";
+
+		if(whichRoom == "oldmanwoodensword")
+		{
+			r.setExit('s', "99");
+		}
+		if(whichRoom == "trader1")
+		{
+			r.setExit('s', "98");
+		}
+		if(whichRoom == "oldladymedicine")
+		{
+			r.setExit('s', "97");
+		}
+		if(whichRoom == "oldladygrave")
+		{
+			r.setExit('s', "96");
+		}
+		if(whichRoom == "trader2")
+		{
+			r.setExit('s', "95");
+		}
+		if(whichRoom == "whitesword")
+		{
+			r.setExit('s', "94");
+		}
+		if(whichRoom == "trader3")
+		{
+			r.setExit('s', "93");
+		}
+		if(whichRoom == "empty")
+		{
+			r.setExit('s', "92");
+		}
+		if(whichRoom == "trader4")
+		{
+			r.setExit('s', "91");
+		}
+		return r;
 	}
 
 	// Update is called once per frame

@@ -3,31 +3,28 @@ using System.Collections;
 
 public class Tile {
 	//local coords (coords in room)
-	int xcoord, ycoord;
-	public string hexval;
+	public int xcoord;
+	public int ycoord;
+	public string tilecode;
 	public int index;
 	//denote enemy / item placement on tile
-	public string spawnval;
+	public string code;
 
-	public Tile(int x, int y, string hex, string spawn)
+	public Tile(int x, int y, string tc, string c)
 	{
 		xcoord = x;
 		ycoord = y;
-		hexval = hex;
-		spawnval = spawn;
+		tilecode = tc;
+		code = c;
 	}
 
 	//todo: replace these with get/set c# snippets?
-	public void alterTileHex(string hex)
+	public void alterTileCode(string tc)
 	{
-		hexval = hex;
+		tilecode = tc;
 	}
-	public void alterTileSpawn(string spawn)
+	public void alterCode(string c)
 	{
-		spawnval = spawn;
-	}
-	public void print()
-	{
-		Debug.Log("x:" + xcoord + " y: " + ycoord + " hex:" + hexval + " spawn:" + spawnval);
+		code = c;
 	}
 }
