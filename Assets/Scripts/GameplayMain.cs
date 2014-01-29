@@ -28,6 +28,9 @@ public class GameplayMain : MonoBehaviour {
 	Room currentRoom;
 	Room oldRoom;
 
+	GameObject LvlCamera;
+	public static GameObject EnemyAudioSourceHolder;
+
 	//DEBUG
 	GameObject cam;
 	debugMapScript dms;
@@ -37,18 +40,34 @@ public class GameplayMain : MonoBehaviour {
 	bool screenScrolling = false;
 	float desiredDisplacementTime = 0;
 
+<<<<<<< HEAD
+=======
+	void Awake(){
+		LvlCamera = GameObject.Find("LvlCamera");
+
+		EnemyAudioSourceHolder = new GameObject("EnemyAudioSourceHolder");
+		EnemyAudioSourceHolder.transform.parent = LvlCamera.transform;
+	}
+
+>>>>>>> 766cdd86d3c5c94e3051b64bd15590145835f619
 	void Start () {
 		//CAM AND DEBUG GUI
 		cam = GameObject.Find("MainCamera");
 		dms = cam.GetComponent("debugMapScript") as debugMapScript;
+
 
 		linkRef = GameObject.FindGameObjectsWithTag("Player")[0];
 		hudPosMarker = GameObject.FindGameObjectsWithTag("hudposmarker")[0];
 
 		//LOAD PREFABS
 		MapTile = Resources.Load("MapTile") as GameObject;
+<<<<<<< HEAD
 		Enemy = Resources.Load("octorok(red)") as GameObject;
 		SpecialCollisionTile = Resources.Load("SpecialCollisionTile") as GameObject;
+=======
+		//Enemy = Resources.Load("Enemies/OctorokRed") as GameObject;
+		Enemy = Resources.Load("Enemies/TektikeBlue") as GameObject;
+>>>>>>> 766cdd86d3c5c94e3051b64bd15590145835f619
 
 		//overworld dataset via http://inventwithpython.com/blog/2012/12/10/8-bit-nes-legend-of-zelda-map-data/
 
@@ -132,17 +151,33 @@ public class GameplayMain : MonoBehaviour {
 
 	void populateRoomWithRoom(Room r)
 	{
+<<<<<<< HEAD
 		currentRoom = r;
+=======
+		GameObject TileHolder = new GameObject("TileHolder");
+		TileHolder.transform.parent = LvlCamera.transform;
+
+>>>>>>> 766cdd86d3c5c94e3051b64bd15590145835f619
 		int objectCount = 0;
 		for(int i = 0; i < 16; i++)
 		{
 			for(int j = 0; j < 11; j++)
 			{
+<<<<<<< HEAD
 				GameObject go = Instantiate(MapTile, new Vector3(topLeftX + i, topLeftY - j, 0), Quaternion.identity) as GameObject;
 				
 				go.SendMessage("setTileCode", r.tiles[i, j].tilecode);
 				go.SendMessage("setCode", r.tiles[i, j].code);
 				go.SendMessage("setIndex", -1);
+=======
+				GameObject go = Instantiate(MapTile, new Vector3(topLeftX + i + offsetX, topLeftY - j + offsetY, 0), Quaternion.identity) as GameObject;
+				go.transform.parent = TileHolder.transform;
+				MapTileScript mts = go.GetComponent("MapTileScript") as MapTileScript;
+
+				go.SendMessage("setHexVal", storedRooms[roomX, roomY].tiles[i, j].hexval);
+				go.SendMessage("setSpawnVal", storedRooms[roomX, roomY].tiles[i, j].spawnval);
+				go.SendMessage("setIndex", storedRooms[roomX, roomY].tiles[i, j].index);
+>>>>>>> 766cdd86d3c5c94e3051b64bd15590145835f619
 				go.SendMessage("updateSprite");
 				
 				activeTiles[objectCount] = go;
@@ -153,6 +188,12 @@ public class GameplayMain : MonoBehaviour {
 
 	void initEnemiesCurrentRoom()
 	{
+<<<<<<< HEAD
+=======
+		GameObject EnemyHolder = new GameObject("EnemyHolder");
+		EnemyHolder.transform.parent = LvlCamera.transform;
+
+>>>>>>> 766cdd86d3c5c94e3051b64bd15590145835f619
 		foreach(GameObject t in activeTiles)
 		{
 			MapTileScript mts = t.GetComponent("MapTileScript") as MapTileScript;
@@ -161,9 +202,14 @@ public class GameplayMain : MonoBehaviour {
 				float xVal = t.transform.position.x + 0.5f;
 				float yVal = t.transform.position.y - 0.5f;
 				GameObject enemy = Instantiate(Enemy, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+				enemy.transform.parent = EnemyHolder.transform;
 				enemies.Add(enemy);
 			}
 		}
+<<<<<<< HEAD
+=======
+		print("# enemies: " + enemies.Count);
+>>>>>>> 766cdd86d3c5c94e3051b64bd15590145835f619
 	}
 
 	//Iterate through the 16x8 possible rooms, initializing them.
@@ -324,8 +370,25 @@ public class GameplayMain : MonoBehaviour {
 			specialExitCode = currentRoom.exitWest;
 		}
 
+<<<<<<< HEAD
 		//IF UNUSUAL ROOM TRANSITION...
 		if(specialExitCode != "00")
+=======
+		//DISPOSE OF ENEMIES
+		//print(enemies.Count);
+		foreach(GameObject e in enemies) 
+		{
+			if(e != null)
+				Destroy(e);
+		}
+		enemies.Clear();
+
+		linkRef.SendMessage("setMovementEnabled", false);
+		linkRef.SendMessage("setDesiredDisplacementTime", new Vector3(xMovement * 0.93f, yMovement * 0.9f, desiredDisplacementTime));
+
+		int counter = 0;
+		foreach(GameObject t in activeTiles)
+>>>>>>> 766cdd86d3c5c94e3051b64bd15590145835f619
 		{
 			destroyCurrentRoom();
 			screenScrolling = false;
@@ -390,7 +453,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			s += t.code + ' ';
 		}
-		System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
+		//System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
 	}
 
 	public IntPair getRoomCoords(string val)

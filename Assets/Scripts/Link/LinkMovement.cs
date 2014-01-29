@@ -7,8 +7,13 @@ using System.Collections;
 
 public partial class Link : MonoBehaviour {
 
+	const float DIST_BTW_STEPS = 0.5f;
+	Vector2 distSinceLastStep = Vector2.zero;
+	bool isRightFootForward = true;
+
 	void checkMovement(){
 		rigidbody2D.velocity = Vector2.zero;
+
 		vert = Input.GetAxis("Vertical");
 		hor = Input.GetAxis("Horizontal");
 		
@@ -21,22 +26,22 @@ public partial class Link : MonoBehaviour {
 				
 				if(vert == 1f){
 					rigidbody2D.AddForce(new Vector2(0, speed * Time.deltaTime));
-					dir = SpriteDir.UP;
+					dir = handleStep(SpriteDir.UP);
 				}
 				
 				if(vert == -1f){
 					rigidbody2D.AddForce(new Vector2(0, -speed * Time.deltaTime));
-					dir = SpriteDir.DOWN;
+					dir = handleStep(SpriteDir.DOWN);
 				}
 			}
 			else{
 				if(diffFromGridLine > 0){
 					rigidbody2D.AddForce(new Vector2(-speed * Time.deltaTime, 0));
-					dir = SpriteDir.LEFT;
+					dir = handleStep(SpriteDir.LEFT);
 				}
 				else if(diffFromGridLine < 0){
 					rigidbody2D.AddForce(new Vector2(speed * Time.deltaTime, 0));
-					dir = SpriteDir.RIGHT;
+					dir = handleStep(SpriteDir.RIGHT);
 				}
 			}
 		}
@@ -45,31 +50,27 @@ public partial class Link : MonoBehaviour {
 		if(vert == 0 && (Input.GetButton("Left") || Input.GetButton("Right"))){
 			float diffFromGridLine = getNearestHorizontalGridLine(transform.position.y, dir);
 			
-			if(Mathf.Abs(diffFromGridLine) < 0.2f)
-			{
+			if(Mathf.Abs(diffFromGridLine) < 0.2f){
 				transform.Translate(new Vector2(0, diffFromGridLine));
 				
 				if(hor == 1f){
 					rigidbody2D.AddForce(new Vector2(speed * Time.deltaTime, 0));
-					dir = SpriteDir.RIGHT;
+					dir = handleStep(SpriteDir.RIGHT);
 				}
 				
 				if(hor == -1f){
 					rigidbody2D.AddForce(new Vector2(-speed * Time.deltaTime, 0));
-					dir = SpriteDir.LEFT;
+					dir = handleStep(SpriteDir.LEFT);
 				}
 			}
-			else
-			{
-				if(diffFromGridLine > 0)
-				{
+			else{
+				if(diffFromGridLine > 0){
 					rigidbody2D.AddForce(new Vector2(0, speed * Time.deltaTime));
-					dir = SpriteDir.UP;
+					dir = handleStep(SpriteDir.UP);
 				}
-				else if(diffFromGridLine < 0)
-				{
+				else if(diffFromGridLine < 0){
 					rigidbody2D.AddForce(new Vector2(0, -speed * Time.deltaTime));
-					dir = SpriteDir.DOWN;
+					dir = handleStep(SpriteDir.DOWN);
 				}
 			}
 		}
@@ -79,22 +80,48 @@ public partial class Link : MonoBehaviour {
 			case SpriteDir.UP:
 				sprRend.sprite = spr[0];
 				break;
+			case SpriteDir.UP_STEP:
+				sprRend.sprite = spr[8];
+				break;
 			case SpriteDir.DOWN:
 				sprRend.sprite = spr[2];
+				break;
+			case SpriteDir.DOWN_STEP:
+				sprRend.sprite = spr[10];
 				break;
 			case SpriteDir.RIGHT:
 				sprRend.sprite = spr[1];
 				break;
 			case SpriteDir.RIGHT_STEP:
-				sprRend.sprite = spr[1];
+				sprRend.sprite = spr[9];
 				break;
 			case SpriteDir.LEFT:
 				sprRend.sprite = spr[3];
+				break;
+			case SpriteDir.LEFT_STEP:
+				sprRend.sprite = spr[11];
 				break;
 			}
 		}
 	}
 
+	SpriteDir handleStep(SpriteDir theDir){
+		Vector3 dtPos = previousPos - transform.position;
+		distSinceLastStep += new Vector2(Mathf.Abs(dtPos.x), Mathf.Abs(dtPos.y));
+
+		if(distSinceLastStep.x >= DIST_BTW_STEPS || distSinceLastStep.y >= DIST_BTW_STEPS){
+			isRightFootForward = !isRightFootForward;
+			distSinceLastStep = Vector2.zero;
+		}
+
+		if(isRightFootForward){
+			return theDir+1;
+		}
+		else {
+			return theDir;
+		}
+	}
+	
 	float getNearestHorizontalGridLine(float ypos, SpriteDir direction){
 		float closestUp = topLeftY + 20 + 0.5f;
 		float closestDown = topLeftY - 50;
