@@ -45,7 +45,7 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: enemies_0
+    - name: OctorokRed_left
       rect:
         serializedVersion: 2
         x: 10
@@ -54,7 +54,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_1
+    - name: OctorokRed_left2
       rect:
         serializedVersion: 2
         x: 32
@@ -63,7 +63,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_2
+    - name: OctorokRed_down
       rect:
         serializedVersion: 2
         x: 56
@@ -72,7 +72,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_3
+    - name: OctorokRed_down2
       rect:
         serializedVersion: 2
         x: 79
@@ -81,7 +81,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_4
+    - name: OctorokRed_right
       rect:
         serializedVersion: 2
         x: 104
@@ -90,7 +90,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_5
+    - name: OctorokRed_right2
       rect:
         serializedVersion: 2
         x: 128
@@ -99,7 +99,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_6
+    - name: OctorokRed_up
       rect:
         serializedVersion: 2
         x: 152
@@ -108,7 +108,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_7
+    - name: OctorokRed_up2
       rect:
         serializedVersion: 2
         x: 175

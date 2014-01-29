@@ -90,6 +90,7 @@ public class GameplayMain : MonoBehaviour {
 		string enemyContent = ((TextAsset)Resources.Load("EnemyTileMap")).text;
 		temp = "";
 		tileNumber = 0;
+
 		for(int i = 0; i < enemyContent.Length; i++)
 		{
 			char currentChar = enemyContent[i];
@@ -175,16 +176,21 @@ public class GameplayMain : MonoBehaviour {
 		GameObject EnemyHolder = new GameObject("EnemyHolder");
 		EnemyHolder.transform.parent = LvlCamera.transform;
 
+		int debugOne = 0;
+
 		foreach(GameObject t in activeTiles)
 		{
 			MapTileScript mts = t.GetComponent("MapTileScript") as MapTileScript;
 			if(mts.code == "01")
 			{
-				float xVal = t.transform.position.x + 0.5f;
-				float yVal = t.transform.position.y - 0.5f;
-				GameObject enemy = Instantiate(Enemy, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
-				enemy.transform.parent = EnemyHolder.transform;
-				enemies.Add(enemy);
+				//if(debugOne++ == 3) {
+
+					float xVal = t.transform.position.x + 0.5f;
+					float yVal = t.transform.position.y - 0.5f;
+					GameObject enemy = Instantiate(Enemy, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					enemy.transform.parent = EnemyHolder.transform;
+					enemies.Add(enemy);
+				//}
 			}
 		}
 	}

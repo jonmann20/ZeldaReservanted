@@ -8,7 +8,6 @@ public abstract class Enemy : MonoBehaviour {
 	protected int health;
 	public Sprite[] spr;
 
-	public float speed = 450;
 	public float topLeftX = -8f;
 	public float topLeftY = 3.5f;
 	public SpriteRenderer sprRend;
