@@ -9,7 +9,7 @@ using System.Collections;
 	See LinkCollision for the collision component of Link.
 */
 
-public enum SpriteDir {UP, UP_STEP, DOWN, DOWN_STEP, LEFT, LEFT_STEP, RIGHT, RIGHT_STEP};	// NOTE: X_STEP must directly proceed X
+public enum SpriteDir {UP, UP_STEP, RIGHT, RIGHT_STEP, DOWN, DOWN_STEP, LEFT, LEFT_STEP};	// NOTE: don't modify order
 
 public partial class Link : MonoBehaviour {
 
