@@ -23,8 +23,7 @@ public class GameplayMain : MonoBehaviour {
 
 	public GameObject linkRef;
 	public GameObject hudPosMarker;
-
-	//TODO: get rid of currentRoom coords-- pack them into currentRoom object.
+	
 	Room currentRoom;
 	Room oldRoom;
 
@@ -39,7 +38,16 @@ public class GameplayMain : MonoBehaviour {
 	//SCREEN SCROLL
 	bool screenScrolling = false;
 	float desiredDisplacementTime = 0;
-	
+
+	//GUI
+	float virtualWidth = 256.0f;
+	float virtualHeight = 240.0f;
+	Matrix4x4 matrix;
+	Font bitFont;
+	string currentSpeech = "";
+	string desiredSpeech = "";
+	int speechTimer = 12;
+
 	void Awake(){
 		LvlCamera = GameObject.Find("LvlCamera");
 
@@ -48,10 +56,14 @@ public class GameplayMain : MonoBehaviour {
 	}
 	
 	void Start () {
+		//GUI
+		matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, new Vector3(Screen.width/virtualWidth, Screen.height/virtualHeight, 1.0f));
+		bitFont = Resources.Load("Fonts/prstartk") as Font;
+		print("font:");
+		print(bitFont);
 		//CAM AND DEBUG GUI
 		cam = GameObject.Find("MainCamera");
 		dms = cam.GetComponent("debugMapScript") as debugMapScript;
-
 
 		linkRef = GameObject.FindGameObjectsWithTag("Player")[0];
 		hudPosMarker = GameObject.FindGameObjectsWithTag("hudposmarker")[0];
@@ -220,6 +232,7 @@ public class GameplayMain : MonoBehaviour {
 
 	void destroyCurrentRoom()
 	{
+		setDesiredSpeechString("");
 		foreach(GameObject t in activeTiles)
 		{
 			Destroy(t);
@@ -418,6 +431,7 @@ public class GameplayMain : MonoBehaviour {
 
 	public IntPair getRoomCoords(string val)
 	{
+		audio.Play();
 		if(val == "99") return new IntPair(7, 7);
 		if(val == "98") return new IntPair(6, 6);
 		if(val == "97") return new IntPair(4, 6);
@@ -436,6 +450,7 @@ public class GameplayMain : MonoBehaviour {
 	{
 		disposeAllEnemies();
 		destroyCurrentRoom();
+		audio.Stop();
 		if(code == "91")
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader4"));
 		if(code == "92")
@@ -453,9 +468,43 @@ public class GameplayMain : MonoBehaviour {
 		if(code == "98")
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader1"));
 		if(code == "99")
+		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("oldmanwoodensword"));
+			setDesiredSpeechString("IT'S DANGEROUS TO GO ALONE! TAKE THIS.");
+		}
 
 		Tile destinationTile2 = currentRoom.tiles[7, 9];
 		linkRef.transform.position = new Vector3(topLeftX + destinationTile2.xcoord, topLeftY - destinationTile2.ycoord, 0);
+	}
+		
+	void OnGUI () {
+
+		GUI.matrix = matrix;
+		GUIStyle style = GUI.skin.GetStyle("Label");
+		style.font = bitFont;
+		style.fontSize = 8;
+		GUI.Label (new Rect(30, 100, 200, 30), currentSpeech, style);
+
+		speechTimer --;
+		if(speechTimer <= 0)
+		{
+			if(desiredSpeech.Length > 0)
+			{
+				currentSpeech += desiredSpeech[0];
+				desiredSpeech = desiredSpeech.Remove(0, 1);
+				speechTimer = 12;
+			}
+			else
+				if(!screenScrolling)
+					linkRef.SendMessage("setMovementEnabled", true);
+		}
+	}
+
+	void setDesiredSpeechString(string s)
+	{
+		linkRef.SendMessage("setMovementEnabled", false);
+		currentSpeech = "";
+		desiredSpeech = s;
+		speechTimer = 0;
 	}
 }
