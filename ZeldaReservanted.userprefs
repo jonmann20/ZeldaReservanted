@@ -1,35 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemies\Octorok.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\HudFull.cs">
     <Files>
-      <File FileName="Assets\Scripts\Enemies\Octorok.cs" Line="153" Column="32" />
-      <File FileName="Assets\Classes\Enemy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Link\LinkMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameplayMain.cs" Line="199" Column="18" />
+      <File FileName="Assets\HudFull.cs" Line="9" Column="24" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Classes" expanded="True" />
-            <Node name="Scripts" expanded="True">
-              <Node name="Enemies" expanded="True">
-                <Node name="Octorok.cs" selected="True" />
-              </Node>
-              <Node name="Link" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="ClassPad">
-        <State expanded="True" selected="True" />
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>this.dirToMove</Value>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
