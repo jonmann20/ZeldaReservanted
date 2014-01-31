@@ -12,31 +12,31 @@ public partial class Link : MonoBehaviour {
 
 	void checkAction(){
 		if(Input.GetButtonDown("Attack")){
-			switch(dir){
-				case SpriteDir.UP:
-				case SpriteDir.UP_STEP:
+			switch(){
+				case Sprite.UP:
+				case Sprite.UP_STEP:
 					sprRend.sprite = spr[4];
 					woodenSword = getItem();
 					break;
-				case SpriteDir.DOWN:
-				case SpriteDir.DOWN_STEP:
+				case Sprite.DOWN:
+				case Sprite.DOWN_STEP:
 					sprRend.sprite = spr[6];
 					woodenSword = getItem();
 					break;
-				case SpriteDir.RIGHT:
-				case SpriteDir.RIGHT_STEP:
+				case Sprite.RIGHT:
+				case Sprite.RIGHT_STEP:
 					sprRend.sprite = spr[5];
 					woodenSword = getItem();
 					break;
-				case SpriteDir.LEFT:
-				case SpriteDir.LEFT_STEP:
+				case Sprite.LEFT:
+				case Sprite.LEFT_STEP:
 					sprRend.sprite = spr[7];
 					woodenSword = getItem();
 					break;
 			}
 			
 			isAttacking = true;
-			StartCoroutine("finishAttack", dir);
+			StartCoroutine("finishAttack", );
 
 			if(health == initHealth){
 				shootSword();	
@@ -72,23 +72,23 @@ public partial class Link : MonoBehaviour {
 		float offsetX = 0, offsetY = 0;
 		Quaternion rot = Quaternion.identity;
 
-		switch(dir){
-			case SpriteDir.UP:
-			case SpriteDir.UP_STEP:
+		switch(){
+			case Sprite.UP:
+			case Sprite.UP_STEP:
 				offsetY = itemOffset;
 				break;
-			case SpriteDir.RIGHT:
-			case SpriteDir.RIGHT_STEP:
+			case Sprite.RIGHT:
+			case Sprite.RIGHT_STEP:
 				offsetX = itemOffset;
 				rot = Quaternion.Euler(0, 0, 270);
 				break;
-			case SpriteDir.DOWN:
-			case SpriteDir.DOWN_STEP:
+			case Sprite.DOWN:
+			case Sprite.DOWN_STEP:
 				offsetY = -itemOffset;
 				rot = Quaternion.Euler(0, 0, 180);
 				break;
-			case SpriteDir.LEFT:
-			case SpriteDir.LEFT_STEP:
+			case Sprite.LEFT:
+			case Sprite.LEFT_STEP:
 				offsetX = -itemOffset;
 				rot = Quaternion.Euler(0, 0, 90);
 				break;
@@ -98,27 +98,27 @@ public partial class Link : MonoBehaviour {
 		return Instantiate(woodenSwordPrefab, newPos, rot) as GameObject;
 	}
 	
-	IEnumerator finishAttack(SpriteDir d){
+	IEnumerator finishAttack(Sprite d){
 		yield return new WaitForSeconds(0.23f);
 		
 		switch(d){
-			case SpriteDir.UP:
-			case SpriteDir.UP_STEP:
+			case Sprite.UP:
+			case Sprite.UP_STEP:
 				sprRend.sprite = spr[10];
 				break;
-			case SpriteDir.DOWN:
-			case SpriteDir.DOWN_STEP:
+			case Sprite.DOWN:
+			case Sprite.DOWN_STEP:
 				sprRend.sprite = spr[8];
 				break;
-			case SpriteDir.RIGHT:
-			case SpriteDir.RIGHT_STEP:
+			case Sprite.RIGHT:
+			case Sprite.RIGHT_STEP:
 				sprRend.sprite = spr[11];
-				dir = SpriteDir.RIGHT;
+				 = Sprite.RIGHT;
 				break;
-			case SpriteDir.LEFT:
-			case SpriteDir.LEFT_STEP:
+			case Sprite.LEFT:
+			case Sprite.LEFT_STEP:
 				sprRend.sprite = spr[1];
-				dir = SpriteDir.LEFT;
+				 = Sprite.LEFT;
 				break;
 		}
 
