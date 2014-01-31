@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\HudFull.cs">
     <Files>
-      <File FileName="Assets\HudFull.cs" Line="9" Column="24" />
+      <File FileName="Assets\Scripts\Link\Link.cs" Line="27" Column="2" />
+      <File FileName="Assets\HudFull.cs" Line="28" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

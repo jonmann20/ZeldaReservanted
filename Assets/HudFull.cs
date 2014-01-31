@@ -6,12 +6,14 @@ public class HudFull : MonoBehaviour {
 	bool isGamePaused = false;
 	bool isFullHud = false, fromFull = false;
 
-	GameObject mainCamera;
+	GameObject mainCamera, rectSelectorPrefab, rectSelector;
 	AudioSource bgMusic;
 
 	void Start(){
 		mainCamera = GameObject.Find("MainCamera");
 		bgMusic = mainCamera.GetComponent<AudioSource>();
+
+		rectSelectorPrefab = Resources.Load<GameObject>("hudRectSelector");
 	}
 
 	void Update () {
@@ -26,6 +28,8 @@ public class HudFull : MonoBehaviour {
 		
 			Vector3 newPos;
 			if(isFullHud){
+				Destroy(rectSelector);
+
 				fromFull = true;
 				newPos = new Vector3(0, -11.4f);
 			}
@@ -67,6 +71,9 @@ public class HudFull : MonoBehaviour {
 			if(elapsedTime >= time){
 				if(fromFull){
 					isFullHud = false;
+				}
+				else {
+					rectSelector = Instantiate(rectSelectorPrefab) as GameObject;
 				}
 			}
 			
