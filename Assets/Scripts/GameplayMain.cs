@@ -484,12 +484,12 @@ public class GameplayMain : MonoBehaviour {
 	}
 		
 	void OnGUI () {
-
+		print("GUI!");
 		GUI.matrix = matrix;
 		GUIStyle style = GUI.skin.GetStyle("Label");
 		style.font = bitFont;
 		style.fontSize = 8;
-		GUI.Label (new Rect(30, 100, 200, 30), currentSpeech, style);
+		GUI.Label (new Rect(30, 20, 200, 0), currentSpeech, style);
 
 		speechTimer --;
 		if(speechTimer <= 0)

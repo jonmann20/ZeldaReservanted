@@ -12,11 +12,9 @@ public partial class Link : MonoBehaviour {
 	bool isRightFootForward = true;
 
 	void checkMovement(){
-		rigidbody2D.velocity = Vector2.zero;
-
 		vert = Input.GetAxis("Vertical");
 		hor = Input.GetAxis("Horizontal");
-		
+
 		// VERTICAL MOVEMENT
 		if(Input.GetButton("Up") || Input.GetButton("Down")){
 			float diffFromGridLine = getNearestVerticalGridLine(transform.position.x, dir);
@@ -52,7 +50,7 @@ public partial class Link : MonoBehaviour {
 			
 			if(Mathf.Abs(diffFromGridLine) < 0.2f){
 				transform.Translate(new Vector2(0, diffFromGridLine));
-				
+
 				if(hor == 1f){
 					rigidbody2D.AddForce(new Vector2(speed * Time.deltaTime, 0));
 					dir = handleStep(SpriteDir.RIGHT);
@@ -122,67 +120,51 @@ public partial class Link : MonoBehaviour {
 		}
 	}
 	
-	float getNearestHorizontalGridLine(float ypos, SpriteDir direction){
+	float getNearestHorizontalGridLine(float ypos, SpriteDir currentDir){
 		float closestUp = topLeftY + 20 + 0.5f;
 		float closestDown = topLeftY - 50;
 		
 		while(closestUp >= ypos){
-			--closestUp;
+			closestUp --;
 		}
-		++closestUp;
+		closestUp ++;
 		
 		while(closestDown <= ypos){ 
-			++closestDown;
+			closestDown ++;
 		}
-		--closestDown;
+		closestDown --;
 		
 		float closestUpDiff = Mathf.Abs(closestUp - ypos);
 		float closestDownDiff = Mathf.Abs(closestDown - ypos);
-		
 
-		if(direction == SpriteDir.UP){
-			if(closestUpDiff < closestDownDiff * 1.2f) return closestUpDiff;
-			else if(closestDownDiff * 1.2f <= closestUpDiff) return -closestDownDiff;
-		}
-		
-		if(direction == SpriteDir.DOWN){
-			if(closestUpDiff * 1.2f < closestDownDiff) return closestUpDiff;
-			else if(closestDownDiff <= closestUpDiff * 1.2f) return -closestDownDiff;
-		}
+		if(closestUpDiff < closestDownDiff) return closestUpDiff;
+		else if(closestDownDiff <= closestUpDiff) return -closestDownDiff;
 
 		return 0;
 	}
 	
 
 
-	float getNearestVerticalGridLine(float xpos, SpriteDir direction){
+	float getNearestVerticalGridLine(float xpos, SpriteDir currentDir){
 		float closestRight = topLeftX + 0.5f + 50;
 		float closestLeft = topLeftX - 2;
 		
 		while(closestRight >= xpos){
-			--closestRight;
+			closestRight --;
 		}
-		++closestRight;
+		closestRight ++;
 		
 		while(closestLeft <= xpos) {
-			++closestLeft;
+			closestLeft ++;
 		}
-		--closestLeft;
+		closestLeft --;
 		
 		float closestLeftDiff = Mathf.Abs(closestLeft - xpos);
 		float closestRightDiff = Mathf.Abs(closestRight - xpos);
-		
-		if(direction == SpriteDir.RIGHT)
-		{
-			if(closestLeftDiff * 1.2f < closestRightDiff) return closestLeftDiff;
-			else if(closestRightDiff <= closestLeftDiff * 1.2f) return -closestRightDiff;
-		}
-		
-		if(direction == SpriteDir.LEFT)
-		{
-			if(closestLeftDiff < closestRightDiff * 1.2f) return closestLeftDiff;
-			else if(closestRightDiff  * 1.2f <= closestLeftDiff) return -closestRightDiff;
-		}
+
+		if(closestLeftDiff < closestRightDiff) return closestLeftDiff;
+		else if(closestRightDiff <= closestLeftDiff) return -closestRightDiff;
+
 		return 0;
 	}
 
