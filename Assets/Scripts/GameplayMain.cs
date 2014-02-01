@@ -484,7 +484,7 @@ public class GameplayMain : MonoBehaviour {
 	}
 		
 	void OnGUI () {
-		print("GUI!");
+//		print("GUI!");
 		GUI.matrix = matrix;
 		GUIStyle style = GUI.skin.GetStyle("Label");
 		style.font = bitFont;
