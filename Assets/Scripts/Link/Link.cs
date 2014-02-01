@@ -32,6 +32,7 @@ public partial class Link : MonoBehaviour {
 	public float initHealth = 3, health = 3;
 
 	SpriteDir dir = SpriteDir.UP_STEP;
+	public static int numRupee = 0;
 
 	void Start(){
 		previousPos = transform.position;
