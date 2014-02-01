@@ -55,6 +55,13 @@ public partial class Link : MonoBehaviour {
 			transform.Translate(deltaDisplacement);
 			--desiredDisplacementTime;
 		}
+
+
+		// on sword shot destroyed
+		if(woodenSwordProjectile == null){
+			canShootAgain = true;
+		}
+
 	}
 
 	void FixedUpdate()
