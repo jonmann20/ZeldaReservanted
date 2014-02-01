@@ -10,6 +10,12 @@ public class SwordCollision : MonoBehaviour {
 		}
 	}
 
+	void Update(){
+		if(Mathf.Abs(transform.position.x) > 9.2f || transform.position.y > 5.5f || transform.position.y < -8.5f){
+			Destroy (gameObject);
+		}
+	}
+
 	void OnBecameInvisible(){
 		Destroy(gameObject);
 	}

@@ -19,7 +19,7 @@ public partial class Link : MonoBehaviour {
 	public float topLeftX = -8f;
 	public float topLeftY = 3.5f;
 
-	public bool movementEnabled = true;
+	public bool movementEnabled = false;
 	public bool isAttacking = false;
 	
 	SpriteRenderer sprRend;
@@ -31,7 +31,7 @@ public partial class Link : MonoBehaviour {
 
 	public float initHealth = 3, health = 3;
 
-	SpriteDir dir = SpriteDir.UP;
+	SpriteDir dir = SpriteDir.UP_STEP;
 
 	void Start(){
 		previousPos = transform.position;
