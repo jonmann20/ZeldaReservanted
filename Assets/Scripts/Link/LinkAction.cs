@@ -12,6 +12,8 @@ public partial class Link : MonoBehaviour {
 
 	void checkAction(){
 		if(Input.GetButtonDown("Attack")){
+			if(!Inventory.hasWoodenSword) return;
+
 			switch(dir){
 				case SpriteDir.UP:
 			case SpriteDir.UP_STEP:
@@ -71,6 +73,7 @@ public partial class Link : MonoBehaviour {
 	GameObject getItem(){
 		float offsetX = 0, offsetY = 0;
 		Quaternion rot = Quaternion.identity;
+		GameObject item = new GameObject();
 
 		switch(dir){
 		case SpriteDir.UP:
@@ -95,6 +98,7 @@ public partial class Link : MonoBehaviour {
 		}
 
 		Vector3 newPos = new Vector3(transform.position.x + offsetX, transform.position.y + offsetY, transform.position.z);
+
 		return Instantiate(woodenSwordPrefab, newPos, rot) as GameObject;
 	}
 	

@@ -8,6 +8,8 @@ public class GameplayMain : MonoBehaviour {
 	public GameObject MapTile;
 	public GameObject Enemy;
 	public GameObject SpecialCollisionTile;
+	public GameObject NPCEntity;
+	public GameObject Fire;
 	Tile[] storedTiles = new Tile[22528];
 	Room[,] storedRooms = new Room[16,8];
 
@@ -17,6 +19,7 @@ public class GameplayMain : MonoBehaviour {
 
 	List<GameObject> enemies = new List<GameObject>();
 	List<GameObject> specialTiles = new List<GameObject>();
+	List<GameObject> NPCObjects = new List<GameObject>();
 
 	public float topLeftX = -8f;
 	public float topLeftY = 3.5f;
@@ -71,6 +74,8 @@ public class GameplayMain : MonoBehaviour {
 		//LOAD PREFABS
 		MapTile = Resources.Load("MapTile") as GameObject;
 		SpecialCollisionTile = Resources.Load("SpecialCollisionTile") as GameObject;
+		NPCEntity = Resources.Load("NPCEntity") as GameObject;
+		Fire = Resources.Load("Fire") as GameObject;
 
 		Enemy = Resources.Load("Enemies/OctorokRed") as GameObject;
 		//Enemy = Resources.Load("Enemies/TektikeBlue") as GameObject;
@@ -247,6 +252,11 @@ public class GameplayMain : MonoBehaviour {
 		{
 			Destroy(st);
 		}
+
+		foreach(GameObject npc in NPCObjects)
+		{
+			Destroy(npc);
+		}
 	}
 
 	void Update () {
@@ -270,10 +280,12 @@ public class GameplayMain : MonoBehaviour {
 				initEnemiesCurrentRoom();
 			}
 			screenScrolling = false;
-			//NOT EFFICIENT
-
-			linkRef.SendMessage("setMovementEnabled", true);
 		}
+
+		print(screenScrolling);
+		print(desiredSpeech);
+		if(desiredSpeech == "" && !screenScrolling)
+			linkRef.SendMessage("setMovementEnabled", true);
 
 		//SHOULD ROOM TRANSITION??
 		//////////////////////////
@@ -477,6 +489,10 @@ public class GameplayMain : MonoBehaviour {
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("oldmanwoodensword"));
 			setDesiredSpeechString("IT'S DANGEROUS TO GO ALONE! TAKE THIS.");
+
+			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
+			NPCObjects.Add(Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject);
+			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
 		}
 
 		Tile destinationTile2 = currentRoom.tiles[7, 9];
@@ -484,12 +500,12 @@ public class GameplayMain : MonoBehaviour {
 	}
 		
 	void OnGUI () {
-		print("GUI!");
+
 		GUI.matrix = matrix;
 		GUIStyle style = GUI.skin.GetStyle("Label");
 		style.font = bitFont;
 		style.fontSize = 8;
-		GUI.Label (new Rect(30, 20, 200, 0), currentSpeech, style);
+		GUI.Label (new Rect(35, 100, 200, 30), currentSpeech, style);
 
 		speechTimer --;
 		if(speechTimer <= 0)
@@ -500,9 +516,6 @@ public class GameplayMain : MonoBehaviour {
 				desiredSpeech = desiredSpeech.Remove(0, 1);
 				speechTimer = 12;
 			}
-			else
-				if(!screenScrolling)
-					linkRef.SendMessage("setMovementEnabled", true);
 		}
 	}
 
