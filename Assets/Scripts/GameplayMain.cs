@@ -10,6 +10,7 @@ public class GameplayMain : MonoBehaviour {
 	public GameObject SpecialCollisionTile;
 	public GameObject NPCEntity;
 	public GameObject Fire;
+	public GameObject ItemEntity;
 	Tile[] storedTiles = new Tile[22528];
 	Room[,] storedRooms = new Room[16,8];
 
@@ -62,8 +63,7 @@ public class GameplayMain : MonoBehaviour {
 		//GUI
 		matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, new Vector3(Screen.width/virtualWidth, Screen.height/virtualHeight, 1.0f));
 		bitFont = Resources.Load("Fonts/prstartk") as Font;
-		print("font:");
-		print(bitFont);
+
 		//CAM AND DEBUG GUI
 		cam = GameObject.Find("MainCamera");
 		dms = cam.GetComponent("debugMapScript") as debugMapScript;
@@ -76,8 +76,9 @@ public class GameplayMain : MonoBehaviour {
 		SpecialCollisionTile = Resources.Load("SpecialCollisionTile") as GameObject;
 		NPCEntity = Resources.Load("NPCEntity") as GameObject;
 		Fire = Resources.Load("Fire") as GameObject;
-
+		ItemEntity = Resources.Load("ItemEntity") as GameObject;
 		Enemy = Resources.Load("Enemies/OctorokRed") as GameObject;
+
 		//Enemy = Resources.Load("Enemies/TektikeBlue") as GameObject;
 
 		//overworld dataset via http://inventwithpython.com/blog/2012/12/10/8-bit-nes-legend-of-zelda-map-data/
@@ -147,7 +148,6 @@ public class GameplayMain : MonoBehaviour {
 				int intcode = int.Parse(code);
 				if(intcode >= 90)
 				{
-					print("SPECIAL TILE: " + intcode.ToString());
 					GameObject sct = Instantiate(SpecialCollisionTile, new Vector3(topLeftX + i + offsetX + 0.5f, topLeftY - j + offsetY - 0.5f, 0), Quaternion.identity) as GameObject;
 	
 					SpecialCollisionTileScript script = sct.GetComponent("SpecialCollisionTileScript") as SpecialCollisionTileScript;
@@ -198,7 +198,8 @@ public class GameplayMain : MonoBehaviour {
 		foreach(GameObject t in activeTiles)
 		{
 			MapTileScript mts = t.GetComponent("MapTileScript") as MapTileScript;
-			if(mts.code == "01")
+			int intcode = int.Parse(mts.code);
+			if(intcode > 0 && intcode < 89)
 			{
 				//if(debugOne++ == 3) {
 
@@ -282,8 +283,6 @@ public class GameplayMain : MonoBehaviour {
 			screenScrolling = false;
 		}
 
-		print(screenScrolling);
-		print(desiredSpeech);
 		if(desiredSpeech == "" && !screenScrolling)
 			linkRef.SendMessage("setMovementEnabled", true);
 
@@ -444,7 +443,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			s += t.code + ' ';
 		}
-		//System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
+		System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
 	}
 
 	public IntPair getRoomCoords(string val)
@@ -488,10 +487,16 @@ public class GameplayMain : MonoBehaviour {
 		if(code == "99")
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("oldmanwoodensword"));
-			setDesiredSpeechString("IT'S DANGEROUS TO GO ALONE! TAKE THIS.");
 
+			if(!Inventory.hasWoodenSword)
+			{
+				setDesiredSpeechString("IT'S DANGEROUS TO GO ALONE! TAKE THIS.");
+				NPCObjects.Add(Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject);
+				GameObject sword = Instantiate(ItemEntity, new Vector3(0, -2.5f, -1), Quaternion.identity) as GameObject;
+				sword.SendMessage("setItemName", "woodensword");
+				NPCObjects.Add(sword);
+			}
 			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
-			NPCObjects.Add(Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject);
 			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
 		}
 
@@ -525,5 +530,27 @@ public class GameplayMain : MonoBehaviour {
 		currentSpeech = "";
 		desiredSpeech = s;
 		speechTimer = 0;
+	}
+
+	public void acquireItem(string itemName)
+	{
+		print("HELLO");
+		bool importantItem = false;
+		switch(itemName)
+		{
+			case "woodensword":
+			Inventory.hasWoodenSword = true;
+			importantItem = true;
+			break;
+
+			case "nothing":
+			print("ERROR: acquired item has no name defined");
+			break;
+		}
+
+		if(importantItem)
+		{
+			linkRef.SendMessage("executeItemPose");
+		}
 	}
 }

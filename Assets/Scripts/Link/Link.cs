@@ -34,6 +34,9 @@ public partial class Link : MonoBehaviour {
 	SpriteDir dir = SpriteDir.UP_STEP;
 	public static int numRupee = 0;
 
+	//ITEM
+	int itemPoseTimer = 0;
+
 	void Start(){
 		previousPos = transform.position;
 		//initHealth = health = PlayerPrefs.GetInt("numHearts");
@@ -50,27 +53,34 @@ public partial class Link : MonoBehaviour {
 			checkAction();
 		}
 
-
 		// SCREEN SCROLL
 		if(desiredDisplacementTime > 0){
 			transform.Translate(deltaDisplacement);
 			--desiredDisplacementTime;
 		}
 
-
 		// on sword shot destroyed
 		if(woodenSwordProjectile == null){
 			canShootAgain = true;
 		}
-
 	}
 
 	void FixedUpdate()
 	{
 		rigidbody2D.velocity = Vector2.zero;
-		if(movementEnabled && !isAttacking){
+		if(movementEnabled && !isAttacking && itemPoseTimer <= 0){
 			checkMovement();
 		}
+		if(itemPoseTimer > 0)
+		{
+			itemPoseTimer --;
+			sprRend.sprite = spr[12];
+		}
 		previousPos = transform.position;
+	}
+
+	void executeItemPose()
+	{
+		itemPoseTimer = 120;
 	}
 }
