@@ -7,14 +7,15 @@ using System.Collections;
 
 public partial class Link : MonoBehaviour {
 
-		void OnCollisionEnter2D(Collision2D col){
-			//transform.Translate(-1, 0, 0);
-			//transform.position = previousPos;
-	
-//			Debug.Log("Collision2D");
-//	
-//			if(col.gameObject.tag == "wall"){
-//				speed = 0;
-//			}
-		}
+	void OnCollisionEnter2D(Collision2D col){
+
+//		print (col.gameObject.tag);
+//		if(col.gameObject.tag == "Enemy"){
+//			// TODO: move link backwards
+//
+//			--Link.health;
+//			Link.updateHealth();
+//		}
+
+	}
 }

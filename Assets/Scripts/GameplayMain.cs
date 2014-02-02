@@ -282,8 +282,8 @@ public class GameplayMain : MonoBehaviour {
 			screenScrolling = false;
 		}
 
-		print(screenScrolling);
-		print(desiredSpeech);
+		//print(screenScrolling);
+		//print(desiredSpeech);
 		if(desiredSpeech == "" && !screenScrolling)
 			linkRef.SendMessage("setMovementEnabled", true);
 

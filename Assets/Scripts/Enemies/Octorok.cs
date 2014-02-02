@@ -15,6 +15,9 @@ public class Octorok : Enemy {
 	bool showStep = false;
 
 	Vector3 prevPosition, dirVec = Vector3.zero;
+	
+	bool freezeMovement = false;
+
 
 	void Update(){
 		if(doDiceRoll){
@@ -26,14 +29,17 @@ public class Octorok : Enemy {
 		// animation
 		sprRend.sprite = spr[(int)dirToMove];
 	}
-
-	bool freezeMovement = false;
-
-	bool waitForExit = false;
-
+	
 	void OnCollisionEnter2D(Collision2D col){
-		if(waitForExit) return;
-		//print ("enter");
+		if(waitForExit){
+			return;
+		}
+
+		if(col.gameObject.tag == "Player"){
+			--Link.health;
+			Link.updateHealth();
+		}
+
 
 		switch(dirToMove){
 			case SpriteDir.UP:
@@ -59,15 +65,6 @@ public class Octorok : Enemy {
 		}
 
 		waitForExit = true;
-	}
-
-	void OnCollisionStay2D(Collision2D col){
-		//print ("stay");
-	}
-
-	void OnCollisionExit2D(Collision2D col){
-		//print ("exit");
-		waitForExit = false;
 	}
 
 	public override void Movement(){

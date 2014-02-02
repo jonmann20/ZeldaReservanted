@@ -29,10 +29,18 @@ public partial class Link : MonoBehaviour {
 	Vector2 desiredDisplacement, deltaDisplacement;
 	float desiredDisplacementTime, vert, hor;
 
-	public float initHealth = 3, health = 3;
+	static GameObject heartPrefab, heartEmptyPrefab;
+
+	public static float initHealth = 3, health = 3;
 
 	SpriteDir dir = SpriteDir.UP_STEP;
 	public static int numRupee = 0;
+
+	void Awake(){
+		heartPrefab = Resources.Load<GameObject>("Heart");
+		heartEmptyPrefab = Resources.Load<GameObject>("HeartEmpty");
+		updateHealth();
+	}
 
 	void Start(){
 		previousPos = transform.position;
@@ -62,7 +70,29 @@ public partial class Link : MonoBehaviour {
 		if(woodenSwordProjectile == null){
 			canShootAgain = true;
 		}
+	}
 
+	public static void updateHealth(){
+		if(health <= 0){
+			// Game Over
+			Application.LoadLevel("death");
+		}
+
+
+		float f = 0;
+
+		for(int i=0; i < health; ++i){
+			GameObject h = Instantiate(heartPrefab, new Vector3(3.5f + f, 4.4f, 0), Quaternion.identity) as GameObject;
+			//h.transform.parent = GameObject.Find("heartHolder").transform;
+			f += 0.5f;
+		}
+
+
+
+		for (float hi = health; hi < initHealth; ++hi){
+			GameObject h = Instantiate(heartEmptyPrefab, new Vector3(3.5f + f, 4.4f, 0), Quaternion.identity) as GameObject;
+			f += 0.5f;
+		}
 	}
 
 	void FixedUpdate()
