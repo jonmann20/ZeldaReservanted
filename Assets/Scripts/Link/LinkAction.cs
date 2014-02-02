@@ -10,6 +10,8 @@ public partial class Link : MonoBehaviour {
 	GameObject woodenSwordPrefab, woodenSword, woodenSwordProjectile;
 	float itemOffset = 0.93f;
 
+	bool canShootAgain = true;
+
 	void checkAction(){
 		if(Input.GetButtonDown("Attack")){
 			if(!Inventory.hasWoodenSword) return;
@@ -38,15 +40,31 @@ public partial class Link : MonoBehaviour {
 			}
 			
 			isAttacking = true;
-			StartCoroutine("finishAttack", dir);
+			StartCoroutine(finishAttack(dir));
+
+			Sword swordScript = woodenSword.GetComponent<Sword>();
 
 			if(health == initHealth){
-				shootSword();	
+				if(canShootAgain){
+					canShootAgain = false;
+
+					shootSword();
+					Destroy(woodenSword);
+				}
+				else {
+					GameAudio.playSwordSwing();
+				}
+			}
+			else {
+				GameAudio.playSwordSwing();
 			}
 		}
 	}
 
 	void shootSword(){
+		GameAudio.playSwordShoot();
+
+
 		float speed = 5;
 
 		woodenSwordProjectile = getItem();

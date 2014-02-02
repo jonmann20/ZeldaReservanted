@@ -449,7 +449,7 @@ public class GameplayMain : MonoBehaviour {
 
 	public IntPair getRoomCoords(string val)
 	{
-		audio.Play();
+		//audio.Play();
 		if(val == "99") return new IntPair(7, 7);
 		if(val == "98") return new IntPair(6, 6);
 		if(val == "97") return new IntPair(4, 6);
@@ -499,8 +499,8 @@ public class GameplayMain : MonoBehaviour {
 		linkRef.transform.position = new Vector3(topLeftX + destinationTile2.xcoord, topLeftY - destinationTile2.ycoord, 0);
 	}
 		
-	void OnGUI () {
-
+	void OnGUI()
+	{
 		GUI.matrix = matrix;
 		GUIStyle style = GUI.skin.GetStyle("Label");
 		style.font = bitFont;
