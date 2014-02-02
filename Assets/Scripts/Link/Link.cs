@@ -72,9 +72,12 @@ public partial class Link : MonoBehaviour {
 		}
 	}
 
+
 	public static void updateHealth(){
 		if(health <= 0){
 			// Game Over
+			int numD = PlayerPrefs.GetInt("numDeath");
+			PlayerPrefs.SetInt("numDeath", ++numD);
 			Application.LoadLevel("death");
 		}
 
