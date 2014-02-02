@@ -13,12 +13,29 @@ public abstract class Enemy : MonoBehaviour {
 	public SpriteRenderer sprRend;
 	protected SpriteDir direction;
 
-	protected GameObject rupeePrefab;
+	protected GameObject rupeePrefab, rupee5Prefab;
 
+	protected bool waitForExit = false;
+
+	// TODO: make movement on grid
 	public abstract void Movement();
+
+//	protected void OnTriggerEnter2d(Collider2D col){
+//
+//	}
+
+//	protected void OnTriggerExit2d(Collider2D col){
+//		waitForExit = false;
+//	}
+
+	void OnCollisionExit2D(Collision2D col){
+		//print ("exit");
+		waitForExit = false;
+	}
 
 	void Awake(){
 		rupeePrefab = Resources.Load<GameObject>("Rupee");
+		rupee5Prefab = Resources.Load<GameObject>("Rupee5");
 		enemyZap = Resources.Load<AudioClip>("Audio/soundEffects/enemyZapped");
 		
 		audioSrc = new GameObject("audioSrc");
@@ -30,9 +47,16 @@ public abstract class Enemy : MonoBehaviour {
 
 	public void kill(){
 		audioSrc.audio.Play();
-		Instantiate(rupeePrefab, this.transform.position, Quaternion.identity);
+
+		int rand = Random.Range(0, 10);
+
+		if(rand <= 2){
+			Instantiate(rupeePrefab, this.transform.position, Quaternion.identity);
+		}
+		else if(rand >= 8){
+			Instantiate(rupee5Prefab, this.transform.position, Quaternion.identity);
+		}
+
 		Destroy(this.gameObject);
 	}
-
-	// TODO: make movement on grid
 }

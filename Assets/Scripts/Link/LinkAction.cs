@@ -11,6 +11,7 @@ public partial class Link : MonoBehaviour {
 	float itemOffset = 0.93f;
 
 	bool canShootAgain = true;
+	const float SHOT_SPEED = 5.5f;
 
 	void checkAction(){
 		if(Input.GetButtonDown("Attack")){
@@ -18,25 +19,25 @@ public partial class Link : MonoBehaviour {
 
 			switch(dir){
 				case SpriteDir.UP:
-			case SpriteDir.UP_STEP:
-					sprRend.sprite = spr[4];
-					woodenSword = getItem();
-					break;
-			case SpriteDir.DOWN:
-			case SpriteDir.DOWN_STEP:
-					sprRend.sprite = spr[6];
-					woodenSword = getItem();
-					break;
-			case SpriteDir.RIGHT:
-			case SpriteDir.RIGHT_STEP:
-					sprRend.sprite = spr[5];
-					woodenSword = getItem();
-					break;
-			case SpriteDir.LEFT:
-			case SpriteDir.LEFT_STEP:
-					sprRend.sprite = spr[7];
-					woodenSword = getItem();
-					break;
+				case SpriteDir.UP_STEP:
+						sprRend.sprite = spr[4];
+						woodenSword = getItem();
+						break;
+				case SpriteDir.DOWN:
+				case SpriteDir.DOWN_STEP:
+						sprRend.sprite = spr[6];
+						woodenSword = getItem();
+						break;
+				case SpriteDir.RIGHT:
+				case SpriteDir.RIGHT_STEP:
+						sprRend.sprite = spr[5];
+						woodenSword = getItem();
+						break;
+				case SpriteDir.LEFT:
+				case SpriteDir.LEFT_STEP:
+						sprRend.sprite = spr[7];
+						woodenSword = getItem();
+						break;
 			}
 			
 			isAttacking = true;
@@ -64,23 +65,20 @@ public partial class Link : MonoBehaviour {
 	void shootSword(){
 		GameAudio.playSwordShoot();
 
-
-		float speed = 5;
-
 		woodenSwordProjectile = getItem();
 		Quaternion r = woodenSwordProjectile.transform.localRotation;
 
 		if(Mathf.Approximately(r.eulerAngles.z, 0)){
-			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(0, speed, 0);
+			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(0, SHOT_SPEED, 0);
 		}
 		else if(Mathf.Approximately(r.eulerAngles.z, 270)){
-			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(speed, 0, 0);
+			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(SHOT_SPEED, 0, 0);
 		}
 		else if(Mathf.Approximately(r.eulerAngles.z, 180)){
-			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(0, -speed, 0);
+			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(0, -SHOT_SPEED, 0);
 		}
 		else if(Mathf.Approximately(r.eulerAngles.z, 90)){
-			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(-speed, 0, 0);
+			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(-SHOT_SPEED, 0, 0);
 		}
 	}
 
@@ -94,25 +92,25 @@ public partial class Link : MonoBehaviour {
 		GameObject item = new GameObject();
 
 		switch(dir){
-		case SpriteDir.UP:
-		case SpriteDir.UP_STEP:
-				offsetY = itemOffset;
-				break;
-		case SpriteDir.RIGHT:
-		case SpriteDir.RIGHT_STEP:
-				offsetX = itemOffset;
-				rot = Quaternion.Euler(0, 0, 270);
-				break;
-		case SpriteDir.DOWN:
-		case SpriteDir.DOWN_STEP:
-				offsetY = -itemOffset;
-				rot = Quaternion.Euler(0, 0, 180);
-				break;
-		case SpriteDir.LEFT:
-		case SpriteDir.LEFT_STEP:
-				offsetX = -itemOffset;
-				rot = Quaternion.Euler(0, 0, 90);
-				break;
+			case SpriteDir.UP:
+			case SpriteDir.UP_STEP:
+					offsetY = itemOffset;
+					break;
+			case SpriteDir.RIGHT:
+			case SpriteDir.RIGHT_STEP:
+					offsetX = itemOffset;
+					rot = Quaternion.Euler(0, 0, 270);
+					break;
+			case SpriteDir.DOWN:
+			case SpriteDir.DOWN_STEP:
+					offsetY = -itemOffset;
+					rot = Quaternion.Euler(0, 0, 180);
+					break;
+			case SpriteDir.LEFT:
+			case SpriteDir.LEFT_STEP:
+					offsetX = -itemOffset;
+					rot = Quaternion.Euler(0, 0, 90);
+					break;
 		}
 
 		Vector3 newPos = new Vector3(transform.position.x + offsetX, transform.position.y + offsetY, transform.position.z);
@@ -124,22 +122,22 @@ public partial class Link : MonoBehaviour {
 		yield return new WaitForSeconds(0.23f);
 		
 		switch(d){
-		case SpriteDir.UP:
-		case SpriteDir.UP_STEP:
-				sprRend.sprite = spr[10];
-				break;
-		case SpriteDir.DOWN:
-		case SpriteDir.DOWN_STEP:
-				sprRend.sprite = spr[8];
-				break;
-		case SpriteDir.RIGHT:
-		case SpriteDir.RIGHT_STEP:
-				sprRend.sprite = spr[11];
-				break;
-		case SpriteDir.LEFT:
-		case SpriteDir.LEFT_STEP:
-				sprRend.sprite = spr[1];
-				break;
+			case SpriteDir.UP:
+			case SpriteDir.UP_STEP:
+					sprRend.sprite = spr[10];
+					break;
+			case SpriteDir.DOWN:
+			case SpriteDir.DOWN_STEP:
+					sprRend.sprite = spr[8];
+					break;
+			case SpriteDir.RIGHT:
+			case SpriteDir.RIGHT_STEP:
+					sprRend.sprite = spr[11];
+					break;
+			case SpriteDir.LEFT:
+			case SpriteDir.LEFT_STEP:
+					sprRend.sprite = spr[1];
+					break;
 		}
 
 		isAttacking = false;

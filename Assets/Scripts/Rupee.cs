@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Rupee : MonoBehaviour {
 
-	int val = 1;
+	public int val = 1;
 
 	void Start () {
 	

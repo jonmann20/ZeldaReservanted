@@ -9,8 +9,8 @@ public class HeartSelectorMovement : MonoBehaviour {
 	GUIStyle style;
 
 	string playerName;
-
 	GameObject redHeart;
+	int numD = 0;
 
 	void Awake(){
 		redHeart = Resources.Load<GameObject>("heartSelectorRegRed");
@@ -18,6 +18,8 @@ public class HeartSelectorMovement : MonoBehaviour {
 
 	void Start(){
 		playerName = PlayerPrefs.GetString("name");
+		numD = PlayerPrefs.GetInt("numDeath");
+
 		print (playerName);
 		cnt = new GUIContent();
 		if(playerName != ""){
@@ -84,6 +86,10 @@ public class HeartSelectorMovement : MonoBehaviour {
 	}
 	
 	void OnGUI(){
-		GUI.Label(new Rect(Screen.width/3.8f, Screen.height/2.65f, 100, 100), cnt, style);
+		GUI.Label(new Rect(Screen.width/3.8f, Screen.height/2.7f, 100, 100), cnt, style);
+
+		if(cnt.text != ""){
+			GUI.Label(new Rect(Screen.width/2.85f, Screen.height/2.4f, 100, 100), numD.ToString(), style);
+		}
 	}
 }

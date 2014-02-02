@@ -29,13 +29,23 @@ public partial class Link : MonoBehaviour {
 	Vector2 desiredDisplacement, deltaDisplacement;
 	float desiredDisplacementTime, vert, hor;
 
-	public float initHealth = 3, health = 3;
+	static GameObject heartPrefab, heartEmptyPrefab;
+
+	public static float initHealth = 3, health = 3;
 
 	SpriteDir dir = SpriteDir.UP_STEP;
 	public static int numRupee = 0;
 
+<<<<<<< HEAD
 	//ITEM
 	int itemPoseTimer = 0;
+=======
+	void Awake(){
+		heartPrefab = Resources.Load<GameObject>("Heart");
+		heartEmptyPrefab = Resources.Load<GameObject>("HeartEmpty");
+		updateHealth();
+	}
+>>>>>>> d9e02111380b138bdfe4e111b7f6bd3ff362d270
 
 	void Start(){
 		previousPos = transform.position;
@@ -63,6 +73,35 @@ public partial class Link : MonoBehaviour {
 		if(woodenSwordProjectile == null){
 			canShootAgain = true;
 		}
+<<<<<<< HEAD
+=======
+	}
+
+
+	public static void updateHealth(){
+		if(health <= 0){
+			// Game Over
+			int numD = PlayerPrefs.GetInt("numDeath");
+			PlayerPrefs.SetInt("numDeath", ++numD);
+			Application.LoadLevel("death");
+		}
+
+
+		float f = 0;
+
+		for(int i=0; i < health; ++i){
+			GameObject h = Instantiate(heartPrefab, new Vector3(3.5f + f, 4.4f, 0), Quaternion.identity) as GameObject;
+			//h.transform.parent = GameObject.Find("heartHolder").transform;
+			f += 0.5f;
+		}
+
+
+
+		for (float hi = health; hi < initHealth; ++hi){
+			GameObject h = Instantiate(heartEmptyPrefab, new Vector3(3.5f + f, 4.4f, 0), Quaternion.identity) as GameObject;
+			f += 0.5f;
+		}
+>>>>>>> d9e02111380b138bdfe4e111b7f6bd3ff362d270
 	}
 
 	void FixedUpdate()
