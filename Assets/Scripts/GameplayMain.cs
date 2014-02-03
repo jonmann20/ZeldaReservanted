@@ -304,7 +304,7 @@ public class GameplayMain : MonoBehaviour {
 			screenScrolling = false;
 		}
 
-		if(desiredSpeech == "" && !screenScrolling)
+		if(desiredSpeech == "" && !screenScrolling && MoveCurtain.isMoved)
 			linkRef.SendMessage("setMovementEnabled", true);
 
 		//SHOULD ROOM TRANSITION??
@@ -464,7 +464,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			s += t.code + ' ';
 		}
-		System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
+//		System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
 	}
 
 	public IntPair getRoomCoords(string val)

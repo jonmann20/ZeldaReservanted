@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MoveCurtain : MonoBehaviour {
 
-	bool isMoved = false;
+	static public bool isMoved = false;
 	GameObject lnk;
 	Link lnkScript;
 
@@ -11,10 +11,11 @@ public class MoveCurtain : MonoBehaviour {
 		int firstRun = 0;
 
 		foreach(Transform child in transform){
-			StartCoroutine(MoveToPosition(
+			StartCoroutine(Utils.that.MoveToPosition(
 				child,
 				child.position + new Vector3((firstRun++ == 0) ? -8.25f : 8.25f, 0),
-				1f
+				1f,
+				doneMoving
 			));
 		}
 
@@ -22,24 +23,8 @@ public class MoveCurtain : MonoBehaviour {
 		lnkScript = lnk.GetComponent<Link>();
 	}
 
-	IEnumerator MoveToPosition(Transform tForm, Vector3 newPos, float time){
-		float elapsedTime = 0;
-		Vector3 startingPos = tForm.position;
-		
-		while (elapsedTime < time){
-			tForm.position = Vector3.Lerp(startingPos, newPos, (elapsedTime / time));
-			elapsedTime += Time.deltaTime;
-
-			if(elapsedTime >= time && !isMoved){
-				doneMoving();
-			}
-			
-			yield return null;
-		}
-	}
-
 	void doneMoving(){
-		isMoved = true;
+		if(isMoved) return;	// prevents double call (1 for each curtain)
 		
 		GameObject mainCam = GameObject.Find("MainCamera");
 		mainCam.audio.Play();
@@ -52,5 +37,7 @@ public class MoveCurtain : MonoBehaviour {
 		foreach(Transform child in transform){
 			Destroy (child.gameObject);
 		}
+
+		isMoved = true;
 	}
 }
