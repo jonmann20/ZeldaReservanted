@@ -13,7 +13,7 @@ public abstract class Enemy : MonoBehaviour {
 	public SpriteRenderer sprRend;
 	protected SpriteDir direction;
 
-	protected GameObject rupeePrefab, rupee5Prefab;
+	protected GameObject rupeePrefab, rupee5Prefab, heartItemDropPrefab;
 
 	protected bool waitForExit = false;
 
@@ -37,6 +37,7 @@ public abstract class Enemy : MonoBehaviour {
 		rupeePrefab = Resources.Load<GameObject>("Rupee");
 		rupee5Prefab = Resources.Load<GameObject>("Rupee5");
 		enemyZap = Resources.Load<AudioClip>("Audio/soundEffects/enemyZapped");
+		heartItemDropPrefab = Resources.Load<GameObject>("heartItemDrop");
 
 		audioSrc = new GameObject("audioSrc");
 		audioSrc.AddComponent<AudioSource>();
@@ -48,12 +49,15 @@ public abstract class Enemy : MonoBehaviour {
 	public void kill(){
 		GameAudio.playEnemyZap();
 
-		int rand = Random.Range(0, 10);
+		int rand = Random.Range(0, 20);
 
-		if(rand <= 2){
+		if(rand <= 3){
 			Instantiate(rupeePrefab, this.transform.position, Quaternion.identity);
 		}
-		else if(rand >= 8){
+		else if(rand >= 4 && rand <= 7){
+			Instantiate(heartItemDropPrefab, this.transform.position, Quaternion.identity);
+		}
+		else if(rand >= 17){
 			Instantiate(rupee5Prefab, this.transform.position, Quaternion.identity);
 		}
 

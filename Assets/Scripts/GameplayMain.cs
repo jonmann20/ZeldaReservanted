@@ -684,6 +684,9 @@ public class GameplayMain : MonoBehaviour {
 			case "woodensword":
 			Inventory.hasWoodenSword = true;
 			importantItem = true;
+			GameObject.Find("HUDwoodenSwordN").GetComponent<SpriteRenderer>().enabled = true;
+			GameAudio.playItemObtained();
+			GameAudio.playItemReceived();
 			break;
 
 			case "nothing":
