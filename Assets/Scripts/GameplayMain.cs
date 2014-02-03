@@ -6,7 +6,11 @@ public class GameplayMain : MonoBehaviour {
 
 	//overworld map is 256x88 tiles
 	public GameObject MapTile;
-	public GameObject Enemy;
+
+	//ENEMY PREFABS
+	public GameObject OctorokRed;
+	public GameObject TektikeBlue;
+
 	public GameObject SpecialCollisionTile;
 	public GameObject NPCEntity;
 	public GameObject Fire;
@@ -77,7 +81,8 @@ public class GameplayMain : MonoBehaviour {
 		NPCEntity = Resources.Load("NPCEntity") as GameObject;
 		Fire = Resources.Load("Fire") as GameObject;
 		ItemEntity = Resources.Load("ItemEntity") as GameObject;
-		Enemy = Resources.Load("Enemies/OctorokRed") as GameObject;
+		OctorokRed = Resources.Load("Enemies/OctorokRed") as GameObject;
+		TektikeBlue = Resources.Load("Enemies/TektikeBlue") as GameObject;
 
 		//Enemy = Resources.Load("Enemies/TektikeBlue") as GameObject;
 
@@ -199,16 +204,32 @@ public class GameplayMain : MonoBehaviour {
 		{
 			MapTileScript mts = t.GetComponent("MapTileScript") as MapTileScript;
 			int intcode = int.Parse(mts.code);
+
+			//ONLY CONSIDER ENEMY CODES (REFER TO CODE KEY GOOGLE DOC)
 			if(intcode > 0 && intcode < 88)
 			{
-				//if(debugOne++ == 3) {
+				float xVal = t.transform.position.x + 0.5f;
+				float yVal = t.transform.position.y - 0.5f;
+				GameObject enemy;
 
-					float xVal = t.transform.position.x + 0.5f;
-					float yVal = t.transform.position.y - 0.5f;
-					GameObject enemy = Instantiate(Enemy, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
-					enemy.transform.parent = EnemyHolder.transform;
-					enemies.Add(enemy);
-				//}
+				switch(mts.code)
+				{
+				case "01":
+					enemy = Instantiate(OctorokRed, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				case "02":
+					enemy = Instantiate(TektikeBlue, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				case "08":
+					enemy = Instantiate(TektikeBlue, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				default:
+					enemy = Instantiate(OctorokRed, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				}
+
+				enemy.transform.parent = EnemyHolder.transform;
+				enemies.Add(enemy);
 			}
 		}
 	}
@@ -335,8 +356,6 @@ public class GameplayMain : MonoBehaviour {
 		int newRoomX = currentRoom.xcoord;
 		int newRoomY = currentRoom.ycoord;
 
-		//give the new tiles a head-start to remove room-break line.
-		float headStartFactor = 1.00f;
 		float hudmovedelta = 0.2f;
 		int xMovement = 0;
 		int yMovement = 0;
@@ -402,10 +421,11 @@ public class GameplayMain : MonoBehaviour {
 				oldTiles[counter] = t;
 				counter ++;
 			}
-			populateRoomWithCoords(newRoomX, newRoomY, -xMovement * headStartFactor, -yMovement * headStartFactor);
+			populateRoomWithCoords(newRoomX, newRoomY, -xMovement, -yMovement);
 			foreach(GameObject t in activeTiles)
 			{
 				t.SendMessage("setDesiredDisplacementTime", new Vector3(xMovement, yMovement, desiredDisplacementTime));
+			
 			}
 			foreach(GameObject st in specialTiles)
 			{
