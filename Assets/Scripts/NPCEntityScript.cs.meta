@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 0ac9582effbeb44bf80ce82f604744c1
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - s_oldman: {instanceID: 0}
+  - s_trader: {instanceID: 0}
+  - s_oldlady: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

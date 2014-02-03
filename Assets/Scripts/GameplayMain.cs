@@ -146,7 +146,7 @@ public class GameplayMain : MonoBehaviour {
 				//CHECK FOR SPECIAL TILE
 				string code = currentRoom.tiles[i, j].code;
 				int intcode = int.Parse(code);
-				if(intcode >= 90)
+				if(intcode >= 88)
 				{
 					GameObject sct = Instantiate(SpecialCollisionTile, new Vector3(topLeftX + i + offsetX + 0.5f, topLeftY - j + offsetY - 0.5f, 0), Quaternion.identity) as GameObject;
 	
@@ -199,7 +199,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			MapTileScript mts = t.GetComponent("MapTileScript") as MapTileScript;
 			int intcode = int.Parse(mts.code);
-			if(intcode > 0 && intcode < 89)
+			if(intcode > 0 && intcode < 88)
 			{
 				//if(debugOne++ == 3) {
 
@@ -283,11 +283,6 @@ public class GameplayMain : MonoBehaviour {
 			screenScrolling = false;
 		}
 
-<<<<<<< HEAD
-=======
-		//print(screenScrolling);
-		//print(desiredSpeech);
->>>>>>> d9e02111380b138bdfe4e111b7f6bd3ff362d270
 		if(desiredSpeech == "" && !screenScrolling)
 			linkRef.SendMessage("setMovementEnabled", true);
 
@@ -389,6 +384,7 @@ public class GameplayMain : MonoBehaviour {
 			screenScrolling = false;
 			IntPair newCoords = getRoomCoords(specialExitCode);
 			populateRoomWithCoords(newCoords.x, newCoords.y, 0, 0);
+			initEnemiesCurrentRoom();
 			//tilecode = 12. xcoord and ycoord look unset.
 			Tile destinationTile = currentRoom.findTileWithCode(specialExitCode);
 			linkRef.transform.position = new Vector3(topLeftX + destinationTile.xcoord, topLeftY - destinationTile.ycoord, 0);
@@ -453,16 +449,20 @@ public class GameplayMain : MonoBehaviour {
 
 	public IntPair getRoomCoords(string val)
 	{
-		//audio.Play();
+		audio.Play();
 		if(val == "99") return new IntPair(7, 7);
 		if(val == "98") return new IntPair(6, 6);
 		if(val == "97") return new IntPair(4, 6);
 		if(val == "96") return new IntPair(5, 7);
-		if(val == "95") return new IntPair(4, 4);
-		if(val == "94") return new IntPair(10, 0);
+		if(val == "95") return new IntPair(4, 4); //K
+		if(val == "94") return new IntPair(10, 0); //I
 		if(val == "93") return new IntPair(12, 0);
 		if(val == "92") return new IntPair(14, 0);
 		if(val == "91") return new IntPair(15, 6);
+
+		if(val == "90") return new IntPair(14, 5); //M
+		if(val == "89") return new IntPair(10, 4); //K
+		if(val == "88") return new IntPair(0, 7);
 		return new IntPair(-1, -1);
 	}
 
@@ -473,22 +473,137 @@ public class GameplayMain : MonoBehaviour {
 		disposeAllEnemies();
 		destroyCurrentRoom();
 		audio.Stop();
+		if(code == "88")
+		{
+			populateRoomWithRoom(MapTileEnum.getNpcRoom("oldladytalker"));
+			
+			setDesiredSpeechString("PAY ME AND I'LL TALK.");
+			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
+			trader.SendMessage("setSprite", "oldlady");
+			NPCObjects.Add(trader);
+			
+			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
+			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+		}
+		if(code == "89")
+		{
+			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader6"));
+			
+			setDesiredSpeechString("BUY SOMETHIN' WILL YA!");
+			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
+			trader.SendMessage("setSprite", "trader");
+			NPCObjects.Add(trader);
+			
+			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
+			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+		}
+		if(code == "90")
+		{
+			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader5"));
+			
+			setDesiredSpeechString("BUY SOMETHIN' WILL YA!");
+			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
+			trader.SendMessage("setSprite", "trader");
+			NPCObjects.Add(trader);
+			
+			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
+			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+		}
 		if(code == "91")
+		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader4"));
+
+			setDesiredSpeechString("BUY SOMETHIN' WILL YA!");
+			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
+			trader.SendMessage("setSprite", "trader");
+			NPCObjects.Add(trader);
+			
+			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
+			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+		}
 		if(code == "92")
+		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("empty"));
+		}
 		if(code == "93")
+		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader3"));
+			
+			setDesiredSpeechString("BUY SOMETHIN' WILL YA!");
+			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
+			trader.SendMessage("setSprite", "trader");
+			NPCObjects.Add(trader);
+			
+			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
+			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+		}
 		if(code == "94")
+		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("whitesword"));
+			
+			if(!Inventory.hasWhiteSword)
+			{
+				setDesiredSpeechString("MASTER USING IT AND...MEH, JUST TAKE IT.");
+				GameObject oldman = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
+				oldman.SendMessage("setSprite", "oldman");
+				NPCObjects.Add(oldman);
+				GameObject sword = Instantiate(ItemEntity, new Vector3(0, -2.5f, -1), Quaternion.identity) as GameObject;
+				sword.SendMessage("setItemName", "woodensword");
+				NPCObjects.Add(sword);
+			}
+			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
+			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+		}
 		if(code == "95")
+		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader2"));
+			
+			setDesiredSpeechString("BUY SOMETHIN' WILL YA!");
+			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
+			trader.SendMessage("setSprite", "trader");
+			NPCObjects.Add(trader);
+			
+			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
+			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+		}
 		if(code == "96")
+		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("oldladygrave"));
+			
+			setDesiredSpeechString("MEET THE OLD MAN AT THE GRAVE. OR DON'T");
+	
+			GameObject oldlady = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
+			oldlady.SendMessage("setSprite", "oldlady");
+			NPCObjects.Add(oldlady);
+			
+			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
+			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+		}
 		if(code == "97")
+		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("oldladymedicine"));
+			
+			setDesiredSpeechString("BUY MEDICINE BEFORE YOU GO.");
+			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
+			trader.SendMessage("setSprite", "oldlady");
+			NPCObjects.Add(trader);
+			
+			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
+			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+		}
 		if(code == "98")
+		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader1"));
+
+			setDesiredSpeechString("BUY SOMETHIN' WILL YA!");
+			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
+			trader.SendMessage("setSprite", "trader");
+			NPCObjects.Add(trader);
+
+			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
+			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+		}
+
 		if(code == "99")
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("oldmanwoodensword"));
@@ -496,7 +611,9 @@ public class GameplayMain : MonoBehaviour {
 			if(!Inventory.hasWoodenSword)
 			{
 				setDesiredSpeechString("IT'S DANGEROUS TO GO ALONE! TAKE THIS.");
-				NPCObjects.Add(Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject);
+				GameObject oldman = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
+				oldman.SendMessage("setSprite", "oldman");
+				NPCObjects.Add(oldman);
 				GameObject sword = Instantiate(ItemEntity, new Vector3(0, -2.5f, -1), Quaternion.identity) as GameObject;
 				sword.SendMessage("setItemName", "woodensword");
 				NPCObjects.Add(sword);
@@ -522,6 +639,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			if(desiredSpeech.Length > 0)
 			{
+				GameAudio.playText();
 				currentSpeech += desiredSpeech[0];
 				desiredSpeech = desiredSpeech.Remove(0, 1);
 				speechTimer = 12;

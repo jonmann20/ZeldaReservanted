@@ -589,6 +589,18 @@ public class MapTileEnum : MonoBehaviour {
 		{
 			r.setExit('s', "91");
 		}
+		if(whichRoom == "trader5")
+		{
+			r.setExit('s', "90");
+		}
+		if(whichRoom == "trader6")
+		{
+			r.setExit('s', "89");
+		}
+		if(whichRoom == "oldladytalker")
+		{
+			r.setExit('s', "88");
+		}
 		return r;
 	}
 

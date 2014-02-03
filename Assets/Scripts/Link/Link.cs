@@ -36,16 +36,13 @@ public partial class Link : MonoBehaviour {
 	SpriteDir dir = SpriteDir.UP_STEP;
 	public static int numRupee = 0;
 
-<<<<<<< HEAD
-	//ITEM
 	int itemPoseTimer = 0;
-=======
+
 	void Awake(){
 		heartPrefab = Resources.Load<GameObject>("Heart");
 		heartEmptyPrefab = Resources.Load<GameObject>("HeartEmpty");
 		updateHealth();
 	}
->>>>>>> d9e02111380b138bdfe4e111b7f6bd3ff362d270
 
 	void Start(){
 		previousPos = transform.position;
@@ -73,8 +70,6 @@ public partial class Link : MonoBehaviour {
 		if(woodenSwordProjectile == null){
 			canShootAgain = true;
 		}
-<<<<<<< HEAD
-=======
 	}
 
 
@@ -101,7 +96,6 @@ public partial class Link : MonoBehaviour {
 			GameObject h = Instantiate(heartEmptyPrefab, new Vector3(3.5f + f, 4.4f, 0), Quaternion.identity) as GameObject;
 			f += 0.5f;
 		}
->>>>>>> d9e02111380b138bdfe4e111b7f6bd3ff362d270
 	}
 
 	void FixedUpdate()
