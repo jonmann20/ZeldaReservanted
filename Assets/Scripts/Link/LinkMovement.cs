@@ -7,7 +7,7 @@ using System.Collections;
 
 public partial class Link : MonoBehaviour {
 
-	const float DIST_BTW_STEPS = 0.5f;
+	const float DIST_BTW_STEPS = 0.4f;
 	Vector2 distSinceLastStep = Vector2.zero;
 	bool isRightFootForward = true;
 
