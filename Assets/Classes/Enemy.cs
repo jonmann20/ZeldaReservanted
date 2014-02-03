@@ -37,7 +37,7 @@ public abstract class Enemy : MonoBehaviour {
 		rupeePrefab = Resources.Load<GameObject>("Rupee");
 		rupee5Prefab = Resources.Load<GameObject>("Rupee5");
 		enemyZap = Resources.Load<AudioClip>("Audio/soundEffects/enemyZapped");
-		
+
 		audioSrc = new GameObject("audioSrc");
 		audioSrc.AddComponent<AudioSource>();
 		audioSrc.audio.clip = enemyZap;
@@ -46,7 +46,7 @@ public abstract class Enemy : MonoBehaviour {
 	}
 
 	public void kill(){
-		audioSrc.audio.Play();
+		GameAudio.playEnemyZap();
 
 		int rand = Random.Range(0, 10);
 

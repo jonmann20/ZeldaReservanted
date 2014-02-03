@@ -9,8 +9,9 @@ public class Tektike : Enemy {
 	int timer = 10;
 	float fractionCovered = 1.0f;
 	Vector3 destination;
+	Vector3 midPoint;
 
-	void Awake()
+	void Start()
 	{
 		Movement();
 	}
@@ -27,11 +28,37 @@ public class Tektike : Enemy {
 			newPlace = transform.position + pickRandom();
 		}
 		destination = newPlace;
+		midPoint = getMidpoint(transform.position, destination);
 		fractionCovered = 0.0f;
 	}
 
 	Vector3 pickRandom(){
 		return new Vector3((int)Random.Range(-3,3), (int)Random.Range(-3,3));
+	}
+
+	Vector3 getMidpoint(Vector3 currentPoint, Vector3 newPoint)
+	{
+		float rise = 1.0f;
+		float midX = 0.0f;
+		float midY = 0.0f;
+
+		if(currentPoint.y == newPoint.y)
+		{
+			midX = (newPoint.x + currentPoint.x) * 0.5f;
+			midY = newPoint.y + rise;
+		}
+		else if(currentPoint.y > newPoint.y)
+		{
+			midX = (currentPoint.x * (0.75f) + newPoint.x * (0.25f));
+			midY = currentPoint.y + rise;
+		}
+		else if(currentPoint.y < newPoint.y)
+		{
+			midX = (currentPoint.x * (0.25f) + newPoint.x * (0.75f));
+			midY = newPoint.y + rise;
+		}
+
+		return new Vector3(midX, midY, 0);
 	}
 
 	void Update(){
@@ -46,13 +73,16 @@ public class Tektike : Enemy {
 		else
 			(renderer as SpriteRenderer).sprite = spr_ground;
 
-		transform.position = Vector3.Lerp(transform.position, destination, fractionCovered);
+		if(fractionCovered <= 0.5f)
+			transform.position = Vector3.Lerp(transform.position, midPoint, fractionCovered / 0.5f);
+		if(fractionCovered > 0.5f)
+			transform.position = Vector3.Lerp(transform.position, destination, (fractionCovered - 0.5f) / 0.5f);
 
 		timer --;
 		if(timer <= 0)
 		{
 			Movement();
-			timer = 15 + (int)Random.Range(0, 240);
+			timer = 60 + (int)Random.Range(0, 240);
 		}
 	}
 
