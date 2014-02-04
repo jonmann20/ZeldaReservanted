@@ -4,6 +4,7 @@ using System.Collections;
 public class EnterName : MonoBehaviour {
 
 	public float speed;
+	public float letterSpacing = 140f;
 
 	Font font;
 	GUIContent cnt;
@@ -45,7 +46,7 @@ public class EnterName : MonoBehaviour {
 		
 		style = new GUIStyle();
 		style.font = font;
-		style.fontSize = 32;
+		style.fontSize = 30;
 		style.normal.textColor = Color.white;
 
 		srcBeep = new GameObject("srcBeep");
@@ -79,7 +80,7 @@ public class EnterName : MonoBehaviour {
 					break;
 				case 1:
 					//heartSelector.transform.position = new Vector2(-72, 50);
-				heartSelector.transform.position = new Vector2(-76, 3);
+					heartSelector.transform.position = new Vector2(-76, 3);
 					break;
 //				case 2:
 //					heartSelector.transform.position = new Vector2(-72, 25);
@@ -124,8 +125,6 @@ public class EnterName : MonoBehaviour {
 		}
 
 		// add char to name
-		float letterSpacing = 134f;
-
 		if(hrtPos == 0 && Input.GetButtonDown("Attack") && cnt.text.Length < 8){
 			cnt.text += charArr[(int)curPos.x, (int)curPos.y];
 			playBombSet();

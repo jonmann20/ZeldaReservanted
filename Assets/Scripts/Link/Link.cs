@@ -38,7 +38,10 @@ public partial class Link : MonoBehaviour {
 
 	int itemPoseTimer = 0;
 
+	public static Link that;
+
 	void Awake(){
+		that = this;
 		heartPrefab = Resources.Load<GameObject>("Heart");
 		heartEmptyPrefab = Resources.Load<GameObject>("HeartEmpty");
 		updateHealth();

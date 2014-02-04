@@ -677,21 +677,20 @@ public class GameplayMain : MonoBehaviour {
 
 	public void acquireItem(string itemName)
 	{
-		print("HELLO");
+		//print("HELLO");
 		bool importantItem = false;
 		switch(itemName)
 		{
 			case "woodensword":
-			Inventory.hasWoodenSword = true;
-			importantItem = true;
-			GameObject.Find("HUDwoodenSwordN").GetComponent<SpriteRenderer>().enabled = true;
-			GameAudio.playItemObtained();
-			GameAudio.playItemReceived();
-			break;
-
+				Inventory.hasWoodenSword = true;
+				importantItem = true;
+				GameObject.Find("HUDwoodenSwordN").GetComponent<SpriteRenderer>().enabled = true;
+				GameAudio.playItemObtained();
+				GameAudio.playItemReceived();
+				break;
 			case "nothing":
-			print("ERROR: acquired item has no name defined");
-			break;
+				//print("ERROR: acquired item has no name defined");
+				break;
 		}
 
 		if(importantItem)
