@@ -13,7 +13,7 @@ public abstract class Enemy : MonoBehaviour {
 	public SpriteRenderer sprRend;
 	protected SpriteDir direction;
 
-	protected GameObject rupeePrefab, rupee5Prefab, heartItemDropPrefab;
+	protected GameObject rupeePrefab, rupee5Prefab, heartItemDropPrefab, bombPrefab;
 
 	protected bool waitForExit = false;
 
@@ -36,6 +36,7 @@ public abstract class Enemy : MonoBehaviour {
 	void Awake(){
 		rupeePrefab = Resources.Load<GameObject>("Rupee");
 		rupee5Prefab = Resources.Load<GameObject>("Rupee5");
+		bombPrefab = Resources.Load<GameObject>("Bomb");
 		enemyZap = Resources.Load<AudioClip>("Audio/soundEffects/enemyZapped");
 		heartItemDropPrefab = Resources.Load<GameObject>("heartItemDrop");
 
@@ -49,18 +50,26 @@ public abstract class Enemy : MonoBehaviour {
 	public void kill(){
 		GameAudio.playEnemyZap();
 
-		int rand = Random.Range(0, 20);
+		//dropRandomItem();
+		Instantiate(bombPrefab, this.transform.position, Quaternion.identity);
 
+		Destroy(this.gameObject);
+	}
+
+	void dropRandomItem(){
+		int rand = Random.Range(0, 40);
+		
 		if(rand <= 3){
 			Instantiate(rupeePrefab, this.transform.position, Quaternion.identity);
 		}
 		else if(rand >= 4 && rand <= 7){
 			Instantiate(heartItemDropPrefab, this.transform.position, Quaternion.identity);
 		}
-		else if(rand >= 17){
+		else if(rand >= 8 && rand <= 11){
 			Instantiate(rupee5Prefab, this.transform.position, Quaternion.identity);
 		}
-
-		Destroy(this.gameObject);
+		else if(rand >= 12 && rand <= 15){
+			Instantiate(bombPrefab, this.transform.position, Quaternion.identity);
+		}
 	}
 }
