@@ -7,7 +7,7 @@ using System.Collections;
 
 public partial class Link : MonoBehaviour {
 
-	GameObject woodenSwordPrefab, woodenSword, woodenSwordProjectile;
+	GameObject woodenSwordPrefab, woodenSword, woodenSwordProjectile, bombPrefab;
 	float itemOffset = 0.93f;
 
 	bool canShootAgain = true;
@@ -58,6 +58,18 @@ public partial class Link : MonoBehaviour {
 			}
 			else {
 				GameAudio.playSwordSwing();
+			}
+		}
+
+		if(Input.GetButtonDown("SpecialAttack")){
+			if(Inventory.hasBomb){
+				if(numBomb > 0){
+					GameObject theBomb = Instantiate(bombPrefab, transform.position, Quaternion.identity) as GameObject;
+					Bomb bScript = theBomb.GetComponent<Bomb>();
+					bScript.isPickup = false;
+
+					bScript.setBomb();
+				}
 			}
 		}
 	}

@@ -767,6 +767,10 @@ Prefab:
       propertyPath: movementEnabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: e72ad6a84356f5547bcb7894e001e1ee, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e72ad6a84356f5547bcb7894e001e1ee, type: 2}
   m_RootGameObject: {fileID: 718128008}
@@ -812,6 +816,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14548c7800115d5458426bbb6f78605a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPickup: 1
+  explosion: {fileID: 21300260, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
 --- !u!212 &679966263
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -918,7 +924,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortingLayerID: 3642503593
   m_Sprite: {fileID: 21300004, guid: 689054bfe45f17041b1e021c571af8be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -45,6 +45,8 @@ public partial class Link : MonoBehaviour {
 		that = this;
 		heartPrefab = Resources.Load<GameObject>("Heart");
 		heartEmptyPrefab = Resources.Load<GameObject>("HeartEmpty");
+		bombPrefab = Resources.Load<GameObject>("Bomb");
+
 		updateHealth();
 	}
 

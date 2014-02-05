@@ -75,9 +75,19 @@ public class GameplayMain : MonoBehaviour {
 	}
 	
 	void Start () {
+		// saves
 		if(PlayerPrefs.GetInt("hasSword") == 1){
 			Inventory.hasWoodenSword =  true;
 			GameObject.Find("HUDwoodenSwordN").GetComponent<SpriteRenderer>().enabled = true;
+		}
+
+		if(PlayerPrefs.GetInt("hasBomb") == 1){
+			Inventory.hasBomb =  true;
+			GameObject.Find("HUDbombAction").GetComponent<SpriteRenderer>().enabled = true;
+
+			Link.numBomb = PlayerPrefs.GetInt("numBomb");
+			GUIText gt = GameObject.Find ("bombNum").GetComponent<GUIText>();
+			gt.text = Link.numBomb.ToString();
 		}
 
 		//GUI
@@ -527,7 +537,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			s += t.code + ' ';
 		}
-		System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
+		//System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
 	}
 
 	public IntPair getRoomCoords(string val)
