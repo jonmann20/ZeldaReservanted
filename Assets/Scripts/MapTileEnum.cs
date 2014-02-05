@@ -189,6 +189,7 @@ public class MapTileEnum : MonoBehaviour {
 		tile08 = mapTileSprites[8];
 		tile09 = mapTileSprites[9];
 		tile0a = mapTileSprites[10];
+		tile0a = mapTileSprites[11];
 		tile0c = mapTileSprites[12];
 		tile0d = mapTileSprites[13];
 		tile0e = mapTileSprites[14];

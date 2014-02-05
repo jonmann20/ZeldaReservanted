@@ -23,13 +23,13 @@ public class Octorok : Enemy {
 		Vector3 newPlace = transform.position + pickRandom();
 		
 		//enforce new place is within room. (WARNING: SLOW!)
-		while(true)
-		{
-			if(newPlace.x > -6.5f && newPlace.x < 6.5f
-			   && newPlace.y > -6 && newPlace.y < 2)
-				break;
+		//while(true)
+		//{
+			//if(newPlace.x > -6.5f && newPlace.x < 6.5f
+			   //&& newPlace.y > -6 && newPlace.y < 2)
+				//break;
 			newPlace = transform.position + pickRandom();
-		}
+		//}
 		destination = newPlace;
 		midPoint = getMidpoint(transform.position, destination);
 		fractionCovered = 0.0f;

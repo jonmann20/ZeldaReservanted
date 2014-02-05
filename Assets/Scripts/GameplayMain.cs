@@ -9,8 +9,19 @@ public class GameplayMain : MonoBehaviour {
 
 	//ENEMY PREFABS
 	public GameObject OctorokRed;
+	public GameObject OctorokBlue;
+	public GameObject TektikeRed;
 	public GameObject TektikeBlue;
-
+	public GameObject LeeverRed;
+	public GameObject LeeverBlue;
+	public GameObject LynelRed;
+	public GameObject LynelBlue;
+	public GameObject MoblinRed;
+	public GameObject MoblinBlue;
+	public GameObject Peahat;
+	public GameObject Zola;
+	public GameObject Rock;
+	 
 	public GameObject SpecialCollisionTile;
 	public GameObject NPCEntity;
 	public GameObject Fire;
@@ -86,9 +97,20 @@ public class GameplayMain : MonoBehaviour {
 		NPCEntity = Resources.Load("NPCEntity") as GameObject;
 		Fire = Resources.Load("Fire") as GameObject;
 		ItemEntity = Resources.Load("ItemEntity") as GameObject;
-		OctorokRed = Resources.Load("Enemies/OctorokRed") as GameObject;
-		TektikeBlue = Resources.Load("Enemies/TektikeBlue") as GameObject;
 
+		OctorokRed = Resources.Load("Enemies/OctorokRed") as GameObject;
+		OctorokBlue = Resources.Load("Enemies/OctorokBlue") as GameObject;
+		TektikeRed = Resources.Load("Enemies/TektikeRed") as GameObject;
+		TektikeBlue = Resources.Load("Enemies/TektikeBlue") as GameObject;
+		LeeverRed = Resources.Load("Enemies/LeeverRed") as GameObject;
+		LeeverBlue = Resources.Load("Enemies/LeeverBlue") as GameObject;
+		LynelRed = Resources.Load("Enemies/LynelRed") as GameObject;
+		LynelBlue = Resources.Load("Enemies/LynelBlue") as GameObject;
+		MoblinRed = Resources.Load("Enemies/MoblinRed") as GameObject;
+		MoblinBlue = Resources.Load("Enemies/MoblinBlue") as GameObject;
+		Peahat = Resources.Load("Enemies/Peahat") as GameObject;
+		Zola = Resources.Load("Enemies/Zola") as GameObject;
+		Rock = Resources.Load("Enemies/Rock") as GameObject;
 		//Enemy = Resources.Load("Enemies/TektikeBlue") as GameObject;
 
 		//overworld dataset via http://inventwithpython.com/blog/2012/12/10/8-bit-nes-legend-of-zelda-map-data/
@@ -200,6 +222,12 @@ public class GameplayMain : MonoBehaviour {
 
 	void initEnemiesCurrentRoom()
 	{
+		if(currentRoom.xcoord == 7 && currentRoom.ycoord == 7)
+		{
+
+			print("HERE");
+		}
+
 		GameObject EnemyHolder = new GameObject("EnemyHolder");
 		EnemyHolder.transform.parent = LvlCamera.transform;
 
@@ -223,10 +251,40 @@ public class GameplayMain : MonoBehaviour {
 					enemy = Instantiate(OctorokRed, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
 					break;
 				case "02":
-					enemy = Instantiate(TektikeBlue, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					enemy = Instantiate(TektikeRed, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				case "03":
+					enemy = Instantiate(Zola, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				case "04":
+					enemy = Instantiate(LeeverBlue, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				case "05":
+					enemy = Instantiate(Peahat, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				case "06":
+					enemy = Instantiate(LeeverRed, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				case "07":
+					enemy = Instantiate(OctorokBlue, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
 					break;
 				case "08":
 					enemy = Instantiate(TektikeBlue, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				case "09":
+					enemy = Instantiate(MoblinRed, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				case "10":
+					enemy = Instantiate(MoblinBlue, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				case "11":
+					enemy = Instantiate(LynelRed, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				case "12":
+					enemy = Instantiate(LynelBlue, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
+					break;
+				case "13":
+					enemy = Instantiate(Rock, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
 					break;
 				default:
 					enemy = Instantiate(OctorokRed, new Vector3(xVal, yVal, 0), Quaternion.identity) as GameObject;
@@ -296,7 +354,6 @@ public class GameplayMain : MonoBehaviour {
 			highlightedTile = s;
 		}
 
-
 		if(desiredDisplacementTime > 0)
 			desiredDisplacementTime --;
 		else
@@ -306,6 +363,7 @@ public class GameplayMain : MonoBehaviour {
 				disposeOfArray(oldTiles);
 				initEnemiesCurrentRoom();
 			}
+
 			screenScrolling = false;
 		}
 
@@ -469,7 +527,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			s += t.code + ' ';
 		}
-//		System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
+		System.IO.File.WriteAllText(@"Assets/Resources/EnemyTileMap.txt", s);
 	}
 
 	public IntPair getRoomCoords(string val)
