@@ -15,6 +15,7 @@ public class Octorok : Enemy {
 	
 	void Start()
 	{
+		setHealth(2);
 		Movement();
 	}
 	
@@ -80,7 +81,7 @@ public class Octorok : Enemy {
 	void Update(){
 
 	}
-	
+
 	void OnCollisionEnter2D(Collision2D col){
 		if(col.gameObject.tag == "Player"){
 			--Link.health;

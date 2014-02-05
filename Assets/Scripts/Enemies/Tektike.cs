@@ -14,6 +14,7 @@ public class Tektike : Enemy {
 
 	void Start()
 	{
+		setHealth(1);
 		Movement();
 	}
 

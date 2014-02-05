@@ -11,7 +11,7 @@ public partial class Link : MonoBehaviour {
 	float itemOffset = 0.93f;
 
 	bool canShootAgain = true;
-	const float SHOT_SPEED = 5.5f;
+	const float SHOT_SPEED = 10.5f;
 
 	void checkAction(){
 		if(Input.GetButtonDown("Attack")){
@@ -42,23 +42,7 @@ public partial class Link : MonoBehaviour {
 			
 			isAttacking = true;
 			StartCoroutine(finishAttack(dir));
-
-			Sword swordScript = woodenSword.GetComponent<Sword>();
-
-			if(health == initHealth){
-				if(canShootAgain){
-					canShootAgain = false;
-
-					shootSword();
-					Destroy(woodenSword);
-				}
-				else {
-					GameAudio.playSwordSwing();
-				}
-			}
-			else {
-				GameAudio.playSwordSwing();
-			}
+			GameAudio.playSwordSwing();
 		}
 
 		if(Input.GetButtonDown("SpecialAttack")){
@@ -101,7 +85,6 @@ public partial class Link : MonoBehaviour {
 	GameObject getItem(){
 		float offsetX = 0, offsetY = 0;
 		Quaternion rot = Quaternion.identity;
-		GameObject item = new GameObject();
 
 		switch(dir){
 			case SpriteDir.UP:
@@ -140,7 +123,7 @@ public partial class Link : MonoBehaviour {
 					break;
 			case SpriteDir.DOWN:
 			case SpriteDir.DOWN_STEP:
-					sprRend.sprite = spr[8];
+					sprRend.sprite = spr[8];shootSword();
 					break;
 			case SpriteDir.RIGHT:
 			case SpriteDir.RIGHT_STEP:
@@ -152,6 +135,8 @@ public partial class Link : MonoBehaviour {
 					break;
 		}
 
+		if(woodenSwordProjectile == null)
+			shootSword();
 		isAttacking = false;
 		Destroy(woodenSword);
 	}

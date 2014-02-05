@@ -5,7 +5,7 @@ public abstract class Enemy : MonoBehaviour {
 
 	protected GameObject audioSrc;
 	protected AudioClip enemyZap;
-	protected int health;
+	protected int health = 1;
 	public Sprite[] spr;
 
 	public float topLeftX = -8f;
@@ -20,13 +20,17 @@ public abstract class Enemy : MonoBehaviour {
 	// TODO: make movement on grid
 	public abstract void Movement();
 
-//	protected void OnTriggerEnter2d(Collider2D col){
-//
-//	}
-
-//	protected void OnTriggerExit2d(Collider2D col){
-//		waitForExit = false;
-//	}
+	void OnTriggerEnter2D(Collider2D col){
+		print("hoya!");
+		if(col.gameObject.tag == "Player"){
+			--Link.health;
+			Link.updateHealth();
+		}
+		else if(col.gameObject.tag == "Sword")
+		{
+			setHealth(health - 1);
+		}
+	}
 
 	void OnCollisionExit2D(Collision2D col){
 		//print ("exit");
@@ -71,5 +75,12 @@ public abstract class Enemy : MonoBehaviour {
 		else if(rand >= 12 && rand <= 15){
 			Instantiate(bombPrefab, this.transform.position, Quaternion.identity);
 		}
+	}
+
+	public void setHealth(int h)
+	{
+		health = h;
+		if(health <= 0)
+			kill ();
 	}
 }
