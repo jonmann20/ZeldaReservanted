@@ -11,19 +11,17 @@ public class ItemEntityScript : MonoBehaviour {
 		gpm = GameObject.Find("MainCamera").GetComponent("GameplayMain") as GameplayMain;
 	}
 
-	void OnTriggerEnter2D (Collider2D coll)
-	{
-		print("collided!");
+	void OnTriggerEnter2D (Collider2D coll){
 		gpm.acquireItem(itemName);
-		Destroy(gameObject);
+
+		// TODO: Destroy...  GameObject.find("NPCEntity") 
+
+		gameObject.GetComponent<BoxCollider2D>().enabled = false;
+		gameObject.transform.position = Link.that.transform.position + new Vector3(-0.288f, 1f, 0);
+		Destroy(gameObject, 2.365f);
 	}
 
-	void Update () {
-	
-	}
-
-	public void setItemName(string n)
-	{
+	public void setItemName(string n){
 		itemName = n;
 	}
 }

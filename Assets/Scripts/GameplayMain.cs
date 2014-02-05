@@ -64,6 +64,11 @@ public class GameplayMain : MonoBehaviour {
 	}
 	
 	void Start () {
+		if(PlayerPrefs.GetInt("hasSword") == 1){
+			Inventory.hasWoodenSword =  true;
+			GameObject.Find("HUDwoodenSwordN").GetComponent<SpriteRenderer>().enabled = true;
+		}
+
 		//GUI
 		matrix = Matrix4x4.TRS (Vector3.zero, Quaternion.identity, new Vector3(Screen.width/virtualWidth, Screen.height/virtualHeight, 1.0f));
 		bitFont = Resources.Load("Fonts/prstartk") as Font;
@@ -677,18 +682,21 @@ public class GameplayMain : MonoBehaviour {
 
 	public void acquireItem(string itemName)
 	{
-		print("HELLO");
+		//print("HELLO");
 		bool importantItem = false;
 		switch(itemName)
 		{
 			case "woodensword":
-			Inventory.hasWoodenSword = true;
-			importantItem = true;
-			break;
-
+				Inventory.hasWoodenSword = true;
+				importantItem = true;
+				GameObject.Find("HUDwoodenSwordN").GetComponent<SpriteRenderer>().enabled = true;
+				GameAudio.playItemObtained();
+				GameAudio.playItemReceived();
+				PlayerPrefs.SetInt("hasSword", 1);
+				break;
 			case "nothing":
-			print("ERROR: acquired item has no name defined");
-			break;
+				//print("ERROR: acquired item has no name defined");
+				break;
 		}
 
 		if(importantItem)

@@ -3,13 +3,13 @@ using System.Collections;
 
 public class MoveCurtain : MonoBehaviour {
 
-	static public bool isMoved = false;
+	public static bool isMoved = false;
 	GameObject lnk;
 	Link lnkScript;
 
 	void Start () {
 		int firstRun = 0;
-
+		isMoved = false;
 		foreach(Transform child in transform){
 			StartCoroutine(Utils.that.MoveToPosition(
 				child,

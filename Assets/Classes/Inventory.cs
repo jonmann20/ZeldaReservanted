@@ -9,7 +9,7 @@ public class Inventory /*: MonoBehaviour*/ {
 	public static int numberOfSilverArrows = 0;
 	public static int numberOfKeys = 0;
 
-	public static bool hasWoodenSword = true;//false;
+	public static bool hasWoodenSword = false;//false;
 	public static bool hasBlueRing = false;
 	public static bool hasRedRing = false;
 	public static bool hasWhiteSword = false;
