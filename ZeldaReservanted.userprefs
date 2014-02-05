@@ -1,11 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Bomb.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameplayMain.cs">
     <Files>
-      <File FileName="Assets\Classes\Enemy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Bomb.cs" Line="32" Column="2" />
-      <File FileName="Assets\Scripts\Link\LinkAction.cs" Line="65" Column="26" />
-      <File FileName="Assets\Scripts\GameplayMain.cs" Line="88" Column="1" />
+      <File FileName="Assets\Scripts\Link\Link.cs" Line="96" Column="54" />
+      <File FileName="Assets\Classes\Enemy.cs" Line="80" Column="3" />
+      <File FileName="Assets\Scripts\Bomb.cs" Line="29" Column="33" />
+      <File FileName="Assets\Scripts\Link\LinkAction.cs" Line="65" Column="30" />
+      <File FileName="Assets\Scripts\GameplayMain.cs" Line="68" Column="23" />
+      <File FileName="Assets\Scripts\Link\Link.cs" Line="96" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

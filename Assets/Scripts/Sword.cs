@@ -36,7 +36,7 @@ public class Sword : MonoBehaviour {
 					(renderer as SpriteRenderer).sprite = spr_shot1_n;
 					isSprite1 = false;
 				}
-				print("HO!");
+				//print("HO!");
 			}
 		}
 

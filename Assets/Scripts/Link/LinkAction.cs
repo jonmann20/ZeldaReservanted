@@ -39,7 +39,9 @@ public partial class Link : MonoBehaviour {
 						woodenSword = getItem();
 						break;
 			}
-			
+
+			woodenSword.transform.parent = GameObject.Find("ItemHolder").transform;
+
 			isAttacking = true;
 			StartCoroutine(finishAttack(dir));
 			GameAudio.playSwordSwing();
@@ -49,6 +51,7 @@ public partial class Link : MonoBehaviour {
 			if(Inventory.hasBomb){
 				if(numBomb > 0){
 					GameObject theBomb = Instantiate(bombPrefab, transform.position, Quaternion.identity) as GameObject;
+					theBomb.transform.parent = GameObject.Find("ItemHolder").transform;
 					Bomb bScript = theBomb.GetComponent<Bomb>();
 					bScript.isPickup = false;
 
@@ -62,6 +65,7 @@ public partial class Link : MonoBehaviour {
 		GameAudio.playSwordShoot();
 
 		woodenSwordProjectile = getItem();
+		woodenSwordProjectile.transform.parent = GameObject.Find("ItemHolder").transform;
 		Quaternion r = woodenSwordProjectile.transform.localRotation;
 
 		if(Mathf.Approximately(r.eulerAngles.z, 0)){

@@ -67,11 +67,19 @@ public class GameplayMain : MonoBehaviour {
 	string desiredSpeech = "";
 	int speechTimer = 12;
 
+
+
+	GameObject itemHolder;
+
+
+
+
 	void Awake(){
 		LvlCamera = GameObject.Find("LvlCamera");
 
 		EnemyAudioSourceHolder = new GameObject("EnemyAudioSourceHolder");
 		EnemyAudioSourceHolder.transform.parent = LvlCamera.transform;
+		itemHolder = GameObject.Find ("ItemHolder");
 	}
 	
 	void Start () {
@@ -483,6 +491,13 @@ public class GameplayMain : MonoBehaviour {
 		}
 		else //ELSE, SCROLL TRANSITION AS NORMAL
 		{
+			// delete items
+			foreach(Transform child in itemHolder.transform){
+				Destroy(child.gameObject);
+			}
+
+
+
 			screenScrolling = true;
 			linkRef.SendMessage("setMovementEnabled", false);
 			linkRef.SendMessage("setDesiredDisplacementTime", new Vector3(xMovement * 0.93f, yMovement * 0.9f, desiredDisplacementTime));

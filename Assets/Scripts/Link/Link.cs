@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 /*
 	This is the "main" class for Link.  It holds the main logic for link.
@@ -41,7 +42,10 @@ public partial class Link : MonoBehaviour {
 
 	public static Link that;
 
+	static GameObject hrtHolder;
+
 	void Awake(){
+		hrtHolder = GameObject.Find("HeartHolder");
 		that = this;
 		heartPrefab = Resources.Load<GameObject>("Heart");
 		heartEmptyPrefab = Resources.Load<GameObject>("HeartEmpty");
@@ -79,6 +83,7 @@ public partial class Link : MonoBehaviour {
 	}
 
 
+
 	public static void updateHealth(){
 		if(health <= 0){
 			// Game Over
@@ -87,19 +92,22 @@ public partial class Link : MonoBehaviour {
 			Application.LoadLevel("death");
 		}
 
+		// clear previous hearts
+		foreach(Transform child in Link.hrtHolder.transform){
+			Destroy(child.gameObject);
+		}
 
 		float f = 0;
 
 		for(int i=0; i < health; ++i){
 			GameObject h = Instantiate(heartPrefab, new Vector3(3.5f + f, 4.4f, 0), Quaternion.identity) as GameObject;
-			//h.transform.parent = GameObject.Find("heartHolder").transform;
+			h.transform.parent = Link.hrtHolder.transform;
 			f += 0.5f;
 		}
 
-
-
 		for (float hi = health; hi < initHealth; ++hi){
 			GameObject h = Instantiate(heartEmptyPrefab, new Vector3(3.5f + f, 4.4f, 0), Quaternion.identity) as GameObject;
+			h.transform.parent = Link.hrtHolder.transform;
 			f += 0.5f;
 		}
 	}

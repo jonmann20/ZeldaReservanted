@@ -410,6 +410,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7141692ca1896b849927314d474abf6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &122605332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 122605333}
+  m_Layer: 0
+  m_Name: ItemHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &122605333
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 122605332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2122215038}
 --- !u!1001 &240958398
 Prefab:
   m_ObjectHideFlags: 0
@@ -462,6 +488,32 @@ Prefab:
   m_RootGameObject: {fileID: 507641836}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &262651335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 262651336}
+  m_Layer: 0
+  m_Name: HeartHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &262651336
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 262651335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1424346, y: -4.20154715, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1370397459}
 --- !u!1 &277288704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1559,7 @@ Transform:
   m_LocalPosition: {x: .370000005, y: -.297476768, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 262651336}
   - {fileID: 1507110238}
   - {fileID: 1025196848}
   - {fileID: 884733886}
@@ -2174,6 +2227,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 122605333}
   - {fileID: 718128012}
   - {fileID: 1217469277}
   m_Father: {fileID: 0}
