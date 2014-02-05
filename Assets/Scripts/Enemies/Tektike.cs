@@ -8,6 +8,7 @@ public class Tektike : Enemy {
 
 	int timer = 10;
 	float fractionCovered = 1.0f;
+
 	Vector3 destination;
 	Vector3 midPoint;
 
