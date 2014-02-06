@@ -8,7 +8,7 @@ public class Dungeon : MonoBehaviour {
 	GameObject curRoom, nextRoom;
 	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomB, roomRL, roomL, roomBoss;
 
-	bool isAnimating = false;
+	public bool isAnimating = false;
 	int numDone = 0;
 
 	GameObject linkGM;
@@ -25,7 +25,7 @@ public class Dungeon : MonoBehaviour {
 	*/
 
 	GameObject[] rooms;
-	int roomPos = 6;
+	int roomPos = 5;//6
 	SpriteDir theDir;
 
 	void Awake(){
@@ -74,6 +74,9 @@ public class Dungeon : MonoBehaviour {
 					roomPos -= 3;
 				}
 
+				newRoomY = 9f;
+
+
 				break;
 			case SpriteDir.DOWN:
 				if(roomPos == 0 || roomPos == 1){
@@ -82,6 +85,8 @@ public class Dungeon : MonoBehaviour {
 				else {
 					roomPos += 3;
 				}
+
+				newRoomY = -13;
 
 				break;
 			case SpriteDir.RIGHT:
@@ -116,7 +121,17 @@ public class Dungeon : MonoBehaviour {
 		nextRoom.transform.parent = GameObject.Find("RoomHolder").transform;
 
 		theDir = dir;
-		StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(-newRoomX, -2), 1.8f, done));	// TODO: or -newRoomY
+
+		if(dir == SpriteDir.DOWN){
+			StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(0, 9), 1.8f, done));
+		}
+		else if(dir == SpriteDir.UP){
+			StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(0, -13f), 1.8f, done));
+		}
+		else {
+			StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(-newRoomX, -2), 1.8f, done));
+		}
+
 		StartCoroutine(Utils.that.MoveToPosition(nextRoom.transform, new Vector3(0, -2), 1.8f, done));
 	}
 	
@@ -131,6 +146,7 @@ public class Dungeon : MonoBehaviour {
 
 			// enable link
 			float teleportX = 0;
+			float teleportY = 0;
 
 			if(theDir == SpriteDir.LEFT){
 				teleportX = 5.45f;
@@ -138,8 +154,20 @@ public class Dungeon : MonoBehaviour {
 			else if(theDir == SpriteDir.RIGHT){
 				teleportX = -5.45f;
 			}
+			else if(theDir == SpriteDir.UP){
+				teleportY = -5f;
+			}
+			else if(theDir == SpriteDir.DOWN){
+				teleportY = 1.4f;
+			}
 
-			linkGM.transform.position = new Vector3(teleportX, -2, 0);
+			if(theDir == SpriteDir.UP || theDir == SpriteDir.DOWN){
+				linkGM.transform.position = new Vector3(0, teleportY, 0);
+			}
+			else {
+				linkGM.transform.position = new Vector3(teleportX, -2, 0);
+			}
+
 			linkGM.gameObject.SetActive(true);
 		}
 	}
