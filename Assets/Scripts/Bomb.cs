@@ -3,20 +3,26 @@ using System.Collections;
 
 public class Bomb : MonoBehaviour {
 
-	public static bool isPickup = true;
+	public bool isPickup = true;
+	public Sprite explosion;
+
 
 	void Start () {
 		if(!isPickup){
-			// play audio set
-			blowUp();
+			// not needed
+			collider2D.enabled = false;
 		}
 	}
-	
+
 	void OnTriggerEnter2D(Collider2D col){
 		if(isPickup && col.gameObject.tag == "Player"){
 			GameObject.Find("HUDbombAction").GetComponent<SpriteRenderer>().enabled = true;
 
 			Link.numBomb += 5;
+			Inventory.hasBomb = true;
+			PlayerPrefs.SetInt ("hasBomb", 1);
+			PlayerPrefs.SetInt("numBomb", Link.numBomb);
+
 			GUIText gt = GameObject.Find ("bombNum").GetComponent<GUIText>();
 			gt.text = Link.numBomb.ToString();
 			Destroy(gameObject);
@@ -24,18 +30,35 @@ public class Bomb : MonoBehaviour {
 		}
 	}
 
+	public void setBomb(){
+		--Link.numBomb;
+		PlayerPrefs.SetInt("numBomb", Link.numBomb);
+		GUIText gt = GameObject.Find ("bombNum").GetComponent<GUIText>();
+		gt.text = Link.numBomb.ToString();
 
-	void OnCollisionEnter2D(Collision2D col){
-		if(!isPickup){
-			if(col.gameObject.tag == "Enemy"){
-				col.gameObject.GetComponent<Enemy>().kill();
-			}
-		}
+		// TODO: play bomb audio
+
+		Invoke("blowUp", 1.68f);
 	}
 
 	void blowUp(){
-		// change animation
-		// make collider NOT a trigger, and scale to blast radius
-		// destroy
+		SpriteRenderer spr = renderer as SpriteRenderer;
+		spr.sprite = explosion;
+		spr.sortingLayerName = "Link";
+
+		transform.localScale = new Vector2(3, 3);
+		checkExplosionCollision();
+	}
+
+	void checkExplosionCollision(){
+		Collider2D[] objectsInRange = Physics2D.OverlapCircleAll(transform.position, 1.5f);
+
+		foreach(Collider2D col in objectsInRange){
+			if(col.gameObject.tag == "Enemy"){
+				Destroy(col.gameObject);
+			}
+		}
+
+		Destroy (gameObject, 0.35f);
 	}
 }

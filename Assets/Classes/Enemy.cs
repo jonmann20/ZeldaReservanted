@@ -73,27 +73,30 @@ public abstract class Enemy : MonoBehaviour {
 	public void kill(){
 		GameAudio.playEnemyZap();
 
-		//dropRandomItem();
-		Instantiate(bombPrefab, this.transform.position, Quaternion.identity);
+		dropRandomItem();
 
 		Destroy(this.gameObject);
 	}
 
 	void dropRandomItem(){
 		int rand = Random.Range(0, 40);
-		
+
+		GameObject item = new GameObject();
+
 		if(rand <= 3){
-			Instantiate(rupeePrefab, this.transform.position, Quaternion.identity);
+			item = Instantiate(rupeePrefab, this.transform.position, Quaternion.identity) as GameObject;
 		}
 		else if(rand >= 4 && rand <= 7){
-			Instantiate(heartItemDropPrefab, this.transform.position, Quaternion.identity);
+			item = Instantiate(heartItemDropPrefab, this.transform.position, Quaternion.identity) as GameObject;
 		}
 		else if(rand >= 8 && rand <= 11){
-			Instantiate(rupee5Prefab, this.transform.position, Quaternion.identity);
+			item = Instantiate(rupee5Prefab, this.transform.position, Quaternion.identity) as GameObject;
 		}
 		else if(rand >= 12 && rand <= 15){
-			Instantiate(bombPrefab, this.transform.position, Quaternion.identity);
+			item = Instantiate(bombPrefab, this.transform.position, Quaternion.identity) as GameObject;
 		}
+
+		item.transform.parent = GameObject.Find("ItemHolder").transform;
 	}
 
 	public void setHealth(int h)

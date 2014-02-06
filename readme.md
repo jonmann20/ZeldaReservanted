@@ -1,17 +1,6 @@
 Zelda Reservanted
 =================
 
-Keyboard Controls:
-------------------
-* UP: w or up arrow
-* DOWN: s or down arrow
-* LEFT: a or left arrow
-* RIGHT: d or right arrow
-* SELECT: space
-* START: enter
-* ATTACK (a): j
-* SPECIAL ATTACK (b): k
-
 Graphics Resources:
 -------------------
 * [zelda sprites](http://www.spriters-resource.com/nes/thelegendofzelda/)

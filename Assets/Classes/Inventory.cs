@@ -20,6 +20,7 @@ public class Inventory /*: MonoBehaviour*/ {
 	public static bool hasMagicalBoomerang = false;
 	public static bool hasBookOfMagic = false;
 	public static bool hasBow = false;
+	public static bool hasBomb = false;
 	public static bool hasStepladder = false;
 	public static bool hasBlueCandle = false;
 	public static bool hasRedCandle = false;
