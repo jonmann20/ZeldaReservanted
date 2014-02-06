@@ -4,7 +4,6 @@ using System.Collections;
 public class Dungeon : MonoBehaviour {
 
 	public static Dungeon that;
-	GameObject tiles;
 
 	GameObject curRoom, nextRoom;
 	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomB, roomRL, roomL, roomBoss;
@@ -34,37 +33,33 @@ public class Dungeon : MonoBehaviour {
 
 		linkGM = GameObject.Find("Link");
 
-		//roomT = ;
+		roomT = Resources.Load<GameObject>("Dungeon/RoomT");
 		roomTL = Resources.Load<GameObject>("Dungeon/RoomTL");
-		//roomTB = ;
+		roomTB = Resources.Load<GameObject>("Dungeon/RoomTB");
 		roomTRB = Resources.Load<GameObject>("Dungeon/RoomTRB");
-		//roomRB = ;
+		roomRB = Resources.Load<GameObject>("Dungeon/RoomRB");
 		roomB = Resources.Load<GameObject>("Dungeon/RoomB");
-		roomRL = Resources.Load<GameObject>("Dungeon/RoomLR");
-		//roomL = ;
+		roomRL = Resources.Load<GameObject>("Dungeon/RoomRL");
+		roomL = Resources.Load<GameObject>("Dungeon/RoomL");
 		//roomBoss =;
 
 
-		rooms = new GameObject[8];
+		rooms = new GameObject[9];
 
-		//rooms[0] = roomRB;
-		//rooms[1] = roomL;
-		//rooms[2] = roomTB;
+		rooms[0] = roomRB;
+		rooms[1] = roomL;
+		rooms[2] = roomTB;
 		//rooms[3] = roomBoss;
-		//rooms[4] = roomB;
+		rooms[4] = roomB;
 		rooms[5] = roomTRB;
 		rooms[6] = roomRL;
 		rooms[7] = roomTL;
-		//rooms[8] = roomT;
+		rooms[8] = roomT;
 
 		curRoom = Instantiate(rooms[roomPos], new Vector3(0, -2), Quaternion.identity) as GameObject;
 		curRoom.transform.parent = GameObject.Find("RoomHolder").transform;
 	}
 
-	void Start(){
-		tiles = Resources.Load<GameObject>("dungeontiles");
-	}
-	
 
 	public void changeRoom(SpriteDir dir){
 		float newRoomX = 0;

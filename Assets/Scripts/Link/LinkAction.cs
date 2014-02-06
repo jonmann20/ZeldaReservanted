@@ -44,7 +44,13 @@ public partial class Link : MonoBehaviour {
 
 			isAttacking = true;
 			StartCoroutine(finishAttack(dir));
-			GameAudio.playSwordSwing();
+
+			if(Link.health == Link.initHealth && woodenSwordProjectile == null){
+				shootSword();
+			}
+			else{
+				GameAudio.playSwordSwing();
+			}
 		}
 
 		if(Input.GetButtonDown("SpecialAttack")){
@@ -82,10 +88,6 @@ public partial class Link : MonoBehaviour {
 		}
 	}
 
-//	IEnumerator blinkShot(){
-//		yield return new WaitForSeconds(0.1f);
-//	}
-
 	GameObject getItem(){
 		float offsetX = 0, offsetY = 0;
 		Quaternion rot = Quaternion.identity;
@@ -119,7 +121,8 @@ public partial class Link : MonoBehaviour {
 	
 	IEnumerator finishAttack(SpriteDir d){
 		yield return new WaitForSeconds(0.23f);
-		
+
+		// restore link's animation state
 		switch(d){
 			case SpriteDir.UP:
 			case SpriteDir.UP_STEP:
@@ -127,7 +130,7 @@ public partial class Link : MonoBehaviour {
 					break;
 			case SpriteDir.DOWN:
 			case SpriteDir.DOWN_STEP:
-					sprRend.sprite = spr[8];shootSword();
+					sprRend.sprite = spr[8];
 					break;
 			case SpriteDir.RIGHT:
 			case SpriteDir.RIGHT_STEP:
@@ -139,8 +142,6 @@ public partial class Link : MonoBehaviour {
 					break;
 		}
 
-		if(woodenSwordProjectile == null)
-			shootSword();
 		isAttacking = false;
 		Destroy(woodenSword);
 	}
