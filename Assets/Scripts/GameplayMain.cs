@@ -29,7 +29,7 @@ public class GameplayMain : MonoBehaviour {
 	Tile[] storedTiles = new Tile[22528];
 	Room[,] storedRooms = new Room[16,8];
 
-	GameObject[] activeTiles = new GameObject[176];
+	public GameObject[] activeTiles = new GameObject[176];
 	GameObject[] oldTiles = new GameObject[176];
 	//TODO: NOT CURRENTLY DESTROYING ALL ENEMIES
 

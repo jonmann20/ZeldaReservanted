@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - 
   - Sword
+  - physicaltile
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

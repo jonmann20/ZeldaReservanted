@@ -1,85 +1,112 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Octorok : Enemy {
 	
 	public Sprite spr_n1;
-	
-	int timer = 10;
-	float fractionCovered = 1.0f;
-	Vector3 destination;
-	Vector3 midPoint;
+	public Sprite spr_n2;
+	public Sprite spr_e1;
+	public Sprite spr_e2;
+	public Sprite spr_s1;
+	public Sprite spr_s2;
+	public Sprite spr_w1;
+	public Sprite spr_w2;
 
-	int xInRoom = 0;
-	int yInRoom = 0;
-	
+	//n, e, s, or w.
+	public char dir = 'n';
+	char previousMove;
+
+	const float SHOT_SPEED = 10;
+	GameObject RockShot;
+
+	Vector2 destination;
+	const float speed = 0.025f;
+
+	public delegate void Callback();
+
 	void Start()
 	{
-		setHealth(2);
+		RockShot = Resources.Load("Enemies/RockShot") as GameObject;
+		setHealth(1);
+
 		Movement();
 	}
 	
 	public override void Movement(){
 
-		Vector3 newPlace = transform.position + pickRandom();
-		
-		//enforce new place is within room. (WARNING: SLOW!)
-		//while(true)
-		//{
-			//if(newPlace.x > -6.5f && newPlace.x < 6.5f
-			   //&& newPlace.y > -6 && newPlace.y < 2)
-				//break;
-			newPlace = transform.position + pickRandom();
-		//}
-		destination = newPlace;
-		midPoint = getMidpoint(transform.position, destination);
-		fractionCovered = 0.0f;
-	}
-	
-	Vector3 pickRandom(){
-		int dx = 0;
-		int dy = 0;
+		Vector3 dest = new Vector3(0, 0, 0);
 
-		//Move Horizontal
-		if(Random.Range(0, 1) > 0.5f)
+		//SHOOT
+		if(Random.Range(0, 100) > 85)
+			StartCoroutine(ShootBullet(Random.Range(0.0f, 2.0f)));
+		else //MOVE
 		{
-			dx = (int)Mathf.Round(Random.Range(-14, 14));
-		}
-		else //Move Vertical
-		{
-			dy = (int)Mathf.Round(Random.Range(-9, 9));
-		}
+			//Get Available Moves
+			List<char> availableMoves = new List<char>();
 
-		return new Vector3(dx, dy, 0);
-	}
-	
-	Vector3 getMidpoint(Vector3 currentPoint, Vector3 newPoint)
-	{
-		float rise = 1.0f;
-		float midX = 0.0f;
-		float midY = 0.0f;
-		
-		if(currentPoint.y == newPoint.y)
-		{
-			midX = (newPoint.x + currentPoint.x) * 0.5f;
-			midY = newPoint.y + rise;
-		}
-		else if(currentPoint.y > newPoint.y)
-		{
-			midX = (currentPoint.x * (0.75f) + newPoint.x * (0.25f));
-			midY = currentPoint.y + rise;
-		}
-		else if(currentPoint.y < newPoint.y)
-		{
-			midX = (currentPoint.x * (0.25f) + newPoint.x * (0.75f));
-			midY = newPoint.y + rise;
-		}
-		
-		return new Vector3(midX, midY, 0);
-	}
-	
-	void Update(){
+			Vector2 eastPos = new Vector2(currentCoordsInRoom.x + 1, currentCoordsInRoom.y);
+			Vector2 southPos = new Vector2(currentCoordsInRoom.x, currentCoordsInRoom.y + 1);
+			Vector2 westPos = new Vector2(currentCoordsInRoom.x - 1, currentCoordsInRoom.y);
+			Vector2 northPos = new Vector2(currentCoordsInRoom.x, currentCoordsInRoom.y - 1);
 
+			if(isTileTraversableLand(eastPos))
+			{
+				availableMoves.Add('e');
+				if(previousMove != null && previousMove == 'e')
+					availableMoves.Add('e');
+			}
+			if(isTileTraversableLand(southPos))
+			{
+				availableMoves.Add('s');
+				if(previousMove != null && previousMove == 's')
+					availableMoves.Add('s');
+			}
+			if(isTileTraversableLand(westPos))
+			{
+				availableMoves.Add('w');
+				if(previousMove != null && previousMove == 'w')
+					availableMoves.Add('w');
+			}
+			if(isTileTraversableLand(northPos))
+			{
+				availableMoves.Add('n');
+				if(previousMove != null && previousMove == 'n')
+					availableMoves.Add('n');
+			}
+
+			char desiredDir = getRandomElementInList(availableMoves);
+			dir = desiredDir;
+
+			if(desiredDir == 'e')
+			{
+				dest = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
+				(renderer as SpriteRenderer).sprite = spr_e1;
+				currentCoordsInRoom.x ++;
+			}
+			else if(desiredDir == 's')
+			{
+				dest = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
+				(renderer as SpriteRenderer).sprite = spr_s1;
+				currentCoordsInRoom.y ++;
+			}
+			else if(desiredDir == 'w')
+			{
+				dest = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
+				(renderer as SpriteRenderer).sprite = spr_w1;
+				currentCoordsInRoom.x --;
+			}
+			else if(desiredDir == 'n')
+			{
+				dest = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+				(renderer as SpriteRenderer).sprite = spr_n1;
+				currentCoordsInRoom.y --;
+			}
+			dir = desiredDir;
+			previousMove = desiredDir;
+
+			StartCoroutine(MoveToPosition(transform, dest, 0.5f));
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
@@ -87,5 +114,63 @@ public class Octorok : Enemy {
 			--Link.health;
 			Link.updateHealth();
 		}
+	}
+
+	public IEnumerator MoveToPosition(Transform tForm, Vector3 newPos, float time){
+		float elapsedTime = 0;
+		Vector3 startingPos = tForm.position;
+		
+		while (elapsedTime < time){
+			tForm.position = Vector3.Lerp(startingPos, newPos, (elapsedTime / time));
+			elapsedTime += Time.deltaTime;
+			
+			if(elapsedTime >= time){
+				Callback call = MoveAgain;
+				call();
+			}
+			
+			yield return null;
+		}
+	}
+
+	public IEnumerator ShootBullet(float time){
+		float elapsedTime = 0;
+
+		GameObject go = Instantiate(RockShot, transform.position, Quaternion.identity) as GameObject;
+		if(dir == 'n')
+			go.rigidbody2D.velocity = new Vector3(0, SHOT_SPEED, 0);
+		else if(dir == 'e')
+			go.rigidbody2D.velocity = new Vector3(SHOT_SPEED, 0, 0);
+		else if(dir == 's')
+			go.rigidbody2D.velocity = new Vector3(0, -SHOT_SPEED, 0);
+		else if(dir == 'w')
+			go.rigidbody2D.velocity = new Vector3(-SHOT_SPEED, 0, 0);
+
+		while (elapsedTime < time){
+			elapsedTime += Time.deltaTime;
+			
+			if(elapsedTime >= time){
+				Callback call = MoveAgain;
+				call();
+			}
+			
+			yield return null;
+		}
+	}
+
+	public void MoveAgain()
+	{
+		Movement();
+	}
+
+	//RETURNS 'z' for failure (no items in list)
+	char getRandomElementInList(List<char> L)
+	{
+		if(L.Count <= 0)
+			return 'z';
+
+		int index = (int)(Random.Range(0.0f, L.Count));
+		//print("list size: " + L.Count.ToString () + " index generated: " + index.ToString());
+		return L[index];
 	}
 }

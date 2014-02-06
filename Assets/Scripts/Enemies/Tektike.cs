@@ -64,28 +64,7 @@ public class Tektike : Enemy {
 	}
 
 	void Update(){
-		if(fractionCovered < 1.0f)
-		{
-			fractionCovered += 0.05f;
-		}
 
-		//ANIMATE
-		if(fractionCovered < 1.0f || (timer > 60 && timer < 100))
-			(renderer as SpriteRenderer).sprite = spr_air;
-		else
-			(renderer as SpriteRenderer).sprite = spr_ground;
-
-		if(fractionCovered <= 0.5f)
-			transform.position = Vector3.Lerp(transform.position, midPoint, fractionCovered / 0.5f);
-		if(fractionCovered > 0.5f)
-			transform.position = Vector3.Lerp(transform.position, destination, (fractionCovered - 0.5f) / 0.5f);
-
-		timer --;
-		if(timer <= 0)
-		{
-			Movement();
-			timer = 60 + (int)Random.Range(0, 240);
-		}
 	}
 
 	void OnCollisionEnter2D(Collision2D col){

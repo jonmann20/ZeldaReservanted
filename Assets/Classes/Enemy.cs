@@ -15,13 +15,31 @@ public abstract class Enemy : MonoBehaviour {
 
 	protected GameObject rupeePrefab, rupee5Prefab, heartItemDropPrefab, bombPrefab;
 
+	public GameplayMain gpm;
+
 	protected bool waitForExit = false;
+
+	public Vector2 currentCoordsInRoom;
 
 	// TODO: make movement on grid
 	public abstract void Movement();
 
+	void Awake(){
+		gpm = (GameObject.Find("MainCamera") as GameObject).GetComponent("GameplayMain") as GameplayMain;
+		rupeePrefab = Resources.Load<GameObject>("Rupee");
+		rupee5Prefab = Resources.Load<GameObject>("Rupee5");
+		bombPrefab = Resources.Load<GameObject>("Bomb");
+		enemyZap = Resources.Load<AudioClip>("Audio/soundEffects/enemyZapped");
+		heartItemDropPrefab = Resources.Load<GameObject>("heartItemDrop");
+		
+		audioSrc = new GameObject("audioSrc");
+		audioSrc.AddComponent<AudioSource>();
+		audioSrc.audio.clip = enemyZap;
+		
+		initCoordsInRoom();
+	}
+
 	void OnTriggerEnter2D(Collider2D col){
-		print("hoya!");
 		if(col.gameObject.tag == "Player"){
 			--Link.health;
 			Link.updateHealth();
@@ -37,18 +55,19 @@ public abstract class Enemy : MonoBehaviour {
 		waitForExit = false;
 	}
 
-	void Awake(){
-		rupeePrefab = Resources.Load<GameObject>("Rupee");
-		rupee5Prefab = Resources.Load<GameObject>("Rupee5");
-		bombPrefab = Resources.Load<GameObject>("Bomb");
-		enemyZap = Resources.Load<AudioClip>("Audio/soundEffects/enemyZapped");
-		heartItemDropPrefab = Resources.Load<GameObject>("heartItemDrop");
+	void initCoordsInRoom()
+	{
+		float topLeftX = -8f;
+		float topLeftY = 3.5f;
+		
+		float currentX = transform.position.x;
+		float currentY = transform.position.y;
+		
+		float tempX = currentX - topLeftX;
+		float tempY = topLeftY - currentY;
 
-		audioSrc = new GameObject("audioSrc");
-		audioSrc.AddComponent<AudioSource>();
-		audioSrc.audio.clip = enemyZap;
-
-		//audioSrc.transform.parent = GameplayMain.EnemyAudioSourceHolder.transform;
+		//WILL DROP DECIMALS. SHOULD BE ACCURATE.
+		currentCoordsInRoom = new Vector2((int)tempX, (int)tempY);
 	}
 
 	public void kill(){
@@ -82,5 +101,31 @@ public abstract class Enemy : MonoBehaviour {
 		health = h;
 		if(health <= 0)
 			kill ();
+	}
+
+	public bool isTileTraversableLand(Vector2 pos)
+	{
+		if(pos.x < 1 || pos.x >= 10 || pos.y < 1 || pos.y > 14)
+			return false;
+		int index = (int)(pos.x * 11 + pos.y);
+		MapTileScript mts = (gpm.activeTiles[index] as GameObject).GetComponent("MapTileScript") as MapTileScript;
+		if(MapTileEnum.isSolid(mts.tilecode)
+		   || MapTileEnum.isWater(mts.tilecode))
+			return false;
+
+		return true;
+	}
+
+	public string getHexValue(Vector2 pos)
+	{
+		int index = (int)(pos.x * 11 + pos.y);
+		MapTileScript mts = (gpm.activeTiles[index] as GameObject).GetComponent("MapTileScript") as MapTileScript;
+		return mts.tilecode; 
+	}
+
+	public void destroyHexValue(Vector2 pos)
+	{
+		int index = (int)(pos.x * 11 + pos.y);
+		Destroy(gpm.activeTiles[index]);
 	}
 }

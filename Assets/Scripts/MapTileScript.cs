@@ -39,6 +39,7 @@ public class MapTileScript : MonoBehaviour {
 		if(MapTileEnum.isSolid(tilecode) || MapTileEnum.isWater(tilecode))
 		{
 			c2d.isTrigger = false;
+			gameObject.tag = "physicaltile";
 		}
 		if(code != "00")
 		{

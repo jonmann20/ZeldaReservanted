@@ -63,7 +63,15 @@ MonoBehaviour:
   topLeftX: -8
   topLeftY: 3.5
   sprRend: {fileID: 21200000}
-  spr_n1: {fileID: 0}
+  currentCoordsInRoom: {x: 0, y: 0}
+  spr_n1: {fileID: 21300012, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_n2: {fileID: 21300014, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_e1: {fileID: 21300008, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_e2: {fileID: 21300010, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_s1: {fileID: 21300004, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_s2: {fileID: 21300006, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_w1: {fileID: 21300000, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_w2: {fileID: 21300002, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
