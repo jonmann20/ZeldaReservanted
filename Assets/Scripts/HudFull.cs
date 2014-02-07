@@ -26,13 +26,13 @@ public class HudFull : MonoBehaviour {
 
 	void Update () {
 		if(Input.GetButtonDown("Select")){
-			if(!isFullHud){
+			if(!isFullHud && !Dungeon.that.isAnimating){
 				pauseTheGame();
 			}
 		}
 
 		if(Input.GetButtonDown("Enter")){
-			if(!doHud && !isGamePaused){
+			if(!doHud && !isGamePaused && !Dungeon.that.isAnimating){
 				Time.timeScale = 0;
 			
 				if(isFullHud){
