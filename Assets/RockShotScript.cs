@@ -15,8 +15,10 @@ public class RockShotScript : MonoBehaviour {
 
 	void Update(){
 		if(Mathf.Abs(transform.position.x) > 9.2f || transform.position.y > 5.5f || transform.position.y < -8.5f){
-			Destroy (gameObject);
+			Destroy(gameObject);
 		}
+		if(rigidbody2D.velocity.x == 0 && rigidbody2D.velocity.y == 0)
+			Destroy(gameObject);
 	}
 	void OnBecameInvisible(){
 		Destroy(gameObject);

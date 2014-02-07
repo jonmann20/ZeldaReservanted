@@ -27,6 +27,7 @@ public class Octorok : Enemy {
 
 	void Start()
 	{
+		print("Hello my name is octorok blue");
 		RockShot = Resources.Load("Enemies/RockShot") as GameObject;
 		setHealth(1);
 
