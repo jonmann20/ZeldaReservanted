@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: OctorokBlue
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,23 +48,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 767a480dda7778146bf64c182676e9c9, type: 3}
+  m_Script: {fileID: 11500000, guid: c522f4d6cdb48474f94f796131fb9bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
   spr: []
   topLeftX: -8
   topLeftY: 3.5
   sprRend: {fileID: 0}
+  invincibility: 10
   gpm: {fileID: 0}
   currentCoordsInRoom: {x: 0, y: 0}
-  spr_n1: {fileID: 0}
-  spr_n2: {fileID: 0}
-  spr_e1: {fileID: 0}
-  spr_e2: {fileID: 0}
-  spr_s1: {fileID: 0}
-  spr_s2: {fileID: 0}
-  spr_w1: {fileID: 0}
-  spr_w2: {fileID: 0}
+  poof: {fileID: 21300260, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  poofTimer: 0
+  spr_n1: {fileID: 21300028, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_e1: {fileID: 21300024, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_s1: {fileID: 21300020, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_w1: {fileID: 21300016, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

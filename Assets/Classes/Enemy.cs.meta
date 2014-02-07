@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: 89d33265ef724a840a65ffadd12d7ea3
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - sprRend: {instanceID: 0}
+  - gpm: {instanceID: 0}
+  - poof: {fileID: 21300260, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

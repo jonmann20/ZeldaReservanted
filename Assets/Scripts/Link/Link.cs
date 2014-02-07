@@ -34,6 +34,8 @@ public partial class Link : MonoBehaviour {
 
 	public static float initHealth = 3, health = 3;
 
+	public int invincibility = 0;
+
 	SpriteDir dir = SpriteDir.UP_STEP;
 	public static int numRupee = 0;
 	public static int numBomb = 0;
@@ -80,6 +82,9 @@ public partial class Link : MonoBehaviour {
 		if(woodenSwordProjectile == null){
 			canShootAgain = true;
 		}
+
+		if(invincibility > 0)
+			invincibility --;
 	}
 
 

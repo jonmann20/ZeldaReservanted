@@ -63,7 +63,11 @@ MonoBehaviour:
   topLeftX: -8
   topLeftY: 3.5
   sprRend: {fileID: 21200000}
+  invincibility: 10
+  gpm: {fileID: 0}
   currentCoordsInRoom: {x: 0, y: 0}
+  poof: {fileID: 21300260, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  poofTimer: 0
   spr_n1: {fileID: 21300012, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   spr_n2: {fileID: 21300014, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   spr_e1: {fileID: 21300008, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}

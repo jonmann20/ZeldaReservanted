@@ -1,56 +1,47 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+public class OctorocBlueScript : Enemy {
 
-public class Octorok : Enemy {
-	
 	public Sprite spr_n1;
-	public Sprite spr_n2;
-	public Sprite spr_e1;
-	public Sprite spr_e2;
-	public Sprite spr_s1;
-	public Sprite spr_s2;
-	public Sprite spr_w1;
-	public Sprite spr_w2;
 
+	public Sprite spr_e1;
+
+	public Sprite spr_s1;
+
+	public Sprite spr_w1;
+
+	
 	//n, e, s, or w.
 	public char dir = 'n';
 	char previousMove;
-
+	
 	const float SHOT_SPEED = 10;
 	GameObject RockShot;
-
+	
 	Vector2 destination;
 	const float speed = 0.025f;
-
+	
 	public delegate void Callback();
-
+	
 	void Start()
 	{
+		print("Hello my name is octorok blue");
 		RockShot = Resources.Load("Enemies/RockShot") as GameObject;
-		setHealth(1);
-		poofTimer = 15 + Random.Range(0, 60);
-		print(poof);
+		setHealth(2);
+		
+		Movement();
 	}
 
 	public override void customUpdate()
 	{
-		if(poofTimer > 0)
-		{
-			poofTimer --;
-			(renderer as SpriteRenderer).sprite = poof;
-		}
-		if(poofTimer == 1)
-		{
-			(renderer as SpriteRenderer).sprite = spr_n1;
-			Movement ();
-		}
+		
 	}
 	
 	public override void Movement(){
-
+		
 		Vector3 dest = new Vector3(0, 0, 0);
-
+		
 		//SHOOT
 		if(Random.Range(0, 100) > 85)
 			StartCoroutine(ShootBullet(Random.Range(0.0f, 2.0f)));
@@ -58,12 +49,12 @@ public class Octorok : Enemy {
 		{
 			//Get Available Moves
 			List<char> availableMoves = new List<char>();
-
+			
 			Vector2 eastPos = new Vector2(currentCoordsInRoom.x + 1, currentCoordsInRoom.y);
 			Vector2 southPos = new Vector2(currentCoordsInRoom.x, currentCoordsInRoom.y + 1);
 			Vector2 westPos = new Vector2(currentCoordsInRoom.x - 1, currentCoordsInRoom.y);
 			Vector2 northPos = new Vector2(currentCoordsInRoom.x, currentCoordsInRoom.y - 1);
-
+			
 			if(isTileTraversableLand(eastPos))
 			{
 				availableMoves.Add('e');
@@ -88,10 +79,10 @@ public class Octorok : Enemy {
 				if(previousMove != null && previousMove == 'n')
 					availableMoves.Add('n');
 			}
-
+			
 			char desiredDir = getRandomElementInList(availableMoves);
 			dir = desiredDir;
-
+			
 			if(desiredDir == 'e')
 			{
 				dest = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
@@ -118,11 +109,11 @@ public class Octorok : Enemy {
 			}
 			dir = desiredDir;
 			previousMove = desiredDir;
-
+			
 			StartCoroutine(MoveToPosition(transform, dest, 0.5f));
 		}
 	}
-
+	
 	public IEnumerator MoveToPosition(Transform tForm, Vector3 newPos, float time){
 		float elapsedTime = 0;
 		Vector3 startingPos = tForm.position;
@@ -139,10 +130,10 @@ public class Octorok : Enemy {
 			yield return null;
 		}
 	}
-
+	
 	public IEnumerator ShootBullet(float time){
 		float elapsedTime = 0;
-
+		
 		GameObject go = Instantiate(RockShot, transform.position, Quaternion.identity) as GameObject;
 		if(dir == 'n')
 			go.rigidbody2D.velocity = new Vector3(0, SHOT_SPEED, 0);
@@ -152,7 +143,7 @@ public class Octorok : Enemy {
 			go.rigidbody2D.velocity = new Vector3(0, -SHOT_SPEED, 0);
 		else if(dir == 'w')
 			go.rigidbody2D.velocity = new Vector3(-SHOT_SPEED, 0, 0);
-
+		
 		while (elapsedTime < time){
 			elapsedTime += Time.deltaTime;
 			
@@ -164,18 +155,18 @@ public class Octorok : Enemy {
 			yield return null;
 		}
 	}
-
+	
 	public void MoveAgain()
 	{
 		Movement();
 	}
-
+	
 	//RETURNS 'z' for failure (no items in list)
 	char getRandomElementInList(List<char> L)
 	{
 		if(L.Count <= 0)
 			return 'z';
-
+		
 		int index = (int)(Random.Range(0.0f, L.Count));
 		//print("list size: " + L.Count.ToString () + " index generated: " + index.ToString());
 		return L[index];

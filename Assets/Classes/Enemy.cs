@@ -5,13 +5,15 @@ public abstract class Enemy : MonoBehaviour {
 
 	protected GameObject audioSrc;
 	protected AudioClip enemyZap;
-	protected int health = 1;
+	public int health = 1;
 	public Sprite[] spr;
 
 	public float topLeftX = -8f;
 	public float topLeftY = 3.5f;
 	public SpriteRenderer sprRend;
 	protected SpriteDir direction;
+
+	public int invincibility = 0;
 
 	protected GameObject rupeePrefab, rupee5Prefab, heartItemDropPrefab, bombPrefab;
 
@@ -21,7 +23,9 @@ public abstract class Enemy : MonoBehaviour {
 
 	public Vector2 currentCoordsInRoom;
 
-	// TODO: make movement on grid
+	public Sprite poof;
+	public int poofTimer;
+
 	public abstract void Movement();
 
 	void Awake(){
@@ -50,9 +54,28 @@ public abstract class Enemy : MonoBehaviour {
 		}
 	}
 
+	void OnCollisionEnter2D(Collision2D col){
+		if(col.gameObject.tag == "Player"){
+			--Link.health;
+			Link.updateHealth();
+		}
+	}
+
 	void OnCollisionExit2D(Collision2D col){
 		//print ("exit");
 		waitForExit = false;
+	}
+
+	void Update()
+	{
+		if(invincibility > 0)
+			invincibility --;
+		customUpdate();
+	}
+
+	public virtual void customUpdate()
+	{
+
 	}
 
 	void initCoordsInRoom()
@@ -99,9 +122,15 @@ public abstract class Enemy : MonoBehaviour {
 		item.transform.parent = GameObject.Find("ItemHolder").transform;
 	}
 
+	//ONLY DESCREASE HEALTH IF invincibility <= 0
 	public void setHealth(int h)
 	{
+		if(h < health && invincibility > 0) 
+			return;
+		if(h < health)
+			invincibility = 20;
 		health = h;
+
 		if(health <= 0)
 			kill ();
 	}

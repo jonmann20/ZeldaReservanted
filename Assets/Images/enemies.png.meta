@@ -117,7 +117,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_8
+    - name: OctorocBlueWest
       rect:
         serializedVersion: 2
         x: 202
@@ -135,7 +135,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_10
+    - name: OctorocBlueSouth
       rect:
         serializedVersion: 2
         x: 248
@@ -153,7 +153,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_12
+    - name: OctorocBlueEast
       rect:
         serializedVersion: 2
         x: 296
@@ -171,7 +171,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_14
+    - name: OctorocBlueNorth
       rect:
         serializedVersion: 2
         x: 344
@@ -576,7 +576,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_59
+    - name: tektikeRedGround
       rect:
         serializedVersion: 2
         x: 1456
@@ -585,7 +585,7 @@ TextureImporter:
         height: 12
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_60
+    - name: tektikeRedAir
       rect:
         serializedVersion: 2
         x: 1480
@@ -594,7 +594,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_61
+    - name: tektikeBlueGround
       rect:
         serializedVersion: 2
         x: 1504
@@ -603,7 +603,7 @@ TextureImporter:
         height: 12
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_62
+    - name: tektikeBlueAir
       rect:
         serializedVersion: 2
         x: 1528
@@ -1215,7 +1215,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_130
+    - name: poof
       rect:
         serializedVersion: 2
         x: 1532

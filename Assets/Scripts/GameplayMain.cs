@@ -586,7 +586,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("oldladytalker"));
 			
-			setDesiredSpeechString("PAY ME AND I'LL TALK.");
+			setDesiredSpeechString("PAY ME AND I'LL TALK. TALK ME AND I'LL PAY! HAHAHA");
 			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
 			trader.SendMessage("setSprite", "oldlady");
 			NPCObjects.Add(trader);
@@ -598,7 +598,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader6"));
 			
-			setDesiredSpeechString("BUY SOMETHIN' WILL YA!");
+			setDesiredSpeechString("I HAVE NOTHIN TA' SELL!");
 			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
 			trader.SendMessage("setSprite", "trader");
 			NPCObjects.Add(trader);
@@ -610,7 +610,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader5"));
 			
-			setDesiredSpeechString("BUY SOMETHIN' WILL YA!");
+			setDesiredSpeechString("GANON STOLE MY WARES!");
 			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
 			trader.SendMessage("setSprite", "trader");
 			NPCObjects.Add(trader);
@@ -622,7 +622,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader4"));
 
-			setDesiredSpeechString("BUY SOMETHIN' WILL YA!");
+			setDesiredSpeechString("YOUR MONEY'S NO GOOD HERE. LITERALLY!");
 			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
 			trader.SendMessage("setSprite", "trader");
 			NPCObjects.Add(trader);
@@ -638,7 +638,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader3"));
 			
-			setDesiredSpeechString("BUY SOMETHIN' WILL YA!");
+			setDesiredSpeechString("NO TRIFORCE, NO TETRA, NO TRADE.");
 			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
 			trader.SendMessage("setSprite", "trader");
 			NPCObjects.Add(trader);
@@ -652,7 +652,7 @@ public class GameplayMain : MonoBehaviour {
 			
 			if(!Inventory.hasWhiteSword)
 			{
-				setDesiredSpeechString("MASTER USING IT AND...MEH, JUST TAKE IT.");
+				setDesiredSpeechString("IT USED TO BE WHITE! ;D");
 				GameObject oldman = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
 				oldman.SendMessage("setSprite", "oldman");
 				NPCObjects.Add(oldman);
@@ -667,7 +667,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader2"));
 			
-			setDesiredSpeechString("BUY SOMETHIN' WILL YA!");
+			setDesiredSpeechString("I HAVE THIN AIR TO SELL YOU!");
 			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
 			trader.SendMessage("setSprite", "trader");
 			NPCObjects.Add(trader);
@@ -679,7 +679,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("oldladygrave"));
 			
-			setDesiredSpeechString("MEET THE OLD MAN AT THE GRAVE. OR DON'T");
+			setDesiredSpeechString("MEET THE OLD MAN AT THE GRAVE. CREEPY!");
 	
 			GameObject oldlady = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
 			oldlady.SendMessage("setSprite", "oldlady");
@@ -692,7 +692,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("oldladymedicine"));
 			
-			setDesiredSpeechString("BUY MEDICINE BEFORE YOU GO.");
+			setDesiredSpeechString("BUY MEDICINE BEFORE YOU GO...OR JUST GO.");
 			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
 			trader.SendMessage("setSprite", "oldlady");
 			NPCObjects.Add(trader);
@@ -704,7 +704,7 @@ public class GameplayMain : MonoBehaviour {
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("trader1"));
 
-			setDesiredSpeechString("BUY SOMETHIN' WILL YA!");
+			setDesiredSpeechString("LIFE'S HARD FOR A STARTUP IN HYRULE!");
 			GameObject trader = Instantiate(NPCEntity, new Vector3(0, -1, -1), Quaternion.identity) as GameObject;
 			trader.SendMessage("setSprite", "trader");
 			NPCObjects.Add(trader);
