@@ -12,7 +12,7 @@ public class DungeonRooms : MonoBehaviour {
 	public static DungeonRooms that;
 
 	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBoss, blackFloor, roomG;
-	GameObject block, mat, stairs, triforce;
+	GameObject block, mat, stairs, triforce, water, key;
 
 	GameObject roomHolder;
 
@@ -40,6 +40,8 @@ public class DungeonRooms : MonoBehaviour {
 		mat = Resources.Load<GameObject>("Dungeon/mat");
 		stairs = Resources.Load<GameObject>("Dungeon/stairs");
 		triforce = Resources.Load<GameObject>("Dungeon/triforce");
+		water = Resources.Load<GameObject>("Dungeon/water");
+		key = Resources.Load<GameObject>("Dungeon/key");
 	}
 
 	public GameObject getRoom(int num, Vector3 pos){
@@ -76,7 +78,9 @@ public class DungeonRooms : MonoBehaviour {
 		dr.objs = new GameObject[NUM_OBJS];
 		
 		dr.objs[0] = Instantiate(triforce, new Vector3(0, -1, 0), Quaternion.identity) as GameObject;
-		
+
+		// TODO: blocks around triforce
+
 		for(int i=0; i < NUM_OBJS; ++i){
 			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
 			dr.objs[i].transform.parent = objHolder.transform;
@@ -91,9 +95,77 @@ public class DungeonRooms : MonoBehaviour {
 		drHolder.transform.parent = roomHolder.transform;
 		
 		DungeonRoom dr = new DungeonRoom();
-		dr.room = Instantiate(roomRB, pos, Quaternion.identity) as GameObject;
+		dr.room = Instantiate(roomB, pos, Quaternion.identity) as GameObject;
 		dr.room.transform.parent = drHolder.transform;
+
+		GameObject objHolder = new GameObject("Objs");
+		objHolder.transform.position = pos;
+		objHolder.transform.parent = drHolder.transform;
 		
+		const int NUM_OBJS = 39;
+		dr.objs = new GameObject[NUM_OBJS];
+
+		// top left corner
+		dr.objs[0] = Instantiate(water, new Vector3(pos.x - 5.5f, pos.y + 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[1] = Instantiate(water, new Vector3(pos.x - 4.5f, pos.y + 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[2] = Instantiate(water, new Vector3(pos.x - 3.5f, pos.y + 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[3] = Instantiate(water, new Vector3(pos.x - 5.5f, pos.y + 2, 0), Quaternion.identity) as GameObject;
+
+		// top right corner
+		dr.objs[4] = Instantiate(water, new Vector3(pos.x + 5.5f, pos.y + 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[5] = Instantiate(water, new Vector3(pos.x + 4.5f, pos.y + 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[6] = Instantiate(water, new Vector3(pos.x + 1.5f, pos.y + 1, 0), Quaternion.identity) as GameObject;
+		dr.objs[7] = Instantiate(water, new Vector3(pos.x + 5.5f, pos.y + 2, 0), Quaternion.identity) as GameObject;
+
+		// bot right corner
+		dr.objs[8] = Instantiate(water, new Vector3(pos.x + 5.5f, pos.y - 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[9] = Instantiate(water, new Vector3(pos.x + 4.5f, pos.y - 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[10] = Instantiate(water, new Vector3(pos.x + 3.5f, pos.y - 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[11] = Instantiate(water, new Vector3(pos.x + 5.5f, pos.y - 2, 0), Quaternion.identity) as GameObject;
+
+		// bot left corner
+		dr.objs[12] = Instantiate(water, new Vector3(pos.x - 5.5f, pos.y - 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[13] = Instantiate(water, new Vector3(pos.x - 4.5f, pos.y - 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[14] = Instantiate(water, new Vector3(pos.x - 3.5f, pos.y - 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[15] = Instantiate(water, new Vector3(pos.x - 5.5f, pos.y - 2, 0), Quaternion.identity) as GameObject;
+
+		dr.objs[16] = Instantiate(water, new Vector3(pos.x - 2.5f, pos.y - 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[17] = Instantiate(water, new Vector3(pos.x - 1.5f, pos.y - 3, 0), Quaternion.identity) as GameObject;
+
+		dr.objs[18] = Instantiate(water, new Vector3(pos.x + 2.5f, pos.y - 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[19] = Instantiate(water, new Vector3(pos.x + 1.5f, pos.y - 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[20] = Instantiate(water, new Vector3(pos.x - 5.5f, pos.y - 1, 0), Quaternion.identity) as GameObject;
+		dr.objs[21] = Instantiate(water, new Vector3(pos.x + 5.5f, pos.y + 1, 0), Quaternion.identity) as GameObject;
+
+		dr.objs[22] = Instantiate(water, new Vector3(pos.x + 1.5f, pos.y + 2, 0), Quaternion.identity) as GameObject;
+		dr.objs[23] = Instantiate(water, new Vector3(pos.x + 0.5f, pos.y - 1, 0), Quaternion.identity) as GameObject;
+		dr.objs[24] = Instantiate(water, new Vector3(pos.x - 0.5f, pos.y - 1, 0), Quaternion.identity) as GameObject;
+
+		dr.objs[25] = Instantiate(water, new Vector3(pos.x - 1.5f, pos.y - 1, 0), Quaternion.identity) as GameObject;
+		dr.objs[26] = Instantiate(water, new Vector3(pos.x - 1.5f, pos.y + 0, 0), Quaternion.identity) as GameObject;
+		dr.objs[27] = Instantiate(water, new Vector3(pos.x - 1.5f, pos.y + 1, 0), Quaternion.identity) as GameObject;
+
+		dr.objs[28] = Instantiate(water, new Vector3(pos.x + 1.5f, pos.y - 2, 0), Quaternion.identity) as GameObject;
+		dr.objs[29] = Instantiate(water, new Vector3(pos.x + 1.5f, pos.y - 1, 0), Quaternion.identity) as GameObject;
+		dr.objs[30] = Instantiate(water, new Vector3(pos.x + 2.5f, pos.y - 2, 0), Quaternion.identity) as GameObject;
+		dr.objs[31] = Instantiate(water, new Vector3(pos.x + 2.5f, pos.y - 1, 0), Quaternion.identity) as GameObject;
+
+		dr.objs[32] = Instantiate(water, new Vector3(pos.x - 4.5f, pos.y - 2, 0), Quaternion.identity) as GameObject;
+		dr.objs[33] = Instantiate(water, new Vector3(pos.x - 4.5f, pos.y - 1, 0), Quaternion.identity) as GameObject;
+
+		dr.objs[34] = Instantiate(water, new Vector3(pos.x - 0.5f, pos.y + 1, 0), Quaternion.identity) as GameObject;
+		dr.objs[35] = Instantiate(water, new Vector3(pos.x + 0.5f, pos.y + 1, 0), Quaternion.identity) as GameObject;
+
+		dr.objs[36] = Instantiate(water, new Vector3(pos.x - 0.5f, pos.y + 2, 0), Quaternion.identity) as GameObject;
+		dr.objs[37] = Instantiate(water, new Vector3(pos.x + 0.5f, pos.y + 2, 0), Quaternion.identity) as GameObject;
+
+		dr.objs[38] = Instantiate(key, new Vector3(pos.x + -0.5f, pos.y, 0), Quaternion.identity) as GameObject;
+
+		for(int i=0; i < NUM_OBJS; ++i){
+			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
+			dr.objs[i].transform.parent = objHolder.transform;
+		}
+
 		return drHolder;
 	}
 
