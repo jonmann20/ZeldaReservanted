@@ -26,15 +26,18 @@ public partial class Link : MonoBehaviour {
 	SpriteRenderer sprRend;
 	Vector3 previousPos;
 
+	Color initialColor;
+	const int COLOR_TIME = 5;
+	int colorTimer = COLOR_TIME;
+	bool colorFlip = false;
+
 	// SCREEN SCROLL
 	Vector2 desiredDisplacement, deltaDisplacement;
 	float desiredDisplacementTime, vert, hor;
 
 	static GameObject heartPrefab, heartEmptyPrefab;
 
-	public static float initHealth = 3, health = 3;
-
-	public int invincibility = 0;
+	public static float initHealth = 3, health = 3, invincibility = 0;
 
 	SpriteDir dir = SpriteDir.UP_STEP;
 	public static int numRupee = 0;
@@ -53,6 +56,8 @@ public partial class Link : MonoBehaviour {
 		heartPrefab = Resources.Load<GameObject>("Heart");
 		heartEmptyPrefab = Resources.Load<GameObject>("HeartEmpty");
 		bombPrefab = Resources.Load<GameObject>("Bomb");
+
+		initialColor = (renderer as SpriteRenderer).color;
 
 		updateHealth();
 	}
@@ -84,8 +89,25 @@ public partial class Link : MonoBehaviour {
 			canShootAgain = true;
 		}
 
+		if(colorTimer > 0)
+			colorTimer --;
+		else
+		{
+			colorTimer = COLOR_TIME;
+			colorFlip = !colorFlip;
+		}
+
 		if(invincibility > 0)
 			invincibility --;
+
+		if(invincibility > 0) 
+		{
+
+			if(colorFlip) (renderer as SpriteRenderer).color = Color.red;
+			if(!colorFlip) (renderer as SpriteRenderer).color = Color.white;
+		}
+		else
+			(renderer as SpriteRenderer).color = initialColor;
 	}
 
 

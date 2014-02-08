@@ -37,6 +37,8 @@ public class RockShotScript : MonoBehaviour {
 		if(col.gameObject.tag == "Player"){
 			--Link.health;
 			Link.updateHealth();
+			Link.invincibility = 60;
+			GameAudio.playPlayerHurt();
 			Destroy(gameObject);
 		}
 		if(col.gameObject.tag == "physicaltile" && mode == 0)

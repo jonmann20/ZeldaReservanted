@@ -13,8 +13,8 @@ public partial class Link : MonoBehaviour {
 		if(col.gameObject.tag == "Enemy" && invincibility <= 0){
 			--Link.health;
 			Link.updateHealth();
-			invincibility = 30;
-			GameAudio.playPlayerHurt();
+			invincibility = 60;
+
 
 			//doKnockback(col);
 		}

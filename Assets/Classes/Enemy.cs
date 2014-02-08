@@ -186,7 +186,7 @@ public abstract class Enemy : MonoBehaviour {
 	{
 		if(pos.x < 1 || pos.x > 14 || pos.y < 1 || pos.y > 9)
 		{
-			print("pos " + pos.ToString () + " is not traversible because of stage boundaries." );
+			//print("pos " + pos.ToString () + " is not traversible because of stage boundaries." );
 			return false;
 		}
 		int index = (int)(pos.x * 11 + pos.y);
@@ -194,11 +194,11 @@ public abstract class Enemy : MonoBehaviour {
 		if(MapTileEnum.isSolid(mts.tilecode)
 		   || MapTileEnum.isWater(mts.tilecode))
 		{
-			print("pos " + pos.ToString () + " is not traversible." );
+			//print("pos " + pos.ToString () + " is not traversible." );
 			return false;
 		}
 
-		print("pos " + pos.ToString () + " is traversible." );
+		//print("pos " + pos.ToString () + " is traversible." );
 		return true;
 	}
 
