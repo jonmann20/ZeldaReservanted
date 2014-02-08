@@ -67,6 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e010bc1371fd24c1ca06530fb904fa28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spr_rock: {fileID: 21300032, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_energy: {fileID: 21300242, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

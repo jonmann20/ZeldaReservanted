@@ -89,7 +89,9 @@ public class Octorok : Enemy {
 					availableMoves.Add('n');
 			}
 
-			char desiredDir = getRandomElementInList(availableMoves);
+			char desiredDir = 'z';
+			if(availableMoves.Count > 0)
+				desiredDir = getRandomElementInList(availableMoves);
 			dir = desiredDir;
 
 			if(desiredDir == 'e')
@@ -168,16 +170,5 @@ public class Octorok : Enemy {
 	public void MoveAgain()
 	{
 		Movement();
-	}
-
-	//RETURNS 'z' for failure (no items in list)
-	char getRandomElementInList(List<char> L)
-	{
-		if(L.Count <= 0)
-			return 'z';
-
-		int index = (int)(Random.Range(0.0f, L.Count));
-		//print("list size: " + L.Count.ToString () + " index generated: " + index.ToString());
-		return L[index];
 	}
 }

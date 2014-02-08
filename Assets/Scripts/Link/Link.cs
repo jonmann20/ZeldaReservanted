@@ -94,6 +94,7 @@ public partial class Link : MonoBehaviour {
 			// Game Over
 			int numD = PlayerPrefs.GetInt("numDeath");
 			PlayerPrefs.SetInt("numDeath", ++numD);
+			GameAudio.playGameOver();
 			Application.LoadLevel("death");
 		}
 

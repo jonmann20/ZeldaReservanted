@@ -1134,7 +1134,7 @@ TextureImporter:
         height: 10
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_121
+    - name: energyShot
       rect:
         serializedVersion: 2
         x: 1340

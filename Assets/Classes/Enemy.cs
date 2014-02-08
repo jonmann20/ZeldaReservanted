@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public abstract class Enemy : MonoBehaviour {
 
@@ -44,23 +45,20 @@ public abstract class Enemy : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		if(col.gameObject.tag == "Player"){
-			--Link.health;
-			Link.updateHealth();
-		}
-		else if(col.gameObject.tag == "Sword")
+
+		if(col.gameObject.tag == "Sword")
 		{
 			setHealth(health - 1);
 		}
 	}
-
+	/*
 	void OnCollisionEnter2D(Collision2D col){
 		if(col.gameObject.tag == "Player"){
 			--Link.health;
 			Link.updateHealth();
 		}
 	}
-
+*/
 	void OnCollisionExit2D(Collision2D col){
 		//print ("exit");
 		waitForExit = false;
@@ -125,7 +123,7 @@ public abstract class Enemy : MonoBehaviour {
 	//ONLY DESCREASE HEALTH IF invincibility <= 0
 	public void setHealth(int h)
 	{
-		if(h < health && invincibility > 0) 
+		if(h < health && invincibility > 0)
 			return;
 		if(h < health)
 			invincibility = 20;
@@ -133,6 +131,19 @@ public abstract class Enemy : MonoBehaviour {
 
 		if(health <= 0)
 			kill ();
+	}
+
+	public List<Vector3> getWaterPositions()
+	{
+		List<Vector3> waterPositions = new List<Vector3>();
+		for(int i = 0; i < 176; i++)
+		{
+			MapTileScript mts = (gpm.activeTiles[i] as GameObject).GetComponent("MapTileScript") as MapTileScript;
+			if(MapTileEnum.isWater(mts.tilecode))
+				waterPositions.Add(mts.transform.position);
+		}
+
+		return waterPositions;
 	}
 
 	public bool isTileTraversableLand(Vector2 pos)
@@ -159,5 +170,12 @@ public abstract class Enemy : MonoBehaviour {
 	{
 		int index = (int)(pos.x * 11 + pos.y);
 		Destroy(gpm.activeTiles[index]);
+	}
+
+	//RETURNS 'z' for failure (no items in list)
+	public T getRandomElementInList<T>(List<T> L)
+	{
+		int index = (int)(Random.Range(0.0f, L.Count));
+		return L[index];
 	}
 }

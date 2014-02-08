@@ -4,12 +4,14 @@ using System.Collections;
 public class GameAudio : MonoBehaviour {
 
 	public static AudioSource swordSwingSrc, swordShootSrc, rupeePickupSrc, rupeePickup5Src, textSrc,
-								enemyZapSrc, heartPickupSrc, itemObtainedSrc, itemReceivedSrc;
+								enemyZapSrc, heartPickupSrc, itemObtainedSrc, itemReceivedSrc,
+								gameOverSrc, playerHurtSrc;
 	GameObject swordSwingSrcHolder, swordShootSrcHolder, rupeePickupSrcHolder, rupeePickup5SrcHolder, textSrcHolder,
-	enemyZapSrcHolder, heartPickupSrcHolder, itemObtainedSrcHolder, itemReceivedSrcHolder;
+								enemyZapSrcHolder, heartPickupSrcHolder, itemObtainedSrcHolder, itemReceivedSrcHolder,
+								gameOverSrcHolder, playerHurtSrcHolder;
 					
-
-	void Start () {
+	void Awake()
+	{
 		setSoundEffect(ref swordSwingSrcHolder, ref swordSwingSrc, "swordSwing");
 		setSoundEffect(ref swordShootSrcHolder, ref swordShootSrc, "fullPowerSword");
 		setSoundEffect(ref rupeePickupSrcHolder, ref rupeePickupSrc, "menuBeep");
@@ -19,8 +21,10 @@ public class GameAudio : MonoBehaviour {
 		setSoundEffect(ref heartPickupSrcHolder, ref heartPickupSrc, "healthHeart");
 		setSoundEffect(ref itemObtainedSrcHolder, ref itemObtainedSrc, "itemObtained");
 		setSoundEffect(ref itemReceivedSrcHolder, ref itemReceivedSrc, "itemReceived");
+		setSoundEffect(ref gameOverSrcHolder, ref gameOverSrc, "gameOver");
+		setSoundEffect(ref playerHurtSrcHolder, ref playerHurtSrc, "playerHurt");
 	}
-
+	
 	void setSoundEffect(ref GameObject holder, ref AudioSource src, string clip){
 		holder = new GameObject();
 		src = holder.AddComponent<AudioSource>();
@@ -58,6 +62,17 @@ public class GameAudio : MonoBehaviour {
 	{
 		heartPickupSrc.audio.Play();
 	}
+
+	public static void playGameOver()
+	{
+		gameOverSrc.audio.Play();
+	}
+
+	public static void playPlayerHurt()
+	{
+		playerHurtSrc.audio.Play();
+	}
+
 
 	public static void playRupeePickup(int num){
 

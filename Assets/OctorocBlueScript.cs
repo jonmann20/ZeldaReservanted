@@ -80,7 +80,9 @@ public class OctorocBlueScript : Enemy {
 					availableMoves.Add('n');
 			}
 			
-			char desiredDir = getRandomElementInList(availableMoves);
+			char desiredDir = 'z';
+			if(availableMoves.Count > 0)
+				desiredDir = getRandomElementInList(availableMoves);
 			dir = desiredDir;
 			
 			if(desiredDir == 'e')

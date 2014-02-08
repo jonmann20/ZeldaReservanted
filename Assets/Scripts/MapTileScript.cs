@@ -36,14 +36,19 @@ public class MapTileScript : MonoBehaviour {
 	public void updateSprite()
 	{
 		GetComponent<SpriteRenderer>().sprite = MapTileEnum.getTileSprite(tilecode);
-		if(MapTileEnum.isSolid(tilecode) || MapTileEnum.isWater(tilecode))
+
+		bool isSolid = MapTileEnum.isSolid(tilecode);
+		bool isWater = MapTileEnum.isWater(tilecode);
+
+		if(isSolid)
 		{
 			c2d.isTrigger = false;
 			gameObject.tag = "physicaltile";
 		}
-		if(code != "00")
+		else if(isWater)
 		{
-			//Instantiate();
+			c2d.isTrigger = false;
+			gameObject.tag = "watertile";
 		}
 	}
 

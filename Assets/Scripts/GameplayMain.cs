@@ -33,7 +33,7 @@ public class GameplayMain : MonoBehaviour {
 	GameObject[] oldTiles = new GameObject[176];
 	//TODO: NOT CURRENTLY DESTROYING ALL ENEMIES
 
-	List<GameObject> enemies = new List<GameObject>();
+	public List<GameObject> enemies = new List<GameObject>();
 	List<GameObject> specialTiles = new List<GameObject>();
 	List<GameObject> NPCObjects = new List<GameObject>();
 
