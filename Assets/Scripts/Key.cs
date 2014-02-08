@@ -11,6 +11,8 @@ public class Key : MonoBehaviour {
 			gt.text = Link.numKey.ToString();
 			GameAudio.playRupeePickup(1);
 
+			DungeonRooms.that.keyIsFound = true;
+
 			Destroy (gameObject);
 		}
 	}

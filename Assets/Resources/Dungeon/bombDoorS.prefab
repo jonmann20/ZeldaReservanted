@@ -12,7 +12,7 @@ GameObject:
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: stairs
+  m_Name: bombDoorS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.03647566, y: -2.80344224, z: 0}
+  m_LocalPosition: {x: -.10349457, y: .86031276, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38,8 +38,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .875, y: .875}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 1, y: .550000012}
+  m_Center: {x: 0, y: -.239999995}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -48,11 +48,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ad2f3d61f60705468849305f1475433, type: 3}
+  m_Script: {fileID: 11500000, guid: e76fee2eb7e8fc246a432d987c330435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRoom8: 0
-  isRoomBoss: 0
+  doorSide: 4
+  isEntrance: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300038, guid: 32179ba2db30b594cabb3dd4491d3780, type: 3}
+  m_Sprite: {fileID: 21300044, guid: 32179ba2db30b594cabb3dd4491d3780, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
