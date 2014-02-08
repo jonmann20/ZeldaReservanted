@@ -15,7 +15,7 @@ public class Bomb : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		if(isPickup && col.gameObject.tag == "Player"){
+		if(isPickup && (col.gameObject.tag == "Player" || col.gameObject.tag == "Sword")){
 			GameObject.Find("HUDbombAction").GetComponent<SpriteRenderer>().enabled = true;
 
 			Link.numBomb += 5;

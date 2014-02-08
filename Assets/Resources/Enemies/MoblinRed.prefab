@@ -13,7 +13,7 @@ GameObject:
   - 61: {fileID: 6100000}
   m_Layer: 0
   m_Name: MoblinRed
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,10 +51,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd340da9a0f0a4e5290439c7069819e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
   spr: []
   topLeftX: -8
   topLeftY: 3.5
   sprRend: {fileID: 0}
+  invincibility: 0
+  gpm: {fileID: 0}
+  currentCoordsInRoom: {x: 0, y: 0}
+  poof: {fileID: 0}
+  poofTimer: 10
+  didPoof: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

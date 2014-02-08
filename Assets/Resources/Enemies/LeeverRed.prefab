@@ -13,7 +13,7 @@ GameObject:
   - 61: {fileID: 6100000}
   m_Layer: 0
   m_Name: LeeverRed
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,10 +51,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b9d59d895734eb4bca444f378823a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 2
   spr: []
   topLeftX: -8
   topLeftY: 3.5
   sprRend: {fileID: 0}
+  invincibility: 0
+  gpm: {fileID: 0}
+  currentCoordsInRoom: {x: 0, y: 0}
+  poof: {fileID: 0}
+  poofTimer: 10
+  didPoof: 0
+  spr1: {fileID: 21300090, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr2: {fileID: 21300092, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  digTimer: 264
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

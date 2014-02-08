@@ -25,7 +25,8 @@ public abstract class Enemy : MonoBehaviour {
 	public Vector2 currentCoordsInRoom;
 
 	public Sprite poof;
-	public int poofTimer;
+	public int poofTimer = 10;
+	public bool didPoof = false;
 
 	public abstract void Movement();
 
@@ -40,7 +41,7 @@ public abstract class Enemy : MonoBehaviour {
 		audioSrc = new GameObject("audioSrc");
 		audioSrc.AddComponent<AudioSource>();
 		audioSrc.audio.clip = enemyZap;
-		
+
 		initCoordsInRoom();
 	}
 
@@ -59,10 +60,6 @@ public abstract class Enemy : MonoBehaviour {
 		}
 	}
 */
-	void OnCollisionExit2D(Collision2D col){
-		//print ("exit");
-		waitForExit = false;
-	}
 
 	void Update()
 	{
@@ -76,7 +73,7 @@ public abstract class Enemy : MonoBehaviour {
 
 	}
 
-	void initCoordsInRoom()
+	protected void initCoordsInRoom()
 	{
 		float topLeftX = -8f;
 		float topLeftY = 3.5f;
@@ -146,16 +143,37 @@ public abstract class Enemy : MonoBehaviour {
 		return waterPositions;
 	}
 
+	public List<Vector3> getTraversiblePositions()
+	{
+		List<Vector3> traversiblePositions = new List<Vector3>();
+		for(int i = 0; i < 176; i++)
+		{
+			MapTileScript mts = (gpm.activeTiles[i] as GameObject).GetComponent("MapTileScript") as MapTileScript;
+			if(!MapTileEnum.isWater(mts.tilecode) && !MapTileEnum.isSolid(mts.tilecode))
+				traversiblePositions.Add(mts.transform.position);
+		}
+		
+		return traversiblePositions;
+	}
+
+
 	public bool isTileTraversableLand(Vector2 pos)
 	{
-		if(pos.x < 1 || pos.x >= 10 || pos.y < 1 || pos.y > 14)
+		if(pos.x < 1 || pos.x > 14 || pos.y < 1 || pos.y > 9)
+		{
+			print("pos " + pos.ToString () + " is not traversible because of stage boundaries." );
 			return false;
+		}
 		int index = (int)(pos.x * 11 + pos.y);
 		MapTileScript mts = (gpm.activeTiles[index] as GameObject).GetComponent("MapTileScript") as MapTileScript;
 		if(MapTileEnum.isSolid(mts.tilecode)
 		   || MapTileEnum.isWater(mts.tilecode))
+		{
+			print("pos " + pos.ToString () + " is not traversible." );
 			return false;
+		}
 
+		print("pos " + pos.ToString () + " is traversible." );
 		return true;
 	}
 

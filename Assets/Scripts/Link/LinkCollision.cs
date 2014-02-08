@@ -16,7 +16,7 @@ public partial class Link : MonoBehaviour {
 			invincibility = 30;
 			GameAudio.playPlayerHurt();
 
-			doKnockback(col);
+			//doKnockback(col);
 		}
 	}
 

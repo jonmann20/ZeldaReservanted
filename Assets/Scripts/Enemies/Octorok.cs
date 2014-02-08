@@ -28,9 +28,7 @@ public class Octorok : Enemy {
 	void Start()
 	{
 		RockShot = Resources.Load("Enemies/RockShot") as GameObject;
-		setHealth(1);
-		poofTimer = 15 + Random.Range(0, 60);
-		print(poof);
+		poofTimer = 15 + (int)Random.Range(0, 60);
 	}
 
 	public override void customUpdate()
@@ -40,10 +38,11 @@ public class Octorok : Enemy {
 			poofTimer --;
 			(renderer as SpriteRenderer).sprite = poof;
 		}
-		if(poofTimer == 1)
+		if(poofTimer == 0 && !didPoof)
 		{
 			(renderer as SpriteRenderer).sprite = spr_n1;
 			Movement ();
+			didPoof = true;
 		}
 	}
 	

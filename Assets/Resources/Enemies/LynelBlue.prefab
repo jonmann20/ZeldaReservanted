@@ -10,9 +10,10 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 61: {fileID: 6100000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: LynelBlue
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,6 +40,36 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a02e55e799d4550b59cf4d00e6608d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 8
+  spr: []
+  topLeftX: -8
+  topLeftY: 3.5
+  sprRend: {fileID: 0}
+  invincibility: 0
+  gpm: {fileID: 0}
+  currentCoordsInRoom: {x: 0, y: 0}
+  poof: {fileID: 0}
+  poofTimer: 10
+  didPoof: 0
+  spr_n1: {fileID: 0}
+  spr_n2: {fileID: 0}
+  spr_e1: {fileID: 0}
+  spr_e2: {fileID: 0}
+  spr_s1: {fileID: 0}
+  spr_s2: {fileID: 0}
+  spr_w1: {fileID: 0}
+  spr_w2: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

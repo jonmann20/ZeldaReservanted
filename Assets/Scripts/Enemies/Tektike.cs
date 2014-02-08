@@ -16,7 +16,59 @@ public class Tektike : Enemy {
 	{
 		print("tektike!");
 		setHealth(1);
-		Movement();
+		poofTimer = 15 + (int)Random.Range(0, 60);
+		print(poof);
+	}
+
+	public override void customUpdate()
+	{
+		//POOFING
+		print("customUpdate");
+		if(poofTimer > 0)
+		{
+			print("poofing");
+			poofTimer --;
+			(renderer as SpriteRenderer).sprite = poof;
+		}
+		if(poofTimer == 0 && !didPoof)
+		{
+			(renderer as SpriteRenderer).sprite = spr_ground;
+			//Movement ();
+			destination = transform.position;
+			midPoint = destination;
+			didPoof = true;
+		}
+
+		if(didPoof)
+		{
+		//NORMAL UPDATE
+		if(fractionCovered < 1.0f)
+		{
+			fractionCovered += 0.05f;
+		}
+		
+		//ANIMATE
+		if(didPoof)
+		{
+			if(fractionCovered < 1.0f || (timer > 60 && timer < 100))
+				(renderer as SpriteRenderer).sprite = spr_air;
+			else
+				(renderer as SpriteRenderer).sprite = spr_ground;
+		}
+		
+		if(fractionCovered <= 0.5f)
+			transform.position = Vector3.Lerp(transform.position, midPoint, fractionCovered / 0.5f);
+		if(fractionCovered > 0.5f)
+			transform.position = Vector3.Lerp(transform.position, destination, (fractionCovered - 0.5f) / 0.5f);
+		
+		if(didPoof)
+			timer --;
+		if(timer <= 0 && didPoof)
+		{
+			Movement();
+			timer = 60 + (int)Random.Range(0, 240);
+		}
+		}
 	}
 
 	public override void Movement(){
@@ -62,30 +114,5 @@ public class Tektike : Enemy {
 		}
 
 		return new Vector3(midX, midY, 0);
-	}
-
-	void Update(){
-		if(fractionCovered < 1.0f)
-		{
-			fractionCovered += 0.05f;
-		}
-		
-		//ANIMATE
-		if(fractionCovered < 1.0f || (timer > 60 && timer < 100))
-			(renderer as SpriteRenderer).sprite = spr_air;
-		else
-			(renderer as SpriteRenderer).sprite = spr_ground;
-		
-		if(fractionCovered <= 0.5f)
-			transform.position = Vector3.Lerp(transform.position, midPoint, fractionCovered / 0.5f);
-		if(fractionCovered > 0.5f)
-			transform.position = Vector3.Lerp(transform.position, destination, (fractionCovered - 0.5f) / 0.5f);
-		
-		timer --;
-		if(timer <= 0)
-		{
-			Movement();
-			timer = 60 + (int)Random.Range(0, 240);
-		}
 	}
 }
