@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 61: {fileID: 6100000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: MoblinBlue
   m_TagString: Enemy
@@ -39,6 +40,37 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd340da9a0f0a4e5290439c7069819e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  spr: []
+  topLeftX: -8
+  topLeftY: 3.5
+  sprRend: {fileID: 0}
+  invincibility: 0
+  gpm: {fileID: 0}
+  currentCoordsInRoom: {x: 0, y: 0}
+  poof: {fileID: 21300260, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  poofTimer: 10
+  didPoof: 0
+  isWalking: 0
+  spr_n1: {fileID: 21300068, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_n2: {fileID: 21300070, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_e1: {fileID: 21300064, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_e2: {fileID: 21300058, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_s1: {fileID: 21300060, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_s2: {fileID: 21300062, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_w1: {fileID: 21300056, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_w2: {fileID: 21300058, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -58,7 +90,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300062, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

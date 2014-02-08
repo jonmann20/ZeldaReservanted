@@ -2,60 +2,79 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PeahatScript : Enemy {
-
-	const int animationTime = 10;
-	int animationTimer = animationTime;
-	public Sprite spr1;
-	public Sprite spr2;
-
-	bool isFlying = false;
-	const int flyingTime = 180;
-	int flyingTimer = 15;
+public class MoblinScript : Enemy {
+	
+	public bool isWalking = false;
+	bool walkMode = false;
+	
+	const int animateTime = 10;
+	int animateTimer = animateTime;
+	
+	public Sprite spr_n1;
+	public Sprite spr_n2;
+	public Sprite spr_e1;
+	public Sprite spr_e2;
+	public Sprite spr_s1;
+	public Sprite spr_s2;
+	public Sprite spr_w1;
+	public Sprite spr_w2;
 	
 	//n, e, s, or w.
 	public char dir = 'n';
-	public char previousMove;
-
+	char previousMove;
+	
+	const float SHOT_SPEED = 10;
+	GameObject ThrownWhiteSword;
+	
 	Vector2 destination;
-	const float speed = 0.01f;
+	const float speed = 0.025f;
 	
 	public delegate void Callback();
 	
 	void Start()
 	{
-		Movement ();
+		ThrownWhiteSword = Resources.Load("Enemies/ThrownWhiteSword") as GameObject;
+		poofTimer = 15 + (int)Random.Range(0, 60);
 	}
 	
 	public override void customUpdate()
 	{
-		if(flyingTimer > 0)
-			flyingTimer --;
-		else
+		if(poofTimer > 0)
 		{
-			flyingTimer = flyingTime + Random.Range(0, flyingTime);
-			isFlying = !isFlying;
-			if(isFlying == true)
-				Movement();
+			poofTimer --;
+			(renderer as SpriteRenderer).sprite = poof;
 		}
-
-
-
-		if(animationTimer > 0)
-			animationTimer --;
-		else
-			animationTimer = animationTime;
-
-		if(isFlying)
+		if(poofTimer == 0 && !didPoof)
 		{
-			if(animationTimer > animationTime * 0.5f)
-				(renderer as SpriteRenderer).sprite = spr1;
+			(renderer as SpriteRenderer).sprite = spr_n1;
+			Movement ();
+			didPoof = true;
+		}
+		
+		if(animateTimer > 0)
+			animateTimer --;
+		else
+		{
+			animateTimer = animateTime;
+			walkMode = !walkMode;
+		}
+		
+		if(isWalking)
+		{
+			if(walkMode)
+			{
+				if(dir == 'e') (renderer as SpriteRenderer).sprite = spr_e1;
+				if(dir == 's') (renderer as SpriteRenderer).sprite = spr_s1;
+				if(dir == 'w') (renderer as SpriteRenderer).sprite = spr_w1;
+				if(dir == 'n') (renderer as SpriteRenderer).sprite = spr_n1;
+			}
 			else
-				(renderer as SpriteRenderer).sprite = spr2;
-		}
-		else
-		{
-			(renderer as SpriteRenderer).sprite = spr2;
+			{
+				if(dir == 'e') (renderer as SpriteRenderer).sprite = spr_e2;
+				if(dir == 's') (renderer as SpriteRenderer).sprite = spr_s2;
+				if(dir == 'w') (renderer as SpriteRenderer).sprite = spr_w2;
+				if(dir == 'n') (renderer as SpriteRenderer).sprite = spr_n2;
+			}
 		}
 		
 	}
@@ -63,7 +82,12 @@ public class PeahatScript : Enemy {
 	public override void Movement(){
 		
 		Vector3 dest = new Vector3(0, 0, 0);
-
+		
+		//SHOOT
+		if(Random.Range(0, 100) > 85)
+			StartCoroutine(ShootBullet(Random.Range(0.0f, 2.0f)));
+		else //MOVE
+		{
 			//Get Available Moves
 			List<char> availableMoves = new List<char>();
 			
@@ -79,6 +103,7 @@ public class PeahatScript : Enemy {
 				{
 					availableMoves.Add('e');
 					availableMoves.Add('e');
+					availableMoves.Add('e');
 				}
 			}
 			if(isTileTraversableLand(southPos))
@@ -86,6 +111,7 @@ public class PeahatScript : Enemy {
 				availableMoves.Add('s');
 				if(previousMove != null && previousMove == 's')
 				{
+					availableMoves.Add('s');
 					availableMoves.Add('s');
 					availableMoves.Add('s');
 				}
@@ -97,6 +123,7 @@ public class PeahatScript : Enemy {
 				{
 					availableMoves.Add('w');
 					availableMoves.Add('w');
+					availableMoves.Add('w');
 				}
 			}
 			if(isTileTraversableLand(northPos))
@@ -104,6 +131,7 @@ public class PeahatScript : Enemy {
 				availableMoves.Add('n');
 				if(previousMove != null && previousMove == 'n')
 				{
+					availableMoves.Add('n');
 					availableMoves.Add('n');
 					availableMoves.Add('n');
 				}
@@ -137,16 +165,61 @@ public class PeahatScript : Enemy {
 			dir = desiredDir;
 			previousMove = desiredDir;
 			
-		if(isFlying)
-			StartCoroutine(MoveToPosition(transform, dest, 0.25f));
+			StartCoroutine(MoveToPosition(transform, dest, 0.5f));
+		}
 	}
 	
 	public IEnumerator MoveToPosition(Transform tForm, Vector3 newPos, float time){
+		isWalking = true;
 		float elapsedTime = 0;
 		Vector3 startingPos = tForm.position;
 		
 		while (elapsedTime < time){
 			tForm.position = Vector3.Lerp(startingPos, newPos, (elapsedTime / time));
+			elapsedTime += Time.deltaTime;
+			
+			if(elapsedTime >= time){
+				isWalking = false;
+				Callback call = MoveAgain;
+				call();
+			}
+			
+			yield return null;
+		}
+	}
+	
+	public IEnumerator ShootBullet(float time){
+		float elapsedTime = 0;
+		
+		Quaternion rot = Quaternion.identity;
+		Vector3 vel = new Vector3(0, 0, 0);
+		
+		if(dir == 'n')
+		{
+			vel = new Vector3(0, SHOT_SPEED, 0);
+			rot = Quaternion.Euler(0, 0, 270);
+		}
+		else if(dir == 'e')
+		{
+			vel = new Vector3(SHOT_SPEED, 0, 0);
+			rot = Quaternion.Euler(0, 0, 180);
+		}
+		else if(dir == 's')
+		{
+			vel = new Vector3(0, -SHOT_SPEED, 0);
+			rot = Quaternion.Euler(0, 0, 90);
+		}
+		else if(dir == 'w')
+		{
+			vel = new Vector3(-SHOT_SPEED, 0, 0);
+			rot = Quaternion.Euler(0, 0, 0);
+		}
+		
+		GameObject go = Instantiate(ThrownWhiteSword, transform.position, rot) as GameObject;
+		go.SendMessage("setMode", 1);
+		go.rigidbody2D.velocity = vel;
+		
+		while (elapsedTime < time){
 			elapsedTime += Time.deltaTime;
 			
 			if(elapsedTime >= time){
@@ -157,7 +230,6 @@ public class PeahatScript : Enemy {
 			yield return null;
 		}
 	}
-
 	
 	public void MoveAgain()
 	{

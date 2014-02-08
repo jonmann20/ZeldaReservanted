@@ -3,7 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class LynelScript : Enemy {
-	
+
+	public bool isWalking = false;
+	bool walkMode = false;
+
+	const int animateTime = 10;
+	int animateTimer = animateTime;
+
 	public Sprite spr_n1;
 	public Sprite spr_n2;
 	public Sprite spr_e1;
@@ -44,6 +50,33 @@ public class LynelScript : Enemy {
 			Movement ();
 			didPoof = true;
 		}
+
+		if(animateTimer > 0)
+			animateTimer --;
+		else
+		{
+			animateTimer = animateTime;
+			walkMode = !walkMode;
+		}
+
+		if(isWalking)
+		{
+			if(walkMode)
+			{
+				if(dir == 'e') (renderer as SpriteRenderer).sprite = spr_e1;
+				if(dir == 's') (renderer as SpriteRenderer).sprite = spr_s1;
+				if(dir == 'w') (renderer as SpriteRenderer).sprite = spr_w1;
+				if(dir == 'n') (renderer as SpriteRenderer).sprite = spr_n1;
+			}
+			else
+			{
+				if(dir == 'e') (renderer as SpriteRenderer).sprite = spr_e2;
+				if(dir == 's') (renderer as SpriteRenderer).sprite = spr_s2;
+				if(dir == 'w') (renderer as SpriteRenderer).sprite = spr_w2;
+				if(dir == 'n') (renderer as SpriteRenderer).sprite = spr_n2;
+			}
+		}
+
 	}
 	
 	public override void Movement(){
@@ -67,25 +100,41 @@ public class LynelScript : Enemy {
 			{
 				availableMoves.Add('e');
 				if(previousMove != null && previousMove == 'e')
+				{
 					availableMoves.Add('e');
+					availableMoves.Add('e');
+					availableMoves.Add('e');
+				}
 			}
 			if(isTileTraversableLand(southPos))
 			{
 				availableMoves.Add('s');
 				if(previousMove != null && previousMove == 's')
+				{
 					availableMoves.Add('s');
+					availableMoves.Add('s');
+					availableMoves.Add('s');
+				}
 			}
 			if(isTileTraversableLand(westPos))
 			{
 				availableMoves.Add('w');
 				if(previousMove != null && previousMove == 'w')
+				{
 					availableMoves.Add('w');
+					availableMoves.Add('w');
+					availableMoves.Add('w');
+				}
 			}
 			if(isTileTraversableLand(northPos))
 			{
 				availableMoves.Add('n');
 				if(previousMove != null && previousMove == 'n')
+				{
 					availableMoves.Add('n');
+					availableMoves.Add('n');
+					availableMoves.Add('n');
+				}
 			}
 			
 			char desiredDir = 'z';
@@ -96,25 +145,21 @@ public class LynelScript : Enemy {
 			if(desiredDir == 'e')
 			{
 				dest = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
-				(renderer as SpriteRenderer).sprite = spr_e1;
 				currentCoordsInRoom.x ++;
 			}
 			else if(desiredDir == 's')
 			{
 				dest = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
-				(renderer as SpriteRenderer).sprite = spr_s1;
 				currentCoordsInRoom.y ++;
 			}
 			else if(desiredDir == 'w')
 			{
 				dest = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
-				(renderer as SpriteRenderer).sprite = spr_w1;
 				currentCoordsInRoom.x --;
 			}
 			else if(desiredDir == 'n')
 			{
 				dest = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
-				(renderer as SpriteRenderer).sprite = spr_n1;
 				currentCoordsInRoom.y --;
 			}
 			dir = desiredDir;
@@ -125,6 +170,7 @@ public class LynelScript : Enemy {
 	}
 	
 	public IEnumerator MoveToPosition(Transform tForm, Vector3 newPos, float time){
+		isWalking = true;
 		float elapsedTime = 0;
 		Vector3 startingPos = tForm.position;
 		
@@ -133,6 +179,7 @@ public class LynelScript : Enemy {
 			elapsedTime += Time.deltaTime;
 			
 			if(elapsedTime >= time){
+				isWalking = false;
 				Callback call = MoveAgain;
 				call();
 			}
@@ -143,17 +190,34 @@ public class LynelScript : Enemy {
 	
 	public IEnumerator ShootBullet(float time){
 		float elapsedTime = 0;
-		
-		GameObject go = Instantiate(ThrownWhiteSword, transform.position, Quaternion.identity) as GameObject;
+
+		Quaternion rot = Quaternion.identity;
+		Vector3 vel = new Vector3(0, 0, 0);
+
 		if(dir == 'n')
-			go.rigidbody2D.velocity = new Vector3(0, SHOT_SPEED, 0);
+		{
+			vel = new Vector3(0, SHOT_SPEED, 0);
+			rot = Quaternion.Euler(0, 0, 270);
+		}
 		else if(dir == 'e')
-			go.rigidbody2D.velocity = new Vector3(SHOT_SPEED, 0, 0);
+		{
+			vel = new Vector3(SHOT_SPEED, 0, 0);
+			rot = Quaternion.Euler(0, 0, 180);
+		}
 		else if(dir == 's')
-			go.rigidbody2D.velocity = new Vector3(0, -SHOT_SPEED, 0);
+		{
+			vel = new Vector3(0, -SHOT_SPEED, 0);
+			rot = Quaternion.Euler(0, 0, 90);
+		}
 		else if(dir == 'w')
-			go.rigidbody2D.velocity = new Vector3(-SHOT_SPEED, 0, 0);
-		
+		{
+			vel = new Vector3(-SHOT_SPEED, 0, 0);
+			rot = Quaternion.Euler(0, 0, 0);
+		}
+
+		GameObject go = Instantiate(ThrownWhiteSword, transform.position, rot) as GameObject;
+		go.rigidbody2D.velocity = vel;
+
 		while (elapsedTime < time){
 			elapsedTime += Time.deltaTime;
 			

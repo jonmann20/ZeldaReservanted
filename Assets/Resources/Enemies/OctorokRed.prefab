@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a480dda7778146bf64c182676e9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
   spr:
   - {fileID: 21300012, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   - {fileID: 21300014, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
@@ -68,6 +69,7 @@ MonoBehaviour:
   currentCoordsInRoom: {x: 0, y: 0}
   poof: {fileID: 21300260, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   poofTimer: 0
+  didPoof: 0
   spr_n1: {fileID: 21300012, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   spr_n2: {fileID: 21300014, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   spr_e1: {fileID: 21300008, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
@@ -95,7 +97,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortingLayerID: 3642503593
   m_Sprite: {fileID: 21300012, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

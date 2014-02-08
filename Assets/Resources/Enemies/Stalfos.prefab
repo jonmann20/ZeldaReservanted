@@ -9,11 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 61: {fileID: 6100000}
-  - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: LeeverBlue
-  m_TagString: Enemy
+  m_Name: Stalfos
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,46 +23,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.14094019, y: -4.53215694, z: 0}
+  m_LocalPosition: {x: -2.52334666, y: .526506901, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!61 &6100000
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: 0}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b9d59d895734eb4bca444f378823a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  spr: []
-  topLeftX: -8
-  topLeftY: 3.5
-  sprRend: {fileID: 0}
-  invincibility: 0
-  gpm: {fileID: 0}
-  currentCoordsInRoom: {x: 0, y: 0}
-  poof: {fileID: 0}
-  poofTimer: 10
-  didPoof: 1
-  spr1: {fileID: 21300096, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
-  spr2: {fileID: 21300098, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
-  digTimer: 196
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -84,9 +46,9 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300098, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  m_Sprite: {fileID: 21300026, guid: 20ac998a8dda54766a76032e6838f21e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
