@@ -11,15 +11,16 @@ public class DungeonRoom {
 public class DungeonRooms : MonoBehaviour {
 	public static DungeonRooms that;
 
-	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBoss, blackFloor, roomG;
+	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBombN, blackFloor, roomG;
 	GameObject block, mat, stairs, triforce, water, key;
-	GameObject lockedDoor;
+	GameObject lockedDoor, bombDoorS, bombDoorN, bombDoorTrigger;
 
 	GameObject roomHolder;
 
 	bool stairsFound = false;
 	public bool keyIsFound = false;
 	public bool doorIsOpen = false;
+	bool bombDoorIsOpen = false;
 
 	void Awake(){
 		that = this;
@@ -36,7 +37,7 @@ public class DungeonRooms : MonoBehaviour {
 		roomRL = Resources.Load<GameObject>("Dungeon/RoomRL");
 		roomL = Resources.Load<GameObject>("Dungeon/RoomL");
 		roomG = Resources.Load<GameObject>("Dungeon/GenericRoom");
-		//roomBoss =;
+		roomBombN = Resources.Load<GameObject>("Dungeon/RoomBombN");
 
 		blackFloor = Resources.Load<GameObject>("Dungeon/blackFloor");
 		block = Resources.Load<GameObject>("Dungeon/block");
@@ -47,6 +48,8 @@ public class DungeonRooms : MonoBehaviour {
 		key = Resources.Load<GameObject>("Dungeon/key");
 
 		lockedDoor = Resources.Load<GameObject>("Dungeon/lockedDoor");
+		bombDoorS = Resources.Load<GameObject>("Dungeon/bombDoorS");
+		bombDoorTrigger = Resources.Load<GameObject>("Dungeon/bombDoorTrigger");
 	}
 
 	public GameObject getRoom(int num, Vector3 pos){
@@ -186,22 +189,30 @@ public class DungeonRooms : MonoBehaviour {
 		drHolder.transform.parent = roomHolder.transform;
 		
 		DungeonRoom dr = new DungeonRoom();
-		dr.room = Instantiate(roomB, pos, Quaternion.identity) as GameObject;
+		dr.room = Instantiate(roomG, pos, Quaternion.identity) as GameObject;
 		dr.room.transform.parent = drHolder.transform;
 
 		GameObject objHolder = new GameObject("Objs");
 		objHolder.transform.position = pos;
 		objHolder.transform.parent = drHolder.transform;
 
-		const int NUM_OBJS = 1;
-		dr.objs = new GameObject[NUM_OBJS];
+		dr.objs = new GameObject[2];
 
 		dr.objs[0] = Instantiate(stairs, new Vector3(pos.x - 5.5f, pos.y + 3, 0), Quaternion.identity) as GameObject;
+		dr.objs[0].transform.parent = objHolder.transform;
 
-		for(int i=0; i < NUM_OBJS; ++i){
-			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
-			dr.objs[i].transform.parent = objHolder.transform;
+		if(bombDoorIsOpen){
+			dr.objs[1] = Instantiate(bombDoorS, new Vector3(pos.x, pos.y - 4f, 0), Quaternion.identity) as GameObject;
+			GameObject grc = GameObject.Find("GenericRoom(Clone)");
+			grc.transform.Find("Walls/DoorWalls/wallB").collider2D.enabled = false;
+
 		}
+		else {
+			dr.objs[1] = Instantiate(bombDoorTrigger, new Vector3(pos.x, pos.y - 4), Quaternion.identity) as GameObject;
+
+		}
+
+		dr.objs[1].transform.parent = objHolder.transform;
 
 		return drHolder;
 	}
@@ -226,7 +237,7 @@ public class DungeonRooms : MonoBehaviour {
 		drHolder.transform.parent = roomHolder.transform;
 		
 		DungeonRoom dr = new DungeonRoom();
-		dr.room = Instantiate(roomT, pos, Quaternion.identity) as GameObject;
+		dr.room = Instantiate(roomBombN, pos, Quaternion.identity) as GameObject;
 		dr.room.transform.parent = drHolder.transform;
 
 
@@ -413,6 +424,21 @@ public class DungeonRooms : MonoBehaviour {
 		GameObject s = Instantiate(stairs, new Vector3(-5.5f, -5, 0), Quaternion.identity) as GameObject;
 		s.transform.parent = g.transform;
 		s.GetComponent<DungeonStairs>().isRoom8 = true;
+	}
+
+	public void addBombDoor(){
+		if(bombDoorIsOpen){
+			return;
+		}
+		bombDoorIsOpen = true;
+		
+		GameObject g = GameObject.Find ("Objs");
+		GameObject s = Instantiate(bombDoorS, new Vector3(0, -6, 0), Quaternion.identity) as GameObject;
+		s.transform.parent = g.transform;
+
+		GameObject grc = GameObject.Find("GenericRoom(Clone)");
+		grc.transform.Find("Walls/DoorWalls/wallB").collider2D.enabled = false;
+		Destroy(GameObject.Find ("BombDoorTrigger(Clone)"));
 	}
 
 }

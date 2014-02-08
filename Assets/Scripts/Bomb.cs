@@ -57,6 +57,9 @@ public class Bomb : MonoBehaviour {
 			if(col.gameObject.tag == "Enemy"){
 				Destroy(col.gameObject);
 			}
+			else if(col.gameObject.tag == "BombDoor"){
+				DungeonRooms.that.addBombDoor();
+			}
 		}
 
 		Destroy (gameObject, 0.35f);

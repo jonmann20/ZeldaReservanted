@@ -243,5 +243,23 @@ TextureImporter:
         height: 20
       alignment: 0
       pivot: {x: .5, y: .5}
+    - name: bombDoorS
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 241
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: bombDoorN
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 241
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 

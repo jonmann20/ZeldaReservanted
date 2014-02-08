@@ -4,8 +4,8 @@ using System.Collections;
 public class Dungeon : MonoBehaviour {
 
 	public static Dungeon that;
-	
-	int roomPos = 0;//6
+
+	int roomPos = 1;//6
 	public static int NUM_ROOMS = 10;
 	GameObject curRoom, nextRoom;
 
@@ -31,6 +31,10 @@ public class Dungeon : MonoBehaviour {
 
 		linkGM = GameObject.Find("Link");
 		linkGM.transform.position = new Vector3(0, -5, 0);
+
+		//debug
+		Inventory.hasBomb = true;
+		Link.numBomb = 100;
 	}
 
 	void Start(){
