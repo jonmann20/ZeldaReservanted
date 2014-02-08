@@ -791,6 +791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorSide: 0
+  isEntrance: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -803,6 +804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorSide: 2
+  isEntrance: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -815,6 +817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorSide: 6
+  isEntrance: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -827,6 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorSide: 4
+  isEntrance: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

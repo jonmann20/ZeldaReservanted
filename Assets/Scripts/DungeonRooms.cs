@@ -10,8 +10,9 @@ public class DungeonRoom {
 
 public class DungeonRooms : MonoBehaviour {
 	public static DungeonRooms that;
-	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBoss, blackFloor;
-	GameObject block, mat, stairs;
+
+	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBoss, blackFloor, roomG;
+	GameObject block, mat, stairs, triforce;
 
 	GameObject roomHolder;
 
@@ -31,12 +32,14 @@ public class DungeonRooms : MonoBehaviour {
 		roomB = Resources.Load<GameObject>("Dungeon/RoomB");
 		roomRL = Resources.Load<GameObject>("Dungeon/RoomRL");
 		roomL = Resources.Load<GameObject>("Dungeon/RoomL");
+		roomG = Resources.Load<GameObject>("Dungeon/GenericRoom");
 		//roomBoss =;
 
 		blackFloor = Resources.Load<GameObject>("Dungeon/blackFloor");
 		block = Resources.Load<GameObject>("Dungeon/block");
 		mat = Resources.Load<GameObject>("Dungeon/mat");
 		stairs = Resources.Load<GameObject>("Dungeon/stairs");
+		triforce = Resources.Load<GameObject>("Dungeon/triforce");
 	}
 
 	public GameObject getRoom(int num, Vector3 pos){
@@ -50,9 +53,36 @@ public class DungeonRooms : MonoBehaviour {
 			case 6:	return getRoomSix(pos);
 			case 7: return getRoomSeven(pos);
 			case 8: return getRoomEight(pos);
+			case 9: return getRoomTriforce(pos);
 		}
 
 		return null;
+	}
+
+	GameObject getRoomTriforce(Vector3 pos){
+		GameObject drHolder = new GameObject("RoomTriforce");
+		drHolder.transform.position = pos;
+		drHolder.transform.parent = roomHolder.transform;
+		
+		DungeonRoom dr = new DungeonRoom();
+		dr.room = Instantiate(roomG, pos, Quaternion.identity) as GameObject;
+		dr.room.transform.parent = drHolder.transform;
+
+		GameObject objHolder = new GameObject("Objs");
+		objHolder.transform.position = pos;
+		objHolder.transform.parent = drHolder.transform;
+		
+		const int NUM_OBJS = 1;
+		dr.objs = new GameObject[NUM_OBJS];
+		
+		dr.objs[0] = Instantiate(triforce, new Vector3(0, -1, 0), Quaternion.identity) as GameObject;
+		
+		for(int i=0; i < NUM_OBJS; ++i){
+			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
+			dr.objs[i].transform.parent = objHolder.transform;
+		}
+
+		return drHolder;
 	}
 
 	GameObject getRoomZero(Vector3 pos){
@@ -115,7 +145,21 @@ public class DungeonRooms : MonoBehaviour {
 		DungeonRoom dr = new DungeonRoom();
 		dr.room = Instantiate(roomT, pos, Quaternion.identity) as GameObject;
 		dr.room.transform.parent = drHolder.transform;
+
+
+		GameObject objHolder = new GameObject("Objs");
+		objHolder.transform.position = pos;
+		objHolder.transform.parent = drHolder.transform;
 		
+		dr.objs = new GameObject[1];
+		dr.objs[0] = Instantiate(stairs, new Vector3(pos.x + 0.5f, pos.y, 0), Quaternion.identity) as GameObject;
+		dr.objs[0].GetComponent<DungeonStairs>().isRoomBoss = true;
+
+		for(int i=0; i < 1; ++i){
+			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
+			dr.objs[i].transform.parent = objHolder.transform;
+		}
+
 		return drHolder;
 	}
 

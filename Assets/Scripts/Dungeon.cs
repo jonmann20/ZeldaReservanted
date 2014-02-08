@@ -5,8 +5,8 @@ public class Dungeon : MonoBehaviour {
 
 	public static Dungeon that;
 	
-	int roomPos = 8;//6
-	public static int NUM_ROOMS = 9;
+	int roomPos = 6;//6
+	public static int NUM_ROOMS = 10;
 	GameObject curRoom, nextRoom;
 
 	SpriteDir theDir;
@@ -88,6 +88,10 @@ public class Dungeon : MonoBehaviour {
 				roomPos = 8;
 				newRoomY = -2;
 				break;
+			case SpriteDir.RIGHT_STEP:		// from stairs room3 (boss)
+				roomPos = 9;
+				newRoomY = -2;
+				break;
 		}
 
 		if(isAnimating){
@@ -106,7 +110,7 @@ public class Dungeon : MonoBehaviour {
 
 		theDir = dir;
 
-		if(dir == SpriteDir.DOWN_STEP || dir == SpriteDir.UP_STEP){
+		if(dir == SpriteDir.DOWN_STEP || dir == SpriteDir.UP_STEP || dir == SpriteDir.RIGHT_STEP){
 			numDone = 2;
 			done();
 		}
@@ -161,7 +165,9 @@ public class Dungeon : MonoBehaviour {
 			}
 			else if(theDir == SpriteDir.UP_STEP){
 				linkGM.transform.position = new Vector3(-5.5f, -3.5f);	// just above staris
-				
+			}
+			else if(theDir == SpriteDir.RIGHT_STEP){
+				linkGM.transform.position = new Vector3(0, -3.5f);	// just above staris
 			}
 			else {
 				linkGM.transform.position = new Vector3(teleportX, -2, 0);
