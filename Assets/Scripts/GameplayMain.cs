@@ -553,7 +553,8 @@ public class GameplayMain : MonoBehaviour {
 			s += t.code + ' ';
 		}
 
-		System.IO.File.WriteAllText("Assets/Resources/EnemyTileMap.txt", s);
+		//System.IO.File.WriteAllText("Assets/Resources/EnemyTileMap.txt", s);
+
 	}
 
 	public IntPair getRoomCoords(string val)
