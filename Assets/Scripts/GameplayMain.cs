@@ -500,7 +500,7 @@ public class GameplayMain : MonoBehaviour {
 
 			screenScrolling = true;
 			linkRef.SendMessage("setMovementEnabled", false);
-			linkRef.SendMessage("setDesiredDisplacementTime", new Vector3(xMovement * 0.93f, yMovement * 0.9f, desiredDisplacementTime));
+			linkRef.SendMessage("setDesiredDisplacementTime", new Vector3(xMovement * 0.92f, yMovement * 0.89f, desiredDisplacementTime));
 
 			int counter = 0;
 			foreach(GameObject t in activeTiles)

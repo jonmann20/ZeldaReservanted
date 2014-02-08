@@ -225,7 +225,7 @@ TextureImporter:
         height: 14
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_20
+    - name: moblinRedLeft1
       rect:
         serializedVersion: 2
         x: 480
@@ -234,7 +234,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_21
+    - name: moblinRedLeft2
       rect:
         serializedVersion: 2
         x: 504
@@ -243,7 +243,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_22
+    - name: moblinRedDown1
       rect:
         serializedVersion: 2
         x: 528
@@ -252,7 +252,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_23
+    - name: moblinRedDown2
       rect:
         serializedVersion: 2
         x: 552
@@ -261,7 +261,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_24
+    - name: moblinRedRight1
       rect:
         serializedVersion: 2
         x: 576
@@ -270,7 +270,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_25
+    - name: moblinRedRight2
       rect:
         serializedVersion: 2
         x: 600
@@ -279,7 +279,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_26
+    - name: moblinRedUp1
       rect:
         serializedVersion: 2
         x: 625
@@ -288,7 +288,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_27
+    - name: moblinRedUp2
       rect:
         serializedVersion: 2
         x: 649
@@ -297,7 +297,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_28
+    - name: moblinBlueLeft1
       rect:
         serializedVersion: 2
         x: 672
@@ -306,7 +306,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_29
+    - name: moblinBlueLeft2
       rect:
         serializedVersion: 2
         x: 696
@@ -315,7 +315,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_30
+    - name: moblinBlueDown1
       rect:
         serializedVersion: 2
         x: 720
@@ -324,7 +324,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_31
+    - name: moblinBlueDown2
       rect:
         serializedVersion: 2
         x: 744
@@ -333,7 +333,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_32
+    - name: moblinBlueRight1
       rect:
         serializedVersion: 2
         x: 768
@@ -342,7 +342,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_33
+    - name: moblinBLueRight2
       rect:
         serializedVersion: 2
         x: 792
@@ -351,7 +351,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_34
+    - name: moblinBlueUp1
       rect:
         serializedVersion: 2
         x: 817
@@ -360,7 +360,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_35
+    - name: moblinBlueUp2
       rect:
         serializedVersion: 2
         x: 841
@@ -396,7 +396,7 @@ TextureImporter:
         height: 5
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_39
+    - name: Arrow
       rect:
         serializedVersion: 2
         x: 941
@@ -450,7 +450,7 @@ TextureImporter:
         height: 11
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_45
+    - name: leeverRed1
       rect:
         serializedVersion: 2
         x: 1121
@@ -459,7 +459,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_46
+    - name: leeverRed2
       rect:
         serializedVersion: 2
         x: 1144
@@ -477,7 +477,7 @@ TextureImporter:
         height: 11
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_48
+    - name: leeverBlue1
       rect:
         serializedVersion: 2
         x: 1193
@@ -486,7 +486,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_49
+    - name: leeverBlue2
       rect:
         serializedVersion: 2
         x: 1216
@@ -522,7 +522,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_53
+    - name: peahat1
       rect:
         serializedVersion: 2
         x: 1312
@@ -531,7 +531,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_54
+    - name: peahat2
       rect:
         serializedVersion: 2
         x: 1337
@@ -828,7 +828,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_87
+    - name: lynelRedLeft1
       rect:
         serializedVersion: 2
         x: 484
@@ -837,7 +837,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_88
+    - name: LynelRedLeft2
       rect:
         serializedVersion: 2
         x: 508
@@ -846,7 +846,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_89
+    - name: LynelRedDown1
       rect:
         serializedVersion: 2
         x: 532
@@ -855,7 +855,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_90
+    - name: LynelRedDown2
       rect:
         serializedVersion: 2
         x: 557
@@ -864,7 +864,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_91
+    - name: LynelRedRight1
       rect:
         serializedVersion: 2
         x: 580
@@ -873,7 +873,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_92
+    - name: LynelRedRight2
       rect:
         serializedVersion: 2
         x: 604
@@ -882,7 +882,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_93
+    - name: LynelRedUp1
       rect:
         serializedVersion: 2
         x: 628
@@ -891,7 +891,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_94
+    - name: LynelRedUp2
       rect:
         serializedVersion: 2
         x: 654
@@ -900,7 +900,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_95
+    - name: LynelBlueLeft1
       rect:
         serializedVersion: 2
         x: 676
@@ -909,7 +909,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_96
+    - name: LynelBlueLeft2
       rect:
         serializedVersion: 2
         x: 700
@@ -918,7 +918,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_97
+    - name: lynelBlueDown1
       rect:
         serializedVersion: 2
         x: 724
@@ -927,7 +927,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_98
+    - name: LynelBlueDown2
       rect:
         serializedVersion: 2
         x: 749
@@ -936,7 +936,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_99
+    - name: LynelBlueRight1
       rect:
         serializedVersion: 2
         x: 772
@@ -945,7 +945,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_100
+    - name: LynelBlueRight2
       rect:
         serializedVersion: 2
         x: 796
@@ -954,7 +954,7 @@ TextureImporter:
         height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_101
+    - name: LynelBlueUp1
       rect:
         serializedVersion: 2
         x: 820
@@ -963,7 +963,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_102
+    - name: LynelBlueUp2
       rect:
         serializedVersion: 2
         x: 846
@@ -1026,7 +1026,7 @@ TextureImporter:
         height: 7
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_109
+    - name: whiteSword
       rect:
         serializedVersion: 2
         x: 1036
