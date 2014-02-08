@@ -5,10 +5,10 @@ public class GameAudio : MonoBehaviour {
 
 	public static AudioSource swordSwingSrc, swordShootSrc, rupeePickupSrc, rupeePickup5Src, textSrc,
 								enemyZapSrc, heartPickupSrc, itemObtainedSrc, itemReceivedSrc,
-								gameOverSrc, playerHurtSrc;
+								gameOverSrc, playerHurtSrc, stairsSrc;
 	GameObject swordSwingSrcHolder, swordShootSrcHolder, rupeePickupSrcHolder, rupeePickup5SrcHolder, textSrcHolder,
 								enemyZapSrcHolder, heartPickupSrcHolder, itemObtainedSrcHolder, itemReceivedSrcHolder,
-								gameOverSrcHolder, playerHurtSrcHolder;
+								gameOverSrcHolder, playerHurtSrcHolder, stairsSrcHolder;
 					
 	void Awake()
 	{
@@ -23,6 +23,7 @@ public class GameAudio : MonoBehaviour {
 		setSoundEffect(ref itemReceivedSrcHolder, ref itemReceivedSrc, "itemReceived");
 		setSoundEffect(ref gameOverSrcHolder, ref gameOverSrc, "gameOver");
 		setSoundEffect(ref playerHurtSrcHolder, ref playerHurtSrc, "playerHurt");
+		setSoundEffect(ref stairsSrcHolder, ref stairsSrc, "stairs");
 	}
 	
 	void setSoundEffect(ref GameObject holder, ref AudioSource src, string clip){
@@ -73,6 +74,10 @@ public class GameAudio : MonoBehaviour {
 		playerHurtSrc.audio.Play();
 	}
 
+	public static void playStairs()
+	{
+		stairsSrc.audio.Play();
+	}
 
 	public static void playRupeePickup(int num){
 

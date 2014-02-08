@@ -67,12 +67,7 @@ public class GameplayMain : MonoBehaviour {
 	string desiredSpeech = "";
 	int speechTimer = 12;
 
-
-
 	GameObject itemHolder;
-
-
-
 
 	void Awake(){
 		LvlCamera = GameObject.Find("LvlCamera");
@@ -593,6 +588,7 @@ public class GameplayMain : MonoBehaviour {
 			
 			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
 			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+			GameAudio.playStairs();
 		}
 		if(code == "89")
 		{
@@ -605,6 +601,7 @@ public class GameplayMain : MonoBehaviour {
 			
 			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
 			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+			GameAudio.playStairs();
 		}
 		if(code == "90")
 		{
@@ -617,6 +614,7 @@ public class GameplayMain : MonoBehaviour {
 			
 			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
 			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+			GameAudio.playStairs();
 		}
 		if(code == "91")
 		{
@@ -629,6 +627,7 @@ public class GameplayMain : MonoBehaviour {
 			
 			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
 			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+			GameAudio.playStairs();
 		}
 		if(code == "92")
 		{
@@ -645,6 +644,7 @@ public class GameplayMain : MonoBehaviour {
 			
 			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
 			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+			GameAudio.playStairs();
 		}
 		if(code == "94")
 		{
@@ -662,6 +662,7 @@ public class GameplayMain : MonoBehaviour {
 			}
 			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
 			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+			GameAudio.playStairs();
 		}
 		if(code == "95")
 		{
@@ -674,6 +675,7 @@ public class GameplayMain : MonoBehaviour {
 			
 			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
 			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+			GameAudio.playStairs();
 		}
 		if(code == "96")
 		{
@@ -687,6 +689,7 @@ public class GameplayMain : MonoBehaviour {
 			
 			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
 			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+			GameAudio.playStairs();
 		}
 		if(code == "97")
 		{
@@ -699,6 +702,7 @@ public class GameplayMain : MonoBehaviour {
 			
 			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
 			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+			GameAudio.playStairs();
 		}
 		if(code == "98")
 		{
@@ -711,6 +715,7 @@ public class GameplayMain : MonoBehaviour {
 
 			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
 			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+			GameAudio.playStairs();
 		}
 
 		if(code == "99")
@@ -729,6 +734,7 @@ public class GameplayMain : MonoBehaviour {
 			}
 			NPCObjects.Add(Instantiate(Fire, new Vector3(-3, -1, -1), Quaternion.identity) as GameObject);
 			NPCObjects.Add(Instantiate(Fire, new Vector3(3, -1, -1), Quaternion.identity) as GameObject);
+			GameAudio.playStairs();
 		}
 
 		Tile destinationTile2 = currentRoom.tiles[7, 9];

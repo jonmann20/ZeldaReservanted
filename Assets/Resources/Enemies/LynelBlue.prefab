@@ -59,17 +59,18 @@ MonoBehaviour:
   invincibility: 0
   gpm: {fileID: 0}
   currentCoordsInRoom: {x: 0, y: 0}
-  poof: {fileID: 0}
+  poof: {fileID: 21300260, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   poofTimer: 10
   didPoof: 0
-  spr_n1: {fileID: 0}
-  spr_n2: {fileID: 0}
-  spr_e1: {fileID: 0}
-  spr_e2: {fileID: 0}
-  spr_s1: {fileID: 0}
-  spr_s2: {fileID: 0}
-  spr_w1: {fileID: 0}
-  spr_w2: {fileID: 0}
+  isWalking: 0
+  spr_n1: {fileID: 21300202, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_n2: {fileID: 21300204, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_e1: {fileID: 21300198, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_e2: {fileID: 21300200, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_s1: {fileID: 21300194, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_s2: {fileID: 21300196, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_w1: {fileID: 21300190, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  spr_w2: {fileID: 21300192, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -89,7 +90,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300194, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -9,6 +9,11 @@ public abstract class Enemy : MonoBehaviour {
 	public int health = 1;
 	public Sprite[] spr;
 
+	Color initialColor;
+	const int COLOR_TIME = 5;
+	int colorTimer = COLOR_TIME;
+	bool colorFlip = false;
+
 	public float topLeftX = -8f;
 	public float topLeftY = 3.5f;
 	public SpriteRenderer sprRend;
@@ -31,6 +36,7 @@ public abstract class Enemy : MonoBehaviour {
 	public abstract void Movement();
 
 	void Awake(){
+		invincibility = 0;
 		gpm = (GameObject.Find("MainCamera") as GameObject).GetComponent("GameplayMain") as GameplayMain;
 		rupeePrefab = Resources.Load<GameObject>("Rupee");
 		rupee5Prefab = Resources.Load<GameObject>("Rupee5");
@@ -42,6 +48,7 @@ public abstract class Enemy : MonoBehaviour {
 		audioSrc.AddComponent<AudioSource>();
 		audioSrc.audio.clip = enemyZap;
 
+		initialColor = (renderer as SpriteRenderer).color;
 		initCoordsInRoom();
 	}
 
@@ -66,6 +73,24 @@ public abstract class Enemy : MonoBehaviour {
 		if(invincibility > 0)
 			invincibility --;
 		customUpdate();
+
+
+
+		if(colorTimer > 0)
+			colorTimer --;
+		else
+		{
+			colorTimer = COLOR_TIME;
+			colorFlip = !colorFlip;
+		}
+
+		if(invincibility > 0) 
+		{
+			if(colorFlip) (renderer as SpriteRenderer).color = Color.red;
+			if(!colorFlip) (renderer as SpriteRenderer).color = Color.white;
+		}
+		else
+			(renderer as SpriteRenderer).color = initialColor;
 	}
 
 	public virtual void customUpdate()

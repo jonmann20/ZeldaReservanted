@@ -2,14 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class LynelScript : Enemy {
-
+public class MoblinScript : Enemy {
+	
 	public bool isWalking = false;
 	bool walkMode = false;
-
+	
 	const int animateTime = 10;
 	int animateTimer = animateTime;
-
+	
 	public Sprite spr_n1;
 	public Sprite spr_n2;
 	public Sprite spr_e1;
@@ -50,7 +50,7 @@ public class LynelScript : Enemy {
 			Movement ();
 			didPoof = true;
 		}
-
+		
 		if(animateTimer > 0)
 			animateTimer --;
 		else
@@ -58,7 +58,7 @@ public class LynelScript : Enemy {
 			animateTimer = animateTime;
 			walkMode = !walkMode;
 		}
-
+		
 		if(isWalking)
 		{
 			if(walkMode)
@@ -76,7 +76,7 @@ public class LynelScript : Enemy {
 				if(dir == 'n') (renderer as SpriteRenderer).sprite = spr_n2;
 			}
 		}
-
+		
 	}
 	
 	public override void Movement(){
@@ -190,10 +190,10 @@ public class LynelScript : Enemy {
 	
 	public IEnumerator ShootBullet(float time){
 		float elapsedTime = 0;
-
+		
 		Quaternion rot = Quaternion.identity;
 		Vector3 vel = new Vector3(0, 0, 0);
-
+		
 		if(dir == 'n')
 		{
 			vel = new Vector3(0, SHOT_SPEED, 0);
@@ -214,10 +214,11 @@ public class LynelScript : Enemy {
 			vel = new Vector3(-SHOT_SPEED, 0, 0);
 			rot = Quaternion.Euler(0, 0, 0);
 		}
-
+		
 		GameObject go = Instantiate(ThrownWhiteSword, transform.position, rot) as GameObject;
+		go.SendMessage("setMode", 1);
 		go.rigidbody2D.velocity = vel;
-
+		
 		while (elapsedTime < time){
 			elapsedTime += Time.deltaTime;
 			

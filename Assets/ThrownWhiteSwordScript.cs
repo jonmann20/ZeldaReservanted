@@ -3,6 +3,11 @@ using System.Collections;
 
 public class ThrownWhiteSwordScript : MonoBehaviour {
 
+	public Sprite whiteSword;
+	public Sprite arrow;
+
+	int mode = 0;
+
 	int stillTimer = 10;
 	
 	void Update(){
@@ -21,11 +26,21 @@ public class ThrownWhiteSwordScript : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.tag == "Player"){
-			Link.health -= 2;
+			if(mode == 0)
+				Link.health -= 2;
+			if(mode == 1)
+				Link.health --;
 			Link.updateHealth();
 			Destroy(gameObject);
 		}
 		if(col.gameObject.tag == "physicaltile")
 			Destroy(gameObject);
+	}
+
+	//0 = white sword, 1 = arrow
+	void setMode(int m)
+	{
+		(renderer as SpriteRenderer).sprite = whiteSword;
+		(renderer as SpriteRenderer).sprite = arrow;
 	}
 }

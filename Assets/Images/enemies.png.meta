@@ -369,7 +369,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_36
+    - name: arrow
       rect:
         serializedVersion: 2
         x: 864
@@ -387,7 +387,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: enemies_38
+    - name: bloh
       rect:
         serializedVersion: 2
         x: 912
@@ -396,7 +396,7 @@ TextureImporter:
         height: 5
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: Arrow
+    - name: blah
       rect:
         serializedVersion: 2
         x: 941
