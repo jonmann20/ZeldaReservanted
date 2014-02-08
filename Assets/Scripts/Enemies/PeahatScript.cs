@@ -53,6 +53,10 @@ public class PeahatScript : Enemy {
 			else
 				(renderer as SpriteRenderer).sprite = spr2;
 		}
+		else
+		{
+			(renderer as SpriteRenderer).sprite = spr2;
+		}
 		
 	}
 	

@@ -1,0 +1,3631 @@
+fileFormatVersion: 2
+guid: 20ac998a8dda54766a76032e6838f21e
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: keese1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 148
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: keese2
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 146
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: UnderworldEnemies_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 148
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 148
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 148
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_5
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 148
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_6
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 148
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_7
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 148
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_8
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 148
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_9
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 148
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_10
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 148
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_11
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 148
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_12
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 148
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: stalfos1
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stalfos2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: UnderworldEnemies_15
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_16
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_17
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_18
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_19
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_20
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_21
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_22
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_23
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_24
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_25
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_26
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_27
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_28
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 144
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_29
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_30
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 144
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_31
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_32
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 144
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_33
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_34
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 144
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_35
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_36
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 144
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_37
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_38
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 144
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_39
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_40
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 144
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_41
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_42
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_43
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_44
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_45
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 144
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_46
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_47
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 147
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_48
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_49
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 147
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_50
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_51
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 147
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_52
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_53
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 147
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_54
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_55
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 147
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_56
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_57
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 147
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_58
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_59
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 147
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_60
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_61
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_62
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_63
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_64
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_65
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 147
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_66
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_67
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_68
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_69
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_70
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_71
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_72
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_73
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_74
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_75
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_76
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_77
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_78
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_79
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_80
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_81
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_82
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_83
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_84
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_85
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_86
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_87
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_88
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_89
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_90
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_91
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_92
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 120
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_93
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_94
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_95
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_96
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_97
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_98
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_99
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_100
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_101
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_102
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_103
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_104
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_105
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_106
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 120
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_107
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_108
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_109
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 121
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_110
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_111
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 121
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_112
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_113
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_114
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_115
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_116
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_117
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_118
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_119
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_120
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_121
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_122
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_123
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 121
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_124
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_125
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_126
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_127
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_128
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_129
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_130
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_131
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_132
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_133
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_134
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_135
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_136
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_137
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_138
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 99
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_139
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_140
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 96
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_141
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_142
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_143
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_144
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 96
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_145
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_146
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_147
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_148
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 96
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_149
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_150
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_151
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_152
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 96
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_153
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_154
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_155
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_156
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_157
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_158
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_159
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_160
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_161
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_162
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_163
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_164
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_165
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_166
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_167
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_168
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_169
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_170
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_171
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_172
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_173
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_174
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_175
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_176
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_177
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_178
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_179
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_180
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_181
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_182
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_183
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_184
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_185
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_186
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_187
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_188
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_189
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_190
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_191
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_192
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_193
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 74
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_194
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 72
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_195
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 74
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_196
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_197
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_198
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_199
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_200
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_201
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_202
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_203
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_204
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_205
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_206
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_207
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_208
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 76
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_209
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 74
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_210
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_211
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 74
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_212
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 76
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_213
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_214
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_215
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_216
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_217
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_218
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_219
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_220
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_221
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_222
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_223
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_224
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_225
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 72
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_226
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 72
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_227
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 72
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_228
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 72
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_229
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 72
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_230
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_231
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 72
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_232
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 72
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_233
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 72
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_234
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 72
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_235
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 72
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_236
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 72
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_237
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 82
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_238
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 75
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_239
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 82
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_240
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 75
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_241
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 82
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_242
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 75
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_243
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 82
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_244
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 75
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_245
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 82
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_246
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 75
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_247
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 82
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_248
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 75
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_249
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 82
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_250
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 75
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_251
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 82
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_252
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 75
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_253
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 82
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_254
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 75
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_255
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 82
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_256
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 75
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_257
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 82
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_258
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 75
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_259
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 82
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_260
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 75
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_261
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 48
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_262
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_263
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 48
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_264
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_265
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 48
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_266
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_267
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 48
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_268
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_269
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 48
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_270
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_271
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 48
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_272
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_273
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 50
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_274
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_275
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 50
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_276
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_277
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_278
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_279
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_280
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_281
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_282
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_283
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_284
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_285
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_286
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 49
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_287
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_288
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_289
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_290
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_291
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_292
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_293
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_294
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_295
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_296
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_297
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_298
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_299
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_300
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_301
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_302
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_303
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_304
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_305
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_306
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_307
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_308
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_309
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_310
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_311
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_312
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_313
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_314
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_315
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_316
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_317
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_318
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_319
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_320
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_321
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_322
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_323
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_324
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_325
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_326
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_327
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_328
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_329
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_330
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_331
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_332
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_333
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_334
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_335
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_336
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_337
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_338
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_339
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_340
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_341
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_342
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_343
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_344
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_345
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_346
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_347
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_348
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_349
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_350
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_351
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_352
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_353
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_354
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_355
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_356
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 32
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_357
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_358
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_359
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_360
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_361
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_362
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_363
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_364
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_365
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_366
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_367
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_368
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_369
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 24
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_370
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 16
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_371
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_372
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 16
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_373
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_374
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 16
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_375
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 16
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_376
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 16
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_377
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 16
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_378
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_379
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_380
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_381
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_382
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_383
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_384
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_385
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_386
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_387
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_388
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_389
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_390
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_391
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_392
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_393
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_394
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_395
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_396
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: UnderworldEnemies_397
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 

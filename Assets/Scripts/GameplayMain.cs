@@ -738,10 +738,16 @@ public class GameplayMain : MonoBehaviour {
 			GameAudio.playStairs();
 		}
 
+		if(code == "102")
+		{
+			Application.LoadLevel("dungeon");
+		}
+
 		Tile destinationTile2 = currentRoom.tiles[7, 9];
 		linkRef.transform.position = new Vector3(topLeftX + destinationTile2.xcoord, topLeftY - destinationTile2.ycoord, 0);
+	
 	}
-		
+
 	void OnGUI()
 	{
 		GUI.matrix = matrix;

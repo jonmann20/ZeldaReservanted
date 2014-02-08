@@ -59,7 +59,7 @@ MonoBehaviour:
   invincibility: 0
   gpm: {fileID: 0}
   currentCoordsInRoom: {x: 0, y: 0}
-  poof: {fileID: 0}
+  poof: {fileID: 21300260, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   poofTimer: 10
   didPoof: 0
   isWalking: 0
