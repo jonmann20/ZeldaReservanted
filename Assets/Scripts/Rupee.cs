@@ -14,8 +14,9 @@ public class Rupee : MonoBehaviour {
 			Link.numRupee += val;
 			GUIText gt = GameObject.Find ("rupeeNum").GetComponent<GUIText>();
 			gt.text = Link.numRupee.ToString();
-			Destroy(gameObject);
 			GameAudio.playRupeePickup(val);
+
+			Destroy(gameObject);
 		}
 	}
 }

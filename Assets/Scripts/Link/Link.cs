@@ -39,6 +39,7 @@ public partial class Link : MonoBehaviour {
 	SpriteDir dir = SpriteDir.UP_STEP;
 	public static int numRupee = 0;
 	public static int numBomb = 0;
+	public static int numKey = 0;
 
 	int itemPoseTimer = 0;
 
