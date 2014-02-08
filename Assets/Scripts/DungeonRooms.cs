@@ -10,7 +10,7 @@ public class DungeonRoom {
 
 public class DungeonRooms : MonoBehaviour {
 	public static DungeonRooms that;
-	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBoss;
+	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBoss, blackFloor;
 	GameObject block, mat;
 
 	GameObject roomHolder;
@@ -31,6 +31,7 @@ public class DungeonRooms : MonoBehaviour {
 		roomL = Resources.Load<GameObject>("Dungeon/RoomL");
 		//roomBoss =;
 
+		blackFloor = Resources.Load<GameObject>("Dungeon/blackFloor");
 		block = Resources.Load<GameObject>("Dungeon/block");
 		mat = Resources.Load<GameObject>("Dungeon/mat");
 	}
@@ -52,7 +53,7 @@ public class DungeonRooms : MonoBehaviour {
 	}
 
 	GameObject getRoomZero(Vector3 pos){
-		GameObject drHolder = new GameObject("Room5");
+		GameObject drHolder = new GameObject("Room0");
 		drHolder.transform.position = pos;
 		drHolder.transform.parent = roomHolder.transform;
 		
@@ -64,7 +65,7 @@ public class DungeonRooms : MonoBehaviour {
 	}
 
 	GameObject getRoomOne(Vector3 pos){
-		GameObject drHolder = new GameObject("Room5");
+		GameObject drHolder = new GameObject("Room1");
 		drHolder.transform.position = pos;
 		drHolder.transform.parent = roomHolder.transform;
 		
@@ -76,7 +77,7 @@ public class DungeonRooms : MonoBehaviour {
 	}
 
 	GameObject getRoomTwo(Vector3 pos){
-		GameObject drHolder = new GameObject("Room5");
+		GameObject drHolder = new GameObject("Room2");
 		drHolder.transform.position = pos;
 		drHolder.transform.parent = roomHolder.transform;
 		
@@ -90,7 +91,7 @@ public class DungeonRooms : MonoBehaviour {
 	GameObject getRoomThree(Vector3 pos){
 		// boss room
 
-		GameObject drHolder = new GameObject("Room5");
+		GameObject drHolder = new GameObject("Room3");
 		drHolder.transform.position = pos;
 		drHolder.transform.parent = roomHolder.transform;
 		
@@ -102,14 +103,27 @@ public class DungeonRooms : MonoBehaviour {
 	}
 
 	GameObject getRoomFour(Vector3 pos){
-		GameObject drHolder = new GameObject("Room5");
+		GameObject drHolder = new GameObject("Room4");
 		drHolder.transform.position = pos;
 		drHolder.transform.parent = roomHolder.transform;
 		
 		DungeonRoom dr = new DungeonRoom();
 		dr.room = Instantiate(roomB, pos, Quaternion.identity) as GameObject;
 		dr.room.transform.parent = drHolder.transform;
+
+		GameObject objHolder = new GameObject("Objs");
+		objHolder.transform.position = pos;
+		objHolder.transform.parent = drHolder.transform;
 		
+		dr.objs = new GameObject[1];
+		dr.objs[0] = Instantiate(blackFloor, new Vector3(pos.x, pos.y, 0), Quaternion.identity) as GameObject;
+
+		
+		for(int i=0; i < 1; ++i){
+			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
+			dr.objs[i].transform.parent = objHolder.transform;
+		}
+
 		return drHolder;
 	}
 
@@ -164,26 +178,60 @@ public class DungeonRooms : MonoBehaviour {
 	}
 
 	GameObject getRoomSeven(Vector3 pos){
-		GameObject drHolder = new GameObject("Room5");
+		GameObject drHolder = new GameObject("Room7");
 		drHolder.transform.position = pos;
 		drHolder.transform.parent = roomHolder.transform;
 		
 		DungeonRoom dr = new DungeonRoom();
 		dr.room = Instantiate(roomTL, pos, Quaternion.identity) as GameObject;
 		dr.room.transform.parent = drHolder.transform;
+
+		GameObject objHolder = new GameObject("Objs");
+		objHolder.transform.position = pos;
+		objHolder.transform.parent = drHolder.transform;
 		
+		dr.objs = new GameObject[6];
+
+		dr.objs[0] = Instantiate(block, new Vector3(pos.x - 0.5f, pos.y + 1, 0), Quaternion.identity) as GameObject;
+		dr.objs[1] = Instantiate(block, new Vector3(pos.x - 0.5f, pos.y, 0), Quaternion.identity) as GameObject;
+		dr.objs[2] = Instantiate(block, new Vector3(pos.x - 0.5f, pos.y - 1, 0), Quaternion.identity) as GameObject;
+		dr.objs[3] = Instantiate(block, new Vector3(pos.x + 0.5f, pos.y + 1, 0), Quaternion.identity) as GameObject;
+		dr.objs[4] = Instantiate(block, new Vector3(pos.x + 0.5f, pos.y, 0), Quaternion.identity) as GameObject;
+		dr.objs[5] = Instantiate(block, new Vector3(pos.x + 0.5f, pos.y - 1, 0), Quaternion.identity) as GameObject;
+
+		for(int i=0; i < 6; ++i){
+			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
+			dr.objs[i].transform.parent = objHolder.transform;
+		}
+
 		return drHolder;
 	}
 
 	GameObject getRoomEight(Vector3 pos){
-		GameObject drHolder = new GameObject("Room5");
+		GameObject drHolder = new GameObject("Room8");
 		drHolder.transform.position = pos;
 		drHolder.transform.parent = roomHolder.transform;
 		
 		DungeonRoom dr = new DungeonRoom();
 		dr.room = Instantiate(roomT, pos, Quaternion.identity) as GameObject;
 		dr.room.transform.parent = drHolder.transform;
+
+		GameObject objHolder = new GameObject("Objs");
+		objHolder.transform.position = pos;
+		objHolder.transform.parent = drHolder.transform;
+
+		dr.objs = new GameObject[2];
 		
+		dr.objs[0] = Instantiate(block, new Vector3(pos.x - 1.5f, pos.y, 0), Quaternion.identity) as GameObject;
+		dr.objs[1] = Instantiate(block, new Vector3(pos.x + 1.5f, pos.y, 0), Quaternion.identity) as GameObject;
+
+		dr.objs[1].AddComponent<MagicBlock>();
+
+		for(int i=0; i < 2; ++i){
+			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
+			dr.objs[i].transform.parent = objHolder.transform;
+		}
+
 		return drHolder;
 	}
 
