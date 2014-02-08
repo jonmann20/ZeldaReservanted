@@ -131,7 +131,6 @@ public class Dungeon : MonoBehaviour {
 	
 	void done(){
 		if(++numDone >= 2){
-			//DungeonRooms.that.destroyRoom(curRoom);
 			Destroy(curRoom);
 
 			curRoom = nextRoom;

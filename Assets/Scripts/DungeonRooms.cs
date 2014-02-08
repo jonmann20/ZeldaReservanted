@@ -13,10 +13,13 @@ public class DungeonRooms : MonoBehaviour {
 
 	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBoss, blackFloor, roomG;
 	GameObject block, mat, stairs, triforce, water, key;
+	GameObject lockedDoor;
 
 	GameObject roomHolder;
 
 	bool stairsFound = false;
+	public bool keyIsFound = false;
+	public bool doorIsOpen = false;
 
 	void Awake(){
 		that = this;
@@ -42,6 +45,8 @@ public class DungeonRooms : MonoBehaviour {
 		triforce = Resources.Load<GameObject>("Dungeon/triforce");
 		water = Resources.Load<GameObject>("Dungeon/water");
 		key = Resources.Load<GameObject>("Dungeon/key");
+
+		lockedDoor = Resources.Load<GameObject>("Dungeon/lockedDoor");
 	}
 
 	public GameObject getRoom(int num, Vector3 pos){
@@ -159,9 +164,15 @@ public class DungeonRooms : MonoBehaviour {
 		dr.objs[36] = Instantiate(water, new Vector3(pos.x - 0.5f, pos.y + 2, 0), Quaternion.identity) as GameObject;
 		dr.objs[37] = Instantiate(water, new Vector3(pos.x + 0.5f, pos.y + 2, 0), Quaternion.identity) as GameObject;
 
-		dr.objs[38] = Instantiate(key, new Vector3(pos.x + -0.5f, pos.y, 0), Quaternion.identity) as GameObject;
+		if(!keyIsFound){
+			dr.objs[38] = Instantiate(key, new Vector3(pos.x + -0.5f, pos.y, 0), Quaternion.identity) as GameObject;
+		}
 
 		for(int i=0; i < NUM_OBJS; ++i){
+			if(i == 38 && keyIsFound){
+				continue;
+			}
+
 			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
 			dr.objs[i].transform.parent = objHolder.transform;
 		}
@@ -268,6 +279,21 @@ public class DungeonRooms : MonoBehaviour {
 		DungeonRoom dr = new DungeonRoom();
 		dr.room = Instantiate(roomTRB, pos, Quaternion.identity) as GameObject;
 		dr.room.transform.parent = drHolder.transform;
+
+		if(!doorIsOpen){
+			GameObject objHolder = new GameObject("Objs");
+			objHolder.transform.position = pos;
+			objHolder.transform.parent = drHolder.transform;
+			
+			dr.objs = new GameObject[1];
+
+			dr.objs[0] = Instantiate(lockedDoor, new Vector3(pos.x, pos.y - 4.1f, 0), Quaternion.identity) as GameObject;
+
+			for(int i=0; i < 1; ++i){
+				dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
+				dr.objs[i].transform.parent = objHolder.transform;
+			}
+		}
 
 		return drHolder;
 	}

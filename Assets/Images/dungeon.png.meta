@@ -234,5 +234,14 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
+    - name: lockedDoor
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 261
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
