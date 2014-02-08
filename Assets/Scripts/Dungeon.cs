@@ -80,6 +80,14 @@ public class Dungeon : MonoBehaviour {
 				newRoomX = -16;
 
 				break;
+			case SpriteDir.DOWN_STEP:		// from stairs room8
+				roomPos = 1;
+				newRoomY = -2;
+				break;
+			case SpriteDir.UP_STEP:			// from stairs room1
+				roomPos = 8;
+				newRoomY = -2;
+				break;
 		}
 
 		if(isAnimating){
@@ -98,17 +106,23 @@ public class Dungeon : MonoBehaviour {
 
 		theDir = dir;
 
-		if(dir == SpriteDir.DOWN){
-			StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(0, 9), 1.8f, done));
-		}
-		else if(dir == SpriteDir.UP){
-			StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(0, -13f), 1.8f, done));
+		if(dir == SpriteDir.DOWN_STEP || dir == SpriteDir.UP_STEP){
+			numDone = 2;
+			done();
 		}
 		else {
-			StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(-newRoomX, -2), 1.8f, done));
-		}
+			if(dir == SpriteDir.DOWN){
+				StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(0, 9), 1.8f, done));
+			}
+			else if(dir == SpriteDir.UP){
+				StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(0, -13f), 1.8f, done));
+			}
+			else {
+				StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(-newRoomX, -2), 1.8f, done));
+			}
 
-		StartCoroutine(Utils.that.MoveToPosition(nextRoom.transform, new Vector3(0, -2), 1.8f, done));
+			StartCoroutine(Utils.that.MoveToPosition(nextRoom.transform, new Vector3(0, -2), 1.8f, done));
+		}
 	}
 	
 	void done(){
@@ -140,6 +154,14 @@ public class Dungeon : MonoBehaviour {
 
 			if(theDir == SpriteDir.UP || theDir == SpriteDir.DOWN){
 				linkGM.transform.position = new Vector3(0, teleportY, 0);
+			}
+			else if(theDir == SpriteDir.DOWN_STEP){
+				linkGM.transform.position = new Vector3(-5.25f, 0.5f);	// just below staris
+
+			}
+			else if(theDir == SpriteDir.UP_STEP){
+				linkGM.transform.position = new Vector3(-5.5f, -3.5f);	// just above staris
+				
 			}
 			else {
 				linkGM.transform.position = new Vector3(teleportX, -2, 0);

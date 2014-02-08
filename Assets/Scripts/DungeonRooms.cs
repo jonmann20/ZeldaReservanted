@@ -11,9 +11,11 @@ public class DungeonRoom {
 public class DungeonRooms : MonoBehaviour {
 	public static DungeonRooms that;
 	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBoss, blackFloor;
-	GameObject block, mat;
+	GameObject block, mat, stairs;
 
 	GameObject roomHolder;
+
+	bool stairsFound = false;
 
 	void Awake(){
 		that = this;
@@ -34,6 +36,7 @@ public class DungeonRooms : MonoBehaviour {
 		blackFloor = Resources.Load<GameObject>("Dungeon/blackFloor");
 		block = Resources.Load<GameObject>("Dungeon/block");
 		mat = Resources.Load<GameObject>("Dungeon/mat");
+		stairs = Resources.Load<GameObject>("Dungeon/stairs");
 	}
 
 	public GameObject getRoom(int num, Vector3 pos){
@@ -70,9 +73,23 @@ public class DungeonRooms : MonoBehaviour {
 		drHolder.transform.parent = roomHolder.transform;
 		
 		DungeonRoom dr = new DungeonRoom();
-		dr.room = Instantiate(roomL, pos, Quaternion.identity) as GameObject;
+		dr.room = Instantiate(roomB, pos, Quaternion.identity) as GameObject;
 		dr.room.transform.parent = drHolder.transform;
-		
+
+		GameObject objHolder = new GameObject("Objs");
+		objHolder.transform.position = pos;
+		objHolder.transform.parent = drHolder.transform;
+
+		const int NUM_OBJS = 1;
+		dr.objs = new GameObject[NUM_OBJS];
+
+		dr.objs[0] = Instantiate(stairs, new Vector3(pos.x - 5.5f, pos.y + 3, 0), Quaternion.identity) as GameObject;
+
+		for(int i=0; i < NUM_OBJS; ++i){
+			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
+			dr.objs[i].transform.parent = objHolder.transform;
+		}
+
 		return drHolder;
 	}
 
@@ -220,19 +237,40 @@ public class DungeonRooms : MonoBehaviour {
 		objHolder.transform.position = pos;
 		objHolder.transform.parent = drHolder.transform;
 
-		dr.objs = new GameObject[2];
+		const int NUM_OBJ = 3;
+		dr.objs = new GameObject[NUM_OBJ];
 		
 		dr.objs[0] = Instantiate(block, new Vector3(pos.x - 1.5f, pos.y, 0), Quaternion.identity) as GameObject;
 		dr.objs[1] = Instantiate(block, new Vector3(pos.x + 1.5f, pos.y, 0), Quaternion.identity) as GameObject;
-
 		dr.objs[1].AddComponent<MagicBlock>();
 
-		for(int i=0; i < 2; ++i){
+		if(stairsFound){
+			dr.objs[2] = Instantiate(stairs, new Vector3(pos.x - 5.5f, pos.y - 3, 0), Quaternion.identity) as GameObject;
+			dr.objs[2].GetComponent<DungeonStairs>().isRoom8 = true;
+		}
+
+		for(int i=0; i < NUM_OBJ; ++i){
+			if(i == 2 && !stairsFound){
+				continue;
+			}
+
 			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
 			dr.objs[i].transform.parent = objHolder.transform;
 		}
 
 		return drHolder;
+	}
+
+	public void addStairs(){
+		if(stairsFound){
+			return;
+		}
+		stairsFound = true;
+
+		GameObject g = GameObject.Find ("Objs");
+		GameObject s = Instantiate(stairs, new Vector3(-5.5f, -5, 0), Quaternion.identity) as GameObject;
+		s.transform.parent = g.transform;
+		s.GetComponent<DungeonStairs>().isRoom8 = true;
 	}
 
 }

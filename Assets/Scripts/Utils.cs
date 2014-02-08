@@ -13,7 +13,7 @@ public class Utils : MonoBehaviour {
 	public IEnumerator MoveToPosition(Transform tForm, Vector3 newPos, float time, Callback callback){
 		float elapsedTime = 0;
 		Vector3 startingPos = tForm.position;
-		print ("haha");
+
 		while (elapsedTime < time){
 			tForm.position = Vector3.Lerp(startingPos, newPos, (elapsedTime / time));
 			elapsedTime += Time.deltaTime;

@@ -15,11 +15,14 @@ public class MagicBlock : MonoBehaviour {
 	void OnCollisionStay2D(Collision2D col){
 		bool isRightSide = checkSide(col);
 
-		if(!isMoved && isRightSide && ++resistance > 30 && col.gameObject.tag == "Player"){
+		if(!isMoved && isRightSide && ++resistance > 15 && col.gameObject.tag == "Player"){
 			isMoved = true;
 			isMoving = true;
 
 			newPos = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
+			//TODO: GameAudio.play(magic);
+
+			DungeonRooms.that.addStairs();
 		}
 	}
 
