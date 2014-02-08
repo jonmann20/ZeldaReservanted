@@ -4,16 +4,17 @@ using System.Collections;
 public class Dungeon : MonoBehaviour {
 
 	public static Dungeon that;
-
+	
+	int roomPos = 8;//6
+	public static int NUM_ROOMS = 9;
 	GameObject curRoom, nextRoom;
-	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomB, roomRL, roomL, roomBoss;
 
+	SpriteDir theDir;
 	public bool isAnimating = false;
 	int numDone = 0;
 
 	GameObject linkGM;
-
-
+	
 	/*
 		|x|x|			0, 1
 		|x|z|x|  		2, 3, 4
@@ -24,40 +25,16 @@ public class Dungeon : MonoBehaviour {
 		z: boss
 	*/
 
-	GameObject[] rooms;
-	int roomPos = 5;//6
-	SpriteDir theDir;
 
 	void Awake(){
 		that = this;
 
 		linkGM = GameObject.Find("Link");
+		linkGM.transform.position = new Vector3(0, -5, 0);
+	}
 
-		roomT = Resources.Load<GameObject>("Dungeon/RoomT");
-		roomTL = Resources.Load<GameObject>("Dungeon/RoomTL");
-		roomTB = Resources.Load<GameObject>("Dungeon/RoomTB");
-		roomTRB = Resources.Load<GameObject>("Dungeon/RoomTRB");
-		roomRB = Resources.Load<GameObject>("Dungeon/RoomRB");
-		roomB = Resources.Load<GameObject>("Dungeon/RoomB");
-		roomRL = Resources.Load<GameObject>("Dungeon/RoomRL");
-		roomL = Resources.Load<GameObject>("Dungeon/RoomL");
-		//roomBoss =;
-
-
-		rooms = new GameObject[9];
-
-		rooms[0] = roomRB;
-		rooms[1] = roomL;
-		rooms[2] = roomTB;
-		//rooms[3] = roomBoss;
-		rooms[4] = roomB;
-		rooms[5] = roomTRB;
-		rooms[6] = roomRL;
-		rooms[7] = roomTL;
-		rooms[8] = roomT;
-
-		curRoom = Instantiate(rooms[roomPos], new Vector3(0, -2), Quaternion.identity) as GameObject;
-		curRoom.transform.parent = GameObject.Find("RoomHolder").transform;
+	void Start(){
+		curRoom = DungeonRooms.that.getRoom(roomPos, new Vector3(0, -2));
 	}
 
 
@@ -103,6 +80,14 @@ public class Dungeon : MonoBehaviour {
 				newRoomX = -16;
 
 				break;
+			case SpriteDir.DOWN_STEP:		// from stairs room8
+				roomPos = 1;
+				newRoomY = -2;
+				break;
+			case SpriteDir.UP_STEP:			// from stairs room1
+				roomPos = 8;
+				newRoomY = -2;
+				break;
 		}
 
 		if(isAnimating){
@@ -117,26 +102,32 @@ public class Dungeon : MonoBehaviour {
 
 
 		// swap rooms
-		nextRoom = Instantiate(rooms[roomPos], new Vector3(newRoomX, newRoomY), Quaternion.identity) as GameObject;
-		nextRoom.transform.parent = GameObject.Find("RoomHolder").transform;
+		nextRoom = DungeonRooms.that.getRoom(roomPos, new Vector2(newRoomX, newRoomY));
 
 		theDir = dir;
 
-		if(dir == SpriteDir.DOWN){
-			StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(0, 9), 1.8f, done));
-		}
-		else if(dir == SpriteDir.UP){
-			StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(0, -13f), 1.8f, done));
+		if(dir == SpriteDir.DOWN_STEP || dir == SpriteDir.UP_STEP){
+			numDone = 2;
+			done();
 		}
 		else {
-			StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(-newRoomX, -2), 1.8f, done));
-		}
+			if(dir == SpriteDir.DOWN){
+				StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(0, 9), 1.8f, done));
+			}
+			else if(dir == SpriteDir.UP){
+				StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(0, -13f), 1.8f, done));
+			}
+			else {
+				StartCoroutine(Utils.that.MoveToPosition(curRoom.transform, new Vector3(-newRoomX, -2), 1.8f, done));
+			}
 
-		StartCoroutine(Utils.that.MoveToPosition(nextRoom.transform, new Vector3(0, -2), 1.8f, done));
+			StartCoroutine(Utils.that.MoveToPosition(nextRoom.transform, new Vector3(0, -2), 1.8f, done));
+		}
 	}
 	
 	void done(){
 		if(++numDone >= 2){
+			//DungeonRooms.that.destroyRoom(curRoom);
 			Destroy(curRoom);
 
 			curRoom = nextRoom;
@@ -149,10 +140,10 @@ public class Dungeon : MonoBehaviour {
 			float teleportY = 0;
 
 			if(theDir == SpriteDir.LEFT){
-				teleportX = 5.45f;
+				teleportX = 5.25f;
 			}
 			else if(theDir == SpriteDir.RIGHT){
-				teleportX = -5.45f;
+				teleportX = -5.25f;
 			}
 			else if(theDir == SpriteDir.UP){
 				teleportY = -5f;
@@ -163,6 +154,14 @@ public class Dungeon : MonoBehaviour {
 
 			if(theDir == SpriteDir.UP || theDir == SpriteDir.DOWN){
 				linkGM.transform.position = new Vector3(0, teleportY, 0);
+			}
+			else if(theDir == SpriteDir.DOWN_STEP){
+				linkGM.transform.position = new Vector3(-5.25f, 0.5f);	// just below staris
+
+			}
+			else if(theDir == SpriteDir.UP_STEP){
+				linkGM.transform.position = new Vector3(-5.5f, -3.5f);	// just above staris
+				
 			}
 			else {
 				linkGM.transform.position = new Vector3(teleportX, -2, 0);
