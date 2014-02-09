@@ -53,17 +53,19 @@ public class HudFull : MonoBehaviour {
 
 		if(doHud){
 			bool flag = false;
+
 			if(newCameraY > 0){
-				mainCamera.transform.position = mainCamera.transform.position + new Vector3(0, 0.18f, 0);
+				mainCamera.transform.Translate(0, 0.18f, 0);
 
 				if(mainCamera.transform.position.y >= newCameraY){
 					flag = true;
 				}
 			}
 			else if(newCameraY < 0){
-				mainCamera.transform.position = mainCamera.transform.position + new Vector3(0, -0.18f, 0);
+				mainCamera.transform.Translate(0, -0.18f, 0);
 
 				if(mainCamera.transform.position.y <= 0){
+					mainCamera.transform.position = new Vector3(0, 0, -2);
 					flag = true;
 				}
 			}

@@ -849,7 +849,6 @@ MonoBehaviour:
   topLeftY: 3.5
   movementEnabled: 1
   isAttacking: 0
-  invincibility: 0
 --- !u!61 &728827227
 BoxCollider2D:
   m_ObjectHideFlags: 0

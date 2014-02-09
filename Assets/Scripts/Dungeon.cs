@@ -5,7 +5,7 @@ public class Dungeon : MonoBehaviour {
 
 	public static Dungeon that;
 
-	int roomPos = 1;//6
+	int roomPos = 6;//6
 	public static int NUM_ROOMS = 10;
 	GameObject curRoom, nextRoom;
 
@@ -138,6 +138,9 @@ public class Dungeon : MonoBehaviour {
 			Destroy(curRoom);
 
 			curRoom = nextRoom;
+
+			curRoom.transform.position = new Vector3(0, -2, 0);
+
 			numDone = 0;
 			isAnimating = false;
 

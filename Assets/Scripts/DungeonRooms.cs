@@ -298,7 +298,7 @@ public class DungeonRooms : MonoBehaviour {
 			
 			dr.objs = new GameObject[1];
 
-			dr.objs[0] = Instantiate(lockedDoor, new Vector3(pos.x, pos.y - 4.1f, 0), Quaternion.identity) as GameObject;
+			dr.objs[0] = Instantiate(lockedDoor, new Vector3(pos.x, pos.y - 4.19f, 0), Quaternion.identity) as GameObject;
 
 			for(int i=0; i < 1; ++i){
 				dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
