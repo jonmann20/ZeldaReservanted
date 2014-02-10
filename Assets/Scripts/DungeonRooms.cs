@@ -14,7 +14,7 @@ public class DungeonRooms : MonoBehaviour {
 
 	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBombN, blackFloor, roomG;
 	GameObject block, mat, stairs, triforce, water, key;
-	GameObject lockedDoor, bombDoorS, bombDoorN, bombDoorTrigger;
+	GameObject lockedDoor, bombDoorS, bombDoorN, bombDoorTrigger, oldMan, fire, oldManTxt;
 
 
 	GameObject roomHolder;
@@ -55,6 +55,10 @@ public class DungeonRooms : MonoBehaviour {
 		lockedDoor = Resources.Load<GameObject>("Dungeon/lockedDoor");
 		bombDoorS = Resources.Load<GameObject>("Dungeon/bombDoorS");
 		bombDoorTrigger = Resources.Load<GameObject>("Dungeon/bombDoorTrigger");
+
+		oldMan = Resources.Load<GameObject>("NPCEntity");
+		fire = Resources.Load<GameObject>("Fire");
+		oldManTxt = Resources.Load<GameObject>("OldManTxt");
 	}
 
 	public GameObject getRoom(int num, Vector3 pos){
@@ -283,15 +287,25 @@ public class DungeonRooms : MonoBehaviour {
 		GameObject objHolder = new GameObject("Objs");
 		objHolder.transform.position = pos;
 		objHolder.transform.parent = drHolder.transform;
-		
-		dr.objs = new GameObject[1];
-		dr.objs[0] = Instantiate(blackFloor, new Vector3(pos.x, pos.y, 0), Quaternion.identity) as GameObject;
 
-		
-		for(int i=0; i < 1; ++i){
-			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
+		const int NUM_OBJS = 5;
+		dr.objs = new GameObject[NUM_OBJS];
+		dr.objs[0] = Instantiate(blackFloor, new Vector3(pos.x, pos.y, 0), Quaternion.identity) as GameObject;
+		dr.objs[1] = Instantiate(oldMan, new Vector3(pos.x, pos.y + 1, 0), Quaternion.identity) as GameObject;
+		dr.objs[2] = Instantiate(fire, new Vector3(pos.x - 3.5f, pos.y + 1, 0), Quaternion.identity) as GameObject;
+		dr.objs[3] = Instantiate(fire, new Vector3(pos.x + 3.5f, pos.y + 1, 0), Quaternion.identity) as GameObject;
+
+		dr.objs[4] = Instantiate(oldManTxt, new Vector3(pos.x + 0.14f, pos.y + 2.55f, 0), Quaternion.identity) as GameObject;
+
+
+		for(int i=0; i < NUM_OBJS; ++i){
+			if(i != 4){
+				dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 3;
+			}
 			dr.objs[i].transform.parent = objHolder.transform;
 		}
+
+		dr.objs[0].GetComponent<SpriteRenderer>().sortingOrder = 2;
 
 		return drHolder;
 	}

@@ -51,6 +51,10 @@ public class HudFull : MonoBehaviour {
 					GameObject.Find("keyNum").GetComponent<GUIText>().enabled = false;
 					GameObject.Find("bombNum").GetComponent<GUIText>().enabled = false;
 					GameObject.Find ("LvlName").GetComponent<GUIText>().enabled = false;
+
+					if(GameObject.Find("OldManTxt(Clone)") != null){
+						GameObject.Find ("OldManTxt(Clone)").GetComponent<GUIText>().enabled = false;
+					}
 				}
 
 				doHud = true;
@@ -85,6 +89,10 @@ public class HudFull : MonoBehaviour {
 					GameObject.Find("keyNum").GetComponent<GUIText>().enabled = true;
 					GameObject.Find("bombNum").GetComponent<GUIText>().enabled = true;
 					GameObject.Find ("LvlName").GetComponent<GUIText>().enabled = true;
+
+					if(GameObject.Find("OldManTxt(Clone)") != null){
+						GameObject.Find ("OldManTxt(Clone)").GetComponent<GUIText>().enabled = true;
+					}
 				}
 				else {
 					rectSelector = Instantiate(rectSelectorPrefab) as GameObject;
