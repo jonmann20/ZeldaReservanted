@@ -237,6 +237,7 @@ public class Dungeon : MonoBehaviour {
 			theRoom = GameObject.Find ("Room0");
 			k1.transform.parent = enemyHolder.transform;
 			k2.transform.parent = enemyHolder.transform;
+			dz.transform.parent = enemyHolder.transform;
 
 		}
 		else if(roomPos == 2)

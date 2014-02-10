@@ -53,7 +53,7 @@ public class BossScript : Enemy {
 		if(state == 0)
 		{
 			sinCounter += 0.5f;
-			float xPos = transform.position.x - 0.02f;
+			float xPos = transform.position.x - 0.06f;
 			float yPos = -8 + Mathf.Sin(sinCounter);
 
 			transform.position = new Vector3(xPos, yPos, 0);
@@ -81,7 +81,10 @@ public class BossScript : Enemy {
 			transform.position = new Vector3(xPos, yPos, 0);
 			
 			if(health <= 8)
+			{
 				state = 2;
+				shotTimer = 60;
+			}
 			return;
 		}
 
