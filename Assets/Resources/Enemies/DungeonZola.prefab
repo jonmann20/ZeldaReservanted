@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb115a03efc34a5a8de3d2f9b4294c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 3
   spr: []
   topLeftX: -8
   topLeftY: 3.5
