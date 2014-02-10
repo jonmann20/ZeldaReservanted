@@ -5,7 +5,7 @@ public class Dungeon : MonoBehaviour {
 
 	public static Dungeon that;
 
-	int roomPos = 6;//6
+	int roomPos = 6;
 	public static int NUM_ROOMS = 10;
 	GameObject curRoom, nextRoom;
 
@@ -32,9 +32,11 @@ public class Dungeon : MonoBehaviour {
 		linkGM = GameObject.Find("Link");
 		linkGM.transform.position = new Vector3(0, -5, 0);
 
-		//debug
+		//---FOR DEBUGGING---
 		Inventory.hasBomb = true;
-		Link.numBomb = 100;
+		Link.numBomb = 30;
+		GUIText gt = GameObject.Find ("bombNum").GetComponent<GUIText>();
+		gt.text = Link.numBomb.ToString();
 	}
 
 	void Start(){
@@ -92,10 +94,18 @@ public class Dungeon : MonoBehaviour {
 				roomPos = 8;
 				newRoomY = -2;
 				break;
-			case SpriteDir.RIGHT_STEP:		// from stairs room3 (boss)
+			case SpriteDir.RIGHT_STEP:		// from stairs room3 (boss --> triforce)
 				roomPos = 9;
 				newRoomY = -2;
 				break;
+		}
+
+		if(roomPos != 9){
+			string tmp = "hudRoom" + roomPos;
+			GameObject.Find("hudlocation").transform.position = GameObject.Find(tmp).transform.position;
+		}
+		else {
+			// TODO: hide HUD??
 		}
 
 		if(isAnimating){

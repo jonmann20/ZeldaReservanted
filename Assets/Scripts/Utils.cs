@@ -17,18 +17,12 @@ public class Utils : MonoBehaviour {
 		while (elapsedTime < time){
 			tForm.position = Vector3.Lerp(startingPos, newPos, (elapsedTime / time));
 			elapsedTime += Time.deltaTime;
-			
 
-			
 			yield return null;
-			print ("h");
 
 			if(elapsedTime >= time && callback != null){
-				print ("y");
 				callback();
 			}
-
-			//callback();
 		}
 	}
 }
