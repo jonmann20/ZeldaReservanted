@@ -51,6 +51,9 @@ public class Dungeon : MonoBehaviour {
 	}
 
 	void Start(){
+		// load saves
+		Utils.that.loadSaves();
+
 		curRoom = DungeonRooms.that.getRoom(roomPos, new Vector3(0, -2));
 		Invoke ("showLink", 0.02f);
 	}
@@ -126,8 +129,13 @@ public class Dungeon : MonoBehaviour {
 		if(isAnimating){
 			return;
 		}
-
 		isAnimating = true;
+
+		// delete items
+		Utils.that.deleteItems();
+
+		// delete enemies
+		deleteEnemies();
 
 
 		// disable link
@@ -205,35 +213,71 @@ public class Dungeon : MonoBehaviour {
 			}
 
 			linkGM.gameObject.SetActive(true);
+
+
+			spawnEnemies();
 		}
+	}
 
-		print("done, with roomPos = " + roomPos.ToString());
+	void deleteEnemies(){
+		if(GameObject.Find("EnemyHolder") != null ){
+			Destroy(GameObject.Find("EnemyHolder"));
+		}
+	}
 
-		//ENEMY SPAWNING
+	void spawnEnemies(){
+		//print("done, with roomPos = " + roomPos.ToString());
+
+		GameObject theRoom = null;
+		GameObject enemyHolder = new GameObject("EnemyHolder");
+		
 		if(roomPos == 0)
 		{
-			Instantiate(DungeonZola, new Vector3(5.5f, 1, 0), Quaternion.identity);
+			GameObject dz = Instantiate(DungeonZola, new Vector3(5.5f, 1, 0), Quaternion.identity) as GameObject;
+
+			theRoom = GameObject.Find ("Room0");
+			dz.transform.parent = enemyHolder.transform;
+
 		}
 		else if(roomPos == 2)
 		{
-
+			
 		}
 		else if(roomPos == 3)
 		{
-			if(epona == null)
+			if(epona == null){
 				epona = Instantiate(Epona, new Vector3(100f, 1, 0), Quaternion.identity) as GameObject;
+
+				theRoom = GameObject.Find("Room3");
+				epona.transform.parent = enemyHolder.transform;
+			}
 		}
 		else if(roomPos == 5)
 		{
-			Instantiate(Stalfos, new Vector3(-3.16f, -1.67f, 0), Quaternion.identity);
-			Instantiate(Stalfos, new Vector3(3.17f, 0.44f, 0), Quaternion.identity);
+			GameObject s1 = Instantiate(Stalfos, new Vector3(-3.16f, -1.67f, 0), Quaternion.identity) as GameObject;
+			GameObject s2 = Instantiate(Stalfos, new Vector3(3.17f, 0.44f, 0), Quaternion.identity) as GameObject;
+
+			theRoom = GameObject.Find ("Room5");
+
+			s1.transform.parent = enemyHolder.transform;
+			s2.transform.parent = enemyHolder.transform;
 		}
 		else if(roomPos == 7)
 		{
-			Instantiate(Keese, new Vector3(-3.16f, -1.67f, 0), Quaternion.identity);
-			Instantiate(Keese, new Vector3(3.17f, 0.44f, 0), Quaternion.identity);
-			Instantiate(Keese, new Vector3(0, 0, 0), Quaternion.identity);
+			GameObject k1 = Instantiate(Keese, new Vector3(-3.16f, -1.67f, 0), Quaternion.identity) as GameObject;
+			GameObject k2 = Instantiate(Keese, new Vector3(3.17f, 0.44f, 0), Quaternion.identity) as GameObject;
+			GameObject k3 = Instantiate(Keese, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+
+			theRoom = GameObject.Find("Room7");
+			k1.transform.parent = enemyHolder.transform;
+			k2.transform.parent = enemyHolder.transform;
+			k3.transform.parent = enemyHolder.transform;
 		}
+
+		if(theRoom != null){
+			enemyHolder.transform.parent = theRoom.transform;
+		}
+
 	}
 }
 

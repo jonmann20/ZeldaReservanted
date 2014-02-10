@@ -476,6 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyIsFound: 0
   doorIsOpen: 0
+  waterTiles: []
 --- !u!82 &300775537
 AudioSource:
   m_ObjectHideFlags: 0
