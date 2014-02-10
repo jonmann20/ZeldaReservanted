@@ -11,21 +11,23 @@ public class DungeonZolaScript : Enemy {
 	GameObject RockShot;
 	
 	public delegate void Callback();
-	
-	// Use this for initialization
-	void Start () {
+
+	void Start(){
 		RockShot = Resources.Load("Enemies/RockShot") as GameObject;
-		print(DungeonRooms.that.waterTiles.Count);
-		foreach(GameObject g in DungeonRooms.that.waterTiles)
-		{
-			if(g != null)
+		//print(DungeonRooms.that.waterTiles.Count);
+
+		availablePositions = new List<Vector3>();
+
+		foreach(GameObject g in DungeonRooms.that.waterTiles){
+			if(g != null){
 				availablePositions.Add (g.transform.position);
+			}
 		}
+
 		Movement();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void Update(){
 		/*timer --;
 		if(timer <= 0)
 		{
@@ -40,7 +42,9 @@ public class DungeonZolaScript : Enemy {
 		newPos.x += 0.5f;
 		newPos.y -= 0.5f;
 		transform.position = newPos;
-		print(newPos.ToString());
+
+		//print(newPos.ToString());
+
 		StartCoroutine(ShootBulletAndMove(3));
 	}
 	
@@ -54,15 +58,20 @@ public class DungeonZolaScript : Enemy {
 			
 			if(elapsedTime > time * 0.5f && !shotAlready)
 			{
-				Vector3 vel = gpm.linkRef.transform.position - transform.position;
+				Vector3 vel = Link.that.transform.position - transform.position;
 				vel.Normalize();
 				vel *= 5;
 				GameObject go = Instantiate(RockShot, transform.position, Quaternion.identity) as GameObject;
 				go.rigidbody2D.velocity = vel;
 				go.SendMessage("setMode", 1);
-				gpm.enemies.Add(go);
+
+
+				go.transform.parent = GameObject.Find("EnemyHolder").transform;
+
+
 				shotAlready = true;
 			}
+
 			if(elapsedTime >= time){
 				Callback call = Movement;
 				call();
