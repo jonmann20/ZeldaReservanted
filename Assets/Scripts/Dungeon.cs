@@ -240,6 +240,19 @@ public class Dungeon : MonoBehaviour {
 			dz.transform.parent = enemyHolder.transform;
 
 		}
+		else if(roomPos == 1){
+			GameObject k1 = Instantiate(Keese, new Vector3(0, -1.67f, 0), Quaternion.identity) as GameObject;
+			GameObject k2 = Instantiate(Keese, new Vector3(3.16f, 1.67f, 0), Quaternion.identity) as GameObject;
+			GameObject s1 = Instantiate(Spikes, new Vector3(-5.5f, -5), Quaternion.identity) as GameObject;
+			GameObject s2 = Instantiate(Spikes, new Vector3(5.5f, -5), Quaternion.identity) as GameObject;
+
+			theRoom = GameObject.Find ("Room1");
+
+			k1.transform.parent = enemyHolder.transform;
+			k2.transform.parent = enemyHolder.transform;
+			s1.transform.parent = enemyHolder.transform;
+			s2.transform.parent = enemyHolder.transform;
+		}
 		else if(roomPos == 2)
 		{
 			theRoom = GameObject.Find("Room2");

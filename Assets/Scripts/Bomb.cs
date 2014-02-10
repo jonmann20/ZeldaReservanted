@@ -6,6 +6,7 @@ public class Bomb : MonoBehaviour {
 	public bool isPickup = true;
 	public Sprite explosion;
 
+	public int val = 5;
 
 	void Start () {
 		if(!isPickup){
@@ -18,7 +19,7 @@ public class Bomb : MonoBehaviour {
 		if(isPickup && (col.gameObject.tag == "Player" || col.gameObject.tag == "Sword")){
 			GameObject.Find("HUDbombAction").GetComponent<SpriteRenderer>().enabled = true;
 
-			Link.numBomb += 5;
+			Link.numBomb += val;
 			Inventory.hasBomb = true;
 			PlayerPrefs.SetInt ("hasBomb", 1);
 			PlayerPrefs.SetInt("numBomb", Link.numBomb);

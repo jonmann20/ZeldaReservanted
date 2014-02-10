@@ -13,7 +13,7 @@ public class DungeonRooms : MonoBehaviour {
 	public static DungeonRooms that;
 
 	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBombN, blackFloor, roomG;
-	GameObject block, mat, stairs, triforce, water, key;
+	GameObject block, mat, stairs, triforce, water, key, bombPickup;
 	GameObject lockedDoor, bombDoorS, bombDoorN, bombDoorTrigger, oldMan, fire, oldManTxt;
 
 
@@ -51,6 +51,8 @@ public class DungeonRooms : MonoBehaviour {
 		triforce = Resources.Load<GameObject>("Dungeon/triforce");
 		water = Resources.Load<GameObject>("Dungeon/water");
 		key = Resources.Load<GameObject>("Dungeon/key");
+		bombPickup = Resources.Load<GameObject>("Bomb");
+		bombPickup.GetComponent<Bomb>().val = 30;
 
 		lockedDoor = Resources.Load<GameObject>("Dungeon/lockedDoor");
 		bombDoorS = Resources.Load<GameObject>("Dungeon/bombDoorS");
@@ -288,7 +290,7 @@ public class DungeonRooms : MonoBehaviour {
 		objHolder.transform.position = pos;
 		objHolder.transform.parent = drHolder.transform;
 
-		const int NUM_OBJS = 5;
+		const int NUM_OBJS = 6;
 		dr.objs = new GameObject[NUM_OBJS];
 		dr.objs[0] = Instantiate(blackFloor, new Vector3(pos.x, pos.y, 0), Quaternion.identity) as GameObject;
 		dr.objs[1] = Instantiate(oldMan, new Vector3(pos.x, pos.y + 1, 0), Quaternion.identity) as GameObject;
@@ -296,7 +298,7 @@ public class DungeonRooms : MonoBehaviour {
 		dr.objs[3] = Instantiate(fire, new Vector3(pos.x + 3.5f, pos.y + 1, 0), Quaternion.identity) as GameObject;
 
 		dr.objs[4] = Instantiate(oldManTxt, new Vector3(pos.x + 0.14f, pos.y + 2.55f, 0), Quaternion.identity) as GameObject;
-
+		dr.objs[5] = Instantiate(bombPickup, new Vector3(pos.x + 0.14f, pos.y - 1, 0), Quaternion.identity) as GameObject;
 
 		for(int i=0; i < NUM_OBJS; ++i){
 			if(i != 4){
@@ -459,12 +461,8 @@ public class DungeonRooms : MonoBehaviour {
 		s.transform.parent = g.transform;
 		s.GetComponent<DungeonStairs>().isRoom8 = true;
 	}
+
 	public void addStairsBoss(){
-
-		GameObject objHolder = GameObject.Find("Objs");
-	//	objHolder.transform.position = new Vector3(0, 0, 0);
-	//	objHolder.transform.parent = GameObject.Find("Room3").transform;
-
 		if(stairsFoundBoss){
 			return;
 		}
@@ -474,7 +472,7 @@ public class DungeonRooms : MonoBehaviour {
 
 		GameObject s = Instantiate(stairs, new Vector3(-5.5f, -5, 0), Quaternion.identity) as GameObject;
 
-		s.transform.parent = objHolder.transform;
+		s.transform.parent = GameObject.Find("Objs").transform;
 		s.GetComponent<DungeonStairs>().isRoomBoss = true;
 	}
 
