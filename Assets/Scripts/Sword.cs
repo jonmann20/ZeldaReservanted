@@ -22,7 +22,7 @@ public class Sword : MonoBehaviour {
 
 		if(rigidbody2D.velocity.x != 0 || rigidbody2D.velocity.y != 0)
 		{
-			-- animateTimer;
+			--animateTimer;
 			if(animateTimer <= 0)
 			{
 				animateTimer = animateTime;
@@ -36,7 +36,6 @@ public class Sword : MonoBehaviour {
 					(renderer as SpriteRenderer).sprite = spr_shot1_n;
 					isSprite1 = false;
 				}
-				//print("HO!");
 			}
 		}
 

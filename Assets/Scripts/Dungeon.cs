@@ -34,7 +34,7 @@ public class Dungeon : MonoBehaviour {
 
 		//---FOR DEBUGGING---
 		Inventory.hasBomb = true;
-		Link.numBomb = 30;
+		Link.numBomb = 20;
 		GUIText gt = GameObject.Find ("bombNum").GetComponent<GUIText>();
 		gt.text = Link.numBomb.ToString();
 	}

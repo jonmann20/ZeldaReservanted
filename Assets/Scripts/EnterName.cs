@@ -146,6 +146,11 @@ public class EnterName : MonoBehaviour {
 		if(hrtPos == 1 && Input.GetButtonDown("Enter")){
 			PlayerPrefs.SetString("name", cnt.text);
 			PlayerPrefs.SetInt("numHearts", 3);
+			PlayerPrefs.SetInt("hasBomb", 0);
+			PlayerPrefs.SetInt("numBomb", 0);
+			PlayerPrefs.SetInt ("hasSword", 0);
+			PlayerPrefs.SetInt("numDeath", 0);
+
 			Application.LoadLevel("loadSave");
 		}
 	}

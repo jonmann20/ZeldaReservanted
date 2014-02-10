@@ -9,7 +9,7 @@ public class LockedDoor : MonoBehaviour {
 
 			GUIText gt = GameObject.Find ("keyNum").GetComponent<GUIText>();
 			gt.text = Link.numKey.ToString();
-			//TODO: GameAudio.playMagic();
+			GameAudio.playDoorOpened();
 
 			DungeonRooms.that.doorIsOpen = true;
 

@@ -20,7 +20,6 @@ public class MagicBlock : MonoBehaviour {
 			isMoving = true;
 
 			newPos = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
-			//TODO: GameAudio.play(magic);
 
 			DungeonRooms.that.addStairs();
 		}

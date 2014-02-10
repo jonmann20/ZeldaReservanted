@@ -1,10 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HudFull.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Dungeon.cs">
     <Files>
-      <File FileName="Assets\Scripts\HudFull.cs" Line="24" Column="70" />
-      <File FileName="Assets\Scripts\Dungeon.cs" Line="176" Column="20" />
-      <File FileName="Assets\Scripts\Bomb.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Dungeon.cs" Line="36" Column="28" />
+      <File FileName="Assets\Scripts\GameAudio.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Triforce.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Link\Link.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

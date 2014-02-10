@@ -420,6 +420,8 @@ public class DungeonRooms : MonoBehaviour {
 		}
 		stairsFound = true;
 
+		GameAudio.playMagical();
+
 		GameObject g = GameObject.Find ("Objs");
 		GameObject s = Instantiate(stairs, new Vector3(-5.5f, -5, 0), Quaternion.identity) as GameObject;
 		s.transform.parent = g.transform;
@@ -431,7 +433,9 @@ public class DungeonRooms : MonoBehaviour {
 			return;
 		}
 		bombDoorIsOpen = true;
-		
+
+		GameAudio.playMagical();
+
 		GameObject g = GameObject.Find ("Objs");
 		GameObject s = Instantiate(bombDoorS, new Vector3(0, -6, 0), Quaternion.identity) as GameObject;
 		s.transform.parent = g.transform;
