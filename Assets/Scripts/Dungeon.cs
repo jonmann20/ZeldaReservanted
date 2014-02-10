@@ -29,7 +29,7 @@ public class Dungeon : MonoBehaviour {
 	*/
 
 	//ENEMY PREFABS
-	GameObject Stalfos, Keese, Epona, DungeonZola;
+	GameObject Stalfos, Keese, Epona, DungeonZola, Spikes, StoneStatue;
 
 	void Awake(){
 		that = this;
@@ -39,6 +39,8 @@ public class Dungeon : MonoBehaviour {
 		Keese = Resources.Load<GameObject>("Enemies/Keese");
 		Epona = Resources.Load<GameObject>("Enemies/Epona");
 		DungeonZola = Resources.Load<GameObject>("Enemies/DungeonZola");
+		Spikes = Resources.Load<GameObject>("Enemies/Spikes");
+		StoneStatue = Resources.Load<GameObject>("Enemies/StoneStatue");
 
 		linkGM = GameObject.Find("Link");
 		linkGM.transform.position = new Vector3(0, -5.6f, 0);
@@ -241,7 +243,25 @@ public class Dungeon : MonoBehaviour {
 		}
 		else if(roomPos == 2)
 		{
-			
+			theRoom = GameObject.Find("Room2");
+
+			// left side
+			int theY = 1;
+			for(int i=0; i < 7; ++i){
+				GameObject spike = Instantiate(Spikes, new Vector3(-5.5f, theY), Quaternion.identity) as GameObject;
+				spike.transform.parent = enemyHolder.transform;
+				
+				--theY;
+			}
+
+			// right side
+			theY = 1;
+			for(int i=0; i < 7; ++i){
+				GameObject spike = Instantiate(Spikes, new Vector3(5.5f, theY), Quaternion.identity) as GameObject;
+				spike.transform.parent = enemyHolder.transform;
+
+				--theY;
+			}
 		}
 		else if(roomPos == 3)
 		{
@@ -272,6 +292,18 @@ public class Dungeon : MonoBehaviour {
 			k1.transform.parent = enemyHolder.transform;
 			k2.transform.parent = enemyHolder.transform;
 			k3.transform.parent = enemyHolder.transform;
+		}
+		else if(roomPos == 8){
+			theRoom = GameObject.Find("Room8");
+
+			GameObject s1 = Instantiate(Spikes, new Vector3(-5.5f, 1), Quaternion.identity) as GameObject;
+			GameObject s2 = Instantiate(Spikes, new Vector3(5.5f, 1), Quaternion.identity) as GameObject;
+
+			GameObject stat = Instantiate(StoneStatue, new Vector3(5.5f, -5), Quaternion.identity) as GameObject;
+				
+			s1.transform.parent = enemyHolder.transform;
+			s2.transform.parent = enemyHolder.transform;
+			stat.transform.parent = enemyHolder.transform;
 		}
 
 		if(theRoom != null){
