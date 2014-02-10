@@ -55,7 +55,15 @@ public class Bomb : MonoBehaviour {
 
 		foreach(Collider2D col in objectsInRange){
 			if(col.gameObject.tag == "Enemy"){
-				Destroy(col.gameObject);
+				BossScript bs = col.gameObject.GetComponent<BossScript>();
+
+				if(bs == null){
+					Destroy(col.gameObject);
+				}
+				else {
+					Enemy en = col.gameObject.GetComponent<Enemy>();
+					en.setHealth(en.health -1);
+				}
 			}
 			else if(col.gameObject.tag == "BombDoor"){
 				DungeonRooms.that.addBombDoor();
