@@ -5,7 +5,7 @@ public class Spikes : Enemy {
 
 	Vector3 initialPosition;
 	const float MAX_DISTANCE = 5;
-	const float CHARGE_SPEED = 0.1f;
+	const float CHARGE_SPEED = 0.15f;
 	const float REEL_SPEED = CHARGE_SPEED * 0.25f;
 
 	//0 = idle, 1 = charging right, 2 = charging left, 3 = reeling

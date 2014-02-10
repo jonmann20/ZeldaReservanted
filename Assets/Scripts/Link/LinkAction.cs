@@ -43,14 +43,13 @@ public partial class Link : MonoBehaviour {
 			woodenSword.transform.parent = GameObject.Find("ItemHolder").transform;
 
 			isAttacking = true;
+			if(Link.health == Link.initHealth && woodenSwordProjectile == null){
+				Invoke("shootSword", 0.18f);
+			}
+
 			StartCoroutine(finishAttack(dir));
 
-			if(Link.health == Link.initHealth && woodenSwordProjectile == null){
-				shootSword();
-			}
-			else{
-				GameAudio.playSwordSwing();
-			}
+			GameAudio.playSwordSwing();
 		}
 
 		if(Input.GetButtonDown("SpecialAttack")){
@@ -69,7 +68,7 @@ public partial class Link : MonoBehaviour {
 
 	void shootSword(){
 		GameAudio.playSwordShoot();
-
+		float distFromLink = 0.5f;
 		woodenSwordProjectile = getItem();
 		woodenSwordProjectile.transform.parent = GameObject.Find("ItemHolder").transform;
 		Quaternion r = woodenSwordProjectile.transform.localRotation;
@@ -86,6 +85,8 @@ public partial class Link : MonoBehaviour {
 		else if(Mathf.Approximately(r.eulerAngles.z, 90)){
 			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(-SHOT_SPEED, 0, 0);
 		}
+
+		woodenSwordProjectile.transform.Translate(0, distFromLink, 0);
 	}
 
 	GameObject getItem(){
@@ -144,5 +145,6 @@ public partial class Link : MonoBehaviour {
 
 		isAttacking = false;
 		Destroy(woodenSword);
+
 	}
 }

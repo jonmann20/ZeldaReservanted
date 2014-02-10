@@ -285,7 +285,7 @@ public class Dungeon : MonoBehaviour {
 		{
 			GameObject k1 = Instantiate(Keese, new Vector3(-3.16f, -1.67f, 0), Quaternion.identity) as GameObject;
 			GameObject k2 = Instantiate(Keese, new Vector3(3.17f, -0.44f, 0), Quaternion.identity) as GameObject;
-			GameObject k3 = Instantiate(Keese, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+			GameObject k3 = Instantiate(Keese, new Vector3(0, -4.5f, 0), Quaternion.identity) as GameObject;
 
 			theRoom = GameObject.Find("Room7");
 			k1.transform.parent = enemyHolder.transform;

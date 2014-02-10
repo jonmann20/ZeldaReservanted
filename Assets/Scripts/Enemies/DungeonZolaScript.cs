@@ -13,6 +13,7 @@ public class DungeonZolaScript : Enemy {
 	public delegate void Callback();
 
 	void Start(){
+		health = 3;
 		RockShot = Resources.Load("Enemies/RockShot") as GameObject;
 		//print(DungeonRooms.that.waterTiles.Count);
 
