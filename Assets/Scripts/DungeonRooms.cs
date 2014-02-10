@@ -248,7 +248,7 @@ public class DungeonRooms : MonoBehaviour {
 		drHolder.transform.parent = roomHolder.transform;
 		
 		DungeonRoom dr = new DungeonRoom();
-		dr.room = Instantiate(roomBombN, pos, Quaternion.identity) as GameObject;
+		dr.room = Instantiate(roomG, pos, Quaternion.identity) as GameObject;//roomBombN
 		dr.room.transform.parent = drHolder.transform;
 
 
