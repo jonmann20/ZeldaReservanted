@@ -5,7 +5,7 @@ public class Dungeon : MonoBehaviour {
 
 	public static Dungeon that;
 	
-	int roomPos = 6;//6 is start
+	int roomPos = 2;//6 is start
 
 	public static int NUM_ROOMS = 10;
 	GameObject curRoom, nextRoom;
@@ -237,8 +237,12 @@ public class Dungeon : MonoBehaviour {
 		{
 			GameObject dz = Instantiate(DungeonZola, new Vector3(5.5f, 1, 0), Quaternion.identity) as GameObject;
 
+			GameObject k1 = Instantiate(Keese, new Vector3(-3.16f, -1.67f, 0), Quaternion.identity) as GameObject;
+			GameObject k2 = Instantiate(Keese, new Vector3(3.16f, 1.67f, 0), Quaternion.identity) as GameObject;
+
 			theRoom = GameObject.Find ("Room0");
-			dz.transform.parent = enemyHolder.transform;
+			k1.transform.parent = enemyHolder.transform;
+			k2.transform.parent = enemyHolder.transform;
 
 		}
 		else if(roomPos == 2)
