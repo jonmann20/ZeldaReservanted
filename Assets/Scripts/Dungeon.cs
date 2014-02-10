@@ -5,11 +5,7 @@ public class Dungeon : MonoBehaviour {
 
 	public static Dungeon that;
 	
-<<<<<<< HEAD
-	int roomPos = 2;//6 is start
-=======
-	int roomPos = 3;//6 is start
->>>>>>> 5b1555970b7b96d4811be37d9082b297285c6aa2
+	int roomPos = 6; //6 is start
 
 	public static int NUM_ROOMS = 10;
 	GameObject curRoom, nextRoom;
