@@ -4,14 +4,17 @@ using System.Collections;
 public class Dungeon : MonoBehaviour {
 
 	public static Dungeon that;
-
+	
 	int roomPos = 6;//6 is start
+
 	public static int NUM_ROOMS = 10;
 	GameObject curRoom, nextRoom;
 
 	SpriteDir theDir;
 	public bool isAnimating = false;
 	int numDone = 0;
+
+	GameObject epona;
 
 	GameObject linkGM;
 	
@@ -25,22 +28,36 @@ public class Dungeon : MonoBehaviour {
 		z: boss
 	*/
 
+	//ENEMY PREFABS
+	GameObject Stalfos, Keese, Epona, DungeonZola;
 
 	void Awake(){
 		that = this;
 
-		linkGM = GameObject.Find("Link");
-		linkGM.transform.position = new Vector3(0, -5, 0);
+		//LOAD ENEMY PREFABS
+		Stalfos = Resources.Load<GameObject>("Enemies/Stalfos");
+		Keese = Resources.Load<GameObject>("Enemies/Keese");
+		Epona = Resources.Load<GameObject>("Enemies/Epona");
+		DungeonZola = Resources.Load<GameObject>("Enemies/DungeonZola");
 
-		//debug
+		linkGM = GameObject.Find("Link");
+		linkGM.transform.position = new Vector3(0, -5.6f, 0);
+
+		//---FOR DEBUGGING---
 		Inventory.hasBomb = true;
-		Link.numBomb = 100;
+		Link.numBomb = 20;
+		GUIText gt = GameObject.Find ("bombNum").GetComponent<GUIText>();
+		gt.text = Link.numBomb.ToString();
 	}
 
 	void Start(){
 		curRoom = DungeonRooms.that.getRoom(roomPos, new Vector3(0, -2));
+		Invoke ("showLink", 0.02f);
 	}
 
+	void showLink(){
+		linkGM.GetComponent<SpriteRenderer>().enabled = true;
+	}
 
 	public void changeRoom(SpriteDir dir){
 		float newRoomX = 0;
@@ -92,10 +109,18 @@ public class Dungeon : MonoBehaviour {
 				roomPos = 8;
 				newRoomY = -2;
 				break;
-			case SpriteDir.RIGHT_STEP:		// from stairs room3 (boss)
+			case SpriteDir.RIGHT_STEP:		// from stairs room3 (boss --> triforce)
 				roomPos = 9;
 				newRoomY = -2;
 				break;
+		}
+
+		if(roomPos != 9){
+			string tmp = "hudRoom" + roomPos;
+			GameObject.Find("hudlocation").transform.position = GameObject.Find(tmp).transform.position;
+		}
+		else {
+			// TODO: hide HUD??
 		}
 
 		if(isAnimating){
@@ -138,6 +163,9 @@ public class Dungeon : MonoBehaviour {
 			Destroy(curRoom);
 
 			curRoom = nextRoom;
+
+			curRoom.transform.position = new Vector3(0, -2, 0);
+
 			numDone = 0;
 			isAnimating = false;
 
@@ -147,16 +175,16 @@ public class Dungeon : MonoBehaviour {
 			float teleportY = 0;
 
 			if(theDir == SpriteDir.LEFT){
-				teleportX = 5.25f;
+				teleportX = 6.35f;
 			}
 			else if(theDir == SpriteDir.RIGHT){
-				teleportX = -5.25f;
+				teleportX = -6.35f;
 			}
 			else if(theDir == SpriteDir.UP){
-				teleportY = -5f;
+				teleportY = -5.6f;
 			}
 			else if(theDir == SpriteDir.DOWN){
-				teleportY = 1.4f;
+				teleportY = 1.7f;
 			}
 
 			if(theDir == SpriteDir.UP || theDir == SpriteDir.DOWN){
@@ -178,7 +206,34 @@ public class Dungeon : MonoBehaviour {
 
 			linkGM.gameObject.SetActive(true);
 		}
-	}
 
+		print("done, with roomPos = " + roomPos.ToString());
+
+		//ENEMY SPAWNING
+		if(roomPos == 0)
+		{
+			Instantiate(DungeonZola, new Vector3(5.5f, 1, 0), Quaternion.identity);
+		}
+		else if(roomPos == 2)
+		{
+
+		}
+		else if(roomPos == 3)
+		{
+			if(epona == null)
+				epona = Instantiate(Epona, new Vector3(100f, 1, 0), Quaternion.identity) as GameObject;
+		}
+		else if(roomPos == 5)
+		{
+			Instantiate(Stalfos, new Vector3(-3.16f, -1.67f, 0), Quaternion.identity);
+			Instantiate(Stalfos, new Vector3(3.17f, 0.44f, 0), Quaternion.identity);
+		}
+		else if(roomPos == 7)
+		{
+			Instantiate(Keese, new Vector3(-3.16f, -1.67f, 0), Quaternion.identity);
+			Instantiate(Keese, new Vector3(3.17f, 0.44f, 0), Quaternion.identity);
+			Instantiate(Keese, new Vector3(0, 0, 0), Quaternion.identity);
+		}
+	}
 }
 

@@ -25,7 +25,6 @@ public class StalfosScript : Enemy {
 	
 	public override void customUpdate()
 	{	
-		print(spr1);
 		(renderer as SpriteRenderer).sprite = spr1;
 		if(animationTimer > 0)
 			animationTimer --;

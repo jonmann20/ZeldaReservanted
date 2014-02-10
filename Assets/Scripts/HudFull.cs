@@ -26,13 +26,13 @@ public class HudFull : MonoBehaviour {
 
 	void Update () {
 		if(Input.GetButtonDown("Select")){
-			if(!isFullHud && !Dungeon.that.isAnimating){
+			if(!isFullHud && (Dungeon.that == null || !Dungeon.that.isAnimating)){
 				pauseTheGame();
 			}
 		}
 
 		if(Input.GetButtonDown("Enter")){
-			if(!doHud && !isGamePaused && !Dungeon.that.isAnimating){
+			if(!doHud && !isGamePaused && (Dungeon.that == null || !Dungeon.that.isAnimating)){
 				Time.timeScale = 0;
 			
 				if(isFullHud){
@@ -45,6 +45,12 @@ public class HudFull : MonoBehaviour {
 					fromFull = false;
 					isFullHud = true;
 					newCameraY = 11.4f;
+
+
+					GameObject.Find("rupeeNum").GetComponent<GUIText>().enabled = false;
+					GameObject.Find("keyNum").GetComponent<GUIText>().enabled = false;
+					GameObject.Find("bombNum").GetComponent<GUIText>().enabled = false;
+					GameObject.Find ("LvlName").GetComponent<GUIText>().enabled = false;
 				}
 
 				doHud = true;
@@ -53,17 +59,19 @@ public class HudFull : MonoBehaviour {
 
 		if(doHud){
 			bool flag = false;
+
 			if(newCameraY > 0){
-				mainCamera.transform.position = mainCamera.transform.position + new Vector3(0, 0.18f, 0);
+				mainCamera.transform.Translate(0, 0.18f, 0);
 
 				if(mainCamera.transform.position.y >= newCameraY){
 					flag = true;
 				}
 			}
 			else if(newCameraY < 0){
-				mainCamera.transform.position = mainCamera.transform.position + new Vector3(0, -0.18f, 0);
+				mainCamera.transform.Translate(0, -0.18f, 0);
 
 				if(mainCamera.transform.position.y <= 0){
+					mainCamera.transform.position = new Vector3(0, 0, -2);
 					flag = true;
 				}
 			}
@@ -72,6 +80,11 @@ public class HudFull : MonoBehaviour {
 				if(fromFull){
 					isFullHud = false;
 					Time.timeScale = 1;
+
+					GameObject.Find("rupeeNum").GetComponent<GUIText>().enabled = true;
+					GameObject.Find("keyNum").GetComponent<GUIText>().enabled = true;
+					GameObject.Find("bombNum").GetComponent<GUIText>().enabled = true;
+					GameObject.Find ("LvlName").GetComponent<GUIText>().enabled = true;
 				}
 				else {
 					rectSelector = Instantiate(rectSelectorPrefab) as GameObject;
@@ -91,7 +104,7 @@ public class HudFull : MonoBehaviour {
 		}
 		
 	}
-	
+
 	void pauseTheGame(){
 		if(isGamePaused){
 			Time.timeScale = 1;

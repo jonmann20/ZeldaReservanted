@@ -4,11 +4,11 @@ using System.Collections;
 public class GameAudio : MonoBehaviour {
 
 	public static AudioSource swordSwingSrc, swordShootSrc, rupeePickupSrc, rupeePickup5Src, textSrc,
-								enemyZapSrc, heartPickupSrc, itemObtainedSrc, itemReceivedSrc,
-								gameOverSrc, playerHurtSrc, stairsSrc;
+								enemyZapSrc, heartPickupSrc, itemObtainedSrc, itemReceivedSrc, doorOpenedSrc,
+								gameOverSrc, playerHurtSrc, stairsSrc, secretSrc, triforceSrc;
 	GameObject swordSwingSrcHolder, swordShootSrcHolder, rupeePickupSrcHolder, rupeePickup5SrcHolder, textSrcHolder,
 								enemyZapSrcHolder, heartPickupSrcHolder, itemObtainedSrcHolder, itemReceivedSrcHolder,
-								gameOverSrcHolder, playerHurtSrcHolder, stairsSrcHolder;
+	gameOverSrcHolder, playerHurtSrcHolder, stairsSrcHolder, secretSrcHolder, doorOpenedSrcHolder, triforceSrcHolder;
 					
 	void Awake()
 	{
@@ -24,6 +24,10 @@ public class GameAudio : MonoBehaviour {
 		setSoundEffect(ref gameOverSrcHolder, ref gameOverSrc, "gameOver");
 		setSoundEffect(ref playerHurtSrcHolder, ref playerHurtSrc, "playerHurt");
 		setSoundEffect(ref stairsSrcHolder, ref stairsSrc, "stairs");
+		setSoundEffect(ref doorOpenedSrcHolder, ref doorOpenedSrc, "doorOpened");
+		setSoundEffect(ref secretSrcHolder, ref secretSrc, "magical");
+		setSoundEffect(ref triforceSrcHolder, ref triforceSrc, "triforcePickup");
+
 	}
 	
 	void setSoundEffect(ref GameObject holder, ref AudioSource src, string clip){
@@ -35,6 +39,14 @@ public class GameAudio : MonoBehaviour {
 
 	public static void playItemObtained(){
 		itemObtainedSrc.audio.Play();
+	}
+
+	public static void playTriforce(){
+		triforceSrc.audio.Play();
+	}
+
+	public static void playDoorOpened(){
+		doorOpenedSrc.audio.Play();
 	}
 
 	public static void playItemReceived(){
@@ -72,6 +84,11 @@ public class GameAudio : MonoBehaviour {
 	public static void playPlayerHurt()
 	{
 		playerHurtSrc.audio.Play();
+	}
+
+	public static void playMagical()
+	{
+		secretSrc.audio.Play();
 	}
 
 	public static void playStairs()

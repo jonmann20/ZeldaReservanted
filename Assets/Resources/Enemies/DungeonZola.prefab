@@ -11,9 +11,9 @@ GameObject:
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
   - 61: {fileID: 6100000}
-  m_Layer: 0
-  m_Name: Bomb
-  m_TagString: Untagged
+  m_Layer: 4
+  m_Name: DungeonZola
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.7246695, y: -2.68122268, z: 0}
+  m_LocalPosition: {x: 14.7627468, y: -8.12298489, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -37,8 +37,8 @@ BoxCollider2D:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: .49000001, y: .49000001}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -48,11 +48,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14548c7800115d5458426bbb6f78605a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bb115a03efc34a5a8de3d2f9b4294c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPickup: 1
-  explosion: {fileID: 21300260, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  health: 1
+  spr: []
+  topLeftX: -8
+  topLeftY: 3.5
+  sprRend: {fileID: 0}
+  invincibility: 0
+  gpm: {fileID: 0}
+  currentCoordsInRoom: {x: 0, y: 0}
+  poof: {fileID: 0}
+  poofTimer: 10
+  didPoof: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -72,9 +81,9 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 500
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300066, guid: 39f1b59dfce596949a7da9f992427139, type: 3}
+  m_Sprite: {fileID: 21300230, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

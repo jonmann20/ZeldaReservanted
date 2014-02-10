@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class DungeonRoom {
 	public GameObject room;			// the basic generic room templates
@@ -14,7 +15,7 @@ public class DungeonRooms : MonoBehaviour {
 	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBombN, blackFloor, roomG;
 	GameObject block, mat, stairs, triforce, water, key;
 	GameObject lockedDoor, bombDoorS, bombDoorN, bombDoorTrigger;
-	GameObject Stalfos, Keese, Epona;
+
 
 	GameObject roomHolder;
 
@@ -22,6 +23,8 @@ public class DungeonRooms : MonoBehaviour {
 	public bool keyIsFound = false;
 	public bool doorIsOpen = false;
 	bool bombDoorIsOpen = false;
+
+	public List<GameObject> waterTiles = new List<GameObject>();
 
 	void Awake(){
 		that = this;
@@ -51,10 +54,6 @@ public class DungeonRooms : MonoBehaviour {
 		lockedDoor = Resources.Load<GameObject>("Dungeon/lockedDoor");
 		bombDoorS = Resources.Load<GameObject>("Dungeon/bombDoorS");
 		bombDoorTrigger = Resources.Load<GameObject>("Dungeon/bombDoorTrigger");
-
-		Stalfos = Resources.Load<GameObject>("Enemies/Stalfos");
-		Keese = Resources.Load<GameObject>("Enemies/Keese");
-		Epona = Resources.Load<GameObject>("Enemies/Epona");
 	}
 
 	public GameObject getRoom(int num, Vector3 pos){
@@ -172,6 +171,12 @@ public class DungeonRooms : MonoBehaviour {
 		dr.objs[36] = Instantiate(water, new Vector3(pos.x - 0.5f, pos.y + 2, 0), Quaternion.identity) as GameObject;
 		dr.objs[37] = Instantiate(water, new Vector3(pos.x + 0.5f, pos.y + 2, 0), Quaternion.identity) as GameObject;
 
+		foreach(GameObject g in dr.objs)
+		{
+			waterTiles.Add(g);
+		}
+
+
 		if(!keyIsFound){
 			dr.objs[38] = Instantiate(key, new Vector3(pos.x + -0.5f, pos.y, 0), Quaternion.identity) as GameObject;
 		}
@@ -250,7 +255,7 @@ public class DungeonRooms : MonoBehaviour {
 		objHolder.transform.position = pos;
 		objHolder.transform.parent = drHolder.transform;
 
-		Instantiate(Epona, new Vector3(pos.x + 0.5f, pos.y, 0), Quaternion.identity);
+
 
 		dr.objs = new GameObject[1];
 
@@ -307,7 +312,7 @@ public class DungeonRooms : MonoBehaviour {
 			
 			dr.objs = new GameObject[1];
 
-			dr.objs[0] = Instantiate(lockedDoor, new Vector3(pos.x, pos.y - 4.1f, 0), Quaternion.identity) as GameObject;
+			dr.objs[0] = Instantiate(lockedDoor, new Vector3(pos.x, pos.y - 4.19f, 0), Quaternion.identity) as GameObject;
 
 			for(int i=0; i < 1; ++i){
 				dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
@@ -316,7 +321,7 @@ public class DungeonRooms : MonoBehaviour {
 		}
 
 		//Skeletons
-		dr.objs[0] = Instantiate(Stalfos, new Vector3(1.5f, 2, 0), Quaternion.identity) as GameObject;
+		//dr.objs[0] = Instantiate(Stalfos, new Vector3(1.5f, 2, 0), Quaternion.identity) as GameObject;
 
 		return drHolder;
 	}
@@ -432,6 +437,8 @@ public class DungeonRooms : MonoBehaviour {
 		}
 		stairsFound = true;
 
+		GameAudio.playMagical();
+
 		GameObject g = GameObject.Find ("Objs");
 		GameObject s = Instantiate(stairs, new Vector3(-5.5f, -5, 0), Quaternion.identity) as GameObject;
 		s.transform.parent = g.transform;
@@ -443,7 +450,9 @@ public class DungeonRooms : MonoBehaviour {
 			return;
 		}
 		bombDoorIsOpen = true;
-		
+
+		GameAudio.playMagical();
+
 		GameObject g = GameObject.Find ("Objs");
 		GameObject s = Instantiate(bombDoorS, new Vector3(0, -6, 0), Quaternion.identity) as GameObject;
 		s.transform.parent = g.transform;

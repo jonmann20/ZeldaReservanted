@@ -144,14 +144,17 @@ public partial class Link : MonoBehaviour {
 	void FixedUpdate()
 	{
 		rigidbody2D.velocity = Vector2.zero;
+
 		if(movementEnabled && !isAttacking && itemPoseTimer <= 0){
 			checkMovement();
 		}
+
 		if(itemPoseTimer > 0)
 		{
 			itemPoseTimer --;
 			sprRend.sprite = spr[12];
 		}
+
 		previousPos = transform.position;
 	}
 
