@@ -20,6 +20,7 @@ public class DungeonRooms : MonoBehaviour {
 	GameObject roomHolder;
 
 	bool stairsFound = false;
+	bool stairsFoundBoss = false;
 	public bool keyIsFound = false;
 	public bool doorIsOpen = false;
 	bool bombDoorIsOpen = false;
@@ -443,6 +444,24 @@ public class DungeonRooms : MonoBehaviour {
 		GameObject s = Instantiate(stairs, new Vector3(-5.5f, -5, 0), Quaternion.identity) as GameObject;
 		s.transform.parent = g.transform;
 		s.GetComponent<DungeonStairs>().isRoom8 = true;
+	}
+	public void addStairsBoss(){
+
+		GameObject objHolder = GameObject.Find("Objs");
+	//	objHolder.transform.position = new Vector3(0, 0, 0);
+	//	objHolder.transform.parent = GameObject.Find("Room3").transform;
+
+		if(stairsFoundBoss){
+			return;
+		}
+		stairsFoundBoss = true;
+		
+		GameAudio.playMagical();
+
+		GameObject s = Instantiate(stairs, new Vector3(-5.5f, -5, 0), Quaternion.identity) as GameObject;
+
+		s.transform.parent = objHolder.transform;
+		s.GetComponent<DungeonStairs>().isRoomBoss = true;
 	}
 
 	public void addBombDoor(){

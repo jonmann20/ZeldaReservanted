@@ -41,6 +41,12 @@ public class BossScript : Enemy {
 
 	}
 
+	void OnDestroy()
+	{
+		print("EPONA DIDED!");
+		DungeonRooms.that.addStairsBoss();
+	}
+
 	// Update is called once per frame
 	public override void customUpdate() {
 

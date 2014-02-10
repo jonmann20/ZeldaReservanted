@@ -14,6 +14,7 @@ public class ZolaScript : Enemy {
 
 	// Use this for initialization
 	void Start () {
+		health = 3;
 		RockShot = Resources.Load("Enemies/RockShot") as GameObject;
 		availablePositions = getWaterPositions();
 		Movement();

@@ -103,6 +103,11 @@ public abstract class Enemy : MonoBehaviour {
 		
 	}
 
+	public virtual void killed()
+	{
+
+	}
+
 	protected void initCoordsInRoom()
 	{
 		float topLeftX = -8f;
@@ -119,6 +124,7 @@ public abstract class Enemy : MonoBehaviour {
 	}
 
 	public void kill(){
+		killed ();
 		GameAudio.playEnemyZap();
 
 		dropRandomItem();
