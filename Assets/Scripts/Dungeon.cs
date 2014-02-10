@@ -30,7 +30,7 @@ public class Dungeon : MonoBehaviour {
 		that = this;
 
 		linkGM = GameObject.Find("Link");
-		linkGM.transform.position = new Vector3(0, -5, 0);
+		linkGM.transform.position = new Vector3(0, -5.6f, 0);
 
 		//---FOR DEBUGGING---
 		Inventory.hasBomb = true;
@@ -41,8 +41,12 @@ public class Dungeon : MonoBehaviour {
 
 	void Start(){
 		curRoom = DungeonRooms.that.getRoom(roomPos, new Vector3(0, -2));
+		Invoke ("showLink", 0.02f);
 	}
 
+	void showLink(){
+		linkGM.GetComponent<SpriteRenderer>().enabled = true;
+	}
 
 	public void changeRoom(SpriteDir dir){
 		float newRoomX = 0;
@@ -160,16 +164,16 @@ public class Dungeon : MonoBehaviour {
 			float teleportY = 0;
 
 			if(theDir == SpriteDir.LEFT){
-				teleportX = 5.25f;
+				teleportX = 6.35f;
 			}
 			else if(theDir == SpriteDir.RIGHT){
-				teleportX = -5.25f;
+				teleportX = -6.35f;
 			}
 			else if(theDir == SpriteDir.UP){
-				teleportY = -5f;
+				teleportY = -5.6f;
 			}
 			else if(theDir == SpriteDir.DOWN){
-				teleportY = 1.4f;
+				teleportY = 1.7f;
 			}
 
 			if(theDir == SpriteDir.UP || theDir == SpriteDir.DOWN){
