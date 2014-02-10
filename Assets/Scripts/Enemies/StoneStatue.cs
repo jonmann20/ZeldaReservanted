@@ -45,6 +45,8 @@ public class StoneStatue : Enemy {
 				go.rigidbody2D.velocity = vel;
 				go.SendMessage("setMode", 1);
 				shotAlready = true;
+
+				go.transform.parent = GameObject.Find("EnemyHolder").transform;
 			}
 			if(elapsedTime >= time){
 				Callback call = Movement;

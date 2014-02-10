@@ -71,6 +71,7 @@ public class BossScript : Enemy {
 				flameTimer = FLAME_FREQUENCY + Random.Range(0, FLAME_FREQUENCY);
 				Vector3 pos = new Vector3(transform.position.x - firePosX, transform.position.y + firePosY, 0);
 				GameObject go = Instantiate(FireProjectile, pos, Quaternion.identity) as GameObject;
+				go.transform.parent = GameObject.Find("EnemyHolder").transform;
 			}
 
 			//MOVEMENT
@@ -101,6 +102,8 @@ public class BossScript : Enemy {
 				GameObject go = Instantiate(RockShot, pos, Quaternion.identity) as GameObject;
 				go.rigidbody2D.velocity = vel;
 				go.SendMessage("setMode", 1);
+
+				go.transform.parent = GameObject.Find("EnemyHolder").transform;
 			}
 			if(shotTimer <= -10)
 				shotTimer = SHOT_FREQUENCY;
