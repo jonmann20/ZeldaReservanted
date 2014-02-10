@@ -13,7 +13,7 @@ public class FireProjectileScript : MonoBehaviour {
 	
 	void Start()
 	{
-		rigidbody2D.velocity = new Vector3(-1, -1, 0);
+		rigidbody2D.velocity = new Vector3(-3, -3, 0);
 	}
 
 	void Update(){

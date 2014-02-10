@@ -25,7 +25,7 @@ public class ThrownWhiteSwordScript : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D col){
-		if(col.gameObject.tag == "Player"){
+		if(col.gameObject.tag == "Player" && Link.invincibility <= 0){
 			if(mode == 0)
 				Link.health -= 2;
 			if(mode == 1)

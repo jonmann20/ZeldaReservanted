@@ -34,7 +34,7 @@ public class RockShotScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		if(col.gameObject.tag == "Player"){
+		if(col.gameObject.tag == "Player" && Link.invincibility <= 0){
 			--Link.health;
 			Link.updateHealth();
 			Link.invincibility = 60;

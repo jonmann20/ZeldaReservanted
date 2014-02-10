@@ -98,6 +98,11 @@ public abstract class Enemy : MonoBehaviour {
 
 	}
 
+	public virtual void justHurt()
+	{
+		
+	}
+
 	protected void initCoordsInRoom()
 	{
 		float topLeftX = -8f;
@@ -148,7 +153,10 @@ public abstract class Enemy : MonoBehaviour {
 		if(h < health && invincibility > 0)
 			return;
 		if(h < health)
+		{
 			invincibility = 20;
+			justHurt();
+		}
 		health = h;
 
 		if(health <= 0)

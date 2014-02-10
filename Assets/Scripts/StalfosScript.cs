@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class StalfosScript : Enemy {
 	
-	const int animationTime = 10;
+	const int animationTime = 15;
 	int animationTimer = animationTime;
 	public Sprite spr1;
 	public Sprite spr2;

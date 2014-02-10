@@ -14,6 +14,7 @@ public class DungeonRooms : MonoBehaviour {
 	GameObject roomT, roomTL, roomTB, roomTRB, roomRB, roomRBL, roomB, roomRL, roomL, roomBombN, blackFloor, roomG;
 	GameObject block, mat, stairs, triforce, water, key;
 	GameObject lockedDoor, bombDoorS, bombDoorN, bombDoorTrigger;
+	GameObject Stalfos, Keese, Epona;
 
 	GameObject roomHolder;
 
@@ -50,6 +51,10 @@ public class DungeonRooms : MonoBehaviour {
 		lockedDoor = Resources.Load<GameObject>("Dungeon/lockedDoor");
 		bombDoorS = Resources.Load<GameObject>("Dungeon/bombDoorS");
 		bombDoorTrigger = Resources.Load<GameObject>("Dungeon/bombDoorTrigger");
+
+		Stalfos = Resources.Load<GameObject>("Enemies/Stalfos");
+		Keese = Resources.Load<GameObject>("Enemies/Keese");
+		Epona = Resources.Load<GameObject>("Enemies/Epona");
 	}
 
 	public GameObject getRoom(int num, Vector3 pos){
@@ -244,15 +249,18 @@ public class DungeonRooms : MonoBehaviour {
 		GameObject objHolder = new GameObject("Objs");
 		objHolder.transform.position = pos;
 		objHolder.transform.parent = drHolder.transform;
-		
+
+		Instantiate(Epona, new Vector3(pos.x + 0.5f, pos.y, 0), Quaternion.identity);
+
 		dr.objs = new GameObject[1];
-		dr.objs[0] = Instantiate(stairs, new Vector3(pos.x + 0.5f, pos.y, 0), Quaternion.identity) as GameObject;
+
+		/*dr.objs[0] = Instantiate(stairs, new Vector3(pos.x + 0.5f, pos.y, 0), Quaternion.identity) as GameObject;
 		dr.objs[0].GetComponent<DungeonStairs>().isRoomBoss = true;
 
 		for(int i=0; i < 1; ++i){
 			dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 2;
 			dr.objs[i].transform.parent = objHolder.transform;
-		}
+		}*/
 
 		return drHolder;
 	}
@@ -282,6 +290,7 @@ public class DungeonRooms : MonoBehaviour {
 		return drHolder;
 	}
 
+	//SKELETON ROOM
 	GameObject getRoomFive(Vector3 pos){
 		GameObject drHolder = new GameObject("Room5");
 		drHolder.transform.position = pos;
@@ -305,6 +314,9 @@ public class DungeonRooms : MonoBehaviour {
 				dr.objs[i].transform.parent = objHolder.transform;
 			}
 		}
+
+		//Skeletons
+		dr.objs[0] = Instantiate(Stalfos, new Vector3(1.5f, 2, 0), Quaternion.identity) as GameObject;
 
 		return drHolder;
 	}
