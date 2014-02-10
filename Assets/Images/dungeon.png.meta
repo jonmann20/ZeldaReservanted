@@ -261,5 +261,14 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
+    - name: stoneStatue
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 222
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
