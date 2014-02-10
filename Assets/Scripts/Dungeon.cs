@@ -44,12 +44,6 @@ public class Dungeon : MonoBehaviour {
 
 		linkGM = GameObject.Find("Link");
 		linkGM.transform.position = new Vector3(0, -5.6f, 0);
-
-		//---FOR DEBUGGING---
-		Inventory.hasBomb = true;
-		Link.numBomb = 20;
-		GUIText gt = GameObject.Find ("bombNum").GetComponent<GUIText>();
-		gt.text = Link.numBomb.ToString();
 	}
 
 	void Start(){

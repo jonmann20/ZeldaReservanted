@@ -28,7 +28,7 @@ public class BossScript : Enemy {
 	// Use this for initialization
 	void Start () {
 		linkRef = GameObject.FindWithTag("Player");
-		print(linkRef);
+
 		health = 11;
 		FireProjectile = Resources.Load("Enemies/FireProjectile") as GameObject;
 		RockShot = Resources.Load("Enemies/RockShot") as GameObject;
