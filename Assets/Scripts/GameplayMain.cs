@@ -773,6 +773,9 @@ public class GameplayMain : MonoBehaviour {
 				GameAudio.playItemReceived();
 				PlayerPrefs.SetInt("hasSword", 1);
 				break;
+			case "triforce":
+				importantItem = true;
+				break;
 			case "nothing":
 				//print("ERROR: acquired item has no name defined");
 				break;

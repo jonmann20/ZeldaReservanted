@@ -39,8 +39,6 @@ public class DungeonZolaScript : Enemy {
 	public override void Movement()
 	{
 		Vector3 newPos = getRandomElementInList<Vector3>(availablePositions);
-		newPos.x += 0.5f;
-		newPos.y -= 0.5f;
 		transform.position = newPos;
 
 		//print(newPos.ToString());
