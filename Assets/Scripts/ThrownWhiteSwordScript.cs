@@ -30,7 +30,7 @@ public class ThrownWhiteSwordScript : MonoBehaviour {
 				Link.health -= 2;
 			if(mode == 1)
 				Link.health --;
-			Link.invincibility = 60;
+			Link.invincibility = 90;
 			GameAudio.playPlayerHurt();
 			Link.updateHealth();
 			Destroy(gameObject);

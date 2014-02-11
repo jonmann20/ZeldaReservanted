@@ -37,7 +37,7 @@ public class RockShotScript : MonoBehaviour {
 		if(col.gameObject.tag == "Player" && Link.invincibility <= 0){
 			--Link.health;
 			Link.updateHealth();
-			Link.invincibility = 60;
+			Link.invincibility = 90;
 			GameAudio.playPlayerHurt();
 			Destroy(gameObject);
 		}

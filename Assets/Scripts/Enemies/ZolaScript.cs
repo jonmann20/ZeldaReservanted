@@ -19,16 +19,6 @@ public class ZolaScript : Enemy {
 		availablePositions = getWaterPositions();
 		Movement();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		/*timer --;
-		if(timer <= 0)
-		{
-			Movement();
-			timer = timeToMove;
-		}*/
-	}
 
 	public override void Movement()
 	{

@@ -69,13 +69,14 @@ public class Bomb : MonoBehaviour {
 		foreach(Collider2D col in objectsInRange){
 			if(col.gameObject.tag == "Enemy"){
 				BossScript bs = col.gameObject.GetComponent<BossScript>();
-
-				if(bs == null){
+				Spikes s = col.gameObject.GetComponent<Spikes>();
+				if(bs == null && s == null){
 					Destroy(col.gameObject);
 				}
 				else {
 					Enemy en = col.gameObject.GetComponent<Enemy>();
 					en.setHealth(en.health -1);
+					en.invincibility = 60;
 				}
 			}
 			else if(col.gameObject.tag == "BombDoor"){

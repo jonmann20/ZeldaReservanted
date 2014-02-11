@@ -28,15 +28,6 @@ public class DungeonZolaScript : Enemy {
 		Movement();
 	}
 
-	void Update(){
-		/*timer --;
-		if(timer <= 0)
-		{
-			Movement();
-			timer = timeToMove;
-		}*/
-	}
-	
 	public override void Movement()
 	{
 		Vector3 newPos = getRandomElementInList<Vector3>(availablePositions);

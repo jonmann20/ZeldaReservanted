@@ -53,7 +53,7 @@ public abstract class Enemy : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-
+		print("trigger enter with tag: " + col.gameObject.tag);
 		if(col.gameObject.tag == "Sword")
 		{
 			setHealth(health - 1);
