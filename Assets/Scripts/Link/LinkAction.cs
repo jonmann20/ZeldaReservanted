@@ -14,7 +14,7 @@ public partial class Link : MonoBehaviour {
 	const float SHOT_SPEED = 10.5f;
 
 	void checkAction(){
-		if(Input.GetButtonDown("Attack")){
+		if(Input.GetButtonDown("Attack") && movementEnabled && itemPoseTimer <= 0){
 			if(!Inventory.hasWoodenSword) return;
 
 			switch(dir){
