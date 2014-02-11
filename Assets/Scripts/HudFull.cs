@@ -32,7 +32,7 @@ public class HudFull : MonoBehaviour {
 		}
 
 		if(Input.GetButtonDown("Enter")){
-			if(!doHud && !isGamePaused && (Dungeon.that == null || !Dungeon.that.isAnimating)){
+			if(!doHud && !isGamePaused && (GameplayMain.that == null || !GameplayMain.that.screenScrolling) && (Dungeon.that == null || !Dungeon.that.isAnimating)){
 				Time.timeScale = 0;
 			
 				if(isFullHud){
@@ -55,6 +55,11 @@ public class HudFull : MonoBehaviour {
 					if(GameObject.Find("OldManTxt(Clone)") != null){
 						GameObject.Find ("OldManTxt(Clone)").GetComponent<GUIText>().enabled = false;
 					}
+
+					if(GameplayMain.that != null && GameplayMain.that.isSpeech){
+						GameplayMain.that.hideSpeech = true;
+					}
+
 				}
 
 				doHud = true;
@@ -93,6 +98,11 @@ public class HudFull : MonoBehaviour {
 					if(GameObject.Find("OldManTxt(Clone)") != null){
 						GameObject.Find ("OldManTxt(Clone)").GetComponent<GUIText>().enabled = true;
 					}
+
+					if(GameplayMain.that != null && GameplayMain.that.isSpeech){
+						GameplayMain.that.hideSpeech = false;
+					}
+
 				}
 				else {
 					rectSelector = Instantiate(rectSelectorPrefab) as GameObject;

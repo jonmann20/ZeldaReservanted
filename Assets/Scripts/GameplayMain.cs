@@ -55,7 +55,7 @@ public class GameplayMain : MonoBehaviour {
 	MapTileScript highlightedTile;
 
 	//SCREEN SCROLL
-	bool screenScrolling = false;
+	public bool screenScrolling = false;
 	float desiredDisplacementTime = 0;
 
 	//GUI
@@ -67,8 +67,13 @@ public class GameplayMain : MonoBehaviour {
 	string desiredSpeech = "";
 	int speechTimer = 12;
 
+	public bool isSpeech = false;
+	public bool hideSpeech = false;
+
+	public static GameplayMain that;
 	
 	void Awake(){
+		that = this;
 		LvlCamera = GameObject.Find("LvlCamera");
 
 		EnemyAudioSourceHolder = new GameObject("EnemyAudioSourceHolder");
@@ -221,11 +226,11 @@ public class GameplayMain : MonoBehaviour {
 
 	void initEnemiesCurrentRoom()
 	{
-		if(currentRoom.xcoord == 7 && currentRoom.ycoord == 7)
-		{
-
-			print("HERE");
-		}
+//		if(currentRoom.xcoord == 7 && currentRoom.ycoord == 7)
+//		{
+//
+//			print("HERE");
+//		}
 
 		GameObject EnemyHolder = new GameObject("EnemyHolder");
 		EnemyHolder.transform.parent = LvlCamera.transform;
@@ -730,23 +735,33 @@ public class GameplayMain : MonoBehaviour {
 	
 	}
 
-	void OnGUI()
-	{
-		GUI.matrix = matrix;
-		GUIStyle style = GUI.skin.GetStyle("Label");
-		style.font = bitFont;
-		style.fontSize = 8;
-		GUI.Label (new Rect(35, 100, 200, 30), currentSpeech, style);
+	void OnGUI(){
+		if(!hideSpeech){
+			GUI.matrix = matrix;
+			GUIStyle style = GUI.skin.GetStyle("Label");
+			style.font = bitFont;
+			style.fontSize = 8;
+			style.normal.textColor = Color.white;
 
-		speechTimer --;
-		if(speechTimer <= 0)
-		{
-			if(desiredSpeech.Length > 0)
+			GUI.Label (new Rect(35, 100, 190, 30), currentSpeech, style);
+
+			if(currentSpeech == string.Empty){
+				isSpeech = false;
+			}
+			else {
+				isSpeech = true;
+			}
+
+			--speechTimer;
+			if(speechTimer <= 0)
 			{
-				GameAudio.playText();
-				currentSpeech += desiredSpeech[0];
-				desiredSpeech = desiredSpeech.Remove(0, 1);
-				speechTimer = 12;
+				if(desiredSpeech.Length > 0)
+				{
+					GameAudio.playText();
+					currentSpeech += desiredSpeech[0];
+					desiredSpeech = desiredSpeech.Remove(0, 1);
+					speechTimer = 12;
+				}
 			}
 		}
 	}

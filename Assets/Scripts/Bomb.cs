@@ -19,15 +19,27 @@ public class Bomb : MonoBehaviour {
 		if(isPickup && (col.gameObject.tag == "Player" || col.gameObject.tag == "Sword")){
 			GameObject.Find("HUDbombAction").GetComponent<SpriteRenderer>().enabled = true;
 
-			Link.numBomb += val;
+			if(Link.numBomb + val <= 99){
+				Link.numBomb += val;
+			}
+			else {
+				Link.numBomb = 99;
+			}
 			Inventory.hasBomb = true;
 			PlayerPrefs.SetInt ("hasBomb", 1);
 			PlayerPrefs.SetInt("numBomb", Link.numBomb);
 
 			GUIText gt = GameObject.Find ("bombNum").GetComponent<GUIText>();
 			gt.text = Link.numBomb.ToString();
-			Destroy(gameObject);
+
 			GameAudio.playRupeePickup(1);
+
+			if(val == 30){
+				DungeonRooms.that.bombFound = true;
+			}
+
+			Destroy(gameObject);
+
 		}
 	}
 

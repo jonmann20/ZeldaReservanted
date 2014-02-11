@@ -37,7 +37,7 @@ public partial class Link : MonoBehaviour {
 
 	static GameObject heartPrefab, heartEmptyPrefab;
 
-	public static float initHealth = 3, health = 3, invincibility = 0;
+	public static float initHealth = 5, health = 5, invincibility = 0;
 
 	SpriteDir dir = SpriteDir.UP_STEP;
 	public static int numRupee = 0;

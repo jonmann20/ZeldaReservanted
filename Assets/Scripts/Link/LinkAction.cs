@@ -46,10 +46,11 @@ public partial class Link : MonoBehaviour {
 			if(Link.health == Link.initHealth && woodenSwordProjectile == null){
 				Invoke("shootSword", 0.18f);
 			}
+			else {
+				GameAudio.playSwordSwing();
+			}
 
 			StartCoroutine(finishAttack(dir));
-
-			GameAudio.playSwordSwing();
 		}
 
 		if(Input.GetButtonDown("SpecialAttack")){

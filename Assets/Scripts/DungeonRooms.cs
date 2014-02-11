@@ -24,6 +24,7 @@ public class DungeonRooms : MonoBehaviour {
 	public bool keyIsFound = false;
 	public bool doorIsOpen = false;
 	bool bombDoorIsOpen = false;
+	public bool bombFound = false;
 
 	public List<GameObject> waterTiles = new List<GameObject>();
 
@@ -298,9 +299,16 @@ public class DungeonRooms : MonoBehaviour {
 		dr.objs[3] = Instantiate(fire, new Vector3(pos.x + 3.5f, pos.y + 1, 0), Quaternion.identity) as GameObject;
 
 		dr.objs[4] = Instantiate(oldManTxt, new Vector3(pos.x + 0.14f, pos.y + 2.55f, 0), Quaternion.identity) as GameObject;
-		dr.objs[5] = Instantiate(bombPickup, new Vector3(pos.x + 0.14f, pos.y - 1, 0), Quaternion.identity) as GameObject;
+
+		if(!bombFound){
+			dr.objs[5] = Instantiate(bombPickup, new Vector3(pos.x + 0.14f, pos.y - 1, 0), Quaternion.identity) as GameObject;
+		}
 
 		for(int i=0; i < NUM_OBJS; ++i){
+			if(i == 5 && bombFound){
+				continue;
+			}
+
 			if(i != 4){
 				dr.objs[i].GetComponent<SpriteRenderer>().sortingOrder = 3;
 			}

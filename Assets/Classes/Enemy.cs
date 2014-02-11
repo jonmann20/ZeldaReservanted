@@ -140,13 +140,13 @@ public abstract class Enemy : MonoBehaviour {
 		if(rand <= 3){
 			item = Instantiate(rupeePrefab, this.transform.position, Quaternion.identity) as GameObject;
 		}
-		else if(rand >= 4 && rand <= 7){
+		else if(rand >= 4 && rand <= 13){
 			item = Instantiate(heartItemDropPrefab, this.transform.position, Quaternion.identity) as GameObject;
 		}
-		else if(rand >= 8 && rand <= 11){
+		else if(rand >= 14 && rand <= 17){
 			item = Instantiate(rupee5Prefab, this.transform.position, Quaternion.identity) as GameObject;
 		}
-		else if(rand >= 12 && rand <= 15){
+		else if(rand >= 18 && rand <= 21){
 			item = Instantiate(bombPrefab, this.transform.position, Quaternion.identity) as GameObject;
 		}
 

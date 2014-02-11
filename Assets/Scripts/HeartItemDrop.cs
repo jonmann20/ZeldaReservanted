@@ -7,10 +7,12 @@ public class HeartItemDrop : MonoBehaviour {
 		if(col.gameObject.tag == "Player" || col.gameObject.tag == "Sword"){
 			if(Link.health < Link.initHealth){
 				++Link.health;
+				Link.updateHealth();
 			}
 
-			Destroy(gameObject);
 			GameAudio.playHeartPickup();
+
+			Destroy(gameObject);
 		}
 	}
 }

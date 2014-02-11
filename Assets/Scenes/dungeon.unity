@@ -476,6 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyIsFound: 0
   doorIsOpen: 0
+  bombFound: 0
   waterTiles: []
 --- !u!82 &300775537
 AudioSource:
@@ -2427,6 +2428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPickup: 1
   explosion: {fileID: 21300260, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
+  val: 30
 --- !u!212 &1874116826
 SpriteRenderer:
   m_ObjectHideFlags: 0

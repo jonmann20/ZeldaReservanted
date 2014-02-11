@@ -40,7 +40,6 @@ public class SpecialCollisionTileScript : MonoBehaviour {
 
 		if(!onTileSafely && coll.gameObject.tag == "Player")
 		{
-			print("collide");
 			gpm.collideWithSpecialCode(code);
 		}
 	}
