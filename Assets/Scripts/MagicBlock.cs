@@ -15,7 +15,7 @@ public class MagicBlock : MonoBehaviour {
 	void OnCollisionStay2D(Collision2D col){
 		bool isRightSide = checkSide(col);
 
-		if(!isMoved && isRightSide && ++resistance > 15 && col.gameObject.tag == "Player"){
+		if(!isMoved && isRightSide && ++resistance > 13 && col.gameObject.tag == "Player"){
 			isMoved = true;
 			isMoving = true;
 

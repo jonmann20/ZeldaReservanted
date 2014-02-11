@@ -1,9 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameplayMain.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Dungeon.cs">
     <Files>
+      <File FileName="Assets\Scripts\Bomb.cs" Line="37" Column="18" />
       <File FileName="Assets\Scripts\GameplayMain.cs" Line="752" Column="21" />
       <File FileName="Assets\Scripts\HudFull.cs" Line="102" Column="38" />
+      <File FileName="Assets\Scripts\Dungeon.cs" Line="17" Column="19" />
+      <File FileName="Assets\Scripts\Enemies\BossScript.cs" Line="42" Column="3" />
+      <File FileName="Assets\Classes\Enemy.cs" Line="133" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

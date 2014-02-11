@@ -53,7 +53,6 @@ public abstract class Enemy : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		print("trigger enter with tag: " + col.gameObject.tag);
 		if(col.gameObject.tag == "Sword")
 		{
 			setHealth(health - 1);
@@ -128,6 +127,11 @@ public abstract class Enemy : MonoBehaviour {
 		GameAudio.playEnemyZap();
 
 		dropRandomItem();
+
+		BossScript bs = gameObject.GetComponent<BossScript>();
+		if(bs != null){
+			DungeonRooms.that.addStairsBoss();
+		}
 
 		Destroy(this.gameObject);
 	}

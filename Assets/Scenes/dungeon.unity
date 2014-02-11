@@ -2428,7 +2428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPickup: 1
   explosion: {fileID: 21300260, guid: 237f57373b642024fb5b6cbc27dad8c0, type: 3}
-  val: 30
+  val: 5
 --- !u!212 &1874116826
 SpriteRenderer:
   m_ObjectHideFlags: 0

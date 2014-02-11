@@ -52,7 +52,7 @@ public class DungeonRooms : MonoBehaviour {
 		triforce = Resources.Load<GameObject>("Dungeon/triforce");
 		water = Resources.Load<GameObject>("Dungeon/water");
 		key = Resources.Load<GameObject>("Dungeon/key");
-		bombPickup = Resources.Load<GameObject>("Bomb");
+		bombPickup = Resources.Load<GameObject>("BombOldMan");
 		bombPickup.GetComponent<Bomb>().val = 30;
 
 		lockedDoor = Resources.Load<GameObject>("Dungeon/lockedDoor");
