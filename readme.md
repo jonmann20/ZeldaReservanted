@@ -21,6 +21,7 @@ Highlights
 * multiple character rooms
 * 2 weapons 
 * original duneon with never before seen boss
+* save stats/items system (NOTE: registering a name will reset the saved stats)
 
 Graphics Resources:
 -------------------
