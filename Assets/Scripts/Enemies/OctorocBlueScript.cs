@@ -88,25 +88,25 @@ public class OctorocBlueScript : Enemy {
 			if(desiredDir == 'e')
 			{
 				dest = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
-				(renderer as SpriteRenderer).sprite = spr_e1;
+				(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_e1;
 				currentCoordsInRoom.x ++;
 			}
 			else if(desiredDir == 's')
 			{
 				dest = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
-				(renderer as SpriteRenderer).sprite = spr_s1;
+				(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_s1;
 				currentCoordsInRoom.y ++;
 			}
 			else if(desiredDir == 'w')
 			{
 				dest = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
-				(renderer as SpriteRenderer).sprite = spr_w1;
+				(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_w1;
 				currentCoordsInRoom.x --;
 			}
 			else if(desiredDir == 'n')
 			{
 				dest = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
-				(renderer as SpriteRenderer).sprite = spr_n1;
+				(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_n1;
 				currentCoordsInRoom.y --;
 			}
 			dir = desiredDir;
@@ -138,13 +138,13 @@ public class OctorocBlueScript : Enemy {
 		
 		GameObject go = Instantiate(RockShot, transform.position, Quaternion.identity) as GameObject;
 		if(dir == 'n')
-			go.rigidbody2D.velocity = new Vector3(0, SHOT_SPEED, 0);
+			go.GetComponent<Rigidbody2D>().velocity = new Vector3(0, SHOT_SPEED, 0);
 		else if(dir == 'e')
-			go.rigidbody2D.velocity = new Vector3(SHOT_SPEED, 0, 0);
+			go.GetComponent<Rigidbody2D>().velocity = new Vector3(SHOT_SPEED, 0, 0);
 		else if(dir == 's')
-			go.rigidbody2D.velocity = new Vector3(0, -SHOT_SPEED, 0);
+			go.GetComponent<Rigidbody2D>().velocity = new Vector3(0, -SHOT_SPEED, 0);
 		else if(dir == 'w')
-			go.rigidbody2D.velocity = new Vector3(-SHOT_SPEED, 0, 0);
+			go.GetComponent<Rigidbody2D>().velocity = new Vector3(-SHOT_SPEED, 0, 0);
 		
 		while (elapsedTime < time){
 			elapsedTime += Time.deltaTime;

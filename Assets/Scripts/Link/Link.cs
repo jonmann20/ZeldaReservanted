@@ -57,7 +57,7 @@ public partial class Link : MonoBehaviour {
 		heartEmptyPrefab = Resources.Load<GameObject>("HeartEmpty");
 		bombPrefab = Resources.Load<GameObject>("Bomb");
 
-		initialColor = (renderer as SpriteRenderer).color;
+		initialColor = (GetComponent<Renderer>() as SpriteRenderer).color;
 
 		updateHealth();
 	}
@@ -66,14 +66,14 @@ public partial class Link : MonoBehaviour {
 		previousPos = transform.position;
 		//initHealth = health = PlayerPrefs.GetInt("numHearts");
 
-		sprRend = renderer as SpriteRenderer;
+		sprRend = GetComponent<Renderer>() as SpriteRenderer;
 		sprRend.sprite = spr[8];	// NOTE: this actually gets overwritten by movement logic
 
 		woodenSwordPrefab = Resources.Load<GameObject>("WoodenSword");
 	}
 
 	void Update(){
-		rigidbody2D.velocity = Vector2.zero;
+		GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		if(!isAttacking){
 			checkAction();
 		}
@@ -103,11 +103,11 @@ public partial class Link : MonoBehaviour {
 		if(invincibility > 0) 
 		{
 
-			if(colorFlip) (renderer as SpriteRenderer).color = Color.red;
-			if(!colorFlip) (renderer as SpriteRenderer).color = Color.white;
+			if(colorFlip) (GetComponent<Renderer>() as SpriteRenderer).color = Color.red;
+			if(!colorFlip) (GetComponent<Renderer>() as SpriteRenderer).color = Color.white;
 		}
 		else
-			(renderer as SpriteRenderer).color = initialColor;
+			(GetComponent<Renderer>() as SpriteRenderer).color = initialColor;
 	}
 
 
@@ -143,7 +143,7 @@ public partial class Link : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		rigidbody2D.velocity = Vector2.zero;
+		GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
 		if(movementEnabled && !isAttacking && itemPoseTimer <= 0){
 			checkMovement();

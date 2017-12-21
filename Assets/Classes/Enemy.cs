@@ -46,9 +46,9 @@ public abstract class Enemy : MonoBehaviour {
 		
 		audioSrc = new GameObject("audioSrc");
 		audioSrc.AddComponent<AudioSource>();
-		audioSrc.audio.clip = enemyZap;
+		audioSrc.GetComponent<AudioSource>().clip = enemyZap;
 
-		initialColor = (renderer as SpriteRenderer).color;
+		initialColor = (GetComponent<Renderer>() as SpriteRenderer).color;
 		initCoordsInRoom();
 	}
 
@@ -85,11 +85,11 @@ public abstract class Enemy : MonoBehaviour {
 
 		if(invincibility > 0) 
 		{
-			if(colorFlip) (renderer as SpriteRenderer).color = Color.red;
-			if(!colorFlip) (renderer as SpriteRenderer).color = Color.white;
+			if(colorFlip) (GetComponent<Renderer>() as SpriteRenderer).color = Color.red;
+			if(!colorFlip) (GetComponent<Renderer>() as SpriteRenderer).color = Color.white;
 		}
 		else
-			(renderer as SpriteRenderer).color = initialColor;
+			(GetComponent<Renderer>() as SpriteRenderer).color = initialColor;
 	}
 
 	public virtual void customUpdate()

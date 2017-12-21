@@ -126,11 +126,11 @@ public class HudFull : MonoBehaviour {
 	void pauseTheGame(){
 		if(isGamePaused){
 			Time.timeScale = 1;
-			bgMusic.audio.Play();
+			bgMusic.GetComponent<AudioSource>().Play();
 		}
 		else {
 			Time.timeScale = 0;
-			bgMusic.audio.Pause();
+			bgMusic.GetComponent<AudioSource>().Pause();
 		}
 		
 		isGamePaused = !isGamePaused;

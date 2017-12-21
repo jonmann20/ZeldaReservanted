@@ -11,7 +11,7 @@ public class Bomb : MonoBehaviour {
 	void Start () {
 		if(!isPickup){
 			// not needed
-			collider2D.enabled = false;
+			GetComponent<Collider2D>().enabled = false;
 		}
 	}
 
@@ -55,7 +55,7 @@ public class Bomb : MonoBehaviour {
 	}
 
 	void blowUp(){
-		SpriteRenderer spr = renderer as SpriteRenderer;
+		SpriteRenderer spr = GetComponent<Renderer>() as SpriteRenderer;
 		spr.sprite = explosion;
 		spr.sortingLayerName = "Link";
 

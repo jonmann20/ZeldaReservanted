@@ -52,7 +52,7 @@ public class DungeonZolaScript : Enemy {
 				vel.Normalize();
 				vel *= 5;
 				GameObject go = Instantiate(RockShot, transform.position, Quaternion.identity) as GameObject;
-				go.rigidbody2D.velocity = vel;
+				go.GetComponent<Rigidbody2D>().velocity = vel;
 				go.SendMessage("setMode", 1);
 
 

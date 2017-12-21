@@ -541,7 +541,7 @@ public class GameplayMain : MonoBehaviour {
 
 	public IntPair getRoomCoords(string val)
 	{
-		audio.Play();
+		GetComponent<AudioSource>().Play();
 		if(val == "99") return new IntPair(7, 7);
 		if(val == "98") return new IntPair(6, 6);
 		if(val == "97") return new IntPair(4, 6);
@@ -564,7 +564,7 @@ public class GameplayMain : MonoBehaviour {
 	{
 		disposeAllEnemies();
 		destroyCurrentRoom();
-		audio.Stop();
+		GetComponent<AudioSource>().Stop();
 		if(code == "88")
 		{
 			populateRoomWithRoom(MapTileEnum.getNpcRoom("oldladytalker"));

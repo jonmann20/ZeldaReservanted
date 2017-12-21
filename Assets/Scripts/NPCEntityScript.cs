@@ -13,15 +13,15 @@ public class NPCEntityScript : MonoBehaviour {
 		switch(s)
 		{
 			case "oldman":
-			(renderer as SpriteRenderer).sprite = s_oldman;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = s_oldman;
 			break;
 
 			case "trader":
-			(renderer as SpriteRenderer).sprite = s_trader;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = s_trader;
 			break;
 
 			case "oldlady":
-			(renderer as SpriteRenderer).sprite = s_oldlady;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = s_oldlady;
 			break;
 		}
 	}

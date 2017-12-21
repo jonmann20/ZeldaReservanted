@@ -23,22 +23,22 @@ public partial class Link : MonoBehaviour {
 				transform.Translate(new Vector2(-diffFromGridLine, 0));
 				
 				if(vert == 1f){
-					rigidbody2D.AddForce(new Vector2(0, speed * Time.deltaTime));
+					GetComponent<Rigidbody2D>().AddForce(new Vector2(0, speed * Time.deltaTime));
 					dir = handleStep(SpriteDir.UP);
 				}
 				
 				if(vert == -1f){
-					rigidbody2D.AddForce(new Vector2(0, -speed * Time.deltaTime));
+					GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -speed * Time.deltaTime));
 					dir = handleStep(SpriteDir.DOWN);
 				}
 			}
 			else{
 				if(diffFromGridLine > 0){
-					rigidbody2D.AddForce(new Vector2(-speed * Time.deltaTime, 0));
+					GetComponent<Rigidbody2D>().AddForce(new Vector2(-speed * Time.deltaTime, 0));
 					dir = handleStep(SpriteDir.LEFT);
 				}
 				else if(diffFromGridLine < 0){
-					rigidbody2D.AddForce(new Vector2(speed * Time.deltaTime, 0));
+					GetComponent<Rigidbody2D>().AddForce(new Vector2(speed * Time.deltaTime, 0));
 					dir = handleStep(SpriteDir.RIGHT);
 				}
 			}
@@ -52,22 +52,22 @@ public partial class Link : MonoBehaviour {
 				transform.Translate(new Vector2(0, diffFromGridLine));
 
 				if(hor == 1f){
-					rigidbody2D.AddForce(new Vector2(speed * Time.deltaTime, 0));
+					GetComponent<Rigidbody2D>().AddForce(new Vector2(speed * Time.deltaTime, 0));
 					dir = handleStep(SpriteDir.RIGHT);
 				}
 				
 				if(hor == -1f){
-					rigidbody2D.AddForce(new Vector2(-speed * Time.deltaTime, 0));
+					GetComponent<Rigidbody2D>().AddForce(new Vector2(-speed * Time.deltaTime, 0));
 					dir = handleStep(SpriteDir.LEFT);
 				}
 			}
 			else{
 				if(diffFromGridLine > 0){
-					rigidbody2D.AddForce(new Vector2(0, speed * Time.deltaTime));
+					GetComponent<Rigidbody2D>().AddForce(new Vector2(0, speed * Time.deltaTime));
 					dir = handleStep(SpriteDir.UP);
 				}
 				else if(diffFromGridLine < 0){
-					rigidbody2D.AddForce(new Vector2(0, -speed * Time.deltaTime));
+					GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -speed * Time.deltaTime));
 					dir = handleStep(SpriteDir.DOWN);
 				}
 			}

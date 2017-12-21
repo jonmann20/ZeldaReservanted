@@ -8,7 +8,7 @@ public class BlinkBossLocation : MonoBehaviour {
 	int prevIdx = 0;
 
 	void Awake(){
-		sprRend = (renderer as SpriteRenderer);
+		sprRend = (GetComponent<Renderer>() as SpriteRenderer);
 	}
 
 	void Update () {

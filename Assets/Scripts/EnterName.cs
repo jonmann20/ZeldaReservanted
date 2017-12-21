@@ -51,11 +51,11 @@ public class EnterName : MonoBehaviour {
 
 		srcBeep = new GameObject("srcBeep");
 		srcBeep.AddComponent<AudioSource>();
-		srcBeep.audio.clip = beep;
+		srcBeep.GetComponent<AudioSource>().clip = beep;
 
 		srcBomb = new GameObject("srcBomp");
 		srcBomb.AddComponent<AudioSource>();
-		srcBomb.audio.clip = bomb;
+		srcBomb.GetComponent<AudioSource>().clip = bomb;
 	}
 
 	void OnGUI(){
@@ -95,8 +95,8 @@ public class EnterName : MonoBehaviour {
 
 		// blink highlighter
 		if(Time.frameCount % 7 == 0){
-			renderer.enabled = !renderer.enabled;
-			namePosHighlight.renderer.enabled = !namePosHighlight.renderer.enabled;
+			GetComponent<Renderer>().enabled = !GetComponent<Renderer>().enabled;
+			namePosHighlight.GetComponent<Renderer>().enabled = !namePosHighlight.GetComponent<Renderer>().enabled;
 		}
 
 		// highlighter movement
@@ -156,18 +156,18 @@ public class EnterName : MonoBehaviour {
 	}
 
 	void playBeep(){
-		if(srcBeep.audio.isPlaying){
-			srcBeep.audio.Stop();
+		if(srcBeep.GetComponent<AudioSource>().isPlaying){
+			srcBeep.GetComponent<AudioSource>().Stop();
 		}
 
-		srcBeep.audio.Play();
+		srcBeep.GetComponent<AudioSource>().Play();
 	}
 
 	void playBombSet(){
-		if(srcBomb.audio.isPlaying){
-			srcBomb.audio.Stop();
+		if(srcBomb.GetComponent<AudioSource>().isPlaying){
+			srcBomb.GetComponent<AudioSource>().Stop();
 		}
 		
-		srcBomb.audio.Play();
+		srcBomb.GetComponent<AudioSource>().Play();
 	}
 }

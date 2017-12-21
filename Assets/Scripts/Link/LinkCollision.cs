@@ -35,16 +35,16 @@ public partial class Link : MonoBehaviour {
 		if(Mathf.Abs(horComponent) > Mathf.Abs(vertComponent))
 		{
 			if(horComponent > 0) //to right
-				rigidbody2D.velocity = new Vector3(KNOCK_BACK_SPEED, 0, 0);
+				GetComponent<Rigidbody2D>().velocity = new Vector3(KNOCK_BACK_SPEED, 0, 0);
 			else //to left
-				rigidbody2D.velocity = new Vector3(-KNOCK_BACK_SPEED, 0, 0);
+				GetComponent<Rigidbody2D>().velocity = new Vector3(-KNOCK_BACK_SPEED, 0, 0);
 		}
 		else //vertical knockback
 		{
 			if(vertComponent > 0) //to north
-				rigidbody2D.velocity = new Vector3(0, KNOCK_BACK_SPEED, 0);
+				GetComponent<Rigidbody2D>().velocity = new Vector3(0, KNOCK_BACK_SPEED, 0);
 			else //to south
-				rigidbody2D.velocity = new Vector3(0, -KNOCK_BACK_SPEED, 0);
+				GetComponent<Rigidbody2D>().velocity = new Vector3(0, -KNOCK_BACK_SPEED, 0);
 		}
 	}
 }

@@ -17,7 +17,7 @@ public class RockShotScript : MonoBehaviour {
 		if(Mathf.Abs(transform.position.x) > 9.2f || transform.position.y > 5.5f || transform.position.y < -8.5f){
 			Destroy(gameObject);
 		}
-		if(rigidbody2D.velocity.x == 0 && rigidbody2D.velocity.y == 0 && stillTimer <= 0)
+		if(GetComponent<Rigidbody2D>().velocity.x == 0 && GetComponent<Rigidbody2D>().velocity.y == 0 && stillTimer <= 0)
 			Destroy(gameObject);
 	}
 	void OnBecameInvisible(){
@@ -28,9 +28,9 @@ public class RockShotScript : MonoBehaviour {
 	{
 		mode = m;
 		if(m == 0)
-			(renderer as SpriteRenderer).sprite = spr_rock;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_rock;
 		else if(m == 1)
-			(renderer as SpriteRenderer).sprite = spr_energy;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_energy;
 	}
 
 	void OnTriggerEnter2D(Collider2D col){

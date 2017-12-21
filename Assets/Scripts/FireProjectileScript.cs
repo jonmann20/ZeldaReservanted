@@ -13,7 +13,7 @@ public class FireProjectileScript : MonoBehaviour {
 	
 	void Start()
 	{
-		rigidbody2D.velocity = new Vector3(-3, -3, 0);
+		GetComponent<Rigidbody2D>().velocity = new Vector3(-3, -3, 0);
 	}
 
 	void Update(){
@@ -26,12 +26,12 @@ public class FireProjectileScript : MonoBehaviour {
 		{
 			animationTimer = animationTime;
 			if(animationTimer < animationTime * 0.5f)
-				(renderer as SpriteRenderer).sprite = spr1;
+				(GetComponent<Renderer>() as SpriteRenderer).sprite = spr1;
 			else
-				(renderer as SpriteRenderer).sprite = spr2;
+				(GetComponent<Renderer>() as SpriteRenderer).sprite = spr2;
 		}
 
-		Vector3 newVel = rigidbody2D.velocity;
+		Vector3 newVel = GetComponent<Rigidbody2D>().velocity;
 
 		if(transform.position.x > 5.0f)
 		{
@@ -51,7 +51,7 @@ public class FireProjectileScript : MonoBehaviour {
 			newVel.y = -newVel.y;
 		}
 
-		rigidbody2D.velocity = newVel;
+		GetComponent<Rigidbody2D>().velocity = newVel;
 	}
 	void OnBecameInvisible(){
 		Destroy(gameObject);

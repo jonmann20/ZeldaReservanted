@@ -10,7 +10,7 @@ public class LeeverScript : Enemy {
 	public Sprite spr2;
 
 	const int digTime = 180;
-	public int digTimer = digTime + Random.Range(0, digTime);
+    public int digTimer;
 
 	List<Vector3> traversiblePositions;
 	
@@ -23,9 +23,10 @@ public class LeeverScript : Enemy {
 	
 	public delegate void Callback();
 
-	void Start()
+    void Start()
 	{
-		traversiblePositions = getTraversiblePositions();
+        digTimer = digTime + Random.Range(0, digTime);
+        traversiblePositions = getTraversiblePositions();
 		Movement ();
 	}
 	
@@ -37,9 +38,9 @@ public class LeeverScript : Enemy {
 			animationTimer = animationTime;
 
 		if(animationTimer > animationTime * 0.5f)
-			(renderer as SpriteRenderer).sprite = spr1;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = spr1;
 		else
-			(renderer as SpriteRenderer).sprite = spr2;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = spr2;
 
 		if(digTimer > 0)
 			digTimer --;

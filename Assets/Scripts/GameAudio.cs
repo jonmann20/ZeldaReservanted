@@ -38,72 +38,72 @@ public class GameAudio : MonoBehaviour {
 	}
 
 	public static void playItemObtained(){
-		itemObtainedSrc.audio.Play();
+		itemObtainedSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playTriforce(){
-		triforceSrc.audio.Play();
+		triforceSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playDoorOpened(){
-		doorOpenedSrc.audio.Play();
+		doorOpenedSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playItemReceived(){
-		itemReceivedSrc.audio.Play();
+		itemReceivedSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playSwordSwing(){
-		swordSwingSrc.audio.Play();
+		swordSwingSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playSwordShoot(){
-		swordShootSrc.audio.Play();
+		swordShootSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playText()
 	{
-		textSrc.audio.Play();
+		textSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playEnemyZap()
 	{
-		enemyZapSrc.audio.Play();
+		enemyZapSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playHeartPickup()
 	{
-		heartPickupSrc.audio.Play();
+		heartPickupSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playGameOver()
 	{
-		gameOverSrc.audio.Play();
+		gameOverSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playPlayerHurt()
 	{
-		playerHurtSrc.audio.Play();
+		playerHurtSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playMagical()
 	{
-		secretSrc.audio.Play();
+		secretSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playStairs()
 	{
-		stairsSrc.audio.Play();
+		stairsSrc.GetComponent<AudioSource>().Play();
 	}
 
 	public static void playRupeePickup(int num){
 
 		if(num == 1){
-			rupeePickupSrc.audio.Play();
+			rupeePickupSrc.GetComponent<AudioSource>().Play();
 		}
 		else {
 			// TODO: make sound math number of rupees
-			rupeePickup5Src.audio.Play();
+			rupeePickup5Src.GetComponent<AudioSource>().Play();
 		}
 
 	}

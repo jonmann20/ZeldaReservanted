@@ -49,13 +49,13 @@ public class PeahatScript : Enemy {
 		if(isFlying)
 		{
 			if(animationTimer > animationTime * 0.5f)
-				(renderer as SpriteRenderer).sprite = spr1;
+				(GetComponent<Renderer>() as SpriteRenderer).sprite = spr1;
 			else
-				(renderer as SpriteRenderer).sprite = spr2;
+				(GetComponent<Renderer>() as SpriteRenderer).sprite = spr2;
 		}
 		else
 		{
-			(renderer as SpriteRenderer).sprite = spr2;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = spr2;
 		}
 		
 	}

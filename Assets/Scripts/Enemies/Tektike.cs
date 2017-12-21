@@ -14,7 +14,6 @@ public class Tektike : Enemy {
 
 	void Start()
 	{
-		print("tektike!");
 		setHealth(1);
 		poofTimer = 15 + (int)Random.Range(0, 60);
 		print(poof);
@@ -23,16 +22,14 @@ public class Tektike : Enemy {
 	public override void customUpdate()
 	{
 		//POOFING
-		print("customUpdate");
 		if(poofTimer > 0)
 		{
-			print("poofing");
 			poofTimer --;
-			(renderer as SpriteRenderer).sprite = poof;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = poof;
 		}
 		if(poofTimer == 0 && !didPoof)
 		{
-			(renderer as SpriteRenderer).sprite = spr_ground;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_ground;
 			//Movement ();
 			destination = transform.position;
 			midPoint = destination;
@@ -51,9 +48,9 @@ public class Tektike : Enemy {
 		if(didPoof)
 		{
 			if(fractionCovered < 1.0f || (timer > 60 && timer < 100))
-				(renderer as SpriteRenderer).sprite = spr_air;
+				(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_air;
 			else
-				(renderer as SpriteRenderer).sprite = spr_ground;
+				(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_ground;
 		}
 		
 		if(fractionCovered <= 0.5f)

@@ -94,7 +94,7 @@ public class BossScript : Enemy {
 				vel *= 3;
 				
 				GameObject go = Instantiate(RockShot, pos, Quaternion.identity) as GameObject;
-				go.rigidbody2D.velocity = vel;
+				go.GetComponent<Rigidbody2D>().velocity = vel;
 				go.SendMessage("setMode", 1);
 
 				go.transform.parent = GameObject.Find("EnemyHolder").transform;
@@ -117,7 +117,7 @@ public class BossScript : Enemy {
 		//CHARGE!
 		if(state == 3)
 		{
-			(renderer as SpriteRenderer).sprite = spr_angry;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_angry;
 
 			//MOVEMENT
 			float xPos = transform.position.x;

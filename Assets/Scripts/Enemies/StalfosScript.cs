@@ -25,16 +25,16 @@ public class StalfosScript : Enemy {
 	
 	public override void customUpdate()
 	{	
-		(renderer as SpriteRenderer).sprite = spr1;
+		(GetComponent<Renderer>() as SpriteRenderer).sprite = spr1;
 		if(animationTimer > 0)
 			animationTimer --;
 		else
 			animationTimer = animationTime;
 
 		if(animationTimer > animationTime * 0.5f)
-			(renderer as SpriteRenderer).sprite = spr1;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = spr1;
 		else
-			(renderer as SpriteRenderer).sprite = spr2;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = spr2;
 	}
 	
 	public override void Movement(){

@@ -17,7 +17,7 @@ public class MapTileScript : MonoBehaviour {
 	void Awake()
 	{
 		desiredDisplacementTime = 0;
-		c2d = gameObject.AddComponent("BoxCollider2D") as BoxCollider2D;
+		c2d = gameObject.AddComponent<BoxCollider2D>() as BoxCollider2D;
 		c2d.isTrigger = true;
 	}
 

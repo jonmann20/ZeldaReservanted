@@ -12,14 +12,14 @@ public class Sword : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.tag == "Enemy"){
-			if(rigidbody2D.velocity.x != 0 || rigidbody2D.velocity.y != 0)
+			if(GetComponent<Rigidbody2D>().velocity.x != 0 || GetComponent<Rigidbody2D>().velocity.y != 0)
 				Destroy(gameObject);
 		}
 	}
 	
 	void Update(){
 		
-		if(rigidbody2D.velocity.x != 0 || rigidbody2D.velocity.y != 0)
+		if(GetComponent<Rigidbody2D>().velocity.x != 0 || GetComponent<Rigidbody2D>().velocity.y != 0)
 		{
 			--animateTimer;
 			if(animateTimer <= 0)
@@ -27,12 +27,12 @@ public class Sword : MonoBehaviour {
 				animateTimer = animateTime;
 				if(!isSprite1)
 				{
-					(renderer as SpriteRenderer).sprite = spr_normal_n;
+					(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_normal_n;
 					isSprite1 = true;
 				}
 				else
 				{
-					(renderer as SpriteRenderer).sprite = spr_shot1_n;
+					(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_shot1_n;
 					isSprite1 = false;
 				}
 			}

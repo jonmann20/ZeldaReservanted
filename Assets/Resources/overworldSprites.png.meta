@@ -1,32 +1,185 @@
 fileFormatVersion: 2
 guid: 01dc017149d79974c8e05d7c11b7cd6e
+timeCreated: 1513836917
+licenseType: Pro
 TextureImporter:
-  serializedVersion: 2
+  fileIDToRecycleName:
+    21300000: overworldSprites_0000
+    21300002: overworldSprites_0001
+    21300004: overworldSprites_0002
+    21300006: overworldSprites_0003
+    21300008: overworldSprites_0004
+    21300010: overworldSprites_0005
+    21300012: overworldSprites_0006
+    21300014: overworldSprites_0007
+    21300016: overworldSprites_0008
+    21300018: overworldSprites_0009
+    21300020: overworldSprites_0010
+    21300022: overworldSprites_0011
+    21300024: overworldSprites_0012
+    21300026: overworldSprites_0013
+    21300028: overworldSprites_0014
+    21300030: overworldSprites_0015
+    21300032: overworldSprites_0016
+    21300034: overworldSprites_0017
+    21300036: overworldSprites_0018
+    21300038: overworldSprites_0019
+    21300040: overworldSprites_0020
+    21300042: overworldSprites_0021
+    21300044: overworldSprites_0022
+    21300046: overworldSprites_0023
+    21300048: overworldSprites_0024
+    21300050: overworldSprites_0025
+    21300052: overworldSprites_0026
+    21300054: overworldSprites_0027
+    21300056: overworldSprites_0028
+    21300058: overworldSprites_0029
+    21300060: overworldSprites_0030
+    21300062: overworldSprites_0031
+    21300064: overworldSprites_0032
+    21300066: overworldSprites_0033
+    21300068: overworldSprites_0034
+    21300070: overworldSprites_0035
+    21300072: overworldSprites_0036
+    21300074: overworldSprites_0037
+    21300076: overworldSprites_0038
+    21300078: overworldSprites_0039
+    21300080: overworldSprites_0040
+    21300082: overworldSprites_0041
+    21300084: overworldSprites_0042
+    21300086: overworldSprites_0043
+    21300088: overworldSprites_0044
+    21300090: overworldSprites_0045
+    21300092: overworldSprites_0046
+    21300094: overworldSprites_0047
+    21300096: overworldSprites_0048
+    21300098: overworldSprites_0049
+    21300100: overworldSprites_0050
+    21300102: overworldSprites_0051
+    21300104: overworldSprites_0052
+    21300106: overworldSprites_0053
+    21300108: overworldSprites_0054
+    21300110: overworldSprites_0055
+    21300112: overworldSprites_0056
+    21300114: overworldSprites_0057
+    21300116: overworldSprites_0058
+    21300118: overworldSprites_0059
+    21300120: overworldSprites_0060
+    21300122: overworldSprites_0061
+    21300124: overworldSprites_0062
+    21300126: overworldSprites_0064
+    21300128: overworldSprites_0065
+    21300130: overworldSprites_0066
+    21300132: overworldSprites_0067
+    21300134: overworldSprites_0068
+    21300136: overworldSprites_0069
+    21300138: overworldSprites_0070
+    21300140: overworldSprites_0071
+    21300142: overworldSprites_0072
+    21300144: overworldSprites_0073
+    21300146: overworldSprites_0074
+    21300148: overworldSprites_0075
+    21300150: overworldSprites_0076
+    21300152: overworldSprites_0077
+    21300154: overworldSprites_0078
+    21300156: overworldSprites_0079
+    21300158: overworldSprites_0080
+    21300160: overworldSprites_0081
+    21300162: overworldSprites_0082
+    21300164: overworldSprites_0083
+    21300166: overworldSprites_0084
+    21300168: overworldSprites_0085
+    21300170: overworldSprites_0086
+    21300172: overworldSprites_0087
+    21300174: overworldSprites_0088
+    21300176: overworldSprites_0089
+    21300178: overworldSprites_0090
+    21300180: overworldSprites_0091
+    21300182: overworldSprites_0092
+    21300184: overworldSprites_0093
+    21300186: overworldSprites_0094
+    21300188: overworldSprites_0095
+    21300190: overworldSprites_0109
+    21300192: overworldSprites_0096
+    21300194: overworldSprites_0097
+    21300196: overworldSprites_0098
+    21300198: overworldSprites_0099
+    21300200: overworldSprites_0100
+    21300202: overworldSprites_0101
+    21300204: overworldSprites_0102
+    21300206: overworldSprites_0103
+    21300208: overworldSprites_0104
+    21300210: overworldSprites_0105
+    21300212: overworldSprites_0106
+    21300214: overworldSprites_0107
+    21300216: overworldSprites_0108
+    21300218: overworldSprites_0127
+    21300220: overworldSprites_0128
+    21300222: overworldSprites_0129
+    21300224: overworldSprites_0130
+    21300226: overworldSprites_0131
+    21300228: overworldSprites_0132
+    21300230: overworldSprites_0133
+    21300232: overworldSprites_0134
+    21300234: overworldSprites_0135
+    21300236: overworldSprites_0136
+    21300238: overworldSprites_0137
+    21300240: overworldSprites_0138
+    21300242: overworldSprites_0139
+    21300244: overworldSprites_0140
+    21300246: overworldSprites_0141
+    21300248: overworldSprites_0142
+    21300250: overworldSprites_0143
+    21300252: overworldSprites_0144
+    21300254: overworldSprites_0110
+    21300256: overworldSprites_0111
+    21300258: overworldSprites_0112
+    21300260: overworldSprites_0113
+    21300262: overworldSprites_0114
+    21300264: overworldSprites_0115
+    21300266: overworldSprites_0116
+    21300268: overworldSprites_0117
+    21300270: overworldSprites_0118
+    21300272: overworldSprites_0119
+    21300274: overworldSprites_0120
+    21300276: overworldSprites_0121
+    21300278: overworldSprites_0122
+    21300280: overworldSprites_0123
+    21300282: overworldSprites_0124
+    21300284: overworldSprites_0125
+    21300286: overworldSprites_0126
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
+    serializedVersion: 2
     filterMode: 0
     aniso: 1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -34,18 +187,39 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 16
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings:
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   - buildTarget: iPhone
     maxTextureSize: 1024
-    textureFormat: -2
+    textureFormat: 2
+    textureCompression: 0
     compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: overworldSprites_00
+    - serializedVersion: 2
+      name: overworldSprites_0000
       rect:
         serializedVersion: 2
         x: 1
@@ -54,7 +228,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_01
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0001
       rect:
         serializedVersion: 2
         x: 18
@@ -63,7 +242,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_02
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0002
       rect:
         serializedVersion: 2
         x: 35
@@ -72,7 +256,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_03
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0003
       rect:
         serializedVersion: 2
         x: 52
@@ -81,7 +270,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_04
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0004
       rect:
         serializedVersion: 2
         x: 69
@@ -90,7 +284,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_05
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0005
       rect:
         serializedVersion: 2
         x: 86
@@ -99,7 +298,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_06
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0006
       rect:
         serializedVersion: 2
         x: 103
@@ -108,7 +312,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_07
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0007
       rect:
         serializedVersion: 2
         x: 120
@@ -117,7 +326,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_08
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0008
       rect:
         serializedVersion: 2
         x: 137
@@ -126,7 +340,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_09
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0009
       rect:
         serializedVersion: 2
         x: 154
@@ -135,7 +354,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_0a
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0010
       rect:
         serializedVersion: 2
         x: 171
@@ -144,7 +368,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_0b
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0011
       rect:
         serializedVersion: 2
         x: 188
@@ -153,7 +382,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_0c
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0012
       rect:
         serializedVersion: 2
         x: 205
@@ -162,7 +396,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_0d
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0013
       rect:
         serializedVersion: 2
         x: 222
@@ -171,7 +410,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_0e
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0014
       rect:
         serializedVersion: 2
         x: 239
@@ -180,7 +424,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_0f
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0015
       rect:
         serializedVersion: 2
         x: 256
@@ -189,7 +438,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_10
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0016
       rect:
         serializedVersion: 2
         x: 273
@@ -198,7 +452,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_11
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0017
       rect:
         serializedVersion: 2
         x: 290
@@ -207,7 +466,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_14
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0018
       rect:
         serializedVersion: 2
         x: 1
@@ -216,7 +480,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_15
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0019
       rect:
         serializedVersion: 2
         x: 18
@@ -225,7 +494,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_16
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0020
       rect:
         serializedVersion: 2
         x: 35
@@ -234,7 +508,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_17
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0021
       rect:
         serializedVersion: 2
         x: 52
@@ -243,7 +522,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_18
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0022
       rect:
         serializedVersion: 2
         x: 69
@@ -252,7 +536,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_19
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0023
       rect:
         serializedVersion: 2
         x: 86
@@ -261,7 +550,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_1a
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0024
       rect:
         serializedVersion: 2
         x: 103
@@ -270,7 +564,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_1b
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0025
       rect:
         serializedVersion: 2
         x: 120
@@ -279,7 +578,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_1c
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0026
       rect:
         serializedVersion: 2
         x: 137
@@ -288,7 +592,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_1d
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0027
       rect:
         serializedVersion: 2
         x: 154
@@ -297,7 +606,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_1e
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0028
       rect:
         serializedVersion: 2
         x: 171
@@ -306,7 +620,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_1f
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0029
       rect:
         serializedVersion: 2
         x: 188
@@ -315,7 +634,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_20
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0030
       rect:
         serializedVersion: 2
         x: 205
@@ -324,7 +648,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_21
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0031
       rect:
         serializedVersion: 2
         x: 222
@@ -333,7 +662,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_22
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0032
       rect:
         serializedVersion: 2
         x: 239
@@ -342,7 +676,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_23
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0033
       rect:
         serializedVersion: 2
         x: 256
@@ -351,7 +690,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_24
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0034
       rect:
         serializedVersion: 2
         x: 273
@@ -360,7 +704,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_25
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0035
       rect:
         serializedVersion: 2
         x: 290
@@ -369,7 +718,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_28
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0036
       rect:
         serializedVersion: 2
         x: 1
@@ -378,7 +732,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_29
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0037
       rect:
         serializedVersion: 2
         x: 18
@@ -387,7 +746,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_2a
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0038
       rect:
         serializedVersion: 2
         x: 35
@@ -396,7 +760,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_2b
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0039
       rect:
         serializedVersion: 2
         x: 52
@@ -405,7 +774,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_2c
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0040
       rect:
         serializedVersion: 2
         x: 69
@@ -414,7 +788,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_2d
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0041
       rect:
         serializedVersion: 2
         x: 86
@@ -423,7 +802,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_2e
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0042
       rect:
         serializedVersion: 2
         x: 103
@@ -432,7 +816,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_2f
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0043
       rect:
         serializedVersion: 2
         x: 120
@@ -441,7 +830,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_30
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0044
       rect:
         serializedVersion: 2
         x: 137
@@ -450,7 +844,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_31
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0045
       rect:
         serializedVersion: 2
         x: 154
@@ -459,7 +858,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_32
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0046
       rect:
         serializedVersion: 2
         x: 171
@@ -468,7 +872,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_33
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0047
       rect:
         serializedVersion: 2
         x: 188
@@ -477,7 +886,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_34
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0048
       rect:
         serializedVersion: 2
         x: 205
@@ -486,7 +900,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_35
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0049
       rect:
         serializedVersion: 2
         x: 222
@@ -495,7 +914,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_36
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0050
       rect:
         serializedVersion: 2
         x: 239
@@ -504,7 +928,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_37
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0051
       rect:
         serializedVersion: 2
         x: 256
@@ -513,7 +942,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_38
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0052
       rect:
         serializedVersion: 2
         x: 273
@@ -522,7 +956,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_39
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0053
       rect:
         serializedVersion: 2
         x: 290
@@ -531,7 +970,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_3c
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0054
       rect:
         serializedVersion: 2
         x: 1
@@ -540,7 +984,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_3d
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0055
       rect:
         serializedVersion: 2
         x: 18
@@ -549,7 +998,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_3e
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0056
       rect:
         serializedVersion: 2
         x: 35
@@ -558,7 +1012,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_3f
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0057
       rect:
         serializedVersion: 2
         x: 52
@@ -567,7 +1026,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_40
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0058
       rect:
         serializedVersion: 2
         x: 69
@@ -576,7 +1040,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_41
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0059
       rect:
         serializedVersion: 2
         x: 86
@@ -585,7 +1054,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_42
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0060
       rect:
         serializedVersion: 2
         x: 103
@@ -594,7 +1068,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_43
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0061
       rect:
         serializedVersion: 2
         x: 120
@@ -603,7 +1082,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_44
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0062
       rect:
         serializedVersion: 2
         x: 137
@@ -612,7 +1096,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_45
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0064
       rect:
         serializedVersion: 2
         x: 154
@@ -621,7 +1110,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_46
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0065
       rect:
         serializedVersion: 2
         x: 171
@@ -630,7 +1124,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_47
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0066
       rect:
         serializedVersion: 2
         x: 188
@@ -639,7 +1138,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_48
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0067
       rect:
         serializedVersion: 2
         x: 205
@@ -648,7 +1152,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_49
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0068
       rect:
         serializedVersion: 2
         x: 222
@@ -657,7 +1166,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_4a
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0069
       rect:
         serializedVersion: 2
         x: 239
@@ -666,7 +1180,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_4b
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0070
       rect:
         serializedVersion: 2
         x: 256
@@ -675,7 +1194,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_4c
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0071
       rect:
         serializedVersion: 2
         x: 273
@@ -684,7 +1208,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_4d
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0072
       rect:
         serializedVersion: 2
         x: 290
@@ -693,7 +1222,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_50
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0073
       rect:
         serializedVersion: 2
         x: 1
@@ -702,7 +1236,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_51
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0074
       rect:
         serializedVersion: 2
         x: 18
@@ -711,7 +1250,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_52
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0075
       rect:
         serializedVersion: 2
         x: 35
@@ -720,7 +1264,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_53
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0076
       rect:
         serializedVersion: 2
         x: 52
@@ -729,7 +1278,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_54
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0077
       rect:
         serializedVersion: 2
         x: 69
@@ -738,7 +1292,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_55
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0078
       rect:
         serializedVersion: 2
         x: 86
@@ -747,7 +1306,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_56
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0079
       rect:
         serializedVersion: 2
         x: 103
@@ -756,7 +1320,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_57
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0080
       rect:
         serializedVersion: 2
         x: 120
@@ -765,7 +1334,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_58
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0081
       rect:
         serializedVersion: 2
         x: 137
@@ -774,7 +1348,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_59
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0082
       rect:
         serializedVersion: 2
         x: 154
@@ -783,7 +1362,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_5a
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0083
       rect:
         serializedVersion: 2
         x: 171
@@ -792,7 +1376,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_5b
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0084
       rect:
         serializedVersion: 2
         x: 188
@@ -801,7 +1390,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_5c
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0085
       rect:
         serializedVersion: 2
         x: 205
@@ -810,7 +1404,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_5d
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0086
       rect:
         serializedVersion: 2
         x: 222
@@ -819,7 +1418,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_5e
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0087
       rect:
         serializedVersion: 2
         x: 239
@@ -828,7 +1432,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_5f
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0088
       rect:
         serializedVersion: 2
         x: 256
@@ -837,7 +1446,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_60
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0089
       rect:
         serializedVersion: 2
         x: 273
@@ -846,7 +1460,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_61
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0090
       rect:
         serializedVersion: 2
         x: 290
@@ -855,7 +1474,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_64
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0091
       rect:
         serializedVersion: 2
         x: 1
@@ -864,7 +1488,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_65
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0092
       rect:
         serializedVersion: 2
         x: 18
@@ -873,7 +1502,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_66
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0093
       rect:
         serializedVersion: 2
         x: 35
@@ -882,7 +1516,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_67
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0094
       rect:
         serializedVersion: 2
         x: 52
@@ -891,7 +1530,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_68
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0095
       rect:
         serializedVersion: 2
         x: 69
@@ -900,7 +1544,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_78
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0109
       rect:
         serializedVersion: 2
         x: 1
@@ -909,7 +1558,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_69
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0096
       rect:
         serializedVersion: 2
         x: 86
@@ -918,7 +1572,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_6a
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0097
       rect:
         serializedVersion: 2
         x: 103
@@ -927,7 +1586,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_6b
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0098
       rect:
         serializedVersion: 2
         x: 120
@@ -936,7 +1600,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_6c
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0099
       rect:
         serializedVersion: 2
         x: 137
@@ -945,7 +1614,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_6d
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0100
       rect:
         serializedVersion: 2
         x: 154
@@ -954,7 +1628,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_6e
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0101
       rect:
         serializedVersion: 2
         x: 171
@@ -963,7 +1642,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_6f
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0102
       rect:
         serializedVersion: 2
         x: 188
@@ -972,7 +1656,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_70
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0103
       rect:
         serializedVersion: 2
         x: 205
@@ -981,7 +1670,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_71
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0104
       rect:
         serializedVersion: 2
         x: 222
@@ -990,7 +1684,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_72
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0105
       rect:
         serializedVersion: 2
         x: 239
@@ -999,7 +1698,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_73
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0106
       rect:
         serializedVersion: 2
         x: 256
@@ -1008,7 +1712,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_74
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0107
       rect:
         serializedVersion: 2
         x: 273
@@ -1017,7 +1726,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_75
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0108
       rect:
         serializedVersion: 2
         x: 290
@@ -1026,7 +1740,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_8c
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0127
       rect:
         serializedVersion: 2
         x: 1
@@ -1035,7 +1754,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_8d
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0128
       rect:
         serializedVersion: 2
         x: 18
@@ -1044,7 +1768,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_8e
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0129
       rect:
         serializedVersion: 2
         x: 35
@@ -1053,7 +1782,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_8f
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0130
       rect:
         serializedVersion: 2
         x: 52
@@ -1062,7 +1796,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_90
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0131
       rect:
         serializedVersion: 2
         x: 69
@@ -1071,7 +1810,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_91
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0132
       rect:
         serializedVersion: 2
         x: 86
@@ -1080,7 +1824,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_92
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0133
       rect:
         serializedVersion: 2
         x: 103
@@ -1089,7 +1838,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_93
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0134
       rect:
         serializedVersion: 2
         x: 120
@@ -1098,7 +1852,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_94
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0135
       rect:
         serializedVersion: 2
         x: 137
@@ -1107,7 +1866,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_95
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0136
       rect:
         serializedVersion: 2
         x: 154
@@ -1116,7 +1880,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_96
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0137
       rect:
         serializedVersion: 2
         x: 171
@@ -1125,7 +1894,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_97
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0138
       rect:
         serializedVersion: 2
         x: 188
@@ -1134,7 +1908,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_98
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0139
       rect:
         serializedVersion: 2
         x: 205
@@ -1143,7 +1922,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_99
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0140
       rect:
         serializedVersion: 2
         x: 222
@@ -1152,7 +1936,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_9a
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0141
       rect:
         serializedVersion: 2
         x: 239
@@ -1161,7 +1950,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_9b
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0142
       rect:
         serializedVersion: 2
         x: 256
@@ -1170,7 +1964,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_9c
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0143
       rect:
         serializedVersion: 2
         x: 273
@@ -1179,7 +1978,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_9d
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0144
       rect:
         serializedVersion: 2
         x: 290
@@ -1188,7 +1992,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_79
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0110
       rect:
         serializedVersion: 2
         x: 18
@@ -1197,7 +2006,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_7a
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0111
       rect:
         serializedVersion: 2
         x: 35
@@ -1206,7 +2020,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_7b
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0112
       rect:
         serializedVersion: 2
         x: 52
@@ -1215,7 +2034,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_7c
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0113
       rect:
         serializedVersion: 2
         x: 69
@@ -1224,7 +2048,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_7d
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0114
       rect:
         serializedVersion: 2
         x: 86
@@ -1233,7 +2062,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_7e
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0115
       rect:
         serializedVersion: 2
         x: 103
@@ -1242,7 +2076,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_7f
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0116
       rect:
         serializedVersion: 2
         x: 120
@@ -1251,7 +2090,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_80
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0117
       rect:
         serializedVersion: 2
         x: 137
@@ -1260,7 +2104,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_81
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0118
       rect:
         serializedVersion: 2
         x: 154
@@ -1269,7 +2118,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_82
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0119
       rect:
         serializedVersion: 2
         x: 171
@@ -1278,7 +2132,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_83
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0120
       rect:
         serializedVersion: 2
         x: 188
@@ -1287,7 +2146,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_84
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0121
       rect:
         serializedVersion: 2
         x: 205
@@ -1296,7 +2160,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_85
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0122
       rect:
         serializedVersion: 2
         x: 222
@@ -1305,7 +2174,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_86
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0123
       rect:
         serializedVersion: 2
         x: 239
@@ -1314,7 +2188,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_87
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0124
       rect:
         serializedVersion: 2
         x: 256
@@ -1323,7 +2202,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_88
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0125
       rect:
         serializedVersion: 2
         x: 273
@@ -1332,7 +2216,12 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
-    - name: overworldSprites_89
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: overworldSprites_0126
       rect:
         serializedVersion: 2
         x: 290
@@ -1341,5 +2230,13 @@ TextureImporter:
         height: 16
       alignment: 1
       pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

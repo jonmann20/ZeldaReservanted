@@ -27,7 +27,7 @@ public class MoveCurtain : MonoBehaviour {
 		if(isMoved) return;	// prevents double call (1 for each curtain)
 		
 		GameObject mainCam = GameObject.Find("MainCamera");
-		mainCam.audio.Play();
+		mainCam.GetComponent<AudioSource>().Play();
 		
 		lnk.GetComponent<SpriteRenderer>().enabled = true;
 		

@@ -9,7 +9,7 @@ public class SimpleSpriteLoopAnimation : MonoBehaviour {
 	SpriteRenderer sprRend;
 	
 	void Start () {
-		sprRend = renderer as SpriteRenderer;
+		sprRend = GetComponent<Renderer>() as SpriteRenderer;
 	}
 	
 	void Update () {

@@ -40,12 +40,12 @@ public class RockScript : Enemy {
 			animateTimer = animateTime;
 			if(isSprite1)
 			{
-				(renderer as SpriteRenderer).sprite = spr_1;
+				(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_1;
 				isSprite1 = false;
 			}
 			else
 			{
-				(renderer as SpriteRenderer).sprite = spr_2;
+				(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_2;
 				isSprite1 = true;
 			}
 		}

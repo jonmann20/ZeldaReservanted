@@ -17,7 +17,7 @@ public class ThrownWhiteSwordScript : MonoBehaviour {
 		if(Mathf.Abs(transform.position.x) > 9.2f || transform.position.y > 5.5f || transform.position.y < -8.5f){
 			Destroy(gameObject);
 		}
-		if(rigidbody2D.velocity.x == 0 && rigidbody2D.velocity.y == 0 && stillTimer <= 0)
+		if(GetComponent<Rigidbody2D>().velocity.x == 0 && GetComponent<Rigidbody2D>().velocity.y == 0 && stillTimer <= 0)
 			Destroy(gameObject);
 	}
 	void OnBecameInvisible(){
@@ -42,7 +42,7 @@ public class ThrownWhiteSwordScript : MonoBehaviour {
 	//0 = white sword, 1 = arrow
 	void setMode(int m)
 	{
-		(renderer as SpriteRenderer).sprite = whiteSword;
-		(renderer as SpriteRenderer).sprite = arrow;
+		(GetComponent<Renderer>() as SpriteRenderer).sprite = whiteSword;
+		(GetComponent<Renderer>() as SpriteRenderer).sprite = arrow;
 	}
 }

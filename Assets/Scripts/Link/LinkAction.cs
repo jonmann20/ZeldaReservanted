@@ -75,16 +75,16 @@ public partial class Link : MonoBehaviour {
 		Quaternion r = woodenSwordProjectile.transform.localRotation;
 
 		if(Mathf.Approximately(r.eulerAngles.z, 0)){
-			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(0, SHOT_SPEED, 0);
+			woodenSwordProjectile.GetComponent<Rigidbody2D>().velocity = new Vector3(0, SHOT_SPEED, 0);
 		}
 		else if(Mathf.Approximately(r.eulerAngles.z, 270)){
-			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(SHOT_SPEED, 0, 0);
+			woodenSwordProjectile.GetComponent<Rigidbody2D>().velocity = new Vector3(SHOT_SPEED, 0, 0);
 		}
 		else if(Mathf.Approximately(r.eulerAngles.z, 180)){
-			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(0, -SHOT_SPEED, 0);
+			woodenSwordProjectile.GetComponent<Rigidbody2D>().velocity = new Vector3(0, -SHOT_SPEED, 0);
 		}
 		else if(Mathf.Approximately(r.eulerAngles.z, 90)){
-			woodenSwordProjectile.rigidbody2D.velocity = new Vector3(-SHOT_SPEED, 0, 0);
+			woodenSwordProjectile.GetComponent<Rigidbody2D>().velocity = new Vector3(-SHOT_SPEED, 0, 0);
 		}
 
 		woodenSwordProjectile.transform.Translate(0, distFromLink, 0);

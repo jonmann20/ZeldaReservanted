@@ -222,7 +222,7 @@ public class DungeonRooms : MonoBehaviour {
 		if(bombDoorIsOpen){
 			dr.objs[1] = Instantiate(bombDoorS, new Vector3(pos.x, pos.y - 4f, 0), Quaternion.identity) as GameObject;
 			GameObject grc = GameObject.Find("GenericRoom(Clone)");
-			grc.transform.Find("Walls/DoorWalls/wallB").collider2D.enabled = false;
+			grc.transform.Find("Walls/DoorWalls/wallB").GetComponent<Collider2D>().enabled = false;
 
 		}
 		else {
@@ -497,7 +497,7 @@ public class DungeonRooms : MonoBehaviour {
 		s.transform.parent = g.transform;
 
 		GameObject grc = GameObject.Find("GenericRoom(Clone)");
-		grc.transform.Find("Walls/DoorWalls/wallB").collider2D.enabled = false;
+		grc.transform.Find("Walls/DoorWalls/wallB").GetComponent<Collider2D>().enabled = false;
 		Destroy(GameObject.Find ("BombDoorTrigger(Clone)"));
 	}
 

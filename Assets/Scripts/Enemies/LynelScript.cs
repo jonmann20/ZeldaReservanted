@@ -42,11 +42,11 @@ public class LynelScript : Enemy {
 		if(poofTimer > 0)
 		{
 			poofTimer --;
-			(renderer as SpriteRenderer).sprite = poof;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = poof;
 		}
 		if(poofTimer == 0 && !didPoof)
 		{
-			(renderer as SpriteRenderer).sprite = spr_n1;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = spr_n1;
 			Movement ();
 			didPoof = true;
 		}
@@ -63,17 +63,17 @@ public class LynelScript : Enemy {
 		{
 			if(walkMode)
 			{
-				if(dir == 'e') (renderer as SpriteRenderer).sprite = spr_e1;
-				if(dir == 's') (renderer as SpriteRenderer).sprite = spr_s1;
-				if(dir == 'w') (renderer as SpriteRenderer).sprite = spr_w1;
-				if(dir == 'n') (renderer as SpriteRenderer).sprite = spr_n1;
+				if(dir == 'e') (GetComponent<Renderer>() as SpriteRenderer).sprite = spr_e1;
+				if(dir == 's') (GetComponent<Renderer>() as SpriteRenderer).sprite = spr_s1;
+				if(dir == 'w') (GetComponent<Renderer>() as SpriteRenderer).sprite = spr_w1;
+				if(dir == 'n') (GetComponent<Renderer>() as SpriteRenderer).sprite = spr_n1;
 			}
 			else
 			{
-				if(dir == 'e') (renderer as SpriteRenderer).sprite = spr_e2;
-				if(dir == 's') (renderer as SpriteRenderer).sprite = spr_s2;
-				if(dir == 'w') (renderer as SpriteRenderer).sprite = spr_w2;
-				if(dir == 'n') (renderer as SpriteRenderer).sprite = spr_n2;
+				if(dir == 'e') (GetComponent<Renderer>() as SpriteRenderer).sprite = spr_e2;
+				if(dir == 's') (GetComponent<Renderer>() as SpriteRenderer).sprite = spr_s2;
+				if(dir == 'w') (GetComponent<Renderer>() as SpriteRenderer).sprite = spr_w2;
+				if(dir == 'n') (GetComponent<Renderer>() as SpriteRenderer).sprite = spr_n2;
 			}
 		}
 
@@ -216,7 +216,7 @@ public class LynelScript : Enemy {
 		}
 
 		GameObject go = Instantiate(ThrownWhiteSword, transform.position, rot) as GameObject;
-		go.rigidbody2D.velocity = vel;
+		go.GetComponent<Rigidbody2D>().velocity = vel;
 
 		while (elapsedTime < time){
 			elapsedTime += Time.deltaTime;

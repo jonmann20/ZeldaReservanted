@@ -259,7 +259,7 @@ public class Dungeon : MonoBehaviour {
 
 			// left side
 			int theY = 1;
-			for(int i=0; i < 7; ++i){
+			for(int i=0; i < 6; ++i){
 				GameObject spike = Instantiate(Spikes, new Vector3(-5.5f, theY), Quaternion.identity) as GameObject;
 				spike.transform.parent = enemyHolder.transform;
 				
@@ -268,7 +268,7 @@ public class Dungeon : MonoBehaviour {
 
 			// right side
 			theY = 1;
-			for(int i=0; i < 7; ++i){
+			for(int i=0; i < 6; ++i){
 				GameObject spike = Instantiate(Spikes, new Vector3(5.5f, theY), Quaternion.identity) as GameObject;
 				spike.transform.parent = enemyHolder.transform;
 

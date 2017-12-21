@@ -16,9 +16,9 @@ public class flameRenderScript : MonoBehaviour {
 	void Update () {
 		timer ++;
 		if(timer == 1)
-			(renderer as SpriteRenderer).sprite = s_flame1;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = s_flame1;
 		else if(timer == 6)
-			(renderer as SpriteRenderer).sprite = s_flame2;
+			(GetComponent<Renderer>() as SpriteRenderer).sprite = s_flame2;
 		else if(timer > 10)
 			timer = 0;
 	}
